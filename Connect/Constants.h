@@ -20,6 +20,15 @@ typedef NS_ENUM(NSUInteger, CNProfileType) {
     CNProfileTypeBusiness
 };
 
+typedef NS_ENUM(NSUInteger, CNUserGender){
+    // Male
+    CNUserMale = 0,
+    // Female
+    CNUserFemalle,
+    // Other
+    CNUserOther
+};
+
 // Log In
 #define kLoggedUserID   @"LoggedUserID"
 

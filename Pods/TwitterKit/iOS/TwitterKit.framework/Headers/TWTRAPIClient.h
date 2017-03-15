@@ -129,7 +129,7 @@ typedef void(^TWTRRequestEmailCompletion)(NSString * _Nullable email, NSError * 
  *  Returns a signed URL request.
  *
  *  @param method     Request method, GET, POST, PUT, DELETE, etc.
- *  @param URL        Request URL. This is the full Twitter API URL. E.g. https://api.twitter.com/1.1/statuses/user_timeline.json
+ *  @param URLString        Request URL. This is the full Twitter API URL. E.g. https://api.twitter.com/1.1/statuses/user_timeline.json
  *  @param parameters Request parameters.
  *  @param error      Error that will be set if there was an error signing the request.
  *

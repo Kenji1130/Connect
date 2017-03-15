@@ -80,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  called when a URL in the text of a tweet was tapped. Implement to show your own webview rather than opening Safari.
  *
  *  @param controller The TWTRTweetDetailViewController.
- *  @param url        The URL that was tapped.
+ *  @param URL        The URL that was tapped.
  */
 - (void)tweetDetailViewController:(TWTRTweetDetailViewController *)controller didTapURL:(NSURL *)URL;
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		30C3724023A95B58C929404B /* Pods_Connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B53EBDDF8321645980AAE2 /* Pods_Connect.framework */; };
 		5A623BC47166DDF8BAA8A477 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F708DE2C7C4D4FE7F3B3B5B /* Pods_ConnectTests.framework */; };
 		F872EFAC97BAC40B115ABD1E /* Pods_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7999A34FAE6D098C60922629 /* Pods_ConnectUITests.framework */; };
@@ -82,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
+		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
 		185F60FFB0BF3CB19A052DC2 /* Pods-ConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectTests/Pods-ConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C107AB5651DC97263199101 /* Pods-ConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectUITests/Pods-ConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		552D491AA3C6CE3668DBD8CA /* Pods-Connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Connect/Pods-Connect.debug.xcconfig"; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				FA4450A11E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m */,
 				FA4450A31E3F7CA200375428 /* CNOnboardingVerifyCodeVC.h */,
 				FA4450A41E3F7CA200375428 /* CNOnboardingVerifyCodeVC.m */,
+				04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */,
+				04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -851,6 +856,7 @@
 				FA4450A51E3F7CA200375428 /* CNOnboardingVerifyCodeVC.m in Sources */,
 				FA4450E61E403BAF00375428 /* CNProfileMediaCell.m in Sources */,
 				FA4450C31E3FED8700375428 /* CNConnectionsVC.m in Sources */,
+				04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */,
 				FA44509C1E3F795000375428 /* CNSplashViewController.m in Sources */,
 				FA4450C01E3FDE6600375428 /* CNUtilities.m in Sources */,
 				FA4451091E40C3D300375428 /* CNMatchViewController.m in Sources */,

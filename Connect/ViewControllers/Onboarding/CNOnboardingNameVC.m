@@ -7,7 +7,7 @@
 //
 
 #import "CNOnboardingNameVC.h"
-#import "CNOnboardingPhoneInputVC.h"
+#import "CNOnboardingGenderSelectCV.h"
 
 @interface CNOnboardingNameVC ()
 
@@ -61,7 +61,7 @@
     [CNUser currentUser].lastName = self.txtFLastName.text;
     
     // Show onboarding snapchat vc
-    CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
+    CNOnboardingGenderSelectCV *vc = (CNOnboardingGenderSelectCV *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingGenderSelectCV class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
