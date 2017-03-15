@@ -7,7 +7,7 @@
 //
 
 #import "CNOnboardingGenderSelectCV.h"
-
+#import "CNOnboardingAgeInputVC.h"
 
 @interface CNOnboardingGenderSelectCV ()
 @property (weak, nonatomic) IBOutlet UIButton *btnMale;
@@ -42,7 +42,9 @@
 }
 
 - (IBAction)onNextBtnClicked:(id)sender {
-   
+    // Show onboarding snapchat vc
+    CNOnboardingAgeInputVC *vc = (CNOnboardingAgeInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingAgeInputVC class])];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)onGenderBtnClicked:(id)sender {
