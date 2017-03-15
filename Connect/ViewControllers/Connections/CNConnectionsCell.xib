@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaRegular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CNConnectionsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O5Y-LX-8au">
+                        <rect key="frame" x="6.5" y="13.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="5fk-tf-xgl"/>
+                            <constraint firstAttribute="height" constant="40" id="eL3-jn-Wte"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx8-Qe-kdX">
+                        <rect key="frame" x="56.5" y="24.5" width="36" height="18.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <color key="textColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQV-JM-zFH">
+                        <rect key="frame" x="102.5" y="21" width="68" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="B5w-Xv-ZxW"/>
+                            <constraint firstAttribute="height" constant="25" id="wMI-6f-lHf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
+                        <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBu-Ab-FWb">
+                        <rect key="frame" x="175.5" y="21" width="68" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="9cL-OH-Al3"/>
+                            <constraint firstAttribute="height" constant="25" id="Wge-Pm-P4V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
+                        <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SQV-JM-zFH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JL8-Uc-Cqw"/>
+                    <constraint firstItem="zBu-Ab-FWb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Nde-Fx-FMm"/>
+                    <constraint firstItem="zBu-Ab-FWb" firstAttribute="leading" secondItem="Vx8-Qe-kdX" secondAttribute="trailing" constant="83" id="RqY-wB-uPO"/>
+                    <constraint firstItem="Vx8-Qe-kdX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ThT-8E-qZn"/>
+                    <constraint firstItem="Vx8-Qe-kdX" firstAttribute="leading" secondItem="O5Y-LX-8au" secondAttribute="trailing" constant="10" id="bJq-Xx-cGC"/>
+                    <constraint firstItem="SQV-JM-zFH" firstAttribute="leading" secondItem="Vx8-Qe-kdX" secondAttribute="trailing" constant="10" id="dXC-hP-UCa"/>
+                    <constraint firstItem="O5Y-LX-8au" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="fCv-4j-kRz"/>
+                    <constraint firstItem="O5Y-LX-8au" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="m3U-Ng-7Ab"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="constOfBusinessLeft" destination="RqY-wB-uPO" id="6eF-R8-CgI"/>
+                <outlet property="ivProfileImage" destination="O5Y-LX-8au" id="unt-u2-JxX"/>
+                <outlet property="lblMarkBusiness" destination="zBu-Ab-FWb" id="xdr-LI-JSo"/>
+                <outlet property="lblMarkPersonal" destination="SQV-JM-zFH" id="JRJ-fW-2Im"/>
+                <outlet property="lblName" destination="Vx8-Qe-kdX" id="iZL-Jk-3qz"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

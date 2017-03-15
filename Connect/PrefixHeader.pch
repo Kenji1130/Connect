@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  Connect
+//
+//  Created by Daniel on 30/01/2017.
+//  Copyright © 2017 Connect Social Network. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+#define UIColorFromRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+@import UIKit;
+@import Foundation;
+
+@import Firebase;
+@import Fabric;
+@import DigitsKit;
+@import TwitterKit;
+
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <PinterestSDK/PinterestSDK.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <UIActivityIndicator_for_SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
+
+#import "Constants.h"
+#import "AppDelegate.h"
+#import "ACMacros.h"
+
+// Data models
+#import "CNUser.h"
+
+#endif /* PrefixHeader_pch */

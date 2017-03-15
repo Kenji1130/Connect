@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[CNOnboardingPhoneInputVC onNextBtnClicked:]:CNOnboardingPhoneInputVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "__45-[CNOnboardingPhoneInputVC onNextBtnClicked:]_block_invoke:CNOnboardingPhoneInputVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AppDelegate sharedInstance].dbRef">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

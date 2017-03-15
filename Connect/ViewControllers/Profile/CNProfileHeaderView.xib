@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaRegular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+        <array key="ProximaNovaSemibold.otf">
+            <string>ProximaNovaA-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CNProfileHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv2-zp-WOD">
+                    <rect key="frame" x="325" y="17" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1t9-17-vgU"/>
+                        <constraint firstAttribute="width" constant="50" id="xVh-Dg-s2g"/>
+                    </constraints>
+                    <state key="normal" image="UIButtonProfileSettings"/>
+                    <connections>
+                        <action selector="onSettingsBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="fHH-qc-HD4"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jpa-r6-9Jt">
+                    <rect key="frame" x="125" y="100" width="125" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="VUM-eu-BUs"/>
+                        <constraint firstAttribute="width" constant="125" id="tec-D8-Bk7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="62.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-Ll-kTm">
+                    <rect key="frame" x="125" y="100" width="125" height="125"/>
+                    <state key="normal" image="UIButtonProfileCamera"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="62.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onImagePickBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="xnC-RF-qBI"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1O-sB-N9z">
+                    <rect key="frame" x="16" y="238" width="343" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQN-ea-dXD">
+                            <rect key="frame" x="150" y="2" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="HbX-Qm-CFh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
+                            <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="guc-cz-xuS">
+                            <rect key="frame" x="200" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="Gu6-Cb-OxI"/>
+                                <constraint firstAttribute="height" constant="20" id="feH-Q8-9qp"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2q-ui-QOE">
+                            <rect key="frame" x="153" y="23" width="36" height="21"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                            <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="VQN-ea-dXD" firstAttribute="top" secondItem="z1O-sB-N9z" secondAttribute="top" constant="2" id="Klq-BN-fEO"/>
+                        <constraint firstItem="Y2q-ui-QOE" firstAttribute="centerX" secondItem="z1O-sB-N9z" secondAttribute="centerX" id="LCk-Yv-MTg"/>
+                        <constraint firstItem="Y2q-ui-QOE" firstAttribute="top" secondItem="VQN-ea-dXD" secondAttribute="bottom" id="OVm-lG-RGC"/>
+                        <constraint firstAttribute="bottom" secondItem="Y2q-ui-QOE" secondAttribute="bottom" id="OmR-sJ-cWk"/>
+                        <constraint firstItem="VQN-ea-dXD" firstAttribute="centerX" secondItem="z1O-sB-N9z" secondAttribute="centerX" id="Ref-l1-WT1"/>
+                        <constraint firstItem="guc-cz-xuS" firstAttribute="top" secondItem="z1O-sB-N9z" secondAttribute="top" id="kh5-1w-CFB"/>
+                        <constraint firstAttribute="height" constant="44" id="rxj-zn-DkU"/>
+                        <constraint firstItem="guc-cz-xuS" firstAttribute="leading" secondItem="VQN-ea-dXD" secondAttribute="trailing" constant="8" id="y19-vm-57p"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJq-Ns-1s8">
+                    <rect key="frame" x="16" y="237" width="343" height="105"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3n-La-hhu">
+                            <rect key="frame" x="71.5" y="0.0" width="200" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="7J1-xk-7i0"/>
+                                <constraint firstAttribute="height" constant="45" id="ki9-eV-GkZ"/>
+                            </constraints>
+                            <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="22.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Occupation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-qc-Lg7">
+                            <rect key="frame" x="71" y="60" width="200" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="F6A-Tq-EUa"/>
+                                <constraint firstAttribute="height" constant="45" id="x6V-6J-dft"/>
+                            </constraints>
+                            <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="22.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="0bq-H5-qZ0"/>
+                        <constraint firstItem="f3Q-qc-Lg7" firstAttribute="centerX" secondItem="NJq-Ns-1s8" secondAttribute="centerX" id="5mZ-iQ-eaA"/>
+                        <constraint firstItem="n3n-La-hhu" firstAttribute="top" secondItem="NJq-Ns-1s8" secondAttribute="top" id="AMI-C9-dad"/>
+                        <constraint firstItem="n3n-La-hhu" firstAttribute="centerX" secondItem="NJq-Ns-1s8" secondAttribute="centerX" id="AtX-GL-Kx3"/>
+                        <constraint firstItem="f3Q-qc-Lg7" firstAttribute="top" secondItem="n3n-La-hhu" secondAttribute="bottom" constant="15" id="spl-vN-dbD"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileBetaTester" translatesAutoresizingMaskIntoConstraints="NO" id="0Nx-m6-cmF">
+                    <rect key="frame" x="227" y="112" width="46" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="CRl-b7-5xW"/>
+                        <constraint firstAttribute="width" constant="46" id="Z8m-vm-GXr"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Kv2-zp-WOD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="1kt-Ny-kxL"/>
+                <constraint firstItem="Dfm-Ll-kTm" firstAttribute="height" secondItem="Jpa-r6-9Jt" secondAttribute="height" id="5A8-mM-5lW"/>
+                <constraint firstItem="0Nx-m6-cmF" firstAttribute="top" secondItem="Jpa-r6-9Jt" secondAttribute="top" constant="12" id="5x5-zE-0hd"/>
+                <constraint firstItem="z1O-sB-N9z" firstAttribute="top" secondItem="Jpa-r6-9Jt" secondAttribute="bottom" constant="13" id="8tE-xX-BWD"/>
+                <constraint firstAttribute="trailing" secondItem="NJq-Ns-1s8" secondAttribute="trailing" constant="16" id="9uE-W9-3k9"/>
+                <constraint firstItem="NJq-Ns-1s8" firstAttribute="top" secondItem="Dfm-Ll-kTm" secondAttribute="bottom" constant="12" id="GAh-A8-gTL"/>
+                <constraint firstItem="Jpa-r6-9Jt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="Jvz-RZ-C0V"/>
+                <constraint firstAttribute="trailing" secondItem="z1O-sB-N9z" secondAttribute="trailing" constant="16" id="PJv-MR-EI9"/>
+                <constraint firstItem="z1O-sB-N9z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="PL1-eU-cEr"/>
+                <constraint firstItem="Dfm-Ll-kTm" firstAttribute="leading" secondItem="Jpa-r6-9Jt" secondAttribute="leading" id="RGm-K0-NBw"/>
+                <constraint firstItem="0Nx-m6-cmF" firstAttribute="leading" secondItem="Jpa-r6-9Jt" secondAttribute="trailing" constant="-23" id="S6K-ls-tzk"/>
+                <constraint firstItem="Dfm-Ll-kTm" firstAttribute="top" secondItem="Jpa-r6-9Jt" secondAttribute="top" id="awk-gU-Dhd"/>
+                <constraint firstItem="NJq-Ns-1s8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="gHO-ng-TtO"/>
+                <constraint firstItem="Dfm-Ll-kTm" firstAttribute="width" secondItem="Jpa-r6-9Jt" secondAttribute="width" id="pYv-rE-dOJ"/>
+                <constraint firstAttribute="trailing" secondItem="Kv2-zp-WOD" secondAttribute="trailing" id="tlO-dP-tai"/>
+                <constraint firstItem="Jpa-r6-9Jt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vce-To-Y9r"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnImagePick" destination="Dfm-Ll-kTm" id="qik-v9-s7A"/>
+                <outlet property="btnSettings" destination="Kv2-zp-WOD" id="Ios-TJ-a0J"/>
+                <outlet property="ivBetaTesterImage" destination="0Nx-m6-cmF" id="yjG-JF-SRT"/>
+                <outlet property="ivProfileChecked" destination="guc-cz-xuS" id="XOn-eF-gqN"/>
+                <outlet property="ivProfileImage" destination="Jpa-r6-9Jt" id="lwP-HJ-P4B"/>
+                <outlet property="lblName" destination="VQN-ea-dXD" id="f38-hi-ldO"/>
+                <outlet property="lblOccupation" destination="Y2q-ui-QOE" id="cbb-op-BnQ"/>
+                <outlet property="txtFName" destination="n3n-La-hhu" id="5C2-s2-PUq"/>
+                <outlet property="txtFOccupation" destination="f3Q-qc-Lg7" id="QCl-7P-aEE"/>
+                <outlet property="viewEditProfile" destination="NJq-Ns-1s8" id="xo9-6C-npy"/>
+                <outlet property="viewProfileInfo" destination="z1O-sB-N9z" id="fGu-e6-nIX"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="UIButtonProfileCamera" width="30" height="23"/>
+        <image name="UIButtonProfileSettings" width="24" height="24"/>
+        <image name="UIImageViewProfileBetaTester" width="46" height="63"/>
+        <image name="UIImageViewProfileCheckmark" width="20" height="20"/>
+    </resources>
+</document>

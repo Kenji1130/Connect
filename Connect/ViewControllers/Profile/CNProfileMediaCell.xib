@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaRegular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CNProfileMediaCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="otV-kk-DLp">
+                        <rect key="frame" x="20" y="10" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="XNZ-x3-PwT"/>
+                            <constraint firstAttribute="height" constant="30" id="hfO-eH-k1L"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-Wh-hiw">
+                        <rect key="frame" x="60" y="15.5" width="36" height="18.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEt-9V-wjV">
+                        <rect key="frame" x="190" y="0.0" width="130" height="49"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOR-Ek-3wb">
+                                <rect key="frame" x="75" y="4.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GVy-x5-DZW"/>
+                                    <constraint firstAttribute="width" constant="40" id="euj-To-cuW"/>
+                                </constraints>
+                                <state key="normal" image="UIImageViewProfileDrag"/>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IEu-Jf-IbG">
+                                <rect key="frame" x="1" y="9" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="RVZ-D2-zUY"/>
+                            <constraint firstItem="IEu-Jf-IbG" firstAttribute="centerY" secondItem="JEt-9V-wjV" secondAttribute="centerY" id="aNR-26-aRC"/>
+                            <constraint firstItem="UOR-Ek-3wb" firstAttribute="centerY" secondItem="JEt-9V-wjV" secondAttribute="centerY" id="c3X-jX-HwC"/>
+                            <constraint firstAttribute="trailing" secondItem="UOR-Ek-3wb" secondAttribute="trailing" constant="15" id="qMQ-B7-ZAB"/>
+                            <constraint firstItem="UOR-Ek-3wb" firstAttribute="leading" secondItem="IEu-Jf-IbG" secondAttribute="trailing" constant="25" id="rKN-Db-H3z"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-F8-SeA">
+                        <rect key="frame" x="145" y="0.0" width="175" height="49"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBd-u4-IRM">
+                                <rect key="frame" x="95" y="12" width="65" height="25"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0kg-9v-opJ"/>
+                                    <constraint firstAttribute="width" constant="65" id="dbh-c0-PTZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
+                                <state key="normal" title="+ Follow">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cli-ll-JcH">
+                                <rect key="frame" x="0.0" y="12" width="85" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="DU9-Ua-kfk"/>
+                                    <constraint firstAttribute="height" constant="25" id="XTv-gG-hm5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
+                                <state key="normal" title="View Profile">
+                                    <color key="titleColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CBd-u4-IRM" secondAttribute="trailing" constant="15" id="6M5-N2-13N"/>
+                            <constraint firstItem="CBd-u4-IRM" firstAttribute="leading" secondItem="cli-ll-JcH" secondAttribute="trailing" constant="10" id="Wz1-VU-tS0"/>
+                            <constraint firstItem="cli-ll-JcH" firstAttribute="centerY" secondItem="Tlo-F8-SeA" secondAttribute="centerY" id="YCk-sy-lXy"/>
+                            <constraint firstAttribute="width" constant="175" id="op6-au-814"/>
+                            <constraint firstItem="CBd-u4-IRM" firstAttribute="centerY" secondItem="Tlo-F8-SeA" secondAttribute="centerY" id="yw6-5C-2VG"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqK-zb-OGc">
+                        <rect key="frame" x="195" y="0.0" width="110" height="49"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N1-mb-mWW">
+                                <rect key="frame" x="61" y="0.0" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="GwZ-Rf-0Nj"/>
+                                </constraints>
+                                <state key="normal" image="UIImageViewProfileSocialDelete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzb-hU-zLc">
+                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="ZE3-do-ECX"/>
+                                </constraints>
+                                <state key="normal" image="UIImageViewProfileSocialEdit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9N1-mb-mWW" firstAttribute="leading" secondItem="nzb-hU-zLc" secondAttribute="trailing" constant="12" id="878-iB-mOF"/>
+                            <constraint firstAttribute="bottom" secondItem="nzb-hU-zLc" secondAttribute="bottom" id="Dhi-F8-jYQ"/>
+                            <constraint firstItem="nzb-hU-zLc" firstAttribute="top" secondItem="LqK-zb-OGc" secondAttribute="top" id="Ezl-vZ-CO0"/>
+                            <constraint firstAttribute="width" constant="110" id="YVa-Si-cGn"/>
+                            <constraint firstAttribute="bottom" secondItem="9N1-mb-mWW" secondAttribute="bottom" id="b3c-Q3-YtG"/>
+                            <constraint firstAttribute="trailing" secondItem="9N1-mb-mWW" secondAttribute="trailing" id="jgX-hU-UpH"/>
+                            <constraint firstItem="9N1-mb-mWW" firstAttribute="top" secondItem="LqK-zb-OGc" secondAttribute="top" id="v9k-6L-NjT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="JEt-9V-wjV" secondAttribute="bottom" id="2rG-yo-RyR"/>
+                    <constraint firstAttribute="bottom" secondItem="LqK-zb-OGc" secondAttribute="bottom" id="CTT-8K-YZ5"/>
+                    <constraint firstAttribute="trailing" secondItem="JEt-9V-wjV" secondAttribute="trailing" id="CpL-Pu-ruD"/>
+                    <constraint firstItem="LqK-zb-OGc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IBY-tJ-w4Y"/>
+                    <constraint firstAttribute="trailing" secondItem="LqK-zb-OGc" secondAttribute="trailing" constant="15" id="N6l-u9-H8H"/>
+                    <constraint firstItem="otV-kk-DLp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NQZ-jH-bkH"/>
+                    <constraint firstItem="JEt-9V-wjV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OBT-2j-ZjH"/>
+                    <constraint firstItem="Tlo-F8-SeA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X3k-Sx-Jgd"/>
+                    <constraint firstAttribute="trailing" secondItem="Tlo-F8-SeA" secondAttribute="trailing" id="atH-cx-WVQ"/>
+                    <constraint firstItem="Qk7-Wh-hiw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iKh-dr-i6o"/>
+                    <constraint firstAttribute="bottom" secondItem="Tlo-F8-SeA" secondAttribute="bottom" id="jgh-jH-LXa"/>
+                    <constraint firstItem="otV-kk-DLp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="khr-D6-fkf"/>
+                    <constraint firstItem="Qk7-Wh-hiw" firstAttribute="leading" secondItem="otV-kk-DLp" secondAttribute="trailing" constant="10" id="tBy-kc-Vyt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnDelete" destination="9N1-mb-mWW" id="Wgv-xz-k0h"/>
+                <outlet property="btnDrag" destination="UOR-Ek-3wb" id="w3Q-Ur-ukz"/>
+                <outlet property="btnEdit" destination="nzb-hU-zLc" id="qkI-eX-E9n"/>
+                <outlet property="btnFollow" destination="CBd-u4-IRM" id="dW0-TF-KGs"/>
+                <outlet property="btnViewProfile" destination="cli-ll-JcH" id="JjV-dR-mFh"/>
+                <outlet property="ivSocialMediaLogo" destination="otV-kk-DLp" id="hg6-6A-GP7"/>
+                <outlet property="lblUsername" destination="Qk7-Wh-hiw" id="W7c-q5-MmT"/>
+                <outlet property="mediaSwitch" destination="IEu-Jf-IbG" id="FkN-9r-3mR"/>
+                <outlet property="viewCurrentOptions" destination="JEt-9V-wjV" id="UtX-QZ-i0Z"/>
+                <outlet property="viewEditOptions" destination="LqK-zb-OGc" id="Wc3-kT-JuP"/>
+                <outlet property="viewOtherOptions" destination="Tlo-F8-SeA" id="has-Lp-bGZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UIImageViewProfileDrag" width="30" height="18"/>
+        <image name="UIImageViewProfileSocialDelete" width="20" height="20"/>
+        <image name="UIImageViewProfileSocialEdit" width="20" height="20"/>
+    </resources>
+</document>
