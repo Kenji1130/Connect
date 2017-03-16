@@ -10,4 +10,6 @@
 
 @interface CNOnboardingPhoneInputVC : UIViewController
 
+@property (nonatomic, assign) UIImage *profileImage;
+
 @end

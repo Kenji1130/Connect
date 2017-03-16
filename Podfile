@@ -8,10 +8,11 @@ target 'Connect' do
   # Pods for Connect
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Fabric'
   pod 'Digits'
   pod 'TwitterKit'
-  pod 'PinterestSDK', :git => 'git@github.com:pinterest/ios-pdk.git'
+  pod "PinterestSDK", :git => "https://github.com/pinterest/ios-pdk.git"
   pod 'MBProgressHUD'
   pod 'SDWebImage'
   pod 'UIActivityIndicator-for-SDWebImage'

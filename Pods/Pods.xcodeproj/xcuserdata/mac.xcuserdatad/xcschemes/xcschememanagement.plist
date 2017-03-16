@@ -6,53 +6,58 @@
 	<dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>PinterestSDK.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Connect.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-ConnectTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-ConnectUITests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SAMKeychain.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>UIActivityIndicator-for-SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -62,12 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>00CB05F1382A531B953BF542A143683E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0D647E74E95C471C7E221C1F339D4277</key>
+		<key>1B7538EAECEBFC033BF66D52CC0FA55F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>598B8F7C04D32AE0AB2D352AE6FF1ABB</key>
+		<key>B233A786C105554D2AEA92AE8517CF6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B233A786C105554D2AEA92AE8517CF6C</key>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>D3F2EAA9636EFD08F8428541D78050F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3878A52BF3F5DEE3304009D7E209DAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2B70179B56D85060F764AD38F8FC5AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

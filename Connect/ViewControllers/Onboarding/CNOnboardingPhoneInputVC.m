@@ -98,23 +98,25 @@
                                        @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType]};
             
             FIRDatabaseReference *userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] childByAutoId];
-            [userRef setValue:userInfo];
-            
-            NSLog(@"user id = %@", userRef.key);
-            [CNUser currentUser].userID = userRef.key;
-            
-            // Save login status                                                                                        
-            [[NSUserDefaults standardUserDefaults] setObject:userRef.key forKey:kLoggedUserID];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // Show main screens
-                [[AppDelegate sharedInstance] showMain];
+            [userRef setValue:userInfo withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
                 
-                // Show onboarding snapchat vc
-                // CNOnboardingVerifyCodeVC *vc = (CNOnboardingVerifyCodeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingVerifyCodeVC class])];
-                // [self.navigationController pushViewController:vc animated:YES];
-            });
+                NSLog(@"user id = %@", ref.key);
+                [CNUser currentUser].userID = ref.key;
+                
+                // Save login status
+                [[NSUserDefaults standardUserDefaults] setObject:ref.key forKey:kLoggedUserID];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // Show main screens
+                    [[AppDelegate sharedInstance] showMain];
+                    
+                    // Show onboarding snapchat vc
+                    // CNOnboardingVerifyCodeVC *vc = (CNOnboardingVerifyCodeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingVerifyCodeVC class])];
+                    // [self.navigationController pushViewController:vc animated:YES];
+                });
+            }];
+
         } else {
             NSLog(@"Authentication error: %@", error.localizedDescription);
         }

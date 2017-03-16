@@ -71,6 +71,7 @@
 - (IBAction)onNextBtnClicked:(id)sender {
 //     Show onboarding snapchat vc
     CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
+    vc.profileImage = [_profileImageView image];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
