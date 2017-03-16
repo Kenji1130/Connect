@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) FIRDatabaseReference *dbRef;
 @property (strong, nonatomic) FIRStorage *storage;
-    @property (strong, nonatomic) FIRStorageReference *storageRef;
+@property (strong, nonatomic) FIRStorageReference *storageRef;
 
 + (instancetype)sharedInstance;
 

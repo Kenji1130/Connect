@@ -8,6 +8,7 @@
 
 #import "CNOnboardingProfileImagePickerVC.h"
 #import "CNOnboardingPhoneInputVC.h"
+#import "CNOnboardingSocialVC.h"
 
 @interface CNOnboardingProfileImagePickerVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -69,10 +70,13 @@
 }
 
 - (IBAction)onNextBtnClicked:(id)sender {
-//     Show onboarding snapchat vc
+
     CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
     vc.profileImage = [_profileImageView image];
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    CNOnboardingSocialVC *vc1 = (CNOnboardingSocialVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
+
+    [self.navigationController pushViewController:vc1 animated:YES];
 }
 
 - (void)showCamera{
