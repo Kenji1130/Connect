@@ -29,6 +29,8 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     
     // Set Firebase database reference
     self.dbRef = [[FIRDatabase database] reference];
+    self.storage = [FIRStorage storage];
+    self.storageRef = [self.storage reference];
     
     // Initialize Fabric
     [Fabric with:@[[Digits class], [Twitter class]]];

@@ -51,7 +51,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-RG-sOi">
-                                                        <rect key="frame" x="70" y="465" width="237" height="52"/>
+                                                        <rect key="frame" x="69" y="465" width="237" height="52"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -78,7 +78,7 @@ News Feed</string>
                                                 <rect key="frame" x="375" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-3p-K6l">
-                                                        <rect key="frame" x="70" y="465" width="237" height="52"/>
+                                                        <rect key="frame" x="69" y="465" width="237" height="52"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -105,7 +105,7 @@ News Feed</string>
                                                 <rect key="frame" x="750" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-Id-HMl">
-                                                        <rect key="frame" x="70" y="465" width="237" height="52"/>
+                                                        <rect key="frame" x="69" y="465" width="237" height="52"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -218,7 +218,7 @@ News Feed</string>
             <objects>
                 <navigationController id="gLi-ZL-rNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconConnections" id="cnp-bh-TrE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IY3-o7-U7A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IY3-o7-U7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -320,14 +320,14 @@ News Feed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-0o-0Eb">
-                                        <rect key="frame" x="0.0" y="41" width="345" height="40"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="345" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="GZ7-46-bbW"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ide-MM-QWT">
-                                        <rect key="frame" x="0.0" y="122" width="345" height="40"/>
+                                        <rect key="frame" x="0.0" y="121.5" width="345" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL5-WZ-u8I">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
@@ -654,7 +654,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-Ie-SE0">
-                                <rect key="frame" x="52" y="110" width="273" height="31"/>
+                                <rect key="frame" x="51" y="110" width="273" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -770,7 +770,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYu-Ae-Nu1">
-                                <rect key="frame" x="90" y="110" width="197" height="31"/>
+                                <rect key="frame" x="89" y="110" width="197" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -797,13 +797,13 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the code we just send you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-Zd-jC3">
-                                <rect key="frame" x="22" y="169" width="331" height="25"/>
+                                <rect key="frame" x="22" y="168.5" width="331" height="24.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Tay-c0-ZBV">
-                                <rect key="frame" x="81" y="244" width="214" height="48"/>
+                                <rect key="frame" x="81" y="243" width="214" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2O-WE-yOF">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="48"/>
@@ -830,7 +830,7 @@ News Feed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-ou-lPT">
-                                        <rect key="frame" x="60" y="0.0" width="35" height="48"/>
+                                        <rect key="frame" x="59.5" y="0.0" width="35" height="48"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qhJ-xZ-tPD">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="47"/>
@@ -854,7 +854,7 @@ News Feed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhB-nA-L94">
-                                        <rect key="frame" x="119" y="0.0" width="35" height="48"/>
+                                        <rect key="frame" x="119.5" y="0.0" width="35" height="48"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbc-lR-IC6">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="47"/>
@@ -908,16 +908,16 @@ News Feed</string>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-XF-aat">
-                                <rect key="frame" x="151" y="324" width="74" height="20"/>
+                                <rect key="frame" x="151" y="323" width="74" height="19.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewVerifiedMark" translatesAutoresizingMaskIntoConstraints="NO" id="jdq-De-MHc">
-                                        <rect key="frame" x="0.0" y="0.0" width="18" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="18" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="0zr-ch-5nC"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-af-KqC">
-                                        <rect key="frame" x="20" y="0.0" width="54" height="20"/>
+                                        <rect key="frame" x="20" y="0.0" width="54" height="19.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1142,7 +1142,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW OLD ARE YOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-ym-Lxd">
-                                <rect key="frame" x="68" y="110" width="241" height="31"/>
+                                <rect key="frame" x="67" y="110" width="241" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1212,7 +1212,7 @@ News Feed</string>
         <scene sceneID="3kL-sr-VxT">
             <objects>
                 <navigationController storyboardIdentifier="loginNavController" navigationBarHidden="YES" id="sOi-YW-ner" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g6-Do-Z6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9g6-Do-Z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1229,7 +1229,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="2wJ-dG-RmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconScanner" id="IoQ-86-IW8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aJ-fL-0Sh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8aJ-fL-0Sh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1246,7 +1246,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="rVA-bE-mLT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconQRCode" id="fFJ-SL-fMF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Xn-IF-pYb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Xn-IF-pYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1263,7 +1263,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="kRq-TN-CTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconProfile" id="JNe-Jo-NDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmP-yt-Jyg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DmP-yt-Jyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
