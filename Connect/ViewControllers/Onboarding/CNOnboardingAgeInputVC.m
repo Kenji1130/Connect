@@ -7,6 +7,7 @@
 //
 
 #import "CNOnboardingAgeInputVC.h"
+#import "CNOnboardingProfileImagePickerVC.h"
 
 @interface CNOnboardingAgeInputVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfAge;
@@ -18,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +59,7 @@
     [CNUser currentUser].age = [f numberFromString:self.tfAge.text];
     
     // Show onboarding snapchat vc
-    CNOnboardingAgeInputVC *vc = (CNOnboardingAgeInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingAgeInputVC class])];
+    CNOnboardingProfileImagePickerVC *vc = (CNOnboardingProfileImagePickerVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingProfileImagePickerVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

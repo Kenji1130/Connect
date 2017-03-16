@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0402E26D1E79C62E0042B672 /* CNOnboardingAgeInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402E26C1E79C62E0042B672 /* CNOnboardingAgeInputVC.m */; };
+		0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402E26F1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		30C3724023A95B58C929404B /* Pods_Connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B53EBDDF8321645980AAE2 /* Pods_Connect.framework */; };
 		5A623BC47166DDF8BAA8A477 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F708DE2C7C4D4FE7F3B3B5B /* Pods_ConnectTests.framework */; };
@@ -86,6 +87,8 @@
 /* Begin PBXFileReference section */
 		0402E26B1E79C62E0042B672 /* CNOnboardingAgeInputVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingAgeInputVC.h; path = ViewControllers/Onboarding/CNOnboardingAgeInputVC.h; sourceTree = "<group>"; };
 		0402E26C1E79C62E0042B672 /* CNOnboardingAgeInputVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingAgeInputVC.m; path = ViewControllers/Onboarding/CNOnboardingAgeInputVC.m; sourceTree = "<group>"; };
+		0402E26E1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingProfileImagePickerVC.h; path = ViewControllers/Onboarding/CNOnboardingProfileImagePickerVC.h; sourceTree = "<group>"; };
+		0402E26F1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingProfileImagePickerVC.m; path = ViewControllers/Onboarding/CNOnboardingProfileImagePickerVC.m; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
 		185F60FFB0BF3CB19A052DC2 /* Pods-ConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectTests/Pods-ConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */,
 				0402E26B1E79C62E0042B672 /* CNOnboardingAgeInputVC.h */,
 				0402E26C1E79C62E0042B672 /* CNOnboardingAgeInputVC.m */,
+				0402E26E1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.h */,
+				0402E26F1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -880,6 +885,7 @@
 				FA4450D71E4014C500375428 /* CNScanViewController.m in Sources */,
 				FA4450C91E3FEDB400375428 /* CNConnectionsCell.m in Sources */,
 				FA4450A21E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m in Sources */,
+				0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */,
 				FA4450EB1E409A3100375428 /* CNProfileEditOptionCell.m in Sources */,
 				FA4450DA1E401E3500375428 /* CNUser.m in Sources */,
 				FA4450E01E403B4900375428 /* CNProfileHeaderView.m in Sources */,

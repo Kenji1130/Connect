@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>823996355950-a71mo8fcrbr6nllricg9lplhh8ss0run.apps.googleusercontent.com</string>
+	<string>351983882494-rhv456jk8s7frlo6a17s03qjln864agq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.823996355950-a71mo8fcrbr6nllricg9lplhh8ss0run</string>
+	<string>com.googleusercontent.apps.351983882494-rhv456jk8s7frlo6a17s03qjln864agq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAwto0CaEXS3ZSlru1pDW5y7IzuGmdD2iY</string>
+	<string>AIzaSyB5C7JsZb6uITdxY6MiudZUre3_mBIG-uI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>823996355950</string>
+	<string>351983882494</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.csn.Connect</string>
 	<key>PROJECT_ID</key>
-	<string>connect-social-network</string>
+	<string>connect-8861d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>connect-social-network.appspot.com</string>
+	<string>connect-8861d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:823996355950:ios:f3a765ba5c020cb2</string>
+	<string>1:351983882494:ios:f3a765ba5c020cb2</string>
 	<key>DATABASE_URL</key>
-	<string>https://connect-social-network.firebaseio.com</string>
+	<string>https://connect-8861d.firebaseio.com</string>
 </dict>
 </plist>
