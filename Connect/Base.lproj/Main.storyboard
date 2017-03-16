@@ -218,7 +218,7 @@ News Feed</string>
             <objects>
                 <navigationController id="gLi-ZL-rNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconConnections" id="cnp-bh-TrE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IY3-o7-U7A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IY3-o7-U7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -620,85 +620,20 @@ News Feed</string>
                                     <constraint firstAttribute="height" constant="140" id="hdq-ND-EZ6"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSK-7l-NsS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.1817107372" green="0.092578269569999996" blue="0.17136434219999999" alpha="0.60016163789999999" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-7h-u8S">
-                                <rect key="frame" x="0.0" y="667" width="375" height="145"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clq-iH-rxW">
-                                        <rect key="frame" x="0.0" y="9" width="375" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="5ye-bY-44a"/>
-                                        </constraints>
-                                        <state key="normal" title="From Photo Library"/>
-                                        <connections>
-                                            <action selector="onPhotoClicked:" destination="2BY-dI-Dgm" eventType="touchUpInside" id="CqE-G4-x4r"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYU-mn-1cr">
-                                        <rect key="frame" x="0.0" y="54" width="375" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Je8-jp-aZd"/>
-                                        </constraints>
-                                        <state key="normal" title="From Take Photo"/>
-                                        <connections>
-                                            <action selector="onCameraClicked:" destination="2BY-dI-Dgm" eventType="touchUpInside" id="Wb1-4U-AN7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-3q-Q98">
-                                        <rect key="frame" x="0.5" y="100" width="374.5" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Dkm-CY-Ra6"/>
-                                        </constraints>
-                                        <state key="normal" title="Cancel"/>
-                                        <connections>
-                                            <action selector="onCancelPhotoPicker:" destination="2BY-dI-Dgm" eventType="touchUpInside" id="uKX-Cm-2aS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="clq-iH-rxW" secondAttribute="trailing" id="0x8-qL-a5z"/>
-                                    <constraint firstItem="WYU-mn-1cr" firstAttribute="top" secondItem="clq-iH-rxW" secondAttribute="bottom" constant="5" id="186-Ej-uux"/>
-                                    <constraint firstAttribute="trailing" secondItem="Bjc-3q-Q98" secondAttribute="trailing" id="2IO-Qc-y72"/>
-                                    <constraint firstItem="WYU-mn-1cr" firstAttribute="leading" secondItem="xiV-7h-u8S" secondAttribute="leading" id="3zf-eQ-MDF"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bjc-3q-Q98" secondAttribute="bottom" constant="5" id="Eyz-5d-kFu"/>
-                                    <constraint firstAttribute="height" constant="145" id="GFk-Au-FPT"/>
-                                    <constraint firstItem="clq-iH-rxW" firstAttribute="leading" secondItem="xiV-7h-u8S" secondAttribute="leading" id="LwA-yC-YjS"/>
-                                    <constraint firstItem="clq-iH-rxW" firstAttribute="top" secondItem="xiV-7h-u8S" secondAttribute="top" constant="9" id="Pcm-ip-ZyG"/>
-                                    <constraint firstItem="Bjc-3q-Q98" firstAttribute="leading" secondItem="xiV-7h-u8S" secondAttribute="leading" id="bQH-bM-xVl"/>
-                                    <constraint firstAttribute="trailing" secondItem="WYU-mn-1cr" secondAttribute="trailing" id="kEO-ze-Exq"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uTN-3g-wOo" firstAttribute="top" secondItem="FSK-7l-NsS" secondAttribute="bottom" id="1DH-5E-IJR"/>
-                            <constraint firstItem="FSK-7l-NsS" firstAttribute="leading" secondItem="34f-0B-q4a" secondAttribute="leading" id="4xa-36-vfb"/>
                             <constraint firstItem="80k-zA-zi6" firstAttribute="top" secondItem="Az9-IP-svE" secondAttribute="bottom" constant="36.5" id="563-g9-sfc"/>
                             <constraint firstItem="wZR-Lc-sMW" firstAttribute="centerX" secondItem="34f-0B-q4a" secondAttribute="centerX" id="DJH-pd-OJi"/>
                             <constraint firstItem="BLQ-vh-9kg" firstAttribute="leading" secondItem="34f-0B-q4a" secondAttribute="leading" id="Dem-NT-hNg"/>
-                            <constraint firstAttribute="trailing" secondItem="xiV-7h-u8S" secondAttribute="trailing" id="LYg-ce-4dh"/>
                             <constraint firstItem="wZR-Lc-sMW" firstAttribute="top" secondItem="34f-0B-q4a" secondAttribute="centerY" constant="50" id="RVv-1N-5uB"/>
                             <constraint firstItem="80k-zA-zi6" firstAttribute="centerX" secondItem="34f-0B-q4a" secondAttribute="centerX" id="V3X-ab-8tg"/>
                             <constraint firstItem="Az9-IP-svE" firstAttribute="centerX" secondItem="34f-0B-q4a" secondAttribute="centerX" id="cCO-HF-c02"/>
-                            <constraint firstItem="FSK-7l-NsS" firstAttribute="top" secondItem="34f-0B-q4a" secondAttribute="top" id="dEq-7A-4gH"/>
                             <constraint firstItem="Az9-IP-svE" firstAttribute="top" secondItem="aLu-To-yhn" secondAttribute="bottom" constant="90" id="gw6-Dm-807"/>
-                            <constraint firstItem="uTN-3g-wOo" firstAttribute="top" secondItem="xiV-7h-u8S" secondAttribute="bottom" constant="-145" id="p2h-ad-kyr"/>
-                            <constraint firstItem="xiV-7h-u8S" firstAttribute="leading" secondItem="34f-0B-q4a" secondAttribute="leading" id="qjb-sx-AnN"/>
                             <constraint firstItem="BLQ-vh-9kg" firstAttribute="top" secondItem="aLu-To-yhn" secondAttribute="bottom" id="rGd-M6-c9D"/>
-                            <constraint firstAttribute="trailing" secondItem="FSK-7l-NsS" secondAttribute="trailing" id="zyC-et-vdn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundView" destination="FSK-7l-NsS" id="2hE-YI-N6k"/>
-                        <outlet property="photoSelectView" destination="xiV-7h-u8S" id="pmk-CU-iVq"/>
-                        <outlet property="photoSelectViewBottomConstraint" destination="p2h-ad-kyr" id="Gz7-Wy-joH"/>
                         <outlet property="profileImageView" destination="80k-zA-zi6" id="hGd-me-eyf"/>
                     </connections>
                 </viewController>
@@ -1277,7 +1212,7 @@ News Feed</string>
         <scene sceneID="3kL-sr-VxT">
             <objects>
                 <navigationController storyboardIdentifier="loginNavController" navigationBarHidden="YES" id="sOi-YW-ner" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g6-Do-Z6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9g6-Do-Z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1294,7 +1229,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="2wJ-dG-RmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconScanner" id="IoQ-86-IW8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aJ-fL-0Sh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8aJ-fL-0Sh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1311,7 +1246,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="rVA-bE-mLT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconQRCode" id="fFJ-SL-fMF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Xn-IF-pYb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Xn-IF-pYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1328,7 +1263,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="kRq-TN-CTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconProfile" id="JNe-Jo-NDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmP-yt-Jyg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DmP-yt-Jyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

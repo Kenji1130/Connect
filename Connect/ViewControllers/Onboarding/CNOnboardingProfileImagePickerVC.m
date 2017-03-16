@@ -11,9 +11,6 @@
 
 @interface CNOnboardingProfileImagePickerVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
-@property (weak, nonatomic) IBOutlet UIView *photoSelectView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *photoSelectViewBottomConstraint;
-@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
 @end
 
@@ -39,33 +36,32 @@
     _profileImageView.layer.cornerRadius = _profileImageView.frame.size.width/2;
     _profileImageView.clipsToBounds = YES;
     
-    _backgroundView.hidden = true;
 }
 
 #pragma mark - IBActions
 
 -(void) selectProfileImage{
     NSLog(@"single Tap on profileImageView");
-    [self showAnimationView:_photoSelectView];
-}
-- (IBAction)onPhotoClicked:(id)sender {
-    [self showPhotoLibrary];
-}
-
-- (IBAction)onCameraClicked:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *photoLibrary = [UIAlertAction actionWithTitle:@"From Photo Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self showPhotoLibrary];
+    }];
+    [alert addAction:photoLibrary];
+    
+    UIAlertAction *camera = [UIAlertAction actionWithTitle:@"From Camera" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self showCamera];
-    } else {
-        UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:@"Error" message:@"Sorry, Your device has no camera." preferredStyle:UIAlertControllerStyleAlert];
-        [alertCon addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self.navigationController presentViewController:alertCon animated:YES completion:nil];
-        
-        return;
-    }
-}
-
-- (IBAction)onCancelPhotoPicker:(id)sender {
-    [self hideAnimationView:_photoSelectView];
+    }];
+    [alert addAction:camera];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:cancel];
+    
+    alert.popoverPresentationController.sourceView = self.profileImageView;
+    alert.popoverPresentationController.sourceRect = self.profileImageView.bounds;
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
 
 - (IBAction)onBackBtnClicked:(id)sender {
@@ -79,11 +75,22 @@
 }
 
 - (void)showCamera{
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:picker animated:YES completion:nil];
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:picker animated:YES completion:nil];
+        
+    } else {
+        UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:@"Error" message:@"Sorry, Your device has no camera." preferredStyle:UIAlertControllerStyleAlert];
+        [alertCon addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [self.navigationController presentViewController:alertCon animated:YES completion:nil];
+        
+        return;
+    }
+
 }
 
 - (void)showPhotoLibrary{
@@ -95,33 +102,16 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (void)showAnimationView:(UIView *) view{
-    [UIView animateWithDuration:0.3 animations:^{
-        view.frame = CGRectMake(view.frame.origin.x, self.view.frame.size.height-view.frame.size.height, view.frame.size.width, view.frame.size.height);
-        self.backgroundView.hidden = false;
-    } completion:^(BOOL finished) { }];
-    
-}
-
-- (void)hideAnimationView:(UIView *) view{
-    [UIView animateWithDuration:0.3 animations:^{
-        view.frame = CGRectMake(view.frame.origin.x, self.view.frame.size.height, view.frame.size.width, view.frame.size.height);
-        self.backgroundView.hidden = true;
-    } completion:^(BOOL finished) { }];
-    
-}
 
 #pragma mark - ImagePickerViewController Delegate
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     NSLog(@"cancel image picker");
-    [self hideAnimationView:_photoSelectView];
     [picker dismissViewControllerAnimated:YES completion:nil];
 
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     [_profileImageView setImage:info[UIImagePickerControllerEditedImage]];
-    [self hideAnimationView:_photoSelectView];
     [picker dismissViewControllerAnimated:YES completion:nil];
 
 }
