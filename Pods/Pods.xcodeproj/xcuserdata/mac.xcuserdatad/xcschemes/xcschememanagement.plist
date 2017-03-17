@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>InstagramKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1B7538EAECEBFC033BF66D52CC0FA55F</key>
+		<key>24ECC93F61F463F702C114C2FA81004A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24ECC93F61F463F702C114C2FA81004A</key>
+		<key>342324A1CF889C2F0B65FAC35C0BEADC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +88,21 @@
 			<true/>
 		</dict>
 		<key>42745AE4BF570E2EC888E694AB9E8D00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C69EA6AC041CD16890CB2F1107DEC57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80B33D344E6C5F4E8F89D98D05FD8347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A58809B27026A13DE1CF66CAC097EC89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,16 +123,6 @@
 			<true/>
 		</dict>
 		<key>D3F2EAA9636EFD08F8428541D78050F8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E3878A52BF3F5DEE3304009D7E209DAD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F2B70179B56D85060F764AD38F8FC5AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

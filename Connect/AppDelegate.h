@@ -16,6 +16,7 @@
 @property (strong, nonatomic) FIRStorage *storage;
 @property (strong, nonatomic) FIRStorageReference *storageRef;
 
+
 + (instancetype)sharedInstance;
 
 - (void)showLogin;

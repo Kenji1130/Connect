@@ -49,6 +49,11 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
+  - InstagramKit (3.8):
+    - AFNetworking (~> 3.0)
+    - InstagramKit/Exclude-UICKeyChainStore (= 3.8)
+  - InstagramKit/Exclude-UICKeyChainStore (3.8):
+    - AFNetworking (~> 3.0)
   - MBProgressHUD (1.0.0)
   - PinterestSDK (1.0.2):
     - AFNetworking (~> 3.0)
@@ -70,10 +75,10 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - InstagramKit (~> 3.0)
   - MBProgressHUD
   - PinterestSDK (from `https://github.com/pinterest/ios-pdk.git`)
   - SDWebImage
-  - TwitterCore
   - TwitterKit
   - UIActivityIndicator-for-SDWebImage
 
@@ -100,6 +105,7 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
+  InstagramKit: 402d6bba375357b548039de08eea19a1b8716354
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   PinterestSDK: 798aced4e2ce7a9607b3df1ac77abf2c72f57734
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
@@ -108,6 +114,6 @@ SPEC CHECKSUMS:
   TwitterKit: 97e729ceea041d174126235bf6ff67dcf37772d4
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 791782da61ed32e108349f121a12466e6547602c
+PODFILE CHECKSUM: 22015e572dd095a85a4a9e12e3d084a872f82bf6
 
 COCOAPODS: 1.2.0

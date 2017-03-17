@@ -8,13 +8,14 @@
 
 #import "CNOnboardingSocialVC.h"
 #import "CNOnboardingPhoneInputVC.h"
+#import "CNInstagramCV.h"
 
-@interface CNOnboardingSocialVC ()
+@interface CNOnboardingSocialVC () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btnFB;
 @property (weak, nonatomic) IBOutlet UIButton *btnTwitter;
 @property (weak, nonatomic) IBOutlet UIButton *btnInstagram;
 @property (weak, nonatomic) IBOutlet UIButton *btnSnapchat;
-
+    
 @end
 
 @implementation CNOnboardingSocialVC
@@ -36,7 +37,8 @@
     [[_btnInstagram layer] setBorderColor:kAppTintColor.CGColor];
     [[_btnSnapchat layer] setBorderColor:kAppTintColor.CGColor];
 }
- 
+    
+
 #pragma mark - IBActions
     
 - (IBAction)onBackBtnClicked:(id)sender {
@@ -172,6 +174,11 @@
     
 }
 
+#pragma mark - Instagram Login
+- (IBAction)connectWithInstagram:(id)sender {
+    CNInstagramCV *vc = (CNInstagramCV *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNInstagramCV class])];
+    [self presentViewController:vc animated:YES completion:nil];
+}
     
 /*
 #pragma mark - Navigation

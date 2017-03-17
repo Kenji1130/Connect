@@ -10,8 +10,6 @@
 #import "CNProfileViewController.h"
 
 NSString *const kPinterestAppID = @"4886880364739441997";
-NSString *const kTwitterSecretKey = @"7J9E7XKKJrQMbQZLFRyQ9NmrxUy0SuA543ppAuCTF3kVa2ZaWg";
-NSString *const kTwitterCustomerKey = @"sdS7fwETVs99cS9QvWpaxKQyI";
 
 @interface AppDelegate ()
 
