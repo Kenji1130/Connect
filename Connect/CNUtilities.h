@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface CNUtilities : NSObject
-
++ (instancetype)shared;
+    
+- (void)showAlert:(UIViewController*)vc withTitle:(NSString *)title withMessage:(NSString *)message;
 @end

@@ -10,6 +10,8 @@
 #import "CNProfileViewController.h"
 
 NSString *const kPinterestAppID = @"4886880364739441997";
+NSString *const kTwitterSecretKey = @"7J9E7XKKJrQMbQZLFRyQ9NmrxUy0SuA543ppAuCTF3kVa2ZaWg";
+NSString *const kTwitterCustomerKey = @"sdS7fwETVs99cS9QvWpaxKQyI";
 
 @interface AppDelegate ()
 
@@ -33,7 +35,8 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     self.storageRef = [self.storage reference];
     
     // Initialize Fabric
-    [Fabric with:@[[Digits class], [Twitter class]]];
+    [[Twitter sharedInstance] startWithConsumerKey:kTwitterCustomerKey consumerSecret:kTwitterSecretKey];
+    [Fabric with:@[ [Twitter class], [Digits class]]];
     
     // Pinterest
     [PDKClient configureSharedInstanceWithAppId:kPinterestAppID];
@@ -119,6 +122,10 @@ NSString *const kPinterestAppID = @"4886880364739441997";
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     
+    if ([[Twitter sharedInstance] application:application openURL:url options:options]) {
+        return YES;
+    }
+        
     BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                                   openURL:url
                                                         sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
@@ -128,6 +135,7 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     return handled;
 }
 
+    
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

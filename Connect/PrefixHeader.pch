@@ -36,6 +36,7 @@ alpha:1.0]
 #import "Constants.h"
 #import "AppDelegate.h"
 #import "ACMacros.h"
+#import "CNUtilities.h"
 
 // Data models
 #import "CNUser.h"

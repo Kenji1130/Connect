@@ -19,17 +19,19 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb279287052503737</string>
-			</array>
-		</dict>
-		<dict>
 			<key>CFBundleURLName</key>
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>pdk4886880364739441997</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitterkit-sdS7fwETVs99cS9QvWpaxKQyI</string>
 			</array>
 		</dict>
 	</array>
@@ -38,16 +40,16 @@
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>4eecec68749a0ceeb7c6bb96dae486b4da94bab6</string>
+		<string>4d06c0892700f0ef1985bb21745d289331537deb</string>
 		<key>Kits</key>
 		<array>
 			<dict>
 				<key>KitInfo</key>
 				<dict>
 					<key>consumerKey</key>
-					<string>oJWMW3hsnCVYgOhzOf0cenet4</string>
+					<string>sdS7fwETVs99cS9QvWpaxKQyI</string>
 					<key>consumerSecret</key>
-					<string>SP78cRI57abd2mbVbCH83rtyz1xlsyDztXRtrC9NLs8JkDo7aZ</string>
+					<string>7J9E7XKKJrQMbQZLFRyQ9NmrxUy0SuA543ppAuCTF3kVa2ZaWg</string>
 				</dict>
 				<key>KitName</key>
 				<string>Digits</string>

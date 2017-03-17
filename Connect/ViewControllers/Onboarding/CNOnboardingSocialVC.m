@@ -49,6 +49,80 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
     
+#pragma mark - Twitter Login
+- (IBAction)connectWithTwitter:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession * _Nullable session, NSError * _Nullable error) {
+        if (session) {
+            NSLog(@"Twitter Login Successed!");
+            [self getTwitterAuth];
+        }
+        else{
+            NSLog(@"Twitter Login Failed! %@", [error localizedDescription]);
+            [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Twitter Connection Failed."];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
+    }];
+}
+    
+- (void)getTwitterAuth{
+    TWTRAPIClient *client = [TWTRAPIClient clientWithCurrentUser];
+    NSURLRequest *request = [client URLRequestWithMethod:@"GET"
+                                                     URL:@"https://api.twitter.com/1.1/account/verify_credentials.json"
+                                              parameters:@{@"include_email": @"true", @"skip_status": @"true"}
+                                                   error:nil];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    
+    if(request){
+        
+        [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            
+            if (data) {
+                NSError *jsonError;
+                NSDictionary *jsonAuth = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                NSLog(@"jsonAuth : %@", jsonAuth);
+                
+                NSString *user_id = [jsonAuth objectForKey:@"id_str"];
+                [params setValue:user_id forKey:@"user_id"];
+                
+                NSString *screen_name = [jsonAuth objectForKey:@"screen_name"];
+                [params setObject:screen_name forKey:@"screen_name"];
+                
+                [self fetchUserInfoFromTwitter:params];
+                
+            }
+            else{
+                NSLog(@"Error : %@", connectionError);
+            }
+        }];
+    }
+}
+    
+- (void)fetchUserInfoFromTwitter : (NSMutableDictionary*)param{
+    
+    TWTRAPIClient *client = [TWTRAPIClient clientWithCurrentUser];
+    NSURLRequest *request = [client URLRequestWithMethod:@"GET"
+                                                     URL:@"https://api.twitter.com/1.1/users/show.json"
+                                              parameters:param
+                                                   error:nil];
+    
+    if (request) {
+        [client sendTwitterRequest:request completion:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+            if (data) {
+                NSDictionary *jsonUser = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                NSLog(@"jsonUser : %@", jsonUser);
+                
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            }
+            else{
+                NSLog(@"Error : %@", connectionError);
+            }
+        }];
+    }
+    
+}
+
+    
 /*
 #pragma mark - Navigation
 
