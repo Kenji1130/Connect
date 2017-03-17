@@ -48,6 +48,56 @@
     vc.profileImage = _profileImage;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark - Facebook Login
+- (IBAction)connectWithFB:(id)sender {
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    FBSDKLoginManager *logIn = [[FBSDKLoginManager alloc] init];
+    [logIn logInWithReadPermissions:@[@"public_profile", @"email", @"user_friends"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        //TODO: process error or result.
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
+        if (error) {
+            NSLog(@"%@", (NSString *)error);
+            [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Facebook  Connection Failed."];
+            
+        }else if (result.isCancelled) {
+            NSLog(@"Login Cancelled");
+            
+        }else {
+            NSLog(@"Logged in with token : @%@", result.token);
+            if ([result.grantedPermissions containsObject:@"email"]) {
+                NSLog(@"result is:%@",result);
+                [self fetchUserInfoFromFB];
+            }
+        }
+
+    }];
+}
+    
+- (void)fetchUserInfoFromFB{
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        NSLog(@"Token is available : %@",[[FBSDKAccessToken currentAccessToken] tokenString]);
+        
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"id, name, link, first_name, last_name, picture.type(large), email, birthday, gender, location, friends, hometown, friendlists"}]
+         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+             if (!error) {
+                 NSLog(@"facebook fetched info : %@", result);
+                 
+//                 NSDictionary *temp = (NSDictionary *)result;
+//                 NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
+//                 [userInfo setObject:[temp objectForKey:@"id"] forKey:@"user_facebook_id"];
+                 
+             } else {
+                 NSLog(@"Error %@",error);
+             }
+         }];
+        
+    }
+    
+}
     
 #pragma mark - Twitter Login
 - (IBAction)connectWithTwitter:(id)sender {

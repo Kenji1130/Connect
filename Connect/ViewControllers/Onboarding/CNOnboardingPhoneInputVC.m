@@ -74,10 +74,8 @@
     NSString *phoneNumber = [NSString stringWithFormat:@"+1%@", self.txtFPhoneNumber.text];
     
     if (![self validatePhone:phoneNumber]) {
-        UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:@"Error" message:@"Your phone number is not valid." preferredStyle:UIAlertControllerStyleAlert];
-        [alertCon addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self.navigationController presentViewController:alertCon animated:YES completion:nil];
-        
+
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Your phone number is not valid."];
         return;
     }
     

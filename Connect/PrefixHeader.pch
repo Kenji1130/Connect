@@ -29,6 +29,7 @@ alpha:1.0]
 @import TwitterKit;
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <PinterestSDK/PinterestSDK.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <UIActivityIndicator_for_SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>

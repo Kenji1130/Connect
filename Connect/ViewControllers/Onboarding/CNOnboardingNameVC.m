@@ -50,10 +50,8 @@
 
 - (IBAction)onNextBtnClicked:(id)sender {
     if ([self.txtFFirstName.text isEqualToString:@""] || [self.txtFLastName.text isEqualToString:@""]) {
-        UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please enter your name." preferredStyle:UIAlertControllerStyleAlert];
-        [alertCon addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self.navigationController presentViewController:alertCon animated:YES completion:nil];
-        
+
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your name."];
         return;
     }
     

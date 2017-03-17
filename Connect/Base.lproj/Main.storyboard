@@ -790,6 +790,9 @@ News Feed</string>
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectWithFB:" destination="iQK-Rp-E8z" eventType="touchUpInside" id="0pB-aL-F8C"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-la-zw6">
                                 <rect key="frame" x="209" y="287" width="120" height="40"/>

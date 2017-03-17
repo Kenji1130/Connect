@@ -47,10 +47,8 @@
 - (IBAction)onNextBtnClicked:(id)sender {
     
     if ([self.tfAge.text isEqualToString:@""]) {
-        UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please enter your age." preferredStyle:UIAlertControllerStyleAlert];
-        [alertCon addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self.navigationController presentViewController:alertCon animated:YES completion:nil];
-        
+
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your age."];
         return;
     }
     
