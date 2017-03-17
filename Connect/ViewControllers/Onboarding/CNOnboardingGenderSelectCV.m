@@ -49,17 +49,17 @@
 
 - (IBAction)onGenderBtnClicked:(id)sender {
     if ([sender tag] == 0) {
-        [CNUser currentUser].userGender = CNUserMale;
+        [CNUser currentUser].gender = CNUserMale;
         [[self.btnMale layer] setBorderColor:kAppTintColor.CGColor];
         [[self.btnFemale layer] setBorderColor: [UIColor blackColor].CGColor];
         [[self.btnOther layer] setBorderColor: [UIColor blackColor].CGColor];
     } else if ([sender tag] == 1){
-        [CNUser currentUser].userGender = CNUserFemalle;
+        [CNUser currentUser].gender = CNUserFemalle;
         [[self.btnFemale layer] setBorderColor:kAppTintColor.CGColor];
         [[self.btnMale layer] setBorderColor: [UIColor blackColor].CGColor];
         [[self.btnOther layer] setBorderColor: [UIColor blackColor].CGColor];
     } else {
-        [CNUser currentUser].userGender = CNUserOther;
+        [CNUser currentUser].gender = CNUserOther;
         [[self.btnOther layer] setBorderColor:kAppTintColor.CGColor];
         [[self.btnMale layer] setBorderColor: [UIColor blackColor].CGColor];
         [[self.btnFemale layer] setBorderColor: [UIColor blackColor].CGColor];

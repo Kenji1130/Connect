@@ -128,11 +128,11 @@
     NSDictionary *userInfo = @{@"username": [CNUser currentUser].username,
                                @"firstName": [CNUser currentUser].firstName,
                                @"lastName": [CNUser currentUser].lastName,
-                               @"gender": [NSNumber numberWithInteger:[CNUser currentUser].userGender],
+                               @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],
                                @"age": [CNUser currentUser].age,
                                @"phoneNumber": [CNUser currentUser].phoneNumber,
                                @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
-                               @"profileImageUrl": [CNUser currentUser].imageURL};
+                               @"imageURL": [CNUser currentUser].imageURL};
     
     FIRDatabaseReference *userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] childByAutoId];
     [userRef setValue:userInfo withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {

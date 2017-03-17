@@ -7,6 +7,7 @@
 //
 
 #import "CNScanViewController.h"
+#import "CNMatchViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "ZFConst.h"
 #import "ZFMaskView.h"
@@ -29,6 +30,13 @@
     [self addUI];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (!self.session.isRunning) {
+        [self.session startRunning];
+    }
+}
+    
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.maskView removeAnimation];
@@ -55,6 +63,7 @@
 #pragma mark - Helpers
 
 - (void)addUI {
+
     self.maskView = [[ZFMaskView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - kBottomBarHeight)];
     [self.view addSubview:self.maskView];
 }
@@ -83,19 +92,21 @@
     [self.session startRunning];
 }
 
-- (void)showMatchScreen {
-    
+- (void)showMatchScreen: (NSString*) scanedBarcode {
+    CNMatchViewController *vc = (CNMatchViewController *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNMatchViewController class])];
+    vc.scanedBarcode = scanedBarcode;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     if (metadataObjects.count > 0) {
-//        [self.session stopRunning];
+        [self.session stopRunning];
         AVMetadataMachineReadableCodeObject * metadataObject = metadataObjects.firstObject;
         NSLog(@"%@", metadataObject.stringValue);
         
-        [self showMatchScreen];
+        [self showMatchScreen:metadataObject.stringValue];
     }
 }
 

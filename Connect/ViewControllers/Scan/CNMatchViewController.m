@@ -7,8 +7,11 @@
 //
 
 #import "CNMatchViewController.h"
+#import "SGQRCodeTool.h"
 
 @interface CNMatchViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *ivCode;
+@property (weak, nonatomic) IBOutlet UILabel *bacodeInfo;
 
 @end
 
@@ -17,12 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configLayout];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+    
+- (void)configLayout{
+    self.ivCode.image = [SGQRCodeTool SG_generateWithDefaultQRCodeData:[NSString stringWithFormat:@"%@", self.scanedBarcode] imageViewWidth:(SCREEN_WIDTH - 70)];
+    self.bacodeInfo.text = _scanedBarcode;
+}
+   
+#pragma mark - IBActions
+    
+- (IBAction)onBackBtnClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

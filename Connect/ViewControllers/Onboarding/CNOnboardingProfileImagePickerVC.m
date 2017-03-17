@@ -7,7 +7,6 @@
 //
 
 #import "CNOnboardingProfileImagePickerVC.h"
-#import "CNOnboardingPhoneInputVC.h"
 #import "CNOnboardingSocialVC.h"
 
 @interface CNOnboardingProfileImagePickerVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -70,13 +69,11 @@
 }
 
 - (IBAction)onNextBtnClicked:(id)sender {
-
-    CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
-    vc.profileImage = [_profileImageView image];
     
-    CNOnboardingSocialVC *vc1 = (CNOnboardingSocialVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
+    CNOnboardingSocialVC *vc = (CNOnboardingSocialVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
+    vc.profileImage = [_profileImageView image];
 
-    [self.navigationController pushViewController:vc1 animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)showCamera{

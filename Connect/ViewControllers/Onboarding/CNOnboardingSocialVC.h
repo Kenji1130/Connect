@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CNOnboardingSocialVC : UIViewController
+@property (nonatomic, assign) UIImage *profileImage;
 
 @end

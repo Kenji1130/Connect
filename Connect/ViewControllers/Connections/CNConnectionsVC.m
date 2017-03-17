@@ -153,14 +153,14 @@
 
 - (void)loadData {
     // Default connections
-//    self.connections = @[@{@"name" : @"Jonathan Reyes", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Gabi Maskowitz", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
-//                         @{@"name" : @"Annie Rowe", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Rachel Woods", @"image" : @"UIImageViewPerson1", @"profile_type" : @2},
-//                         @{@"name" : @"Carol Mendez", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
-//                         @{@"name" : @"Joan Green", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Johnny Castillo", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Kathy Patterson", @"image" : @"UIImageViewPerson1", @"profile_type" : @0}];
+    self.connections = @[@{@"name" : @"Jonathan Reyes", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+                         @{@"name" : @"Gabi Maskowitz", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
+                         @{@"name" : @"Annie Rowe", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+                         @{@"name" : @"Rachel Woods", @"image" : @"UIImageViewPerson1", @"profile_type" : @2},
+                         @{@"name" : @"Carol Mendez", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
+                         @{@"name" : @"Joan Green", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+                         @{@"name" : @"Johnny Castillo", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+                         @{@"name" : @"Kathy Patterson", @"image" : @"UIImageViewPerson1", @"profile_type" : @0}];
     
     if (self.userRef == nil) {
         self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
@@ -278,7 +278,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    //    return @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
+//        return @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
     return self.connectionTitles;
 }
 

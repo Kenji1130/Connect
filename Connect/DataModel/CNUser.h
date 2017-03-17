@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, assign) CNProfileType profileType;
-@property (nonatomic, assign) CNUserGender userGender;
+@property (nonatomic, assign) CNUserGender gender;
 @property (nonatomic, strong) NSNumber *age;
 
 @property (nonatomic, readonly) BOOL isMe;
