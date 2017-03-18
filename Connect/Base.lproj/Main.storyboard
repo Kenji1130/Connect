@@ -926,6 +926,152 @@ News Feed</string>
             </objects>
             <point key="canvasLocation" x="3449" y="139"/>
         </scene>
+        <!--Onboarding User TypeVC-->
+        <scene sceneID="SkM-y0-Jv7">
+            <objects>
+                <viewController storyboardIdentifier="CNOnboardingUserTypeVC" id="yFA-Xg-Rt3" customClass="CNOnboardingUserTypeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhe-uj-LE5"/>
+                        <viewControllerLayoutGuide type="bottom" id="M7L-HF-am8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vjw-8l-mVY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keo-WX-6DZ">
+                                <rect key="frame" x="0.0" y="20" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="0mU-JO-LRx"/>
+                                    <constraint firstAttribute="width" constant="42" id="tKc-Ud-c9s"/>
+                                </constraints>
+                                <state key="normal" image="UIButtonOnboardingBack"/>
+                                <connections>
+                                    <action selector="onBackBtnClicked:" destination="yFA-Xg-Rt3" eventType="touchUpInside" id="5SV-de-2In"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT PROFILE TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ans-lr-0Fx">
+                                <rect key="frame" x="57" y="110" width="262" height="31"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-p8-zLc">
+                                <rect key="frame" x="62.5" y="201" width="250" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Fb0-fN-NFf"/>
+                                    <constraint firstAttribute="height" constant="46" id="pbe-QB-iH3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="PERSONAL">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onUserType:" destination="yFA-Xg-Rt3" eventType="touchUpInside" id="Dhg-Uv-gM3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0M-u0-FwF">
+                                <rect key="frame" x="62" y="263" width="250" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="T23-1o-h4d"/>
+                                    <constraint firstAttribute="height" constant="46" id="TjD-PL-zDo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="BUSINESS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onUserType:" destination="yFA-Xg-Rt3" eventType="touchUpInside" id="iFU-S4-hpw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir9-ET-cJC">
+                                <rect key="frame" x="62" y="325" width="250" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="262-bB-Fet"/>
+                                    <constraint firstAttribute="width" constant="250" id="O8k-rl-mTR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="BOTH">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onUserType:" destination="yFA-Xg-Rt3" eventType="touchUpInside" id="mQL-Nx-Kue"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-wo-rvK">
+                                <rect key="frame" x="62" y="421" width="250" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="JOd-sf-ZBK"/>
+                                    <constraint firstAttribute="width" constant="250" id="aWc-Gz-Jz3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onNextBtnClicked:" destination="yFA-Xg-Rt3" eventType="touchUpInside" id="5im-oN-nwj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JtI-wo-rvK" firstAttribute="centerX" secondItem="Vjw-8l-mVY" secondAttribute="centerX" id="BMj-IP-m9W"/>
+                            <constraint firstItem="l0M-u0-FwF" firstAttribute="centerX" secondItem="Vjw-8l-mVY" secondAttribute="centerX" id="Bqh-KZ-WnC"/>
+                            <constraint firstItem="ir9-ET-cJC" firstAttribute="top" secondItem="l0M-u0-FwF" secondAttribute="bottom" constant="16" id="CCZ-ez-Pgi"/>
+                            <constraint firstItem="wCL-p8-zLc" firstAttribute="top" secondItem="ans-lr-0Fx" secondAttribute="bottom" constant="60" id="MBd-hc-d1v"/>
+                            <constraint firstItem="ans-lr-0Fx" firstAttribute="top" secondItem="qhe-uj-LE5" secondAttribute="bottom" constant="90" id="MsQ-p9-X5t"/>
+                            <constraint firstItem="l0M-u0-FwF" firstAttribute="top" secondItem="wCL-p8-zLc" secondAttribute="bottom" constant="16" id="Ojk-Qh-VeW"/>
+                            <constraint firstItem="Keo-WX-6DZ" firstAttribute="leading" secondItem="Vjw-8l-mVY" secondAttribute="leading" id="PMt-nR-duM"/>
+                            <constraint firstItem="Keo-WX-6DZ" firstAttribute="top" secondItem="qhe-uj-LE5" secondAttribute="bottom" id="PSx-NY-h8a"/>
+                            <constraint firstItem="ir9-ET-cJC" firstAttribute="centerX" secondItem="Vjw-8l-mVY" secondAttribute="centerX" id="T2L-eZ-NJy"/>
+                            <constraint firstItem="ans-lr-0Fx" firstAttribute="centerX" secondItem="Vjw-8l-mVY" secondAttribute="centerX" id="YrZ-r4-kzm"/>
+                            <constraint firstItem="JtI-wo-rvK" firstAttribute="top" secondItem="ir9-ET-cJC" secondAttribute="bottom" constant="50" id="elf-iN-2g5"/>
+                            <constraint firstItem="wCL-p8-zLc" firstAttribute="centerX" secondItem="Vjw-8l-mVY" secondAttribute="centerX" id="g9g-gt-ySA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBoth" destination="ir9-ET-cJC" id="5F2-eI-jyL"/>
+                        <outlet property="btnBusiness" destination="l0M-u0-FwF" id="CvI-17-lpk"/>
+                        <outlet property="btnPersonal" destination="wCL-p8-zLc" id="Jve-rn-kKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YF7-id-Fl0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4118" y="140"/>
+        </scene>
         <!--InstagramCV-->
         <scene sceneID="IZw-Ns-UbQ">
             <objects>
@@ -970,7 +1116,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFT-w6-kK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="-508.69565217391306"/>
+            <point key="canvasLocation" x="4793" y="-510"/>
         </scene>
         <!--Onboarding SocialVC-->
         <scene sceneID="npA-aF-dgo">
@@ -1162,7 +1308,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xX-xT-oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="137.18140929535232"/>
+            <point key="canvasLocation" x="4793" y="139"/>
         </scene>
         <!--Onboarding Phone InputVC-->
         <scene sceneID="oQ0-Fr-OuB">
@@ -1278,7 +1424,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtE-xL-rwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4785" y="139"/>
+            <point key="canvasLocation" x="5462" y="141"/>
         </scene>
         <!--Onboarding Verify CodeVC-->
         <scene sceneID="2ga-EO-WiU">
@@ -1496,7 +1642,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgo-If-p7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5444" y="139"/>
+            <point key="canvasLocation" x="6121" y="141"/>
         </scene>
         <!--Onboarding Gender SelectCV-->
         <scene sceneID="lnQ-Sw-mlS">

@@ -47,7 +47,6 @@
 
 - (IBAction)onSkipeClicked:(id)sender {
       CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
-    vc.profileImage = _profileImage;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

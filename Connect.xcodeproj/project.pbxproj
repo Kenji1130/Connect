@@ -14,6 +14,7 @@
 		04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D571E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m */; };
 		04106D5B1E7C815200B2CAC0 /* CNOnboardingLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D5A1E7C815200B2CAC0 /* CNOnboardingLoginVC.m */; };
 		04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D5D1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m */; };
+		04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D601E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		309DE55D86EFD689FE24F805 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D091ECB69DE8C4B60A6E4BB /* Pods_ConnectTests.framework */; };
@@ -105,6 +106,8 @@
 		04106D5A1E7C815200B2CAC0 /* CNOnboardingLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingLoginVC.m; path = ViewControllers/Connections/CNOnboardingLoginVC.m; sourceTree = "<group>"; };
 		04106D5C1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingPasswordVC.h; path = ViewControllers/Onboarding/CNOnboardingPasswordVC.h; sourceTree = "<group>"; };
 		04106D5D1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingPasswordVC.m; path = ViewControllers/Onboarding/CNOnboardingPasswordVC.m; sourceTree = "<group>"; };
+		04106D5F1E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingUserTypeVC.h; path = ViewControllers/Onboarding/CNOnboardingUserTypeVC.h; sourceTree = "<group>"; };
+		04106D601E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingUserTypeVC.m; path = ViewControllers/Onboarding/CNOnboardingUserTypeVC.m; sourceTree = "<group>"; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 				04106D5A1E7C815200B2CAC0 /* CNOnboardingLoginVC.m */,
 				04106D5C1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.h */,
 				04106D5D1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m */,
+				04106D5F1E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.h */,
+				04106D601E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -916,6 +921,7 @@
 				FA44509F1E3F7BEF00375428 /* CNOnboardingSnapchatVC.m in Sources */,
 				FA4450621E3A7B6D00375428 /* main.m in Sources */,
 				FA4451051E40BDC400375428 /* ZFMaskView.m in Sources */,
+				04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */,
 				FA4450D11E40149C00375428 /* CNQRCodeViewController.m in Sources */,
 				FA4450D41E4014B300375428 /* CNProfileViewController.m in Sources */,
 				04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */,

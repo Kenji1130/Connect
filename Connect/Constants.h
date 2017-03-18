@@ -17,7 +17,9 @@ typedef NS_ENUM(NSUInteger, CNProfileType) {
     /// Personal Profile.
     CNProfileTypePersonal = 0,
     /// Business Profile.
-    CNProfileTypeBusiness
+    CNProfileTypeBusiness,
+    /// Both
+    CNProfileTypeBoth
 };
 
 typedef NS_ENUM(NSUInteger, CNUserGender){

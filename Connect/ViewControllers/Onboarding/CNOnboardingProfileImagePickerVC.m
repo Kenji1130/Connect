@@ -7,8 +7,7 @@
 //
 
 #import "CNOnboardingProfileImagePickerVC.h"
-#import "CNOnboardingSocialVC.h"
-
+#import "CNOnboardingUserTypeVC.h"
 @interface CNOnboardingProfileImagePickerVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
@@ -70,7 +69,7 @@
 
 - (IBAction)onNextBtnClicked:(id)sender {
     
-    CNOnboardingSocialVC *vc = (CNOnboardingSocialVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
+    CNOnboardingUserTypeVC *vc = (CNOnboardingUserTypeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingUserTypeVC class])];
     vc.profileImage = [_profileImageView image];
 
     [self.navigationController pushViewController:vc animated:YES];
