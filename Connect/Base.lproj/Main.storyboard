@@ -211,7 +211,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-737" y="139"/>
+            <point key="canvasLocation" x="-1242" y="139"/>
         </scene>
         <!--Onboarding LoginVC-->
         <scene sceneID="YbZ-QY-eVN">
@@ -427,7 +427,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkm-ry-TvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-77.599999999999994" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-607" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Igb-sH-UGB">
@@ -841,12 +841,12 @@ News Feed</string>
                     </view>
                     <connections>
                         <outlet property="constOfUsernameTop" destination="ymC-oA-6F9" id="tBg-ef-gNn"/>
-                        <outlet property="txtFUsername" destination="QT5-xG-7Z2" id="ja6-E9-0Tz"/>
+                        <outlet property="tfEmail" destination="QT5-xG-7Z2" id="bVs-yJ-4F9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2H-0M-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="139"/>
+            <point key="canvasLocation" x="41" y="139"/>
         </scene>
         <!--Onboarding Profile Image PickerVC-->
         <scene sceneID="cwH-DN-5Nk">
@@ -1745,7 +1745,7 @@ News Feed</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIW-Tv-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="139"/>
+            <point key="canvasLocation" x="-1870" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yhz-by-jyK">
@@ -1922,6 +1922,130 @@ News Feed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Br6-dA-u3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1447" y="139"/>
+        </scene>
+        <!--Onboarding PasswordVC-->
+        <scene sceneID="rA9-dJ-Qh5">
+            <objects>
+                <viewController storyboardIdentifier="CNOnboardingPasswordVC" id="bKi-l5-x9p" customClass="CNOnboardingPasswordVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQi-Mq-V6D"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sc4-uy-6Ce"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k7o-BW-Yp8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iee-bW-Mu7">
+                                <rect key="frame" x="0.0" y="20" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="CbX-uM-5fQ"/>
+                                    <constraint firstAttribute="height" constant="42" id="DHn-Ve-CJu"/>
+                                </constraints>
+                                <state key="normal" image="UIButtonOnboardingBack"/>
+                                <connections>
+                                    <action selector="onBackBtnClicked:" destination="bKi-l5-x9p" eventType="touchUpInside" id="4CE-3o-zrd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-Tv-6Dr">
+                                <rect key="frame" x="94" y="110" width="187.5" height="31"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-uD-dA3">
+                                <rect key="frame" x="15" y="169" width="86" height="20"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SxD-xi-ucG">
+                                <rect key="frame" x="15" y="197" width="345" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-LE-W6k">
+                                <rect key="frame" x="15" y="226" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tlb-oB-rmG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY9-2i-cmZ">
+                                <rect key="frame" x="15" y="247" width="71.5" height="20"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sk6-an-Jr8">
+                                <rect key="frame" x="15" y="275" width="345" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNr-uo-VKH">
+                                <rect key="frame" x="15" y="304" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="QNB-0w-jkm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-vb-5BX">
+                                <rect key="frame" x="63" y="404" width="250" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Yom-By-2v0"/>
+                                    <constraint firstAttribute="width" constant="250" id="zM1-H4-oMO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onNextBtnClicked:" destination="bKi-l5-x9p" eventType="touchUpInside" id="EHs-Ly-EdQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="l1f-vb-5BX" firstAttribute="top" secondItem="k7o-BW-Yp8" secondAttribute="centerY" constant="70" id="062-rL-q1l"/>
+                            <constraint firstItem="SxD-xi-ucG" firstAttribute="leading" secondItem="wJH-uD-dA3" secondAttribute="leading" id="344-C8-0HV"/>
+                            <constraint firstItem="ZNr-uo-VKH" firstAttribute="leading" secondItem="k7o-BW-Yp8" secondAttribute="leading" constant="15" id="3wv-Ak-npB"/>
+                            <constraint firstItem="Tmm-LE-W6k" firstAttribute="trailing" secondItem="SxD-xi-ucG" secondAttribute="trailing" id="700-Yw-WZC"/>
+                            <constraint firstItem="Tmm-LE-W6k" firstAttribute="top" secondItem="SxD-xi-ucG" secondAttribute="bottom" constant="4" id="8hj-wI-97I"/>
+                            <constraint firstItem="LY9-2i-cmZ" firstAttribute="leading" secondItem="wJH-uD-dA3" secondAttribute="leading" id="CnU-vM-ugr"/>
+                            <constraint firstItem="sk6-an-Jr8" firstAttribute="leading" secondItem="wJH-uD-dA3" secondAttribute="leading" id="Ftr-UO-HX7"/>
+                            <constraint firstItem="l1f-vb-5BX" firstAttribute="centerX" secondItem="k7o-BW-Yp8" secondAttribute="centerX" id="OSj-Sj-dTO"/>
+                            <constraint firstItem="wJH-uD-dA3" firstAttribute="top" secondItem="a8r-Tv-6Dr" secondAttribute="bottom" constant="28" id="PHI-vi-j3S"/>
+                            <constraint firstItem="iee-bW-Mu7" firstAttribute="leading" secondItem="k7o-BW-Yp8" secondAttribute="leading" id="Q5E-ng-Bvk"/>
+                            <constraint firstItem="iee-bW-Mu7" firstAttribute="top" secondItem="fQi-Mq-V6D" secondAttribute="bottom" id="Ra0-Ti-aNV"/>
+                            <constraint firstItem="Tmm-LE-W6k" firstAttribute="leading" secondItem="SxD-xi-ucG" secondAttribute="leading" id="S70-MH-UDW"/>
+                            <constraint firstItem="wJH-uD-dA3" firstAttribute="leading" secondItem="k7o-BW-Yp8" secondAttribute="leading" constant="15" id="Ugo-rR-lN0"/>
+                            <constraint firstItem="ZNr-uo-VKH" firstAttribute="top" secondItem="sk6-an-Jr8" secondAttribute="bottom" constant="4" id="XXm-KO-1un"/>
+                            <constraint firstAttribute="trailing" secondItem="SxD-xi-ucG" secondAttribute="trailing" constant="15" id="iby-1w-kuz"/>
+                            <constraint firstItem="SxD-xi-ucG" firstAttribute="top" secondItem="wJH-uD-dA3" secondAttribute="bottom" constant="8" id="kVy-yu-GPr"/>
+                            <constraint firstAttribute="trailing" secondItem="ZNr-uo-VKH" secondAttribute="trailing" constant="15" id="mHj-FO-Ohf"/>
+                            <constraint firstItem="LY9-2i-cmZ" firstAttribute="top" secondItem="Tmm-LE-W6k" secondAttribute="bottom" constant="20" id="mUz-ok-Moh"/>
+                            <constraint firstItem="a8r-Tv-6Dr" firstAttribute="top" secondItem="fQi-Mq-V6D" secondAttribute="bottom" constant="90" id="pCJ-yv-VBi"/>
+                            <constraint firstItem="sk6-an-Jr8" firstAttribute="trailing" secondItem="SxD-xi-ucG" secondAttribute="trailing" id="qeG-BZ-bXh"/>
+                            <constraint firstItem="sk6-an-Jr8" firstAttribute="top" secondItem="LY9-2i-cmZ" secondAttribute="bottom" constant="8" id="rmp-Z4-QUQ"/>
+                            <constraint firstItem="a8r-Tv-6Dr" firstAttribute="centerX" secondItem="k7o-BW-Yp8" secondAttribute="centerX" id="sic-8G-VB5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfPassword" destination="SxD-xi-ucG" id="yB9-S8-ama"/>
+                        <outlet property="tfPasswordConfirm" destination="sk6-an-Jr8" id="dH4-vA-Mqt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcr-55-8js" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="139"/>
         </scene>
     </scenes>
     <resources>

@@ -1,22 +1,21 @@
 //
-//  CNOnboardingSnapchatVC.m
+//  CNOnboardingPasswordVC.m
 //  Connect
 //
-//  Created by Daniel on 30/01/2017.
+//  Created by mac on 3/17/17.
 //  Copyright © 2017 Connect Social Network. All rights reserved.
 //
 
-#import "CNOnboardingSnapchatVC.h"
 #import "CNOnboardingPasswordVC.h"
+#import "CNOnboardingNameVC.h"
 
-@interface CNOnboardingSnapchatVC ()
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constOfUsernameTop;
-@property (weak, nonatomic) IBOutlet UITextField *tfEmail;
+@interface CNOnboardingPasswordVC ()
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet UITextField *tfPasswordConfirm;
 
 @end
 
-@implementation CNOnboardingSnapchatVC
+@implementation CNOnboardingPasswordVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,38 +26,44 @@
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
 }
-
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Helpers
-
+    
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     [self.view endEditing:YES];
 }
-
+    
 #pragma mark - IBActions
-
+    
 - (IBAction)onBackBtnClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+    
 - (IBAction)onNextBtnClicked:(id)sender {
-    if (![[CNUtilities shared] validateEmail:_tfEmail.text]) {
-
-        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your email correctly."];
+    if ([_tfPassword.text isEqualToString:@""]) {
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your password"];
+        return;
+    }
+    if ([_tfPasswordConfirm.text isEqualToString:@""]) {
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please confirm password"];
+        return;
+    }
+    if (![_tfPassword.text isEqualToString:_tfPasswordConfirm.text]) {
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Password does not matched."];
         return;
     }
     
-    [CNUser currentUser].email = self.tfEmail.text;
-    
-    // Show onboarding name vc
-    CNOnboardingPasswordVC *vc = (CNOnboardingPasswordVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPasswordVC class])];
+    [CNUser currentUser].password = _tfPassword.text;
+    CNOnboardingNameVC *vc = (CNOnboardingNameVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingNameVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 
 /*
 #pragma mark - Navigation

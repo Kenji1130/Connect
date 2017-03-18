@@ -20,10 +20,12 @@
 @property (nonatomic, assign) CNProfileType profileType;
 @property (nonatomic, assign) CNUserGender gender;
 @property (nonatomic, strong) NSNumber *age;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *password;
 
 @property (nonatomic, readonly) BOOL isMe;
 @property (nonatomic, readonly) NSString *name;
-
+    
 + (instancetype)currentUser;
 
 - (instancetype)initWithDictionary:(NSDictionary *)value;
