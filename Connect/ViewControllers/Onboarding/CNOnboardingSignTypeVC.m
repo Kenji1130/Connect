@@ -7,8 +7,11 @@
 //
 
 #import "CNOnboardingSignTypeVC.h"
+#import "CNOnboardingLoginVC.h"
 
 @interface CNOnboardingSignTypeVC ()
+@property (weak, nonatomic) IBOutlet UIButton *btnSignWithEmail;
+@property (weak, nonatomic) IBOutlet UIButton *btnSignWithPhone;
 
 @end
 
@@ -17,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configLayout];
+}
+
+- (void) configLayout{
+    _btnSignWithEmail.layer.borderColor = kAppTintColor.CGColor;
+    _btnSignWithPhone.layer.borderColor = kAppTintColor.CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +33,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
+    
+- (IBAction)onBackBtnClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+    
+- (IBAction)onSignWithEmail:(id)sender {
+    CNOnboardingLoginVC *vc = (CNOnboardingLoginVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingLoginVC class])];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)onSignWithPhone:(id)sender {
+    
+}
+    
 /*
 #pragma mark - Navigation
 

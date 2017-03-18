@@ -7,7 +7,7 @@
 //
 
 #import "CNSplashViewController.h"
-#import "CNOnboardingSnapchatVC.h"
+#import "CNOnboardingSignTypeVC.h"
 
 @interface CNSplashViewController () <UIScrollViewDelegate>
 
@@ -43,7 +43,7 @@
 
 - (IBAction)onGetStartedBtnClicked:(id)sender {
     // Show onboarding snapchat vc
-    CNOnboardingSnapchatVC *vc = (CNOnboardingSnapchatVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSnapchatVC class])];
+    CNOnboardingSignTypeVC *vc = (CNOnboardingSignTypeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSignTypeVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

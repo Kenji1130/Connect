@@ -51,7 +51,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-RG-sOi">
-                                                        <rect key="frame" x="70" y="465" width="237" height="52"/>
+                                                        <rect key="frame" x="69" y="465" width="237" height="52"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -78,7 +78,7 @@ News Feed</string>
                                                 <rect key="frame" x="375" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-3p-K6l">
-                                                        <rect key="frame" x="70" y="465" width="237" height="52"/>
+                                                        <rect key="frame" x="69" y="465" width="237" height="52"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -105,7 +105,7 @@ News Feed</string>
                                                 <rect key="frame" x="750" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-Id-HMl">
-                                                        <rect key="frame" x="70" y="465" width="237" height="52"/>
+                                                        <rect key="frame" x="69" y="465" width="237" height="52"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -211,14 +211,230 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-737" y="139"/>
+        </scene>
+        <!--Onboarding LoginVC-->
+        <scene sceneID="YbZ-QY-eVN">
+            <objects>
+                <viewController storyboardIdentifier="CNOnboardingLoginVC" id="LoM-hB-o52" customClass="CNOnboardingLoginVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1dT-E9-Cyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="EYH-Md-a3q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O3t-72-12r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJz-ku-sej">
+                                <rect key="frame" x="0.0" y="20" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="84d-CH-7b4"/>
+                                    <constraint firstAttribute="width" constant="42" id="xxf-aH-UAH"/>
+                                </constraints>
+                                <state key="normal" image="UIButtonOnboardingBack"/>
+                                <connections>
+                                    <action selector="onBackBtnClicked:" destination="LoM-hB-o52" eventType="touchUpInside" id="Sbb-bQ-Tbr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcX-hv-0Le">
+                                <rect key="frame" x="16" y="132" width="46" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-3l-gfS">
+                                <rect key="frame" x="16" y="204.5" width="86" height="19.5"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-UO-wAH">
+                                <rect key="frame" x="16" y="159.5" width="343" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMv-ZA-Lv3">
+                                <rect key="frame" x="16" y="232" width="343" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj9-zC-dZr">
+                                <rect key="frame" x="62" y="344" width="250" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="qM6-BA-6xG"/>
+                                    <constraint firstAttribute="width" constant="250" id="xA2-jf-BqF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onLogIn:" destination="LoM-hB-o52" eventType="touchUpInside" id="Anh-RK-n1r"/>
+                                    <action selector="onNextBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="9bC-WO-p4B"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cw5-Zm-yEo">
+                                <rect key="frame" x="63.5" y="410" width="248" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account yet?   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-RF-Ybk">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRr-FS-CTw">
+                                        <rect key="frame" x="192" y="0.0" width="56" height="30"/>
+                                        <state key="normal" title="SIGNUP">
+                                            <color key="titleColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSignUp:" destination="LoM-hB-o52" eventType="touchUpInside" id="fRf-1o-KFT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IcX-hv-0Le" firstAttribute="top" secondItem="xJz-ku-sej" secondAttribute="bottom" constant="70" id="65z-2V-PDW"/>
+                            <constraint firstItem="IcX-hv-0Le" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="J1I-in-kh8"/>
+                            <constraint firstItem="qWh-UO-wAH" firstAttribute="top" secondItem="IcX-hv-0Le" secondAttribute="bottom" constant="8" id="PRZ-qH-1bg"/>
+                            <constraint firstItem="Xj9-zC-dZr" firstAttribute="top" secondItem="O3t-72-12r" secondAttribute="centerY" constant="10" id="aMx-FK-GJB"/>
+                            <constraint firstItem="qWh-UO-wAH" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leading" constant="16" id="cZa-jX-ERi"/>
+                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="top" secondItem="pmw-3l-gfS" secondAttribute="bottom" constant="8" id="e7m-M8-dAB"/>
+                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="trailing" secondItem="O3t-72-12r" secondAttribute="trailingMargin" id="g0t-TC-YAG"/>
+                            <constraint firstItem="xJz-ku-sej" firstAttribute="top" secondItem="1dT-E9-Cyf" secondAttribute="bottom" id="hZP-EG-tME"/>
+                            <constraint firstItem="xJz-ku-sej" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leading" id="iEG-ie-yr5"/>
+                            <constraint firstItem="cw5-Zm-yEo" firstAttribute="centerX" secondItem="O3t-72-12r" secondAttribute="centerX" id="jQk-o2-myL"/>
+                            <constraint firstAttribute="trailing" secondItem="qWh-UO-wAH" secondAttribute="trailing" constant="16" id="mpK-g7-AyA"/>
+                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="rGZ-DV-rpF"/>
+                            <constraint firstItem="pmw-3l-gfS" firstAttribute="top" secondItem="qWh-UO-wAH" secondAttribute="bottom" constant="20" id="rYh-ft-7lu"/>
+                            <constraint firstItem="cw5-Zm-yEo" firstAttribute="top" secondItem="Xj9-zC-dZr" secondAttribute="bottom" constant="20" id="v8y-0q-w6b"/>
+                            <constraint firstItem="Xj9-zC-dZr" firstAttribute="centerX" secondItem="O3t-72-12r" secondAttribute="centerX" id="x56-BS-Qoe"/>
+                            <constraint firstItem="pmw-3l-gfS" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="zAa-mR-TQx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfEmail" destination="qWh-UO-wAH" id="wHL-57-e8o"/>
+                        <outlet property="tfPassword" destination="vMv-ZA-Lv3" id="mQS-Jc-Gy4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sM9-tJ-Lv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="-509.59520239880067"/>
+        </scene>
+        <!--Onboarding Sign TypeVC-->
+        <scene sceneID="Iir-Sm-c5d">
+            <objects>
+                <viewController storyboardIdentifier="CNOnboardingSignTypeVC" id="UBh-nn-G5Q" customClass="CNOnboardingSignTypeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7a-4z-iJT"/>
+                        <viewControllerLayoutGuide type="bottom" id="xS1-jL-3hL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2MW-cA-9d9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1Z-aP-uZo">
+                                <rect key="frame" x="0.0" y="20" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="WPd-Kj-0Kl"/>
+                                    <constraint firstAttribute="width" constant="42" id="eS0-cw-wv3"/>
+                                </constraints>
+                                <state key="normal" image="UIButtonOnboardingBack"/>
+                                <connections>
+                                    <action selector="onBackBtnClicked:" destination="UBh-nn-G5Q" eventType="touchUpInside" id="zob-3f-ge1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR SIGN TYPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-ff-7VB">
+                                <rect key="frame" x="32" y="110" width="310.5" height="31"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-Hu-ebs">
+                                <rect key="frame" x="62" y="209" width="250" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="bzR-4E-5ML"/>
+                                    <constraint firstAttribute="width" constant="250" id="l3f-ul-VxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="SIGN WITH EMAIL">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSignWithEmail:" destination="UBh-nn-G5Q" eventType="touchUpInside" id="IeD-Ac-u9u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3i-De-kGX">
+                                <rect key="frame" x="62" y="276" width="250" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3rj-c7-Fkr"/>
+                                    <constraint firstAttribute="height" constant="46" id="4Xq-cK-7aB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="SIGN WITH PHONE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSignWithPhone:" destination="UBh-nn-G5Q" eventType="touchUpInside" id="5ii-2s-HCm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g1Z-aP-uZo" firstAttribute="top" secondItem="o7a-4z-iJT" secondAttribute="bottom" id="7K6-Bq-4QZ"/>
+                            <constraint firstItem="uGq-Hu-ebs" firstAttribute="centerX" secondItem="2MW-cA-9d9" secondAttribute="centerX" id="JSO-Ey-N2f"/>
+                            <constraint firstItem="Afx-ff-7VB" firstAttribute="centerX" secondItem="2MW-cA-9d9" secondAttribute="centerX" id="XRt-9k-X7K"/>
+                            <constraint firstItem="c3i-De-kGX" firstAttribute="centerX" secondItem="2MW-cA-9d9" secondAttribute="centerX" id="Y4E-Lz-zPs"/>
+                            <constraint firstItem="c3i-De-kGX" firstAttribute="top" secondItem="uGq-Hu-ebs" secondAttribute="bottom" constant="21" id="tBD-0w-Bso"/>
+                            <constraint firstItem="uGq-Hu-ebs" firstAttribute="top" secondItem="Afx-ff-7VB" secondAttribute="bottom" constant="68" id="u1i-VN-cE8"/>
+                            <constraint firstItem="Afx-ff-7VB" firstAttribute="top" secondItem="o7a-4z-iJT" secondAttribute="bottom" constant="90" id="uOm-V5-78B"/>
+                            <constraint firstItem="g1Z-aP-uZo" firstAttribute="leading" secondItem="2MW-cA-9d9" secondAttribute="leading" id="yQ9-Ps-qZC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSignWithEmail" destination="uGq-Hu-ebs" id="C2i-Tg-Udm"/>
+                        <outlet property="btnSignWithPhone" destination="c3i-De-kGX" id="zsE-oD-qdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkm-ry-TvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77.599999999999994" y="137.18140929535232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Igb-sH-UGB">
             <objects>
                 <navigationController id="gLi-ZL-rNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconConnections" id="cnp-bh-TrE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IY3-o7-U7A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IY3-o7-U7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -320,14 +536,14 @@ News Feed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-0o-0Eb">
-                                        <rect key="frame" x="0.0" y="41" width="345" height="40"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="345" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="GZ7-46-bbW"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ide-MM-QWT">
-                                        <rect key="frame" x="0.0" y="122" width="345" height="40"/>
+                                        <rect key="frame" x="0.0" y="121.5" width="345" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL5-WZ-u8I">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
@@ -549,19 +765,19 @@ News Feed</string>
                                     <action selector="onBackBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="M7F-Id-2Vm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNAPCHAT NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-vY-z7B">
-                                <rect key="frame" x="83" y="110" width="210" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S YOUR EMAIL?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-vY-z7B">
+                                <rect key="frame" x="60.5" y="110" width="255" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-l8-hwj">
-                                <rect key="frame" x="15" y="221" width="86" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-l8-hwj">
+                                <rect key="frame" x="15" y="221" width="46" height="20"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your snapchat username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QT5-xG-7Z2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QT5-xG-7Z2">
                                 <rect key="frame" x="15" y="249" width="345" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
@@ -961,7 +1177,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-Ie-SE0">
-                                <rect key="frame" x="52" y="110" width="273" height="31"/>
+                                <rect key="frame" x="51" y="110" width="273" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1077,7 +1293,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYu-Ae-Nu1">
-                                <rect key="frame" x="90" y="110" width="197" height="31"/>
+                                <rect key="frame" x="89" y="110" width="197" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1104,13 +1320,13 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the code we just send you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-Zd-jC3">
-                                <rect key="frame" x="22" y="169" width="331" height="25"/>
+                                <rect key="frame" x="22" y="168.5" width="331" height="24.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Tay-c0-ZBV">
-                                <rect key="frame" x="81" y="244" width="214" height="48"/>
+                                <rect key="frame" x="81" y="243" width="214" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2O-WE-yOF">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="48"/>
@@ -1137,7 +1353,7 @@ News Feed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-ou-lPT">
-                                        <rect key="frame" x="60" y="0.0" width="35" height="48"/>
+                                        <rect key="frame" x="59.5" y="0.0" width="35" height="48"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qhJ-xZ-tPD">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="47"/>
@@ -1161,7 +1377,7 @@ News Feed</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhB-nA-L94">
-                                        <rect key="frame" x="119" y="0.0" width="35" height="48"/>
+                                        <rect key="frame" x="119.5" y="0.0" width="35" height="48"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbc-lR-IC6">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="47"/>
@@ -1215,16 +1431,16 @@ News Feed</string>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-XF-aat">
-                                <rect key="frame" x="151" y="324" width="74" height="20"/>
+                                <rect key="frame" x="151" y="323" width="74" height="19.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewVerifiedMark" translatesAutoresizingMaskIntoConstraints="NO" id="jdq-De-MHc">
-                                        <rect key="frame" x="0.0" y="0.0" width="18" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="18" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="0zr-ch-5nC"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-af-KqC">
-                                        <rect key="frame" x="20" y="0.0" width="54" height="20"/>
+                                        <rect key="frame" x="20" y="0.0" width="54" height="19.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                         <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1449,7 +1665,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW OLD ARE YOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-ym-Lxd">
-                                <rect key="frame" x="68" y="110" width="241" height="31"/>
+                                <rect key="frame" x="67" y="110" width="241" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1519,7 +1735,7 @@ News Feed</string>
         <scene sceneID="3kL-sr-VxT">
             <objects>
                 <navigationController storyboardIdentifier="loginNavController" navigationBarHidden="YES" id="sOi-YW-ner" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g6-Do-Z6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9g6-Do-Z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1529,14 +1745,14 @@ News Feed</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIW-Tv-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-647" y="139"/>
+            <point key="canvasLocation" x="-1388" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yhz-by-jyK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="2wJ-dG-RmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconScanner" id="IoQ-86-IW8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aJ-fL-0Sh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8aJ-fL-0Sh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1553,7 +1769,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="rVA-bE-mLT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconQRCode" id="fFJ-SL-fMF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Xn-IF-pYb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Xn-IF-pYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1570,7 +1786,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="kRq-TN-CTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconProfile" id="JNe-Jo-NDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmP-yt-Jyg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DmP-yt-Jyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
