@@ -115,7 +115,7 @@
     NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithDictionary:info];
     if ([CNUser currentUser].signType == CNSignTypeEmail) {
         [userInfo setValue:[CNUser currentUser].email forKey:@"email"];
-        [userInfo setValue:[[CNUtilities shared] md5:[CNUser currentUser].password] forKey:@"password"];
+        [userInfo setValue:[CNUser currentUser].password forKey:@"password"];
     } else {
         [userInfo setValue:[CNUser currentUser].phoneNumber forKey:@"phoneNumber"];
     }
@@ -133,10 +133,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             // Show main screens
             [[AppDelegate sharedInstance] showMain];
-            
-            // Show onboarding snapchat vc
-            // CNOnboardingVerifyCodeVC *vc = (CNOnboardingVerifyCodeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingVerifyCodeVC class])];
-            // [self.navigationController pushViewController:vc animated:YES];
+
         });
     }];
 }

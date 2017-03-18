@@ -53,7 +53,7 @@
         [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your password."];
         return;
     } else {
-        [self loginWithEmail:_tfEmail.text password:_tfPassword.text];
+        [self loginWithEmail:_tfEmail.text password:[[CNUtilities shared] md5:_tfPassword.text]];
     }
 
 }
@@ -70,9 +70,45 @@
              NSLog(@"Error: %@", error);
          } else{
              NSLog(@"LogIn Success");
-             
+             [CNUser currentUser].userID = user.uid;
+             [self fetchUserInfo:user.uid];
          }
      }];
+}
+
+- (void) fetchUserInfo:(NSString*) userId{
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[[[AppDelegate sharedInstance].dbRef child:@"users"] child:userId] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        // Get user value
+        NSLog(@"value: %@", snapshot);
+        [CNUser currentUser].age = snapshot.value[@"age"];
+        [CNUser currentUser].email = snapshot.value[@"email"];
+        [CNUser currentUser].password = snapshot.value[@"password"];
+        [CNUser currentUser].username = snapshot.value[@"userName"];
+        [CNUser currentUser].firstName = snapshot.value[@"firstName"];
+        [CNUser currentUser].lastName = snapshot.value[@"lastName"];
+        [CNUser currentUser].profileType = [snapshot.value[@"profileType"] intValue];
+        [CNUser currentUser].gender = [snapshot.value[@"gender"] intValue];
+        [CNUser currentUser].signType = [snapshot.value[@"signType"] intValue];
+        [CNUser currentUser].imageURL = snapshot.value[@"imageURL"];
+        
+        
+        // Save login status
+        [[NSUserDefaults standardUserDefaults] setObject:[CNUser currentUser].userID forKey:kLoggedUserID];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Show main screens
+            [[AppDelegate sharedInstance] showMain];
+            
+        });
+        
+        // ...
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
     
 - (IBAction)onSignUp:(id)sender {

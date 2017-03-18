@@ -59,7 +59,7 @@
         return;
     }
     
-    [CNUser currentUser].password = _tfPassword.text;
+    [CNUser currentUser].password = [[CNUtilities shared] md5:_tfPassword.text];
     CNOnboardingSnapchatVC *vc = (CNOnboardingSnapchatVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSnapchatVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
