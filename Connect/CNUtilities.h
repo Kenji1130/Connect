@@ -14,5 +14,5 @@
 - (void)showAlert:(UIViewController*)vc withTitle:(NSString *)title withMessage:(NSString *)message;
 - (NSString *) md5:(NSString *) input;
 - (BOOL)validateEmail:(NSString *)emailStr;
-
+- (BOOL)validatePhone:(NSString *)phoneNumber;
 @end

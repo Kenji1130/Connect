@@ -30,13 +30,18 @@
 - (void)configureUserWithDictionary:(NSDictionary *)value {
     // Configure user with dictionary
     self.userID = value[@"userID"];
+    self.email = value[@"email"];
+    self.password = value[@"password"];
     self.username = value[@"username"];
     self.firstName = value[@"firstName"];
     self.lastName = value[@"lastName"];
+    self.age = value[@"age"];
     self.occupation = value[@"occupation"];
     self.phoneNumber = value[@"phoneNumber"];
     self.imageURL = value[@"imageURL"];
     self.profileType = [value[@"profileType"] intValue];
+    self.gender = [value[@"gender"] intValue];
+    self.signType = [value[@"signType"] intValue];
 }
 
 #pragma mark -

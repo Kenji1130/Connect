@@ -44,13 +44,6 @@
     
 }
 
-- (BOOL)validatePhone:(NSString *)phoneNumber {
-    NSString *phoneRegex = @"^((\\+)|(00))[0-9]{6,14}$";
-    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
-    
-    return [phoneTest evaluateWithObject:phoneNumber];
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     [self.view endEditing:YES];
@@ -73,7 +66,7 @@
     
     NSString *phoneNumber = [NSString stringWithFormat:@"+1%@", self.txtFPhoneNumber.text];
     
-    if (![self validatePhone:phoneNumber]) {
+    if (![[CNUtilities shared] validatePhone:phoneNumber]) {
 
         [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Your phone number is not valid."];
         return;

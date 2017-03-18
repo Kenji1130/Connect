@@ -11,17 +11,18 @@
 @interface CNUser : NSObject
 
 @property (nonatomic, strong) NSString *userID;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSNumber *age;
 @property (nonatomic, strong) NSString *occupation;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, assign) CNProfileType profileType;
 @property (nonatomic, assign) CNUserGender gender;
-@property (nonatomic, strong) NSNumber *age;
-@property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *password;
+@property (nonatomic, assign) CNSignType signType;
 
 @property (nonatomic, readonly) BOOL isMe;
 @property (nonatomic, readonly) NSString *name;

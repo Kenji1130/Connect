@@ -7,7 +7,7 @@
 //
 
 #import "CNOnboardingPasswordVC.h"
-#import "CNOnboardingNameVC.h"
+#import "CNOnboardingSnapchatVC.h"
 
 @interface CNOnboardingPasswordVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
@@ -60,7 +60,7 @@
     }
     
     [CNUser currentUser].password = _tfPassword.text;
-    CNOnboardingNameVC *vc = (CNOnboardingNameVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingNameVC class])];
+    CNOnboardingSnapchatVC *vc = (CNOnboardingSnapchatVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSnapchatVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

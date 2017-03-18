@@ -7,7 +7,7 @@
 //
 
 #import "CNOnboardingLoginVC.h"
-#import "CNOnboardingSnapchatVC.h"
+#import "CNOnboardingEmailInputVC.h"
 
 @interface CNOnboardingLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfEmail;
@@ -20,17 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configureLayout];
 }
-
+    
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
+}
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-    
-- (void)configureLayout {
-    // Configures layout
-    
 }
     
 #pragma mark - Helpers
@@ -54,12 +53,12 @@
         [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your password."];
         return;
     } else {
-        [self signWithEmail:_tfEmail.text password:_tfPassword.text];
+        [self loginWithEmail:_tfEmail.text password:_tfPassword.text];
     }
 
 }
 
-- (void) signWithEmail:(NSString*) email password:(NSString*) password{
+- (void) loginWithEmail:(NSString*) email password:(NSString*) password{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[FIRAuth auth]
      signInWithEmail:email
@@ -77,7 +76,7 @@
 }
     
 - (IBAction)onSignUp:(id)sender {
-    CNOnboardingSnapchatVC *vc = (CNOnboardingSnapchatVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSnapchatVC class])];
+    CNOnboardingEmailInputVC *vc = (CNOnboardingEmailInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingEmailInputVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

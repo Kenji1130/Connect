@@ -31,6 +31,12 @@ typedef NS_ENUM(NSUInteger, CNUserGender){
     CNUserOther
 };
 
+typedef NS_ENUM(NSUInteger, CNSignType) {
+    /// Email Sign
+    CNSignTypeEmail = 0,
+    /// Phone Sign
+    CNSignTypePhone 
+};
 // Log In
 #define kLoggedUserID   @"LoggedUserID"
 

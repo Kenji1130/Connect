@@ -211,7 +211,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1242" y="139"/>
+            <point key="canvasLocation" x="-1921" y="141"/>
         </scene>
         <!--Onboarding LoginVC-->
         <scene sceneID="YbZ-QY-eVN">
@@ -279,11 +279,10 @@ News Feed</string>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onLogIn:" destination="LoM-hB-o52" eventType="touchUpInside" id="Anh-RK-n1r"/>
-                                    <action selector="onNextBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="9bC-WO-p4B"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cw5-Zm-yEo">
-                                <rect key="frame" x="63.5" y="410" width="248" height="30"/>
+                                <rect key="frame" x="64" y="410" width="248" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account yet?   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-RF-Ybk">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
@@ -330,7 +329,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM9-tJ-Lv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="-509.59520239880067"/>
+            <point key="canvasLocation" x="-1286" y="-510"/>
         </scene>
         <!--Onboarding Sign TypeVC-->
         <scene sceneID="Iir-Sm-c5d">
@@ -356,7 +355,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR SIGN TYPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-ff-7VB">
-                                <rect key="frame" x="32" y="110" width="310.5" height="31"/>
+                                <rect key="frame" x="32" y="110" width="311" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -427,7 +426,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkm-ry-TvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-607" y="139"/>
+            <point key="canvasLocation" x="-1286" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Igb-sH-UGB">
@@ -742,10 +741,10 @@ News Feed</string>
             </objects>
             <point key="canvasLocation" x="876" y="932"/>
         </scene>
-        <!--Onboarding SnapchatVC-->
+        <!--Onboarding Email InputVC-->
         <scene sceneID="h6J-Yn-r4C">
             <objects>
-                <viewController storyboardIdentifier="CNOnboardingSnapchatVC" id="hxl-GK-3wa" customClass="CNOnboardingSnapchatVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CNOnboardingEmailInputVC" id="hxl-GK-3wa" customClass="CNOnboardingEmailInputVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gSo-3n-kyO"/>
                         <viewControllerLayoutGuide type="bottom" id="P4K-kS-cWc"/>
@@ -762,11 +761,11 @@ News Feed</string>
                                 </constraints>
                                 <state key="normal" image="UIButtonOnboardingBack"/>
                                 <connections>
-                                    <action selector="onBackBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="M7F-Id-2Vm"/>
+                                    <action selector="onBackBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="zeh-Ha-Za3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S YOUR EMAIL?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-vY-z7B">
-                                <rect key="frame" x="60.5" y="110" width="255" height="31"/>
+                                <rect key="frame" x="60" y="110" width="255" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -808,23 +807,14 @@ News Feed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onNextBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="xvN-Sb-2kH"/>
+                                    <action selector="onNextBtnClicked:" destination="hxl-GK-3wa" eventType="touchUpInside" id="bOU-DP-Rxh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewOnboardingSnapchat" translatesAutoresizingMaskIntoConstraints="NO" id="gap-2J-lBM">
-                                <rect key="frame" x="138" y="554" width="100" height="93"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="93.5" id="2jv-39-8Yb"/>
-                                    <constraint firstAttribute="width" constant="100" id="JlJ-3h-FJp"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cTv-vY-z7B" firstAttribute="top" secondItem="gSo-3n-kyO" secondAttribute="bottom" constant="90" id="7YL-hP-7nw"/>
                             <constraint firstItem="k8a-Gd-1S6" firstAttribute="trailing" secondItem="QT5-xG-7Z2" secondAttribute="trailing" id="GaE-Qv-qEV"/>
-                            <constraint firstItem="P4K-kS-cWc" firstAttribute="top" secondItem="gap-2J-lBM" secondAttribute="bottom" constant="20" id="PxU-Hx-KPp"/>
-                            <constraint firstItem="gap-2J-lBM" firstAttribute="centerX" secondItem="QLU-v0-cHh" secondAttribute="centerX" id="Qvf-eb-BnQ"/>
                             <constraint firstItem="lvh-aw-bm4" firstAttribute="top" secondItem="gSo-3n-kyO" secondAttribute="bottom" id="bvc-9c-nQY"/>
                             <constraint firstItem="Saw-l8-hwj" firstAttribute="leading" secondItem="QLU-v0-cHh" secondAttribute="leading" constant="15" id="dCB-AX-Lk9"/>
                             <constraint firstItem="Kr7-Tg-b7Y" firstAttribute="top" secondItem="QLU-v0-cHh" secondAttribute="centerY" constant="50" id="ecS-Q6-Mid"/>
@@ -840,13 +830,12 @@ News Feed</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="constOfUsernameTop" destination="ymC-oA-6F9" id="tBg-ef-gNn"/>
-                        <outlet property="tfEmail" destination="QT5-xG-7Z2" id="bVs-yJ-4F9"/>
+                        <outlet property="tfEmail" destination="QT5-xG-7Z2" id="8W7-qw-QOv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2H-0M-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="139"/>
+            <point key="canvasLocation" x="-633" y="141"/>
         </scene>
         <!--Onboarding Profile Image PickerVC-->
         <scene sceneID="cwH-DN-5Nk">
@@ -956,12 +945,12 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-p8-zLc">
-                                <rect key="frame" x="62.5" y="201" width="250" height="46"/>
+                                <rect key="frame" x="63" y="201" width="250" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Fb0-fN-NFf"/>
                                     <constraint firstAttribute="height" constant="46" id="pbe-QB-iH3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                 <state key="normal" title="PERSONAL">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -984,7 +973,7 @@ News Feed</string>
                                     <constraint firstAttribute="width" constant="250" id="T23-1o-h4d"/>
                                     <constraint firstAttribute="height" constant="46" id="TjD-PL-zDo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                 <state key="normal" title="BUSINESS">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1007,7 +996,7 @@ News Feed</string>
                                     <constraint firstAttribute="height" constant="46" id="262-bB-Fet"/>
                                     <constraint firstAttribute="width" constant="250" id="O8k-rl-mTR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                 <state key="normal" title="BOTH">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1891,7 +1880,7 @@ News Feed</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIW-Tv-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1870" y="139"/>
+            <point key="canvasLocation" x="-2550" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yhz-by-jyK">
@@ -2093,7 +2082,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-Tv-6Dr">
-                                <rect key="frame" x="94" y="110" width="187.5" height="31"/>
+                                <rect key="frame" x="94" y="110" width="188" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2118,7 +2107,7 @@ News Feed</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY9-2i-cmZ">
-                                <rect key="frame" x="15" y="247" width="71.5" height="20"/>
+                                <rect key="frame" x="15" y="247" width="72" height="20"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2191,7 +2180,113 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zcr-55-8js" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="139"/>
+            <point key="canvasLocation" x="68" y="141"/>
+        </scene>
+        <!--Onboarding SnapchatVC-->
+        <scene sceneID="DDV-LB-dMt">
+            <objects>
+                <viewController storyboardIdentifier="CNOnboardingSnapchatVC" id="jgJ-dz-uHO" customClass="CNOnboardingSnapchatVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nK4-GG-FT7"/>
+                        <viewControllerLayoutGuide type="bottom" id="AYC-Zn-9e7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l3e-Db-8gQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD3-ex-3eC">
+                                <rect key="frame" x="0.0" y="20" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="OsM-M8-bXJ"/>
+                                    <constraint firstAttribute="width" constant="42" id="vd5-7x-Vtl"/>
+                                </constraints>
+                                <state key="normal" image="UIButtonOnboardingBack"/>
+                                <connections>
+                                    <action selector="onBackBtnClicked:" destination="jgJ-dz-uHO" eventType="touchUpInside" id="tHT-Z3-Ff0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S SNAPCHAT NAME?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-tm-CiU">
+                                <rect key="frame" x="28" y="110" width="319" height="31"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cg-d1-nks">
+                                <rect key="frame" x="15" y="221" width="86" height="20"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJd-ha-PeS">
+                                <rect key="frame" x="15" y="249" width="345" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhd-Fe-dTS">
+                                <rect key="frame" x="15" y="278" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="TIm-PY-rOp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-VG-196">
+                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="CHu-zs-dn3"/>
+                                    <constraint firstAttribute="height" constant="46" id="blo-UL-oWu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onNextBtnClicked:" destination="jgJ-dz-uHO" eventType="touchUpInside" id="zFa-LF-T8j"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewOnboardingSnapchat" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-lj-oY8">
+                                <rect key="frame" x="138" y="554" width="100" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93.5" id="Ggg-yY-X3E"/>
+                                    <constraint firstAttribute="width" constant="100" id="qjG-5d-sL1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aH4-tm-CiU" firstAttribute="top" secondItem="nK4-GG-FT7" secondAttribute="bottom" constant="90" id="6FD-pc-am7"/>
+                            <constraint firstItem="2cg-d1-nks" firstAttribute="leading" secondItem="l3e-Db-8gQ" secondAttribute="leading" constant="15" id="9BB-ab-4P8"/>
+                            <constraint firstItem="Mhd-Fe-dTS" firstAttribute="top" secondItem="JJd-ha-PeS" secondAttribute="bottom" constant="4" id="AeA-Es-Oaw"/>
+                            <constraint firstItem="PDp-VG-196" firstAttribute="centerX" secondItem="l3e-Db-8gQ" secondAttribute="centerX" id="DrY-7b-TlA"/>
+                            <constraint firstItem="JJd-ha-PeS" firstAttribute="leading" secondItem="l3e-Db-8gQ" secondAttribute="leading" constant="15" id="EKQ-ib-cUE"/>
+                            <constraint firstItem="PDp-VG-196" firstAttribute="top" secondItem="l3e-Db-8gQ" secondAttribute="centerY" constant="50" id="HYb-5F-RPy"/>
+                            <constraint firstItem="Mhd-Fe-dTS" firstAttribute="trailing" secondItem="JJd-ha-PeS" secondAttribute="trailing" id="Rc8-vX-hXI"/>
+                            <constraint firstItem="AYC-Zn-9e7" firstAttribute="top" secondItem="mzl-lj-oY8" secondAttribute="bottom" constant="20" id="W5Y-ln-qS2"/>
+                            <constraint firstItem="Mhd-Fe-dTS" firstAttribute="leading" secondItem="JJd-ha-PeS" secondAttribute="leading" id="XBy-c1-bpD"/>
+                            <constraint firstItem="aH4-tm-CiU" firstAttribute="centerX" secondItem="l3e-Db-8gQ" secondAttribute="centerX" id="bYG-aL-rxJ"/>
+                            <constraint firstItem="CD3-ex-3eC" firstAttribute="leading" secondItem="l3e-Db-8gQ" secondAttribute="leading" id="dPr-0r-FfQ"/>
+                            <constraint firstItem="2cg-d1-nks" firstAttribute="top" secondItem="aH4-tm-CiU" secondAttribute="bottom" constant="80" id="ehM-va-Cmy"/>
+                            <constraint firstAttribute="trailing" secondItem="JJd-ha-PeS" secondAttribute="trailing" constant="15" id="g7n-RL-10d"/>
+                            <constraint firstItem="mzl-lj-oY8" firstAttribute="centerX" secondItem="l3e-Db-8gQ" secondAttribute="centerX" id="iBc-dk-XQ7"/>
+                            <constraint firstItem="CD3-ex-3eC" firstAttribute="top" secondItem="nK4-GG-FT7" secondAttribute="bottom" id="jhF-aS-vRO"/>
+                            <constraint firstItem="JJd-ha-PeS" firstAttribute="top" secondItem="2cg-d1-nks" secondAttribute="bottom" constant="8" id="jie-Zb-qvv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="constOfUsernameTop" destination="ehM-va-Cmy" id="XyX-0e-gbf"/>
+                        <outlet property="tfUserName" destination="JJd-ha-PeS" id="5Nn-nI-0BN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCa-6j-YM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="141"/>
         </scene>
     </scenes>
     <resources>

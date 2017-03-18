@@ -55,10 +55,91 @@
 }
     
 - (IBAction)onNextBtnClicked:(id)sender {
-    
+  
+    [self signUpWithEmail:[CNUser currentUser].email password:[[CNUtilities shared] md5:[CNUser currentUser].password]];
+}
 
+- (void) signUpWithEmail:(NSString*) email password:(NSString*) password{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[FIRAuth auth]
+     createUserWithEmail:email
+     password:password
+     completion:^(FIRUser *_Nullable user,
+                  NSError *_Nullable error) {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         
+         if (error != nil) {
+             NSLog(@"Error: %@", error);
+             
+         } else {
+             [CNUser currentUser].userID = user.uid;
+             [self uploadProfileImage];
+         }
+     }];
 }
     
+- (void) uploadProfileImage{
+    NSString *imageName = [NSString stringWithFormat:@"%@%@", [CNUser currentUser].userID, @".jpg"];
+    FIRStorageReference *imageRef = [[[AppDelegate sharedInstance].storageRef child:@"profile_image"] child:imageName];
+    
+    // Create file metadata including the content type
+    FIRStorageMetadata *meta = [[FIRStorageMetadata alloc] init];
+    meta.contentType = @"image/jpeg";
+    
+    // Upload the file
+    NSData *data = UIImageJPEGRepresentation(_profileImage, 0.1);
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [imageRef putData:data metadata:meta completion:^(FIRStorageMetadata *metadata, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+        } else {
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            NSURL *downloadURL = metadata.downloadURL;
+            [CNUser currentUser].imageURL = metadata.downloadURL.absoluteString;
+            [self saveProfileInfo:downloadURL];
+        }
+    }];
+}
+    
+- (void) saveProfileInfo: (NSURL*) profileImageUrl{
+    
+    NSDictionary *info = @{@"username": [CNUser currentUser].username,
+                               @"firstName": [CNUser currentUser].firstName,
+                               @"lastName": [CNUser currentUser].lastName,
+                               @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],
+                               @"age": [CNUser currentUser].age,
+                               @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
+                               @"signType": [NSNumber numberWithInteger:[CNUser currentUser].signType],
+                               @"imageURL": [CNUser currentUser].imageURL};
+    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithDictionary:info];
+    if ([CNUser currentUser].signType == CNSignTypeEmail) {
+        [userInfo setValue:[CNUser currentUser].email forKey:@"email"];
+        [userInfo setValue:[[CNUtilities shared] md5:[CNUser currentUser].password] forKey:@"password"];
+    } else {
+        [userInfo setValue:[CNUser currentUser].phoneNumber forKey:@"phoneNumber"];
+    }
+    
+    FIRDatabaseReference *userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [userRef setValue:userInfo withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        // Save login status
+        [[NSUserDefaults standardUserDefaults] setObject:ref.key forKey:kLoggedUserID];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Show main screens
+            [[AppDelegate sharedInstance] showMain];
+            
+            // Show onboarding snapchat vc
+            // CNOnboardingVerifyCodeVC *vc = (CNOnboardingVerifyCodeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingVerifyCodeVC class])];
+            // [self.navigationController pushViewController:vc animated:YES];
+        });
+    }];
+}
 /*
 #pragma mark - Navigation
 
