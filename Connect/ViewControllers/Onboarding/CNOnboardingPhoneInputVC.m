@@ -138,10 +138,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             // Show main screens
             [[AppDelegate sharedInstance] showMain];
-            
-            // Show onboarding snapchat vc
-            // CNOnboardingVerifyCodeVC *vc = (CNOnboardingVerifyCodeVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingVerifyCodeVC class])];
-            // [self.navigationController pushViewController:vc animated:YES];
+
         });
     }];
 }

@@ -67,10 +67,10 @@
                   NSError *_Nullable error) {
          [MBProgressHUD hideHUDForView:self.view animated:YES];
          if (error != nil) {
-             NSLog(@"Error: %@", error);
+             NSLog(@"Error: %@", error.localizedDescription);
+             [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:error.localizedDescription];
          } else{
              NSLog(@"LogIn Success");
-             [CNUser currentUser].userID = user.uid;
              [self fetchUserInfo:user.uid];
          }
      }];
@@ -82,17 +82,13 @@
     [[[[AppDelegate sharedInstance].dbRef child:@"users"] child:userId] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         // Get user value
         NSLog(@"value: %@", snapshot);
-        [CNUser currentUser].age = snapshot.value[@"age"];
-        [CNUser currentUser].email = snapshot.value[@"email"];
-        [CNUser currentUser].password = snapshot.value[@"password"];
-        [CNUser currentUser].username = snapshot.value[@"userName"];
-        [CNUser currentUser].firstName = snapshot.value[@"firstName"];
-        [CNUser currentUser].lastName = snapshot.value[@"lastName"];
-        [CNUser currentUser].profileType = [snapshot.value[@"profileType"] intValue];
-        [CNUser currentUser].gender = [snapshot.value[@"gender"] intValue];
-        [CNUser currentUser].signType = [snapshot.value[@"signType"] intValue];
-        [CNUser currentUser].imageURL = snapshot.value[@"imageURL"];
         
+        if (![snapshot.value isEqual:[NSNull null]]) {
+            NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:snapshot.value];
+            [userInfo setObject:userId forKey:@"userID"];
+            
+            [[CNUser currentUser] configureUserWithDictionary:userInfo];
+        }
         
         // Save login status
         [[NSUserDefaults standardUserDefaults] setObject:[CNUser currentUser].userID forKey:kLoggedUserID];

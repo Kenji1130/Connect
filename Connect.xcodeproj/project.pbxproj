@@ -16,6 +16,7 @@
 		04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D5D1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m */; };
 		04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D601E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m */; };
 		04106D641E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D631E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m */; };
+		04106D661E7D890B00B2CAC0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04106D651E7D890B00B2CAC0 /* AdSupport.framework */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		309DE55D86EFD689FE24F805 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D091ECB69DE8C4B60A6E4BB /* Pods_ConnectTests.framework */; };
@@ -111,6 +112,7 @@
 		04106D601E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingUserTypeVC.m; path = ViewControllers/Onboarding/CNOnboardingUserTypeVC.m; sourceTree = "<group>"; };
 		04106D621E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingEmailInputVC.h; path = ViewControllers/Onboarding/CNOnboardingEmailInputVC.h; sourceTree = "<group>"; };
 		04106D631E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingEmailInputVC.m; path = ViewControllers/Onboarding/CNOnboardingEmailInputVC.m; sourceTree = "<group>"; };
+		04106D651E7D890B00B2CAC0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04106D661E7D890B00B2CAC0 /* AdSupport.framework in Frameworks */,
 				FA8C15971E63D3C600075AB7 /* FBSDKCoreKit.framework in Frameworks */,
 				FA8C15991E63D3C600075AB7 /* FBSDKShareKit.framework in Frameworks */,
 				FA8C15981E63D3C600075AB7 /* FBSDKLoginKit.framework in Frameworks */,
@@ -253,6 +256,7 @@
 		91104BB23DB4E1AF43FD192D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04106D651E7D890B00B2CAC0 /* AdSupport.framework */,
 				04106D471E7C26E600B2CAC0 /* Accounts.framework */,
 				FA8C15921E63D3C600075AB7 /* Bolts.framework */,
 				FA8C15931E63D3C600075AB7 /* FBSDKCoreKit.framework */,

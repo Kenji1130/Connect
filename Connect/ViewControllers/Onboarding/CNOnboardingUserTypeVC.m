@@ -56,7 +56,7 @@
     
 - (IBAction)onNextBtnClicked:(id)sender {
   
-    [self signUpWithEmail:[CNUser currentUser].email password:[[CNUtilities shared] md5:[CNUser currentUser].password]];
+    [self signUpWithEmail:[CNUser currentUser].email password:[CNUser currentUser].password];
 }
 
 - (void) signUpWithEmail:(NSString*) email password:(NSString*) password{
@@ -69,7 +69,8 @@
          [MBProgressHUD hideHUDForView:self.view animated:YES];
          
          if (error != nil) {
-             NSLog(@"Error: %@", error);
+            NSLog(@"Error: %@", error.localizedDescription);
+            [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:error.localizedDescription];
              
          } else {
              [CNUser currentUser].userID = user.uid;
@@ -93,6 +94,8 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (error != nil) {
             // Uh-oh, an error occurred!
+            NSLog(@"Error: %@", error.localizedDescription);
+            [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:error.localizedDescription];
         } else {
             // Metadata contains file metadata such as size, content-type, and download URL.
             NSURL *downloadURL = metadata.downloadURL;
@@ -125,16 +128,23 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [userRef setValue:userInfo withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
         
-        // Save login status
-        [[NSUserDefaults standardUserDefaults] setObject:ref.key forKey:kLoggedUserID];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Show main screens
-            [[AppDelegate sharedInstance] showMain];
 
-        });
+        if (error != nil) {
+            NSLog(@"Error: %@", error.localizedDescription);
+            [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:error.localizedDescription];
+        } else {
+            // Save login status
+            [[NSUserDefaults standardUserDefaults] setObject:[CNUser currentUser].userID forKey:kLoggedUserID];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Show main screens
+                [[AppDelegate sharedInstance] showMain];
+                
+            });
+        }
+
     }];
 }
 /*

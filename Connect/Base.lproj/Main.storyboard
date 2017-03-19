@@ -236,29 +236,17 @@ News Feed</string>
                                     <action selector="onBackBtnClicked:" destination="LoM-hB-o52" eventType="touchUpInside" id="Sbb-bQ-Tbr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcX-hv-0Le">
-                                <rect key="frame" x="16" y="132" width="46" height="19.5"/>
-                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
-                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-3l-gfS">
-                                <rect key="frame" x="16" y="204.5" width="86" height="19.5"/>
-                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
-                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-UO-wAH">
-                                <rect key="frame" x="16" y="159.5" width="343" height="25"/>
+                                <rect key="frame" x="45" y="159.5" width="314" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMv-ZA-Lv3">
-                                <rect key="frame" x="16" y="232" width="343" height="25"/>
+                                <rect key="frame" x="45" y="232" width="314" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj9-zC-dZr">
                                 <rect key="frame" x="62" y="344" width="250" height="46"/>
@@ -301,25 +289,39 @@ News Feed</string>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewUser" translatesAutoresizingMaskIntoConstraints="NO" id="W3H-ch-XCU">
+                                <rect key="frame" x="16" y="159.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="RPQ-Fp-Obq"/>
+                                    <constraint firstAttribute="width" constant="25" id="qEI-D5-VBY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewPassword" translatesAutoresizingMaskIntoConstraints="NO" id="lrs-bO-dws">
+                                <rect key="frame" x="16" y="232" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="BYr-x5-Igw"/>
+                                    <constraint firstAttribute="height" constant="25" id="UIN-l3-a5y"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IcX-hv-0Le" firstAttribute="top" secondItem="xJz-ku-sej" secondAttribute="bottom" constant="70" id="65z-2V-PDW"/>
-                            <constraint firstItem="IcX-hv-0Le" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="J1I-in-kh8"/>
-                            <constraint firstItem="qWh-UO-wAH" firstAttribute="top" secondItem="IcX-hv-0Le" secondAttribute="bottom" constant="8" id="PRZ-qH-1bg"/>
+                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="leading" secondItem="lrs-bO-dws" secondAttribute="trailing" constant="4" id="D6J-eW-ASW"/>
+                            <constraint firstItem="W3H-ch-XCU" firstAttribute="top" secondItem="xJz-ku-sej" secondAttribute="bottom" constant="97.5" id="DPG-XX-Ynx"/>
+                            <constraint firstItem="lrs-bO-dws" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="M48-Ez-e4N"/>
+                            <constraint firstItem="W3H-ch-XCU" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="P5s-BM-7ja"/>
+                            <constraint firstItem="qWh-UO-wAH" firstAttribute="centerY" secondItem="W3H-ch-XCU" secondAttribute="centerY" id="QvH-OA-vxb"/>
+                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="centerY" secondItem="lrs-bO-dws" secondAttribute="centerY" id="VkE-me-ORo"/>
                             <constraint firstItem="Xj9-zC-dZr" firstAttribute="top" secondItem="O3t-72-12r" secondAttribute="centerY" constant="10" id="aMx-FK-GJB"/>
-                            <constraint firstItem="qWh-UO-wAH" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leading" constant="16" id="cZa-jX-ERi"/>
-                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="top" secondItem="pmw-3l-gfS" secondAttribute="bottom" constant="8" id="e7m-M8-dAB"/>
+                            <constraint firstItem="qWh-UO-wAH" firstAttribute="leading" secondItem="W3H-ch-XCU" secondAttribute="trailing" constant="4" id="aeX-Nq-XOK"/>
                             <constraint firstItem="vMv-ZA-Lv3" firstAttribute="trailing" secondItem="O3t-72-12r" secondAttribute="trailingMargin" id="g0t-TC-YAG"/>
                             <constraint firstItem="xJz-ku-sej" firstAttribute="top" secondItem="1dT-E9-Cyf" secondAttribute="bottom" id="hZP-EG-tME"/>
                             <constraint firstItem="xJz-ku-sej" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leading" id="iEG-ie-yr5"/>
                             <constraint firstItem="cw5-Zm-yEo" firstAttribute="centerX" secondItem="O3t-72-12r" secondAttribute="centerX" id="jQk-o2-myL"/>
+                            <constraint firstItem="lrs-bO-dws" firstAttribute="top" secondItem="W3H-ch-XCU" secondAttribute="bottom" constant="47.5" id="k5S-Vv-ELy"/>
                             <constraint firstAttribute="trailing" secondItem="qWh-UO-wAH" secondAttribute="trailing" constant="16" id="mpK-g7-AyA"/>
-                            <constraint firstItem="vMv-ZA-Lv3" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="rGZ-DV-rpF"/>
-                            <constraint firstItem="pmw-3l-gfS" firstAttribute="top" secondItem="qWh-UO-wAH" secondAttribute="bottom" constant="20" id="rYh-ft-7lu"/>
                             <constraint firstItem="cw5-Zm-yEo" firstAttribute="top" secondItem="Xj9-zC-dZr" secondAttribute="bottom" constant="20" id="v8y-0q-w6b"/>
                             <constraint firstItem="Xj9-zC-dZr" firstAttribute="centerX" secondItem="O3t-72-12r" secondAttribute="centerX" id="x56-BS-Qoe"/>
-                            <constraint firstItem="pmw-3l-gfS" firstAttribute="leading" secondItem="O3t-72-12r" secondAttribute="leadingMargin" id="zAa-mR-TQx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -329,7 +331,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM9-tJ-Lv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1286" y="-510"/>
+            <point key="canvasLocation" x="-1287.2" y="-510.49475262368821"/>
         </scene>
         <!--Onboarding Sign TypeVC-->
         <scene sceneID="Iir-Sm-c5d">
@@ -1413,7 +1415,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtE-xL-rwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5462" y="141"/>
+            <point key="canvasLocation" x="-634" y="-510"/>
         </scene>
         <!--Onboarding Verify CodeVC-->
         <scene sceneID="2ga-EO-WiU">
@@ -1631,7 +1633,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgo-If-p7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6121" y="141"/>
+            <point key="canvasLocation" x="26" y="-510"/>
         </scene>
         <!--Onboarding Gender SelectCV-->
         <scene sceneID="lnQ-Sw-mlS">
@@ -2097,7 +2099,7 @@ News Feed</string>
                                 <rect key="frame" x="15" y="197" width="345" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-LE-W6k">
                                 <rect key="frame" x="15" y="226" width="345" height="1"/>
@@ -2116,7 +2118,7 @@ News Feed</string>
                                 <rect key="frame" x="15" y="275" width="345" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNr-uo-VKH">
                                 <rect key="frame" x="15" y="304" width="345" height="1"/>
@@ -2293,8 +2295,10 @@ News Feed</string>
         <image name="UIButtonOnboardingBack" width="11" height="20"/>
         <image name="UIImageViewFlagUS" width="18" height="11"/>
         <image name="UIImageViewOnboardingSnapchat" width="100" height="93"/>
+        <image name="UIImageViewPassword" width="24" height="23"/>
         <image name="UIImageViewProfilePlaceHolder" width="125" height="125"/>
         <image name="UIImageViewSplashBackground" width="375" height="667"/>
+        <image name="UIImageViewUser" width="24" height="24"/>
         <image name="UIImageViewVerifiedMark" width="13" height="13"/>
         <image name="UITabBarIconConnections" width="24" height="24"/>
         <image name="UITabBarIconProfile" width="24" height="24"/>
