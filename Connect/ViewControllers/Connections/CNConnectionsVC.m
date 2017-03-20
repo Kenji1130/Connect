@@ -35,7 +35,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setupSearchBar];
+    [self setupNavigationBar];
+    [self setupNavTitle];
+    
     [self configureLayout];
     [self configureSwitchView];
     
@@ -68,7 +70,45 @@
 
 #pragma mark - Helpers
 
+- (void) setupNavigationBar{
+    CGRect frameimg = CGRectMake(15,5, 25,25);
+
+    UIImage* image1 = [UIImage imageNamed:@"UIButtonSearch"];
+    UIButton *button1 = [[UIButton alloc] initWithFrame:frameimg];
+    [button1 setBackgroundImage:image1 forState:UIControlStateNormal];
+    [button1 addTarget:self action:@selector(toggleSearch:)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithCustomView:button1];
+    self.navigationItem.leftBarButtonItem =searchButton;
+    
+    UIImage* image2 = [UIImage imageNamed:@"UIButtonNotification"];
+    UIButton *butto2 = [[UIButton alloc] initWithFrame:frameimg];
+    [butto2 setBackgroundImage:image2 forState:UIControlStateNormal];
+    [butto2 addTarget:self action:@selector(toggleNotification:)
+      forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *notiButton =[[UIBarButtonItem alloc] initWithCustomView:butto2];
+    self.navigationItem.rightBarButtonItem =notiButton;
+}
+
+- (IBAction)toggleSearch:(id)sender{
+    // do something or handle Search Button Action.
+    [self setupSearchBar];
+    [self hideNavigationBar];
+}
+
+- (IBAction)toggleNotification:(id)sender{
+    
+}
+
+- (void) hideNavigationBar{
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
 - (void)setupSearchBar {
+    
     // Configure search controller
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.delegate = self;
@@ -80,12 +120,18 @@
     self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeWords;
     self.searchController.searchBar.barTintColor = kAppTextColor;
     
-//    self.searchController.searchBar.backgroundImage = [self imageWithColor:[UIColor whiteColor] size:self.searchController.searchBar.frame.size];
-//    UITextField *txfSearchField = [self.searchController.searchBar valueForKey:@"_searchField"];
-//    txfSearchField.backgroundColor = UIColorFromRGB(0xdedee0);
-    
     self.navigationItem.titleView = self.searchController.searchBar;
 }
+
+- (void) setupNavTitle{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    label.text = @"GRIP";
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = TextAlignmentCenter;
+    
+    self.navigationItem.titleView = label;
+}
+
 
 - (void)configureLayout {
     // Configure view
@@ -245,6 +291,8 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [self setupNavigationBar];
+    [self setupNavTitle];
     [self dismissSearch];
 }
 

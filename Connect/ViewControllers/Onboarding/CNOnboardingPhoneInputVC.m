@@ -7,8 +7,7 @@
 //
 
 #import "CNOnboardingPhoneInputVC.h"
-#import "CNOnboardingVerifyCodeVC.h"
-
+#import "CNOnboardingSnapchatVC.h"
 @interface CNOnboardingPhoneInputVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFPhoneNumber;
@@ -81,66 +80,18 @@
             // Add user to db
             [CNUser currentUser].phoneNumber = phoneNumber;
             [CNUser currentUser].profileType = CNProfileTypePersonal;
-
-            [self uploadProfileImage];
+            
+            [self goNext];
+            
         } else {
             NSLog(@"Authentication error: %@", error.localizedDescription);
         }
     }];
 }
-    
-- (void) uploadProfileImage{
-    
-    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
-    NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
-    NSString *imageName = [NSString stringWithFormat:@"%d%@", [timeStampObj intValue], @".jpg"];
-    FIRStorageReference *imageRef = [[[AppDelegate sharedInstance].storageRef child:@"profile_image"] child:imageName];
-    
-    // Create file metadata including the content type
-    FIRStorageMetadata *meta = [[FIRStorageMetadata alloc] init];
-    meta.contentType = @"image/jpeg";
-    
-    // Upload the file
-    NSData *data = UIImageJPEGRepresentation(_profileImage, 0.1);
-    [imageRef putData:data metadata:meta completion:^(FIRStorageMetadata *metadata, NSError *error) {
-            if (error != nil) {
-                // Uh-oh, an error occurred!
-            } else {
-                // Metadata contains file metadata such as size, content-type, and download URL.
-                NSURL *downloadURL = metadata.downloadURL;
-                [CNUser currentUser].imageURL = metadata.downloadURL.absoluteString;
-                [self saveProfileInfo:downloadURL];
-            }
-    }];
-}
 
-- (void) saveProfileInfo: (NSURL*) profileImageUrl{
-    
-    NSDictionary *userInfo = @{@"username": [CNUser currentUser].username,
-                               @"firstName": [CNUser currentUser].firstName,
-                               @"lastName": [CNUser currentUser].lastName,
-                               @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],
-                               @"age": [CNUser currentUser].age,
-                               @"phoneNumber": [CNUser currentUser].phoneNumber,
-                               @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
-                               @"imageURL": [CNUser currentUser].imageURL};
-    
-    FIRDatabaseReference *userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] childByAutoId];
-    [userRef setValue:userInfo withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
-        
-        NSLog(@"user id = %@", ref.key);
-        [CNUser currentUser].userID = ref.key;
-        
-        // Save login status
-        [[NSUserDefaults standardUserDefaults] setObject:ref.key forKey:kLoggedUserID];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Show main screens
-            [[AppDelegate sharedInstance] showMain];
-
-        });
-    }];
+- (void) goNext{
+    CNOnboardingSnapchatVC *vc = (CNOnboardingSnapchatVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSnapchatVC class])];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*
