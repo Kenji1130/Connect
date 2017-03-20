@@ -41,10 +41,19 @@
 
 - (void)configureCellWithConnection:(NSDictionary *)connection {
     // Configure cell
-    self.ivProfileImage.image = [UIImage imageNamed:connection[@"image"]];
-    self.lblName.text = connection[@"name"];
+    if (connection[@"imageURL"] == nil) {
+        self.ivProfileImage.backgroundColor = UIColorFromRGB(0xd1d1d1);
+        self.ivProfileImage.image = [UIImage imageNamed:@"UIImageViewProfileIconPicture"];
+        self.ivProfileImage.contentMode = UIViewContentModeCenter;
+    } else {
+        self.ivProfileImage.backgroundColor = [UIColor clearColor];
+        [self.ivProfileImage setImageWithURL:[NSURL URLWithString:connection[@"imageURL"]] placeholderImage:nil usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        self.ivProfileImage.contentMode = UIViewContentModeScaleAspectFill;
+    }
     
-    NSInteger profile_type = [connection[@"profile_type"] integerValue];
+    self.lblName.text = [NSString stringWithFormat:@"%@ %@", connection[@"firstName"], connection[@"lastName"]];
+    
+    NSInteger profile_type = [connection[@"profileType"] integerValue];
     if (profile_type == 0) { // Personal
         self.lblMarkPersonal.hidden = NO;
         self.lblMarkBusiness.hidden = YES;

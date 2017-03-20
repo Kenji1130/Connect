@@ -22,8 +22,10 @@
 @property (strong, nonatomic) CNSwitchView *searchSwitch;
 
 @property (strong, nonatomic) FIRDatabaseReference *userRef;
+@property (strong, nonatomic) FIRDatabaseReference *connectionRef;
 
 @property (strong, nonatomic) NSArray *connections;
+@property (strong, nonatomic) NSArray *allUsers;
 @property (nonatomic, strong) NSMutableDictionary *connectionsData;
 @property (strong, nonatomic) NSArray *connectionTitles;
 
@@ -193,37 +195,86 @@
 }
 
 - (void)switchValueChanged:(id)sender {
-//    CNSwitchView *cnSwitch = (CNSwitchView *)sender;
-    
+    CNSwitchView *cnSwitch = (CNSwitchView *)sender;
+    if (cnSwitch.isOn) {
+        NSLog(@"Switch On");
+        [self loadData];
+    } else {
+         NSLog(@"Switch Off");
+        [self feachAllUser];
+    }
 }
 
 - (void)loadData {
     // Default connections
-    self.connections = @[@{@"name" : @"Jonathan Reyes", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-                         @{@"name" : @"Gabi Maskowitz", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
-                         @{@"name" : @"Annie Rowe", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-                         @{@"name" : @"Rachel Woods", @"image" : @"UIImageViewPerson1", @"profile_type" : @2},
-                         @{@"name" : @"Carol Mendez", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
-                         @{@"name" : @"Joan Green", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-                         @{@"name" : @"Johnny Castillo", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-                         @{@"name" : @"Kathy Patterson", @"image" : @"UIImageViewPerson1", @"profile_type" : @0}];
+//    self.connections = @[@{@"name" : @"Jonathan Reyes", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+//                         @{@"name" : @"Gabi Maskowitz", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
+//                         @{@"name" : @"Annie Rowe", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+//                         @{@"name" : @"Rachel Woods", @"image" : @"UIImageViewPerson1", @"profile_type" : @2},
+//                         @{@"name" : @"Carol Mendez", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
+//                         @{@"name" : @"Joan Green", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+//                         @{@"name" : @"Johnny Castillo", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
+//                         @{@"name" : @"Kathy Patterson", @"image" : @"UIImageViewPerson1", @"profile_type" : @0}];
     
-    if (self.userRef == nil) {
-        self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
+    if (_connections != nil) {
+        [self startSearchWithString:self.searchController.searchBar.text];
+        return;
     }
     
+    self.connectionRef = [[[AppDelegate sharedInstance].dbRef child:@"connections"] child:[CNUser currentUser].userID];
+    self.userRef = [[AppDelegate sharedInstance].dbRef child:@"users"];
+
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    [[_userRef child:@"connections"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+    [_connectionRef observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         if (![snapshot.value isEqual:[NSNull null]]) {
             NSDictionary *value = snapshot.value;
-            self.connections = value.allValues;
+            
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            for(int i = 0 ; i < value.allKeys.count; i ++){
+                NSString *userID = [value.allKeys objectAtIndex:i];
+                
+                [[self.userRef child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                    NSLog(@"%@", snapshot.value);
+                    NSDictionary *value1 = snapshot.value;
+                    [array addObject:value1];
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [MBProgressHUD hideHUDForView:self.view animated:YES];
+                        
+                        [self startSearchWithString:self.searchController.searchBar.text];
+                    });
+                    
+                }];
+
+            }
+            self.connections = array;
+            
+        }
+
+    }];
+}
+
+- (void) feachAllUser{
+    if (_allUsers != nil) {
+        [self startSearchWithString:self.searchController.searchBar.text];
+        return;
+    }
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.userRef = [[AppDelegate sharedInstance].dbRef child:@"users"];
+
+    [_userRef observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if (![snapshot.value isEqual:[NSNull null]]) {
+            NSLog(@"%@", snapshot.value);
+            NSDictionary *value = snapshot.value;
+            self.allUsers = value.allValues;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
             
-            [self startSearchWithString:nil];
+            [self startSearchWithString:self.searchController.searchBar.text];
         });
     }];
 }
@@ -241,7 +292,14 @@
     
     self.connectionsData = [NSMutableDictionary new];
     
-    for (NSDictionary *object in self.connections) {
+    NSArray *temp;
+    if (self.searchSwitch.isOn) {
+        temp = self.connections;
+    } else {
+        temp = self.allUsers;
+    }
+    
+    for (NSDictionary *object in temp) {
         NSString *name = [NSString stringWithFormat:@"%@ %@", object[@"firstName"], object[@"lastName"]];
         
         if (searchString.length > 0) {
@@ -293,6 +351,8 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [self setupNavigationBar];
     [self setupNavTitle];
+    [self.searchSwitch setOn:YES];
+    [self loadData];
     [self dismissSearch];
 }
 
@@ -363,23 +423,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-//    [self.view endEditing:YES];
-    [self.searchController.searchBar resignFirstResponder];
-    
-    CNProfileViewController *profileVC = (CNProfileViewController *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNProfileViewController class])];
-//    profileVC.user = nil;
-    profileVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:profileVC animated:YES];
-    
-//    NSString *sectionTitle = [self.countrySectionTitles objectAtIndex:indexPath.section];
-//    NSArray *sectionCountries = [self.countryData objectForKey:sectionTitle];
-//    NSDictionary *country = [sectionCountries objectAtIndex:indexPath.row];
-//    
-//    if (self.delegate && [self.delegate respondsToSelector:@selector(didCountrySelected:)]) {
-//        [self.delegate didCountrySelected:country];
-//    }
-//    
-//    [self.navigationController popViewControllerAnimated:YES];
+
     
 }
 
