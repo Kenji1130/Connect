@@ -80,6 +80,31 @@
     [super viewWillDisappear:animated];
 }
 
+- (IBAction)sendConnectionRequest:(id)sender {
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    
+//    {
+//        "group_id": "connect",
+//        "recipients": {
+//            "custom_ids": ["VOPbIGQjBJYEBqwQTqajYkJAdUo1"]
+//        },
+//        "message": {
+//            "title": "Hello!",
+//            "body": "How's it going?"
+//        }
+//    }
+    [params setObject:@"connect" forKey:@"group_id"];
+    NSArray *custom_ids = @[_user.userID];
+    NSDictionary *recipients = [NSDictionary dictionaryWithObject:custom_ids forKey:@"custom_ids"];
+    [params setObject:recipients forKey:@"recipients"];
+    NSDictionary *message = [NSDictionary dictionaryWithObjectsAndKeys:
+                             @"Hello", @"title",
+                             _user.userID, @"body",
+                             nil];
+    [params setObject:message forKey:@"message"];
+    [[CNUtilities shared] httpJsonRequest:kBatchTransactionUrl withJSON:params];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

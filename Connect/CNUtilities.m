@@ -8,6 +8,8 @@
 
 #import "CNUtilities.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "JSON.h"
+
 
 @implementation CNUtilities
 + (instancetype)shared {
@@ -65,5 +67,28 @@
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
     
     return [phoneTest evaluateWithObject:phoneNumber];
+}
+
+- (void) httpJsonRequest:(NSString *) urlStr withJSON:(NSMutableDictionary *)params {
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    NSString *body = [[SBJsonWriter new] stringWithObject:params];
+    NSData *requestData = [body dataUsingEncoding:NSASCIIStringEncoding];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:kBatchRestKey forHTTPHeaderField:@"X-Authorization"];
+    [request setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody: requestData];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Error:%@", error);
+        }
+        NSLog(@"respose: %@", response);
+        NSLog(@"data: %@", data);
+    }] resume];
+    
 }
 @end

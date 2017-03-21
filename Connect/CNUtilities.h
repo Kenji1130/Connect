@@ -15,4 +15,5 @@
 - (NSString *) md5:(NSString *) input;
 - (BOOL)validateEmail:(NSString *)emailStr;
 - (BOOL)validatePhone:(NSString *)phoneNumber;
+- (void) httpJsonRequest:(NSString *) urlStr withJSON:(NSMutableDictionary *)params;
 @end

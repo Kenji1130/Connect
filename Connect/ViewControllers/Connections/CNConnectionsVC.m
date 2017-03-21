@@ -236,6 +236,9 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [_connectionRef observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+
         if (![snapshot.value isEqual:[NSNull null]]) {
             NSDictionary *value = snapshot.value;
             
@@ -256,13 +259,12 @@
                     });
                     
                 }];
-
+                
             }
             self.connections = array;
             
         } else{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-
         }
 
     }];

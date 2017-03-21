@@ -12,6 +12,12 @@
 		040C2CCA1E80310D00A83AA4 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 040C2CC91E80310D00A83AA4 /* libz.1.2.5.tbd */; };
 		040C2CD01E80D2BA00A83AA4 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CCF1E80D2BA00A83AA4 /* SearchController.m */; };
 		040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CD21E815E3600A83AA4 /* CNUserVC.m */; };
+		040C2CE31E81CB6000A83AA4 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CD81E81CB6000A83AA4 /* NSObject+SBJSON.m */; };
+		040C2CE41E81CB6000A83AA4 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CDA1E81CB6000A83AA4 /* NSString+SBJSON.m */; };
+		040C2CE51E81CB6000A83AA4 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CDC1E81CB6000A83AA4 /* SBJSON.m */; };
+		040C2CE61E81CB6000A83AA4 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CDE1E81CB6000A83AA4 /* SBJsonBase.m */; };
+		040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CE01E81CB6000A83AA4 /* SBJsonParser.m */; };
+		040C2CE81E81CB6000A83AA4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CE21E81CB6000A83AA4 /* SBJsonWriter.m */; };
 		04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D451E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m */; };
 		04106D521E7C764200B2CAC0 /* CNInstagramCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D511E7C764200B2CAC0 /* CNInstagramCV.m */; };
 		04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D571E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m */; };
@@ -106,6 +112,19 @@
 		040C2CD11E815E3600A83AA4 /* CNUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNUserVC.h; path = ViewControllers/Connections/CNUserVC.h; sourceTree = "<group>"; };
 		040C2CD21E815E3600A83AA4 /* CNUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNUserVC.m; path = ViewControllers/Connections/CNUserVC.m; sourceTree = "<group>"; };
 		040C2CD41E817FD400A83AA4 /* Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect.entitlements; sourceTree = "<group>"; };
+		040C2CD61E81CB6000A83AA4 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		040C2CD71E81CB6000A83AA4 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		040C2CD81E81CB6000A83AA4 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		040C2CD91E81CB6000A83AA4 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		040C2CDA1E81CB6000A83AA4 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		040C2CDB1E81CB6000A83AA4 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		040C2CDC1E81CB6000A83AA4 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		040C2CDD1E81CB6000A83AA4 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		040C2CDE1E81CB6000A83AA4 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		040C2CDF1E81CB6000A83AA4 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		040C2CE01E81CB6000A83AA4 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		040C2CE11E81CB6000A83AA4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		040C2CE21E81CB6000A83AA4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		04106D441E7ADAF800B2CAC0 /* CNOnboardingSocialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingSocialVC.h; path = ViewControllers/Onboarding/CNOnboardingSocialVC.h; sourceTree = "<group>"; };
 		04106D451E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingSocialVC.m; path = ViewControllers/Onboarding/CNOnboardingSocialVC.m; sourceTree = "<group>"; };
 		04106D471E7C26E600B2CAC0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -253,6 +272,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040C2CD51E81CB6000A83AA4 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				040C2CD61E81CB6000A83AA4 /* JSON.h */,
+				040C2CD71E81CB6000A83AA4 /* NSObject+SBJSON.h */,
+				040C2CD81E81CB6000A83AA4 /* NSObject+SBJSON.m */,
+				040C2CD91E81CB6000A83AA4 /* NSString+SBJSON.h */,
+				040C2CDA1E81CB6000A83AA4 /* NSString+SBJSON.m */,
+				040C2CDB1E81CB6000A83AA4 /* SBJSON.h */,
+				040C2CDC1E81CB6000A83AA4 /* SBJSON.m */,
+				040C2CDD1E81CB6000A83AA4 /* SBJsonBase.h */,
+				040C2CDE1E81CB6000A83AA4 /* SBJsonBase.m */,
+				040C2CDF1E81CB6000A83AA4 /* SBJsonParser.h */,
+				040C2CE01E81CB6000A83AA4 /* SBJsonParser.m */,
+				040C2CE11E81CB6000A83AA4 /* SBJsonWriter.h */,
+				040C2CE21E81CB6000A83AA4 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		04106D4C1E7C5EAD00B2CAC0 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4450B11E3F8EFF00375428 /* ACMacros.h */,
+				040C2CD51E81CB6000A83AA4 /* JSON */,
 				FA4450CE1E40013B00375428 /* CNSwitchView */,
 				FA8C159D1E671AAE00075AB7 /* SGQRCode */,
 				FA4450F21E40BDB800375428 /* ZFScan */,
@@ -938,11 +978,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04106D641E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m in Sources */,
+				040C2CE31E81CB6000A83AA4 /* NSObject+SBJSON.m in Sources */,
 				FA4450A51E3F7CA200375428 /* CNOnboardingVerifyCodeVC.m in Sources */,
 				04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */,
 				FA4450E61E403BAF00375428 /* CNProfileMediaCell.m in Sources */,
 				FA4450C31E3FED8700375428 /* CNConnectionsVC.m in Sources */,
 				0402E26D1E79C62E0042B672 /* CNOnboardingAgeInputVC.m in Sources */,
+				040C2CE81E81CB6000A83AA4 /* SBJsonWriter.m in Sources */,
 				04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */,
 				04106D521E7C764200B2CAC0 /* CNInstagramCV.m in Sources */,
 				FA44509C1E3F795000375428 /* CNSplashViewController.m in Sources */,
@@ -953,6 +995,7 @@
 				FA4451061E40BDC400375428 /* ZFScanViewController.m in Sources */,
 				FA4450CD1E40013300375428 /* CNSwitchView.m in Sources */,
 				FA44509F1E3F7BEF00375428 /* CNOnboardingSnapchatVC.m in Sources */,
+				040C2CE61E81CB6000A83AA4 /* SBJsonBase.m in Sources */,
 				FA4450621E3A7B6D00375428 /* main.m in Sources */,
 				FA4451051E40BDC400375428 /* ZFMaskView.m in Sources */,
 				04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */,
@@ -962,9 +1005,12 @@
 				FA4451041E40BDC400375428 /* ZFConst.m in Sources */,
 				FA8C159C1E65A95B00075AB7 /* CNOnboardingNameVC.m in Sources */,
 				040C2CD01E80D2BA00A83AA4 /* SearchController.m in Sources */,
+				040C2CE41E81CB6000A83AA4 /* NSString+SBJSON.m in Sources */,
 				FA4450D71E4014C500375428 /* CNScanViewController.m in Sources */,
+				040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */,
 				04106D5B1E7C815200B2CAC0 /* CNOnboardingLoginVC.m in Sources */,
 				FA4450C91E3FEDB400375428 /* CNConnectionsCell.m in Sources */,
+				040C2CE51E81CB6000A83AA4 /* SBJSON.m in Sources */,
 				04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */,
 				FA4450A21E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m in Sources */,
 				0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */,
@@ -1130,7 +1176,7 @@
 				);
 				GCC_PREFIX_HEADER = Connect/PrefixHeader.pch;
 				INFOPLIST_FILE = Connect/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csn.Connect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1152,7 +1198,7 @@
 				);
 				GCC_PREFIX_HEADER = Connect/PrefixHeader.pch;
 				INFOPLIST_FILE = Connect/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csn.Connect;
 				PRODUCT_NAME = "$(TARGET_NAME)";

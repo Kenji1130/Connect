@@ -59,7 +59,6 @@ NSString *const kPinterestAppID = @"4886880364739441997";
             // Get user value
             if (![snapshot.value isEqual:[NSNull null]]) {
                 NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:snapshot.value];
-                [userInfo setObject:loggedUserID forKey:@"userID"];
                 
                 [[CNUser currentUser] configureUserWithDictionary:userInfo];
                 [self showMain];
@@ -98,6 +97,12 @@ NSString *const kPinterestAppID = @"4886880364739441997";
 //    profileVC.isCurrentUser = YES;
     
     self.window.rootViewController = tabBarController;
+}
+
+- (void)saveUserIDForBatch: (NSString*) userID{
+    BatchUserDataEditor *editor = [BatchUser editor];
+    [editor setIdentifier:userID];
+    [editor save]; // Do not forget to save the changes!
 }
 
 - (void)setupAppearance {
@@ -166,5 +171,9 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    NSString *deeplink = [BatchPush deeplinkFromUserInfo:userInfo];
+    NSLog(@"Deep Link: %@", deeplink);
+}
 
 @end
