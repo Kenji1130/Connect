@@ -11,6 +11,7 @@
 		0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402E26F1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m */; };
 		040C2CCA1E80310D00A83AA4 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 040C2CC91E80310D00A83AA4 /* libz.1.2.5.tbd */; };
 		040C2CD01E80D2BA00A83AA4 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CCF1E80D2BA00A83AA4 /* SearchController.m */; };
+		040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CD21E815E3600A83AA4 /* CNUserVC.m */; };
 		04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D451E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m */; };
 		04106D521E7C764200B2CAC0 /* CNInstagramCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D511E7C764200B2CAC0 /* CNInstagramCV.m */; };
 		04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D571E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m */; };
@@ -102,6 +103,8 @@
 		040C2CC91E80310D00A83AA4 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		040C2CCE1E80D2BA00A83AA4 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchController.h; path = ViewControllers/Connections/SearchController.h; sourceTree = "<group>"; };
 		040C2CCF1E80D2BA00A83AA4 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchController.m; path = ViewControllers/Connections/SearchController.m; sourceTree = "<group>"; };
+		040C2CD11E815E3600A83AA4 /* CNUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNUserVC.h; path = ViewControllers/Connections/CNUserVC.h; sourceTree = "<group>"; };
+		040C2CD21E815E3600A83AA4 /* CNUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNUserVC.m; path = ViewControllers/Connections/CNUserVC.m; sourceTree = "<group>"; };
 		04106D441E7ADAF800B2CAC0 /* CNOnboardingSocialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingSocialVC.h; path = ViewControllers/Onboarding/CNOnboardingSocialVC.h; sourceTree = "<group>"; };
 		04106D451E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingSocialVC.m; path = ViewControllers/Onboarding/CNOnboardingSocialVC.m; sourceTree = "<group>"; };
 		04106D471E7C26E600B2CAC0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -524,6 +527,8 @@
 			children = (
 				040C2CCE1E80D2BA00A83AA4 /* SearchController.h */,
 				040C2CCF1E80D2BA00A83AA4 /* SearchController.m */,
+				040C2CD11E815E3600A83AA4 /* CNUserVC.h */,
+				040C2CD21E815E3600A83AA4 /* CNUserVC.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -956,6 +961,7 @@
 				FA4450EB1E409A3100375428 /* CNProfileEditOptionCell.m in Sources */,
 				FA4450DA1E401E3500375428 /* CNUser.m in Sources */,
 				FA4450E01E403B4900375428 /* CNProfileHeaderView.m in Sources */,
+				040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */,
 				FA8C15B51E671AB800075AB7 /* SGQRCodeTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

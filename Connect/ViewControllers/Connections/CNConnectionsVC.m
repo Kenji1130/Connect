@@ -11,6 +11,7 @@
 #import "CNSwitchView.h"
 #import "CNProfileViewController.h"
 #import "SearchController.h"
+#import "CNUserVC.h"
 
 @interface CNConnectionsVC () <UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 
@@ -278,9 +279,20 @@
     [_userRef observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (![snapshot.value isEqual:[NSNull null]]) {
-            NSLog(@"%@", snapshot.value);
-            NSDictionary *value = snapshot.value;
-            self.allUsers = value.allValues;
+ 
+            NSEnumerator *children = [snapshot children];
+            FIRDataSnapshot *child;
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+
+            while (child = [children nextObject]) {
+                NSLog(@"Child Value: %@", child.value);
+                NSDictionary *dict = child.value;
+                if (![[CNUser currentUser].userID isEqualToString:dict[@"userID"]]) {
+                    [array addObject: dict];
+                }
+            }
+            
+            self.allUsers = array;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -311,27 +323,26 @@
     }
     
     for (NSDictionary *object in temp) {
-        if (![[CNUser currentUser].userID isEqualToString:object[@"userID"]]) {
-            NSString *name = [NSString stringWithFormat:@"%@ %@", object[@"firstName"], object[@"lastName"]];
-            
-            if (searchString.length > 0) {
-                if (![[name lowercaseString] containsString:[searchString lowercaseString]]) {
-                    continue;
-                }
+        NSString *name = [NSString stringWithFormat:@"%@ %@", object[@"firstName"], object[@"lastName"]];
+        
+        if (searchString.length > 0) {
+            if (![[name lowercaseString] containsString:[searchString lowercaseString]]) {
+                continue;
             }
-            
-            NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
-            NSMutableArray *array = [self.connectionsData objectForKey:firstLetter];
-            
-            if (array == nil) {
-                array = [NSMutableArray array];
-                [self.connectionsData setObject:array forKey:firstLetter];
-            }
-            
-            [array addObject:object];
         }
+        
+        NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
+        NSMutableArray *array = [self.connectionsData objectForKey:firstLetter];
+        
+        if (array == nil) {
+            array = [NSMutableArray array];
+            [self.connectionsData setObject:array forKey:firstLetter];
+        }
+        
+        [array addObject:object];
 
     }
+    
     
     self.connectionTitles = [[self.connectionsData allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
@@ -434,7 +445,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
+    
+    CNUserVC *vc = (CNUserVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNUserVC class])];
+    
+    NSString *sectionTitle = [self.connectionTitles objectAtIndex:indexPath.section];
+    NSArray *sectionConnections = [self.connectionsData objectForKey:sectionTitle];
+    NSDictionary *connection = [sectionConnections objectAtIndex:indexPath.row];
+    
+    CNUser *user = [[CNUser alloc] initWithDictionary:connection];
+    vc.user = user;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
