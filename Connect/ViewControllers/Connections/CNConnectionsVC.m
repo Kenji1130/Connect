@@ -50,14 +50,13 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillHideNotification object:nil];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillShowNotification object:nil];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self.view endEditing:YES];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super viewWillDisappear:animated];
 }
 
@@ -251,6 +250,9 @@
             }
             self.connections = array;
             
+        } else{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+
         }
 
     }];
@@ -300,23 +302,26 @@
     }
     
     for (NSDictionary *object in temp) {
-        NSString *name = [NSString stringWithFormat:@"%@ %@", object[@"firstName"], object[@"lastName"]];
-        
-        if (searchString.length > 0) {
-            if (![[name lowercaseString] containsString:[searchString lowercaseString]]) {
-                continue;
+        if (![[CNUser currentUser].userID isEqualToString:object[@"userID"]]) {
+            NSString *name = [NSString stringWithFormat:@"%@ %@", object[@"firstName"], object[@"lastName"]];
+            
+            if (searchString.length > 0) {
+                if (![[name lowercaseString] containsString:[searchString lowercaseString]]) {
+                    continue;
+                }
             }
+            
+            NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
+            NSMutableArray *array = [self.connectionsData objectForKey:firstLetter];
+            
+            if (array == nil) {
+                array = [NSMutableArray array];
+                [self.connectionsData setObject:array forKey:firstLetter];
+            }
+            
+            [array addObject:object];
         }
-        
-        NSString *firstLetter = [[name substringToIndex:1] uppercaseString];
-        NSMutableArray *array = [self.connectionsData objectForKey:firstLetter];
-        
-        if (array == nil) {
-            array = [NSMutableArray array];
-            [self.connectionsData setObject:array forKey:firstLetter];
-        }
-        
-        [array addObject:object];
+
     }
     
     self.connectionTitles = [[self.connectionsData allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];

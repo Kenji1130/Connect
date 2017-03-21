@@ -107,7 +107,8 @@
     
 - (void) saveProfileInfo: (NSURL*) profileImageUrl{
     
-    NSDictionary *info = @{@"username": [CNUser currentUser].username,
+    NSDictionary *info = @{@"userID": [CNUser currentUser].userID,
+                               @"username": [CNUser currentUser].username,
                                @"firstName": [CNUser currentUser].firstName,
                                @"lastName": [CNUser currentUser].lastName,
                                @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],

@@ -85,7 +85,6 @@
         
         if (![snapshot.value isEqual:[NSNull null]]) {
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:snapshot.value];
-            [userInfo setObject:userId forKey:@"userID"];
             
             [[CNUser currentUser] configureUserWithDictionary:userInfo];
         }
