@@ -10,6 +10,7 @@
 #import "CNConnectionsCell.h"
 #import "CNSwitchView.h"
 #import "CNProfileViewController.h"
+#import "SearchController.h"
 
 @interface CNConnectionsVC () <UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 
@@ -18,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constOfSwitchViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constOfTableViewBottom;
 
-@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) SearchController *searchController;
 @property (strong, nonatomic) CNSwitchView *searchSwitch;
 
 @property (strong, nonatomic) FIRDatabaseReference *userRef;
@@ -36,27 +37,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self setupNavigationBar];
-    [self setupNavTitle];
-    
+
     [self configureLayout];
     [self configureSwitchView];
     
-    [self loadData];
+    [self initNavBar];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self initNavBar];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void) initNavBar{
     
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillShowNotification object:nil];
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillHideNotification object:nil];
+    [self setupNavigationBar];
+    [self setupNavTitle];
+    [self.searchSwitch setOn:YES];
+    [self loadData];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self.view endEditing:YES];
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super viewWillDisappear:animated];
 }
 
@@ -111,7 +119,7 @@
 - (void)setupSearchBar {
     
     // Configure search controller
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController = [[SearchController alloc] initWithSearchResultsController:nil];
     self.searchController.delegate = self;
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
@@ -120,6 +128,7 @@
     self.searchController.searchBar.delegate = self;
     self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeWords;
     self.searchController.searchBar.barTintColor = kAppTextColor;
+    [self.searchController.searchBar becomeFirstResponder];
     
     self.navigationItem.titleView = self.searchController.searchBar;
 }
@@ -354,10 +363,7 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [self setupNavigationBar];
-    [self setupNavTitle];
-    [self.searchSwitch setOn:YES];
-    [self loadData];
+    [self initNavBar];
     [self dismissSearch];
 }
 
