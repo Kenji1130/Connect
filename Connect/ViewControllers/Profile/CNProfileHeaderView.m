@@ -94,7 +94,7 @@
         [self.btnSettings setImage:[UIImage imageNamed:@"UIButtonProfileDoneCheckmark"] forState:UIControlStateNormal];
     }
     
-    if (self.user.profileType == CNProfileTypePersonal) {
+    if (self.user.profileType == CNProfileTypePersonal || self.user.profileType == CNProfileTypeBoth) {
         self.backgroundColor = UIColorFromRGB(0xf0f0f0);
         self.btnSettings.tintColor = UIColorFromRGB(0x929eaf);
         self.lblName.textColor = kAppTextColor;
@@ -109,7 +109,6 @@
         self.lblOccupation.textColor = [UIColor whiteColor];
         self.txtFName.textColor = [UIColor whiteColor];
         self.txtFOccupation.textColor = [UIColor whiteColor];
-        
     }
 }
 

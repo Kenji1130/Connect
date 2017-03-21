@@ -77,10 +77,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "Batch/Batch.embeddedframework/Batch.bundle"
   install_resource "Digits/iOS/DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle"
   install_resource "TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "Batch/Batch.embeddedframework/Batch.bundle"
   install_resource "Digits/iOS/DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle"
   install_resource "TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle"
 fi

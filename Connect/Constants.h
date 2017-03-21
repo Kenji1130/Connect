@@ -62,5 +62,6 @@ alpha:1.0]
 
 #define kInstagramClientID  @"1dd5bf86971e48a19471481e2ff5c72a"
 
+#define kBatchDevAPIKey     @"DEV58D1469E06B70E84387F656FB38"
 
 #endif /* Constants_h */

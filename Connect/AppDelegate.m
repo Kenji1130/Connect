@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CNProfileViewController.h"
+@import Batch;
 
 NSString *const kPinterestAppID = @"4886880364739441997";
 
@@ -43,6 +44,10 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     
+    // Start Batch SDK.
+    [Batch startWithAPIKey:kBatchDevAPIKey];
+    // Register for push notifications
+    [BatchPush registerForRemoteNotifications];
     
     [self setupAppearance];
     
