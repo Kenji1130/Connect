@@ -48,7 +48,7 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     [Batch startWithAPIKey:kBatchDevAPIKey];
     // Register for push notifications
     [BatchPush registerForRemoteNotifications];
-    
+
     [self setupAppearance];
     
     // Check if user has already logged in
@@ -171,9 +171,5 @@ NSString *const kPinterestAppID = @"4886880364739441997";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    NSString *deeplink = [BatchPush deeplinkFromUserInfo:userInfo];
-    NSLog(@"Deep Link: %@", deeplink);
-}
 
 @end
