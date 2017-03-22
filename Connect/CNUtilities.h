@@ -15,5 +15,9 @@
 - (NSString *) md5:(NSString *) input;
 - (BOOL)validateEmail:(NSString *)emailStr;
 - (BOOL)validatePhone:(NSString *)phoneNumber;
+- (void)saveLoggedUserID:(NSString*) userId;
+- (NSString*)getLoggedUserID;
+- (void)saveToken:(NSString*) token;
+- (NSString*)getToken;
 - (void) httpJsonRequest:(NSString *) urlStr withJSON:(NSMutableDictionary *)params;
 @end

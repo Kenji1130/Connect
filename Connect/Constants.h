@@ -39,6 +39,7 @@ typedef NS_ENUM(NSUInteger, CNSignType) {
 };
 // Log In
 #define kLoggedUserID   @"LoggedUserID"
+#define kToken          @"token"
 
 #define UIColorFromRGB(rgbValue) \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -62,10 +63,8 @@ alpha:1.0]
 
 #define kInstagramClientID  @"1dd5bf86971e48a19471481e2ff5c72a"
 
-#define kBatchDevAPIKey     @"DEV58D1469E06B70E84387F656FB38"
-#define kBatchRestKey       @"f827e410a7b6c1bd791b40c35ab0ce21"
-#define kBatchTransactionUrl    @"https://api.batch.com/1.1/DEV58D1469E06B70E84387F656FB38/transactional/send"
-
-
+/// Firebase Info
+#define kFCMUrl             @"https://fcm.googleapis.com/fcm/send"
+#define kAutherization      @"key=AAAA-GzmNAU:APA91bGzRayHYs-MJm5TqmbZZWZ04lVuP8lPBsiOyRJ3icbJy_iCeuCN-0BCuPZLUVFHlIBA-itRIiNbBJr8n4stOVctppdWEbJapfmfZqFeJhU-xfZVwxbg4Q1WKPk6iTrgI0hwyDih"
 
 #endif /* Constants_h */

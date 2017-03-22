@@ -108,6 +108,7 @@
 - (void) saveProfileInfo: (NSURL*) profileImageUrl{
     
     NSDictionary *info = @{@"userID": [CNUser currentUser].userID,
+                               @"token": [[CNUtilities shared] getToken],
                                @"username": [CNUser currentUser].username,
                                @"firstName": [CNUser currentUser].firstName,
                                @"lastName": [CNUser currentUser].lastName,
@@ -135,14 +136,13 @@
             NSLog(@"Error: %@", error.localizedDescription);
             [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:error.localizedDescription];
         } else {
+            
             // Save login status
-            [[NSUserDefaults standardUserDefaults] setObject:[CNUser currentUser].userID forKey:kLoggedUserID];
-            [[NSUserDefaults standardUserDefaults] synchronize];
+            [[CNUtilities shared] saveLoggedUserID:[CNUser currentUser].userID];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Show main screens
                 [[AppDelegate sharedInstance] showMain];
-                [[AppDelegate sharedInstance] saveUserIDForBatch:[CNUser currentUser].userID];
                 
             });
         }

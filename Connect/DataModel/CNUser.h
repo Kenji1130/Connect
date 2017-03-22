@@ -11,6 +11,7 @@
 @interface CNUser : NSObject
 
 @property (nonatomic, strong) NSString *userID;
+@property (nonatomic, strong) NSString *token;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *username;

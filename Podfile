@@ -10,6 +10,7 @@ target 'Connect' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
   pod 'Fabric'
   pod 'Digits'
   pod 'TwitterKit'
@@ -18,7 +19,6 @@ target 'Connect' do
   pod 'SDWebImage'
   pod 'UIActivityIndicator-for-SDWebImage'
   pod 'InstagramKit', '~> 3.0'
-  pod 'Batch', '~> 1.7'
   target 'ConnectTests' do
     inherit! :search_paths
     # Pods for testing

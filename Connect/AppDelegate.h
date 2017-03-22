@@ -21,6 +21,6 @@
 
 - (void)showLogin;
 - (void)showMain;
-- (void)saveUserIDForBatch:(NSString*) userID;
+- (void)updateToken;
 @end
 

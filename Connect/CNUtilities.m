@@ -77,7 +77,7 @@
     NSData *requestData = [body dataUsingEncoding:NSASCIIStringEncoding];
     
     [request setHTTPMethod:@"POST"];
-    [request setValue:kBatchRestKey forHTTPHeaderField:@"X-Authorization"];
+    [request setValue:kAutherization forHTTPHeaderField:@"Authorization"];
     [request setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody: requestData];
     
@@ -91,4 +91,25 @@
     }] resume];
     
 }
+
+- (void) saveLoggedUserID:(NSString*) userId{
+    [[NSUserDefaults standardUserDefaults] setObject:userId forKey:kLoggedUserID];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSString*) getLoggedUserID{
+    NSString *loggedUserID = [[NSUserDefaults standardUserDefaults] objectForKey:kLoggedUserID];
+    return loggedUserID;
+}
+
+- (void) saveToken:(NSString *)token{
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:kToken];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSString*) getToken{
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:kToken];
+    return token;
+}
+
 @end

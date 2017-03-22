@@ -82,17 +82,28 @@
 
 - (IBAction)sendConnectionRequest:(id)sender {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setObject:@"connect" forKey:@"group_id"];
-    NSArray *custom_ids = @[_user.userID];
-    NSDictionary *recipients = [NSDictionary dictionaryWithObject:custom_ids forKey:@"custom_ids"];
-    [params setObject:recipients forKey:@"recipients"];
-    NSDictionary *message = [NSDictionary dictionaryWithObjectsAndKeys:
-                             @"Connect Request", @"title",
-                             [NSString stringWithFormat:@"%@ %@ required Connection with you.", _user.firstName, _user.lastName], @"body",
-                             nil];
-    [params setObject:message forKey:@"message"];
-    [[CNUtilities shared] httpJsonRequest:kBatchTransactionUrl withJSON:params];
+//    {
+//        "to" : "APA91bHun4MxP5egoKMwt2KZFBaFUH-1RYqx...",
+//        "notification" : {
+//            "body" : "great match!",
+//            "title" : "Portugal vs. Denmark",
+//            "icon" : "myicon"
+//        },
+//        "data" : {
+//            "Nick" : "Mario",
+//            "Room" : "PortugalVSDenmark"
+//        }
+//    }
+   
+    [params setObject:_user.token forKey:@"to"];
+    NSDictionary *notification = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  @"Connection Request", @"title",
+                                  [NSString stringWithFormat:@"%@ %@ required connetion with you", _user.firstName, _user.lastName], @"body",
+                                  nil];
+    [params setObject:notification forKey:@"notification"];
+    NSDictionary *data = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:1] forKey:@"type"];
+    [params setObject:data forKey:@"data"];
+    [[CNUtilities shared] httpJsonRequest:kFCMUrl withJSON:params];
 }
 
 - (void)didReceiveMemoryWarning {

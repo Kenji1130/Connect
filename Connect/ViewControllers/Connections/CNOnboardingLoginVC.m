@@ -90,14 +90,13 @@
         }
         
         // Save login status
-        [[NSUserDefaults standardUserDefaults] setObject:[CNUser currentUser].userID forKey:kLoggedUserID];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[CNUtilities shared] saveLoggedUserID:[CNUser currentUser].userID];
+        [[AppDelegate sharedInstance] updateToken];
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         dispatch_async(dispatch_get_main_queue(), ^{
             // Show main screens
             [[AppDelegate sharedInstance] showMain];
-            [[AppDelegate sharedInstance] saveUserIDForBatch:[CNUser currentUser].userID];
         });
         
         // ...

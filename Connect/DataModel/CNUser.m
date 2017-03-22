@@ -30,6 +30,7 @@
 - (void)configureUserWithDictionary:(NSDictionary *)value {
     // Configure user with dictionary
     self.userID = value[@"userID"];
+    self.token = value[@"token"];
     self.email = value[@"email"];
     self.password = value[@"password"];
     self.username = value[@"username"];

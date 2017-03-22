@@ -24,11 +24,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## Batch
-
-Copyright © 2015 Batch.com
-
-
 ## Digits
 
 Fabric: Copyright 2015 Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Fabric Software and Services Agreement located at https://fabric.io/terms.  Digits Kit: Copyright 2015 Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Digits Kit Agreement located at https://fabric.io/terms/digits and the Developer Agreement located at https://dev.twitter.com/overview/terms/agreement. OSS: http://get.fabric.io/terms/opensource.txt
@@ -58,6 +53,10 @@ Copyright 2016 Google
 Copyright 2016 Google
 
 ## FirebaseInstanceID
+
+Copyright 2016 Google
+
+## FirebaseMessaging
 
 Copyright 2016 Google
 
