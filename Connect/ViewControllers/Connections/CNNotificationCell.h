@@ -19,8 +19,8 @@
 
 @property (nonatomic, strong) CNNotification *notification;
 @property (strong, nonatomic) FIRDatabaseReference *notiRef;
-@property (strong, nonatomic) FIRDatabaseReference *notiRemoveRef;
-
+@property (strong, nonatomic) FIRDatabaseReference *notiUpdateRef;
+@property (strong, nonatomic) FIRDatabaseReference *connectRef;
 
 - (void)configureCellWithNotification:(CNNotification *) notification;
 

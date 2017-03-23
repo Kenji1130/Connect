@@ -85,9 +85,9 @@
 }
 
 - (void)refreshList:(id)sender {
-//    SDImageCache *imageCache = [SDImageCache sharedImageCache];
-//    [imageCache clearMemory];
-//    [imageCache clearDisk];
+    SDImageCache *imageCache = [SDImageCache sharedImageCache];
+    [imageCache clearMemory];
+    [imageCache clearDisk];
     
     self.tableView.userInteractionEnabled = NO;
     

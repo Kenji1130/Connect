@@ -15,9 +15,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivProfileImage;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbOccupation;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnConnectHeightAnchor;
 
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
 @property (strong, nonatomic) FIRDatabaseReference *notiRef;
+@property (strong, nonatomic) FIRDatabaseReference *connectRef;
+
 
 @end
 
@@ -28,6 +31,7 @@
     // Do any additional setup after loading the view.
     
     [self configLayout];
+    [self isConnected];
 }
 
 - (void) configLayout{
@@ -45,6 +49,12 @@
     
     _lbName.text = [NSString stringWithFormat:@"%@ %@", _user.firstName, _user.lastName];
     _lbOccupation.text = _user.occupation;
+    
+//    if ([self isConnected]) {
+//        self.btnConnectHeightAnchor.constant = 0;
+//    } else {
+//        self.btnConnectHeightAnchor.constant = 40;
+//    }
 }
 
 - (void) configSwitchView{
@@ -82,6 +92,32 @@
     [super viewWillDisappear:animated];
 }
 
+
+#pragma mark - Connection check
+- (BOOL) isConnected{
+    __block BOOL connected = false;
+    
+    self.connectRef = [[[[AppDelegate sharedInstance].dbRef child:@"connections"] child:[CNUser currentUser].userID] child:_user.userID];
+    
+    [self.connectRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        if (![snapshot.value isEqual:[NSNull null]]) {
+            connected = true;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.btnConnectHeightAnchor.constant = 0;
+            });
+        } else{
+            connected = false;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.btnConnectHeightAnchor.constant = 46;
+            });
+        }
+    }];
+    
+    return connected;
+    
+}
+
 - (IBAction)sendConnectionRequest:(id)sender {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:_user.token forKey:@"to"];
@@ -108,7 +144,7 @@
     NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
     NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
     [param setObject:timeStampObj forKey:@"timeStamp"];
-    [param setObject:_user.token forKey:@"token"];
+    [param setObject:[CNUser currentUser].token forKey:@"token"];
     
     self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:_user.userID] childByAutoId];
     [self.notiRef setValue:param];

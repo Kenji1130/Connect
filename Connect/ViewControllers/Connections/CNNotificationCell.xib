@@ -39,7 +39,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itm-yn-gj3">
-                        <rect key="frame" x="56" y="14.5" width="38" height="19"/>
+                        <rect key="frame" x="56" y="15" width="37" height="18.5"/>
                         <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -87,12 +87,13 @@
                         </userDefinedRuntimeAttributes>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-iI-een">
-                        <rect key="frame" x="98" y="15" width="36" height="18.5"/>
+                        <rect key="frame" x="97" y="15" width="36" height="18.5"/>
                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="hcL-Ln-Ptv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0v7-lO-C6p"/>
                     <constraint firstItem="HzZ-4h-7C6" firstAttribute="leading" secondItem="h0S-VT-4Aw" secondAttribute="trailing" constant="8" id="2ok-gD-K0x"/>

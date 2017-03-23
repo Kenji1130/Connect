@@ -71,22 +71,24 @@
     NSLog(@"Connect Clicked");
     
     NSString *title = @"Connection Accepted";
-    NSString *body = [NSString stringWithFormat:@"%@ accepeted your connection request", self.notification.fromName];
+    NSString *body = [NSString stringWithFormat:@"%@ accepeted your connection request", self.notification.toName];
     [self sendNotification:title body:body type:CNNotificationTypeConfirm];
     [self saveNotification:CNNotificationTypeConfirm];
-    
+    [self saveConnection];
 }
 
 - (IBAction)onRejectClicked:(id)sender{
     NSLog(@"Reject Clicked");
     
     NSString *title = @"Connection Rejected";
-    NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.fromName];
+    NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.toName];
     [self sendNotification:title body:body type:CNNotificationTypeReject];
     [self saveNotification:CNNotificationTypeReject];
+    
 }
 
 - (void) sendNotification:(NSString*)title body:(NSString*) body type:(CNNotificationType) type{
+    
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:self.notification.token forKey:@"to"];
     NSDictionary *notification = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -114,13 +116,29 @@
     
     self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.fromID] childByAutoId];
     [self.notiRef setValue:param];
+
+    [self updateNotification:type];
     
-    [self removeNotification];
 }
 
-- (void) removeNotification{
-    self.notiRemoveRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.toID] child:self.notification.notiID];
-    [self.notiRemoveRef removeValue];
+
+- (void) updateNotification: (CNNotificationType) type{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
+    [param setObject:timeStampObj forKey:@"timeStamp"];
+    
+    [param setObject:[NSNumber numberWithInteger:type] forKey:@"notiType"];
+
+    self.notiUpdateRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.toID] child:self.notification.notiID];
+    [self.notiUpdateRef updateChildValues:param];
+}
+
+- (void) saveConnection{
+    self.connectRef = [[AppDelegate sharedInstance].dbRef child:@"connections"];
+    [[[self.connectRef child:self.notification.fromID] child:self.notification.toID] setValue:[NSNumber numberWithInt:1]];
+    [[[self.connectRef child:self.notification.toID] child:self.notification.fromID] setValue:[NSNumber numberWithInt:1]];
 }
 
 @end
