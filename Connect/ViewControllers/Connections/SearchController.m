@@ -26,7 +26,8 @@
 
 - (void) viewWillDisappear:(BOOL)animated{
     
-    self.active = false;
+//    self.active = false;
+    [super viewWillDisappear:animated];
 }
 /*
 #pragma mark - Navigation

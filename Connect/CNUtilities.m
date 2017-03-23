@@ -83,13 +83,46 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Error:%@", error);
-        }
         NSLog(@"respose: %@", response);
         NSLog(@"data: %@", data);
+        
+        if (error != nil) {
+            NSLog(@"Error:%@", error);
+            [self.delegate onFailed];
+        } else {
+            [self.delegate onSuccess];
+        }
+
     }] resume];
     
+}
+
+- (NSString*) stringFromTimeInterval: (NSTimeInterval) interval{
+    
+    NSString *timeString;
+    
+    NSInteger time = round(interval);
+    NSInteger second, minute, hour, day;
+    second = time % 60;
+    minute = (time / 60) % 60;
+    hour = (time / 3600);
+    day = (time / 14400);
+    
+    if (day > 0) {
+        timeString = [NSString stringWithFormat:@"%ld day ago", (long)day];
+    } else {
+        if (hour > 0) {
+            timeString = [NSString stringWithFormat:@"%ld hour ago", (long)hour];
+        } else {
+            if (minute > 0) {
+                timeString = [NSString stringWithFormat:@"%ld min ago", (long)minute];
+            } else{
+                timeString = [NSString stringWithFormat:@"%ld second ago", (long)second];
+            }
+        }
+    }
+    NSLog(@"%@", timeString);
+    return timeString;
 }
 
 - (void) saveLoggedUserID:(NSString*) userId{

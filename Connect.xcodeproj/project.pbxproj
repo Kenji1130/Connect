@@ -26,6 +26,10 @@
 		04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D601E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m */; };
 		04106D641E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D631E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m */; };
 		04106D661E7D890B00B2CAC0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04106D651E7D890B00B2CAC0 /* AdSupport.framework */; };
+		0427C3F61E82BE59008E3359 /* CNNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3F51E82BE59008E3359 /* CNNotificationVC.m */; };
+		0427C3FA1E82D81C008E3359 /* CNNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3F81E82D81C008E3359 /* CNNotificationCell.m */; };
+		0427C3FB1E82D81C008E3359 /* CNNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */; };
+		0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3FD1E8310EC008E3359 /* CNNotification.m */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		309DE55D86EFD689FE24F805 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D091ECB69DE8C4B60A6E4BB /* Pods_ConnectTests.framework */; };
@@ -141,6 +145,13 @@
 		04106D621E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingEmailInputVC.h; path = ViewControllers/Onboarding/CNOnboardingEmailInputVC.h; sourceTree = "<group>"; };
 		04106D631E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingEmailInputVC.m; path = ViewControllers/Onboarding/CNOnboardingEmailInputVC.m; sourceTree = "<group>"; };
 		04106D651E7D890B00B2CAC0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0427C3F41E82BE59008E3359 /* CNNotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNNotificationVC.h; path = ViewControllers/Connections/CNNotificationVC.h; sourceTree = "<group>"; };
+		0427C3F51E82BE59008E3359 /* CNNotificationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNNotificationVC.m; path = ViewControllers/Connections/CNNotificationVC.m; sourceTree = "<group>"; };
+		0427C3F71E82D81C008E3359 /* CNNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNNotificationCell.h; path = ViewControllers/Connections/CNNotificationCell.h; sourceTree = "<group>"; };
+		0427C3F81E82D81C008E3359 /* CNNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNNotificationCell.m; path = ViewControllers/Connections/CNNotificationCell.m; sourceTree = "<group>"; };
+		0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CNNotificationCell.xib; path = ViewControllers/Connections/CNNotificationCell.xib; sourceTree = "<group>"; };
+		0427C3FC1E8310EC008E3359 /* CNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNNotification.h; path = DataModel/CNNotification.h; sourceTree = "<group>"; };
+		0427C3FD1E8310EC008E3359 /* CNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNNotification.m; path = DataModel/CNNotification.m; sourceTree = "<group>"; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
@@ -427,6 +438,8 @@
 			children = (
 				FA4450D81E401E3500375428 /* CNUser.h */,
 				FA4450D91E401E3500375428 /* CNUser.m */,
+				0427C3FC1E8310EC008E3359 /* CNNotification.h */,
+				0427C3FD1E8310EC008E3359 /* CNNotification.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -557,6 +570,9 @@
 		FA4450C41E3FED8F00375428 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0427C3F71E82D81C008E3359 /* CNNotificationCell.h */,
+				0427C3F81E82D81C008E3359 /* CNNotificationCell.m */,
+				0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */,
 				FA4450C61E3FEDB400375428 /* CNConnectionsCell.h */,
 				FA4450C71E3FEDB400375428 /* CNConnectionsCell.m */,
 				FA4450C81E3FEDB400375428 /* CNConnectionsCell.xib */,
@@ -571,6 +587,8 @@
 				040C2CCF1E80D2BA00A83AA4 /* SearchController.m */,
 				040C2CD11E815E3600A83AA4 /* CNUserVC.h */,
 				040C2CD21E815E3600A83AA4 /* CNUserVC.m */,
+				0427C3F41E82BE59008E3359 /* CNNotificationVC.h */,
+				0427C3F51E82BE59008E3359 /* CNNotificationVC.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -791,6 +809,7 @@
 				FA44506B1E3A7B6D00375428 /* Main.storyboard in Resources */,
 				FA4450F11E409A5500375428 /* CNProfileAddMediaCell.xib in Resources */,
 				FA4450BA1E3F923700375428 /* ProximaNovaLight.otf in Resources */,
+				0427C3FB1E82D81C008E3359 /* CNNotificationCell.xib in Resources */,
 				FA4450E21E403B5A00375428 /* CNProfileHeaderView.xib in Resources */,
 				FA4450E71E403BAF00375428 /* CNProfileMediaCell.xib in Resources */,
 				FA4450AB1E3F879B00375428 /* UIButton.xcassets in Resources */,
@@ -980,6 +999,7 @@
 				04106D641E7CCF4500B2CAC0 /* CNOnboardingEmailInputVC.m in Sources */,
 				040C2CE31E81CB6000A83AA4 /* NSObject+SBJSON.m in Sources */,
 				FA4450A51E3F7CA200375428 /* CNOnboardingVerifyCodeVC.m in Sources */,
+				0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */,
 				04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */,
 				FA4450E61E403BAF00375428 /* CNProfileMediaCell.m in Sources */,
 				FA4450C31E3FED8700375428 /* CNConnectionsVC.m in Sources */,
@@ -996,6 +1016,7 @@
 				FA4450CD1E40013300375428 /* CNSwitchView.m in Sources */,
 				FA44509F1E3F7BEF00375428 /* CNOnboardingSnapchatVC.m in Sources */,
 				040C2CE61E81CB6000A83AA4 /* SBJsonBase.m in Sources */,
+				0427C3FA1E82D81C008E3359 /* CNNotificationCell.m in Sources */,
 				FA4450621E3A7B6D00375428 /* main.m in Sources */,
 				FA4451051E40BDC400375428 /* ZFMaskView.m in Sources */,
 				04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */,
@@ -1009,6 +1030,7 @@
 				FA4450D71E4014C500375428 /* CNScanViewController.m in Sources */,
 				040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */,
 				04106D5B1E7C815200B2CAC0 /* CNOnboardingLoginVC.m in Sources */,
+				0427C3F61E82BE59008E3359 /* CNNotificationVC.m in Sources */,
 				FA4450C91E3FEDB400375428 /* CNConnectionsCell.m in Sources */,
 				040C2CE51E81CB6000A83AA4 /* SBJSON.m in Sources */,
 				04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */,

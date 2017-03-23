@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaRegular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+        <array key="ProximaNovaSemibold.otf">
+            <string>ProximaNovaA-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="CNNotificationCell">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="hcL-Ln-Ptv">
+                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Ara-5Y-pVs"/>
+                            <constraint firstAttribute="width" constant="40" id="Tqx-3f-wcb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itm-yn-gj3">
+                        <rect key="frame" x="56" y="14.5" width="38" height="19"/>
+                        <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJA-gS-Fe1">
+                        <rect key="frame" x="56" y="33.5" width="29" height="15"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0S-VT-4Aw">
+                        <rect key="frame" x="56" y="52.5" width="60" height="25"/>
+                        <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="A9N-4j-Dhj"/>
+                            <constraint firstAttribute="width" constant="60" id="qrf-im-cak"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                        <state key="normal" title="Connect">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-4h-7C6">
+                        <rect key="frame" x="124" y="52.5" width="60" height="25"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Vod-Nx-aUr"/>
+                            <constraint firstAttribute="width" constant="60" id="ipN-Yi-dp1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                        <state key="normal" title="Reject">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-iI-een">
+                        <rect key="frame" x="98" y="15" width="36" height="18.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hcL-Ln-Ptv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0v7-lO-C6p"/>
+                    <constraint firstItem="HzZ-4h-7C6" firstAttribute="leading" secondItem="h0S-VT-4Aw" secondAttribute="trailing" constant="8" id="2ok-gD-K0x"/>
+                    <constraint firstItem="ZJA-gS-Fe1" firstAttribute="top" secondItem="itm-yn-gj3" secondAttribute="bottom" id="3JV-Hn-s35"/>
+                    <constraint firstItem="h0S-VT-4Aw" firstAttribute="top" secondItem="ZJA-gS-Fe1" secondAttribute="bottom" constant="4" id="E8L-ES-tYi"/>
+                    <constraint firstItem="itm-yn-gj3" firstAttribute="centerY" secondItem="hcL-Ln-Ptv" secondAttribute="centerY" constant="-4" id="GbK-VZ-6fI"/>
+                    <constraint firstItem="h0S-VT-4Aw" firstAttribute="leading" secondItem="itm-yn-gj3" secondAttribute="leading" id="LJL-Fo-rl5"/>
+                    <constraint firstItem="itm-yn-gj3" firstAttribute="leading" secondItem="hcL-Ln-Ptv" secondAttribute="trailing" constant="8" id="Lpg-HF-qAA"/>
+                    <constraint firstItem="dYu-iI-een" firstAttribute="centerY" secondItem="itm-yn-gj3" secondAttribute="centerY" id="N9q-0D-Nbv"/>
+                    <constraint firstItem="hcL-Ln-Ptv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="eEk-nF-LAw"/>
+                    <constraint firstItem="dYu-iI-een" firstAttribute="leading" secondItem="itm-yn-gj3" secondAttribute="trailing" constant="4" id="iUt-nx-EiR"/>
+                    <constraint firstItem="ZJA-gS-Fe1" firstAttribute="leading" secondItem="itm-yn-gj3" secondAttribute="leading" id="jcc-2D-TJb"/>
+                    <constraint firstItem="HzZ-4h-7C6" firstAttribute="centerY" secondItem="h0S-VT-4Aw" secondAttribute="centerY" id="yi6-TA-44c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnConnect" destination="h0S-VT-4Aw" id="XSV-ig-zPb"/>
+                <outlet property="btnReject" destination="HzZ-4h-7C6" id="oz7-aI-Yho"/>
+                <outlet property="lbName" destination="itm-yn-gj3" id="qaM-WM-kL7"/>
+                <outlet property="lbNoti" destination="dYu-iI-een" id="Or5-1m-bEU"/>
+                <outlet property="lbTime" destination="ZJA-gS-Fe1" id="Psu-1k-CVa"/>
+                <outlet property="profileImageView" destination="hcL-Ln-Ptv" id="AX5-Wd-1zQ"/>
+            </connections>
+            <point key="canvasLocation" x="28.5" y="71.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UIImageViewProfilePlaceHolder" width="125" height="125"/>
+    </resources>
+</document>

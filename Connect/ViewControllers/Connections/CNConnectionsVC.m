@@ -12,6 +12,7 @@
 #import "CNProfileViewController.h"
 #import "SearchController.h"
 #import "CNUserVC.h"
+#import "CNNotificationVC.h"
 
 @interface CNConnectionsVC () <UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 
@@ -66,11 +67,8 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [self.view endEditing:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.searchController dismissViewControllerAnimated:YES completion:nil];
     [super viewWillDisappear:animated];
-}
-
--(void)dealloc {
-    [self.searchController.view removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,7 +107,8 @@
 }
 
 - (IBAction)toggleNotification:(id)sender{
-    
+    CNNotificationVC *vc = (CNNotificationVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNNotificationVC class])];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void) hideNavigationBar{
@@ -130,7 +129,6 @@
     self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeWords;
     self.searchController.searchBar.barTintColor = kAppTextColor;
     [self.searchController.searchBar becomeFirstResponder];
-    
     self.navigationItem.titleView = self.searchController.searchBar;
 }
 
@@ -264,7 +262,11 @@
             self.connections = array;
             
         } else{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                
+                [self startSearchWithString:self.searchController.searchBar.text];
+            });
         }
 
     }];
@@ -456,8 +458,7 @@
     
     CNUser *user = [[CNUser alloc] initWithDictionary:connection];
     vc.user = user;
-    [self.navigationController pushViewController:vc animated:YES];
-    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 // Override to support conditional editing of the table view.

@@ -37,6 +37,16 @@ typedef NS_ENUM(NSUInteger, CNSignType) {
     /// Phone Sign
     CNSignTypePhone 
 };
+
+typedef NS_ENUM(NSUInteger, CNNotificationType) {
+    // Request
+    CNNotificationTypeRequest = 0,
+    // Confirm
+    CNNotificationTypeConfirm,
+    // Reject
+    CNNotificationTypeReject
+};
+
 // Log In
 #define kLoggedUserID   @"LoggedUserID"
 #define kToken          @"token"

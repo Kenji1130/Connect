@@ -1,0 +1,126 @@
+//
+//  CNNotificationCell.m
+//  Connect
+//
+//  Created by mac on 3/22/17.
+//  Copyright © 2017 Connect Social Network. All rights reserved.
+//
+
+#import "CNNotificationCell.h"
+
+@implementation CNNotificationCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+    
+    self.btnReject.layer.borderWidth = 1;
+    self.btnReject.layer.borderColor = kAppTintColor.CGColor;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
+    [self.btnConnect addTarget:self action:@selector(onConnectClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnReject addTarget:self action:@selector(onRejectClicked:) forControlEvents:UIControlEventTouchUpInside];
+
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+- (void)configureCellWithNotification:(CNNotification *)notification {
+    // Configure cell
+    self.notification = notification;
+    
+    if (notification.imageURL == nil) {
+        self.profileImageView.backgroundColor = UIColorFromRGB(0xd1d1d1);
+        self.profileImageView.image = [UIImage imageNamed:@"UIImageViewProfileIconPicture"];
+        self.profileImageView.contentMode = UIViewContentModeCenter;
+    } else {
+        self.profileImageView.backgroundColor = [UIColor clearColor];
+        [self.profileImageView setImageWithURL:[NSURL URLWithString:notification.imageURL] placeholderImage:nil usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        self.profileImageView.contentMode = UIViewContentModeScaleAspectFill;
+    }
+    
+    self.lbName.text = notification.fromName;
+    if (notification.notiType == CNNotificationTypeRequest) {
+        self.lbNoti.text = @"requested to connect with you.";
+    } else if (notification.notiType == CNNotificationTypeConfirm){
+        self.lbNoti.text = @"connected with you.";
+    } else if (notification.notiType == CNNotificationTypeReject){
+        self.lbNoti.text = @"rejected your request.";
+    }
+        NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
+
+    NSTimeInterval difference = [[NSDate dateWithTimeIntervalSince1970:[timeStampObj intValue]] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:[notification.timeStamp intValue]]];
+    
+    self.lbTime.text = [[CNUtilities shared] stringFromTimeInterval:difference];
+    
+    if (notification.notiType != CNNotificationTypeRequest) {
+        self.btnConnect.hidden = true;
+        self.btnReject.hidden = true;
+    } else {
+        self.btnConnect.hidden = false;
+        self.btnReject.hidden = false;
+    }
+}
+
+- (IBAction)onConnectClicked:(id)sender{
+    NSLog(@"Connect Clicked");
+    
+    NSString *title = @"Connection Accepted";
+    NSString *body = [NSString stringWithFormat:@"%@ accepeted your connection request", self.notification.fromName];
+    [self sendNotification:title body:body type:CNNotificationTypeConfirm];
+    [self saveNotification:CNNotificationTypeConfirm];
+    
+}
+
+- (IBAction)onRejectClicked:(id)sender{
+    NSLog(@"Reject Clicked");
+    
+    NSString *title = @"Connection Rejected";
+    NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.fromName];
+    [self sendNotification:title body:body type:CNNotificationTypeReject];
+    [self saveNotification:CNNotificationTypeReject];
+}
+
+- (void) sendNotification:(NSString*)title body:(NSString*) body type:(CNNotificationType) type{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:self.notification.token forKey:@"to"];
+    NSDictionary *notification = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  title, @"title",
+                                  body, @"body",
+                                  nil];
+    [params setObject:notification forKey:@"notification"];
+    NSDictionary *data = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:type] forKey:@"type"];
+    [params setObject:data forKey:@"data"];
+    [[CNUtilities shared] httpJsonRequest:kFCMUrl withJSON:params];
+}
+
+- (void) saveNotification: (CNNotificationType) type{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:[NSString stringWithFormat:@"%@ %@",[CNUser currentUser].firstName, [CNUser currentUser].lastName] forKey:@"fromName"];
+    [param setObject:[CNUser currentUser].userID forKey:@"fromID"];
+    [param setObject:self.notification.toName forKey:@"toName"];
+    [param setObject:self.notification.toID forKey:@"toID"];
+    [param setObject:[CNUser currentUser].imageURL forKey:@"imageURL"];
+    [param setObject:[NSNumber numberWithInteger:type] forKey:@"notiType"];
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
+    [param setObject:timeStampObj forKey:@"timeStamp"];
+    [param setObject:[CNUser currentUser].token forKey:@"token"];
+    
+    self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.fromID] childByAutoId];
+    [self.notiRef setValue:param];
+    
+    [self removeNotification];
+}
+
+- (void) removeNotification{
+    self.notiRemoveRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.toID] child:self.notification.notiID];
+    [self.notiRemoveRef removeValue];
+}
+
+@end

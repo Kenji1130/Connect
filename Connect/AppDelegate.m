@@ -331,6 +331,9 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     NSString *token = [[CNUtilities shared] getToken];
     if (loggedUserID != nil && ![loggedUserID isEqualToString:@""] && token != nil && ![token isEqualToString:@""]) {
         [[[[self.dbRef child:@"users"] child:loggedUserID] child:@"token"] setValue:token];
+        
+        //Change current user's token for new login.
+        [CNUser currentUser].token = token;
     }
 }
 

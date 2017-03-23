@@ -8,14 +8,16 @@
 
 #import "CNUserVC.h"
 #import "CNSwitchView.h"
+#import "CNNotification.h"
 
-@interface CNUserVC ()
+@interface CNUserVC () <CNUtilitiesDelegate>
 @property (weak, nonatomic) IBOutlet UIView *switchView;
 @property (weak, nonatomic) IBOutlet UIImageView *ivProfileImage;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbOccupation;
 
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
+@property (strong, nonatomic) FIRDatabaseReference *notiRef;
 
 @end
 
@@ -82,28 +84,34 @@
 
 - (IBAction)sendConnectionRequest:(id)sender {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-//    {
-//        "to" : "APA91bHun4MxP5egoKMwt2KZFBaFUH-1RYqx...",
-//        "notification" : {
-//            "body" : "great match!",
-//            "title" : "Portugal vs. Denmark",
-//            "icon" : "myicon"
-//        },
-//        "data" : {
-//            "Nick" : "Mario",
-//            "Room" : "PortugalVSDenmark"
-//        }
-//    }
-   
     [params setObject:_user.token forKey:@"to"];
     NSDictionary *notification = [NSDictionary dictionaryWithObjectsAndKeys:
                                   @"Connection Request", @"title",
-                                  [NSString stringWithFormat:@"%@ %@ required connetion with you", _user.firstName, _user.lastName], @"body",
+                                  [NSString stringWithFormat:@"%@ %@ requested to connet with you", _user.firstName, _user.lastName], @"body",
                                   nil];
     [params setObject:notification forKey:@"notification"];
-    NSDictionary *data = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:1] forKey:@"type"];
+    NSDictionary *data = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:CNNotificationTypeRequest] forKey:@"type"];
     [params setObject:data forKey:@"data"];
     [[CNUtilities shared] httpJsonRequest:kFCMUrl withJSON:params];
+    [CNUtilities shared].delegate = self;
+    [self saveNotification];
+}
+
+- (void) saveNotification{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:[NSString stringWithFormat:@"%@ %@",[CNUser currentUser].firstName, [CNUser currentUser].lastName] forKey:@"fromName"];
+    [param setObject:[CNUser currentUser].userID forKey:@"fromID"];
+    [param setObject:[NSString stringWithFormat:@"%@ %@", _user.firstName, _user.lastName] forKey:@"toName"];
+    [param setObject:_user.userID forKey:@"toID"];
+    [param setObject:[CNUser currentUser].imageURL forKey:@"imageURL"];
+    [param setObject:[NSNumber numberWithInteger:CNNotificationTypeRequest] forKey:@"notiType"];
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
+    [param setObject:timeStampObj forKey:@"timeStamp"];
+    [param setObject:_user.token forKey:@"token"];
+    
+    self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:_user.userID] childByAutoId];
+    [self.notiRef setValue:param];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,7 +119,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
+- (IBAction)onBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
+#pragma mark - CNUtilitiesDelegate
+- (void) onSuccess{
+    NSLog(@"Success");
+    
+}
+
+- (void) onFailed{
+    NSLog(@"Failed");
+}
 /*
 #pragma mark - Navigation
 
