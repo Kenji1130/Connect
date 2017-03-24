@@ -16,7 +16,9 @@ typedef NS_ENUM(NSUInteger, CNSwitchType) {
     /// Connections.
     CNSwitchTypeConnections,
     /// Profile.
-    CNSwitchTypeProfile
+    CNSwitchTypeProfile,
+    /// Notification
+    CNSwitchTypeNotification
 };
 
 @interface CNSwitchView : UIControl <UIGestureRecognizerDelegate>

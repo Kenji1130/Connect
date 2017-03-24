@@ -76,30 +76,25 @@
     
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
     [param setObject:[NSString stringWithFormat:@"%@ %@",[CNUser currentUser].firstName, [CNUser currentUser].lastName] forKey:@"fromName"];
-    [param setObject:[CNUser currentUser].userID forKey:@"fromID"];
     [param setObject:[NSString stringWithFormat:@"%@ %@",self.user.firstName, self.user.lastName] forKey:@"toName"];
-    [param setObject:self.user.userID forKey:@"toID"];
     [param setObject:[CNUser currentUser].imageURL forKey:@"imageURL"];
     [param setObject:[NSNumber numberWithInteger:type] forKey:@"notiType"];
     [param setObject:timeStampObj forKey:@"timeStamp"];
     [param setObject:[CNUser currentUser].token forKey:@"token"];
     
-    [[[self.notiRef child:self.user.userID] childByAutoId] setValue:param];
+    [[[self.notiRef child:self.user.userID] child:[CNUser currentUser].userID] setValue:param];
     
     NSMutableDictionary *param1 = [[NSMutableDictionary alloc] init];
     [param1 setObject:[NSString stringWithFormat:@"%@ %@",self.user.firstName, self.user.lastName] forKey:@"fromName"];
-    [param1 setObject:self.user.userID forKey:@"fromID"];
     [param1 setObject:[NSString stringWithFormat:@"%@ %@",[CNUser currentUser].firstName, [CNUser currentUser].lastName] forKey:@"toName"];
-    [param1 setObject:[CNUser currentUser].userID forKey:@"toID"];
     [param1 setObject:self.user.imageURL forKey:@"imageURL"];
     [param1 setObject:[NSNumber numberWithInteger:type] forKey:@"notiType"];
     [param1 setObject:timeStampObj forKey:@"timeStamp"];
     [param1 setObject:self.user.token forKey:@"token"];
     
-    [[[self.notiRef child:[CNUser currentUser].userID] childByAutoId] setValue:param1];
+    [[[self.notiRef child:[CNUser currentUser].userID] child:self.user.userID] setValue:param1];
     
 }
-
 
 - (void) saveConnection{
     self.connectRef = [[AppDelegate sharedInstance].dbRef child:@"connections"];

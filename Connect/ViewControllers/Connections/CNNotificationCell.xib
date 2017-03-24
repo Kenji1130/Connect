@@ -39,7 +39,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itm-yn-gj3">
-                        <rect key="frame" x="56" y="15" width="37" height="18.5"/>
+                        <rect key="frame" x="56" y="15" width="37.5" height="19"/>
                         <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -87,8 +87,14 @@
                         </userDefinedRuntimeAttributes>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-iI-een">
-                        <rect key="frame" x="97" y="15" width="36" height="18.5"/>
+                        <rect key="frame" x="97.5" y="15" width="36" height="18.5"/>
                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phb-MQ-u3y">
+                        <rect key="frame" x="137.5" y="15" width="37.5" height="19"/>
+                        <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -103,6 +109,8 @@
                     <constraint firstItem="h0S-VT-4Aw" firstAttribute="leading" secondItem="itm-yn-gj3" secondAttribute="leading" id="LJL-Fo-rl5"/>
                     <constraint firstItem="itm-yn-gj3" firstAttribute="leading" secondItem="hcL-Ln-Ptv" secondAttribute="trailing" constant="8" id="Lpg-HF-qAA"/>
                     <constraint firstItem="dYu-iI-een" firstAttribute="centerY" secondItem="itm-yn-gj3" secondAttribute="centerY" id="N9q-0D-Nbv"/>
+                    <constraint firstItem="phb-MQ-u3y" firstAttribute="leading" secondItem="dYu-iI-een" secondAttribute="trailing" constant="4" id="Ppk-ux-yLf"/>
+                    <constraint firstItem="phb-MQ-u3y" firstAttribute="centerY" secondItem="dYu-iI-een" secondAttribute="centerY" id="bom-wO-0C4"/>
                     <constraint firstItem="hcL-Ln-Ptv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="eEk-nF-LAw"/>
                     <constraint firstItem="dYu-iI-een" firstAttribute="leading" secondItem="itm-yn-gj3" secondAttribute="trailing" constant="4" id="iUt-nx-EiR"/>
                     <constraint firstItem="ZJA-gS-Fe1" firstAttribute="leading" secondItem="itm-yn-gj3" secondAttribute="leading" id="jcc-2D-TJb"/>
@@ -114,6 +122,7 @@
                 <outlet property="btnReject" destination="HzZ-4h-7C6" id="oz7-aI-Yho"/>
                 <outlet property="lbName" destination="itm-yn-gj3" id="qaM-WM-kL7"/>
                 <outlet property="lbNoti" destination="dYu-iI-een" id="Or5-1m-bEU"/>
+                <outlet property="lbOtherName" destination="phb-MQ-u3y" id="EFk-Dm-Aq0"/>
                 <outlet property="lbTime" destination="ZJA-gS-Fe1" id="Psu-1k-CVa"/>
                 <outlet property="profileImageView" destination="hcL-Ln-Ptv" id="AX5-Wd-1zQ"/>
             </connections>

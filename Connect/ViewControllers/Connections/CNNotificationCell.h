@@ -12,6 +12,7 @@
 @interface CNNotificationCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UILabel *lbOtherName;
 @property (weak, nonatomic) IBOutlet UILabel *lbTime;
 @property (weak, nonatomic) IBOutlet UILabel *lbNoti;
 @property (weak, nonatomic) IBOutlet UIButton *btnConnect;

@@ -136,9 +136,7 @@
 - (void) saveNotification{
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
     [param setObject:[NSString stringWithFormat:@"%@ %@",[CNUser currentUser].firstName, [CNUser currentUser].lastName] forKey:@"fromName"];
-    [param setObject:[CNUser currentUser].userID forKey:@"fromID"];
     [param setObject:[NSString stringWithFormat:@"%@ %@", _user.firstName, _user.lastName] forKey:@"toName"];
-    [param setObject:_user.userID forKey:@"toID"];
     [param setObject:[CNUser currentUser].imageURL forKey:@"imageURL"];
     [param setObject:[NSNumber numberWithInteger:CNNotificationTypeRequest] forKey:@"notiType"];
     NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
@@ -146,7 +144,7 @@
     [param setObject:timeStampObj forKey:@"timeStamp"];
     [param setObject:[CNUser currentUser].token forKey:@"token"];
     
-    self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:_user.userID] childByAutoId];
+    self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:_user.userID] child:[CNUser currentUser].userID];
     [self.notiRef setValue:param];
 }
 

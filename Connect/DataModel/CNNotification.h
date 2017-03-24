@@ -10,7 +10,6 @@
 
 @interface CNNotification : NSObject
 
-@property (nonatomic, strong) NSString *notiID;
 @property (nonatomic, assign) CNNotificationType notiType;
 @property (nonatomic, strong) NSString *fromName;
 @property (nonatomic, strong) NSString *fromID;

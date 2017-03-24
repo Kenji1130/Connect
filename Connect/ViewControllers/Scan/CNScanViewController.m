@@ -130,13 +130,13 @@
     self.connectRef = [[[[AppDelegate sharedInstance].dbRef child:@"connections"] child:[CNUser currentUser].userID] child:self.user.userID];
     [self.connectRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
-//        if ([snapshot.value isEqual:[NSNull null]]) {
-//            [self showMatchScreen:self.user];
-//        } else {
-//            [self showAlert:self withTitle:@"Error" withMessage:@"You are already connected."];
-//        }
+        if ([snapshot.value isEqual:[NSNull null]]) {
+            [self showMatchScreen:self.user];
+        } else {
+            [self showAlert:self withTitle:@"Error" withMessage:@"You are already connected."];
+        }
         
-        [self showMatchScreen:self.user];
+//        [self showMatchScreen:self.user];
     }];
 }
 

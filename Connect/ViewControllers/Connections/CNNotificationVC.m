@@ -19,7 +19,9 @@
 @property (strong, nonatomic) CNSwitchView *searchSwitch;
 
 @property (strong, nonatomic) FIRDatabaseReference *notiRef;
+@property (strong, nonatomic) FIRDatabaseReference *connectRef;
 @property (strong, nonatomic) NSMutableArray *notifications;
+@property (strong, nonatomic) NSMutableArray *connections;
 @property (strong, nonatomic) NSArray *sortedNotis;
 
 @end
@@ -31,7 +33,7 @@
     // Do any additional setup after loading the view.
     
     [self configLayout];
-    [self loadNotifications];
+    [self loadConnections];
     
 }
 
@@ -47,7 +49,7 @@
 - (void)configSwitchView {
     // Configure switch view
     self.switchView.clipsToBounds = YES;
-    self.searchSwitch = [[CNSwitchView alloc] initWithType:CNSwitchTypeConnections];
+    self.searchSwitch = [[CNSwitchView alloc] initWithType:CNSwitchTypeNotification];
     self.searchSwitch.translatesAutoresizingMaskIntoConstraints = NO;
     [self.searchSwitch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.switchView addSubview:self.searchSwitch];
@@ -73,7 +75,8 @@
             NSLog(@"Child Value: %@", child.value);
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             dict = child.value;
-            [dict setObject:child.key forKey:@"notiID"];
+            [dict setObject:child.key forKey:@"fromID"];
+            [dict setObject:[CNUser currentUser].userID forKey:@"toID"];
             CNNotification *noti = [[CNNotification alloc] initWithDictionary:dict];
             [self.notifications addObject:noti];
             self.sortedNotis = [self.notifications sortedArrayUsingSelector:@selector(compare:)];
@@ -88,12 +91,52 @@
 
 }
 
+- (void)loadConnections{
+    self.notiRef = [[AppDelegate sharedInstance].dbRef child:@"notifications"];
+    self.connections = [[NSMutableArray alloc] init];
+    self.sortedNotis = [[NSArray alloc] init];
+
+    int connectCount = (int)[CNUser currentUser].connectionId.count;
+    for (int i = 0; i < connectCount / 2 ; i++) {
+        NSLog(@"Connection ID: %@", [[CNUser currentUser].connectionId objectAtIndex:i]);
+        NSString *userID1 = [[CNUser currentUser].connectionId objectAtIndex:i];
+        
+        int j = i + 1;
+        while (i+j < connectCount) {
+            NSString *userID2 = [[CNUser currentUser].connectionId objectAtIndex:i+j];
+            
+            [[[self.notiRef child:userID1] child:userID2] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                
+                NSLog(@"Connection ID: %@ Connection Data: %@", userID1, snapshot.value);
+                NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+                dict = snapshot.value;
+                CNNotification *noti = [[CNNotification alloc] initWithDictionary:dict];
+                [self.connections addObject:noti];
+                self.sortedNotis = [self.connections sortedArrayUsingSelector:@selector(compare:)];
+
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [self.tableView reloadData];
+                });
+                
+            }];
+            
+            j ++;
+
+        }
+        
+    }
+}
+
 - (void)switchValueChanged:(id)sender {
     CNSwitchView *cnSwitch = (CNSwitchView *)sender;
     if (cnSwitch.isOn) {
         NSLog(@"Switch On");
+        [self loadConnections];
     } else {
         NSLog(@"Switch Off");
+        [self loadNotifications];
     }
 }
 

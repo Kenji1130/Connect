@@ -43,19 +43,27 @@
         self.profileImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     
-    if (notification.fromID == [CNUser currentUser].userID) {
-        self.lbName.text = notification.toName;
+    self.lbName.text = self.notification.fromName;
+    
+    if (notification.fromID != nil) {
+        if (notification.notiType == CNNotificationTypeRequest) {
+            self.lbNoti.text = @"requested to connect with you.";
+        } else if (notification.notiType == CNNotificationTypeConfirm){
+            self.lbNoti.text = @"connected with you.";
+        } else if (notification.notiType == CNNotificationTypeReject){
+            self.lbNoti.text = @"rejected your request.";
+        }
+        
+        self.lbOtherName.hidden = YES;
     } else {
-        self.lbName.text = notification.fromName;
+        
+        self.lbOtherName.hidden = NO;
+        self.lbOtherName.text = self.notification.toName;
+        self.lbNoti.text = @"connected with";
     }
     
-    if (notification.notiType == CNNotificationTypeRequest) {
-        self.lbNoti.text = @"requested to connect with you.";
-    } else if (notification.notiType == CNNotificationTypeConfirm){
-        self.lbNoti.text = @"connected with you.";
-    } else if (notification.notiType == CNNotificationTypeReject){
-        self.lbNoti.text = @"rejected your request.";
-    }
+    
+    
     NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
     NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
 
@@ -86,7 +94,7 @@
     NSString *title = @"Connection Rejected";
     NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.toName];
     [self sendNotification:title body:body type:CNNotificationTypeReject];
-    [self saveNotification:CNNotificationTypeReject];
+    [self removeNotification];
     
 }
 
@@ -105,11 +113,10 @@
 }
 
 - (void) saveNotification: (CNNotificationType) type{
+    
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    [param setObject:[NSString stringWithFormat:@"%@ %@",[CNUser currentUser].firstName, [CNUser currentUser].lastName] forKey:@"fromName"];
-    [param setObject:[CNUser currentUser].userID forKey:@"fromID"];
-    [param setObject:self.notification.toName forKey:@"toName"];
-    [param setObject:self.notification.toID forKey:@"toID"];
+    [param setObject:self.notification.toName forKey:@"fromName"];
+    [param setObject:self.notification.fromName forKey:@"toName"];
     [param setObject:[CNUser currentUser].imageURL forKey:@"imageURL"];
     [param setObject:[NSNumber numberWithInteger:type] forKey:@"notiType"];
     NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
@@ -117,7 +124,7 @@
     [param setObject:timeStampObj forKey:@"timeStamp"];
     [param setObject:[CNUser currentUser].token forKey:@"token"];
     
-    self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.fromID] childByAutoId];
+    self.notiRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.fromID] child:[CNUser currentUser].userID];
     [self.notiRef setValue:param];
 
     [self updateNotification:type];
@@ -134,8 +141,13 @@
     
     [param setObject:[NSNumber numberWithInteger:type] forKey:@"notiType"];
 
-    self.notiUpdateRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:self.notification.toID] child:self.notification.notiID];
+    self.notiUpdateRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:[CNUser currentUser].userID] child:self.notification.fromID];
     [self.notiUpdateRef updateChildValues:param];
+}
+
+- (void) removeNotification{
+    self.notiUpdateRef = [[[[AppDelegate sharedInstance].dbRef child:@"notifications"] child:[CNUser currentUser].userID] child:self.notification.fromID];
+    [self.notiUpdateRef removeValue];
 }
 
 - (void) saveConnection{

@@ -240,9 +240,13 @@
         if (![snapshot.value isEqual:[NSNull null]]) {
             NSDictionary *value = snapshot.value;
             
+            [CNUser currentUser].connectionId = [[NSMutableArray alloc] init];
             NSMutableArray *array = [[NSMutableArray alloc] init];
+            
             for(int i = 0 ; i < value.allKeys.count; i ++){
+                
                 NSString *userID = [value.allKeys objectAtIndex:i];
+                [[CNUser currentUser].connectionId addObject:userID];
                 
                 [[self.userRef child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
                     NSLog(@"%@", snapshot.value);

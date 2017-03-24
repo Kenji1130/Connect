@@ -21,7 +21,6 @@
 
 - (void)configureUserWithDictionary:(NSDictionary *)value {
     // Configure user with dictionary
-    self.notiID = value[@"notiID"];
     self.notiType = [value[@"notiType"] intValue];
     self.fromName = value[@"fromName"];
     self.fromID = value[@"fromID"];
