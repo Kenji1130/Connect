@@ -50,11 +50,6 @@
     _lbName.text = [NSString stringWithFormat:@"%@ %@", _user.firstName, _user.lastName];
     _lbOccupation.text = _user.occupation;
     
-//    if ([self isConnected]) {
-//        self.btnConnectHeightAnchor.constant = 0;
-//    } else {
-//        self.btnConnectHeightAnchor.constant = 40;
-//    }
 }
 
 - (void) configSwitchView{

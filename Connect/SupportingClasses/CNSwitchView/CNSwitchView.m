@@ -95,6 +95,8 @@ static const CGFloat kThumbShadowRadius = 0.5f;
         self.offTextFont = [UIFont fontWithName:@"ProximaNova-Regular" size:15];
         self.offTextColor = UIColorFromRGB(0x2d3941);
         self.offTintColor = UIColorFromRGB(0x2d3941);
+        self.onButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaA-Semibold" size:15];
+        self.offButton.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Regular" size:15];
         
     } else if (self.switchType == CNSwitchTypeProfile) {
         // Profile Switch
@@ -108,6 +110,10 @@ static const CGFloat kThumbShadowRadius = 0.5f;
         self.offTextFont = [UIFont fontWithName:@"ProximaNova-Regular" size:12];
         self.offTextColor = UIColorFromRGB(0x697781);
         self.offTintColor = UIColorFromRGB(0x929eaf);
+        
+        self.onButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaA-Semibold" size:12];
+        self.offButton.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Regular" size:12];
+        
     } else if (self.switchType == CNSwitchTypeNotification){
         // Notification Switch
         [self.onButton setTitle:@"Connections" forState:UIControlStateNormal];
@@ -117,10 +123,11 @@ static const CGFloat kThumbShadowRadius = 0.5f;
         self.offTextFont = [UIFont fontWithName:@"ProximaNova-Regular" size:15];
         self.offTextColor = UIColorFromRGB(0x2d3941);
         self.offTintColor = UIColorFromRGB(0x2d3941);
+        
+        self.onButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaA-Semibold" size:15];
+        self.offButton.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Regular" size:15];
     }
-    
-    self.onButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaA-Semibold" size:15];
-    self.offButton.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Regular" size:15];
+
     
     [self.offButton setTitleColor:self.offTextColor forState:UIControlStateNormal];
     [self.offButton setTintColor:self.offTintColor];

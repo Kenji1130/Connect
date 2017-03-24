@@ -97,6 +97,11 @@
     self.sortedNotis = [[NSArray alloc] init];
 
     int connectCount = (int)[CNUser currentUser].connectionId.count;
+    if (connectCount < 2) {
+        [self.tableView reloadData];
+        return;
+    }
+    
     for (int i = 0; i < connectCount / 2 ; i++) {
         NSLog(@"Connection ID: %@", [[CNUser currentUser].connectionId objectAtIndex:i]);
         NSString *userID1 = [[CNUser currentUser].connectionId objectAtIndex:i];
