@@ -121,8 +121,17 @@
             }
         }
     }
-    NSLog(@"%@", timeString);
     return timeString;
+}
+
+- (BOOL)valideCharacter:(NSString*) string{
+    NSCharacterSet * set = [[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789"] invertedSet];
+    
+    if ([string rangeOfCharacterFromSet:set].location != NSNotFound) {
+        return YES;
+    } else{
+        return NO;
+    }
 }
 
 - (void) saveLoggedUserID:(NSString*) userId{

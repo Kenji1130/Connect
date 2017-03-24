@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CNMatchViewController : UIViewController
-@property (strong, nonatomic) NSString *scanedBarcode;
+@property (strong, nonatomic) CNUser *user;
 @end

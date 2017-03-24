@@ -27,6 +27,7 @@
 - (BOOL)validateEmail:(NSString *)emailStr;
 - (BOOL)validatePhone:(NSString *)phoneNumber;
 - (NSString*) stringFromTimeInterval: (NSTimeInterval) interval;
+- (BOOL)valideCharacter:(NSString*) string;
 - (void)saveLoggedUserID:(NSString*) userId;
 - (NSString*)getLoggedUserID;
 - (void)saveToken:(NSString*) token;

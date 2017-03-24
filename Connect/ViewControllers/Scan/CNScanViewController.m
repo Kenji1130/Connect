@@ -17,7 +17,10 @@
 @property (nonatomic, strong) AVCaptureSession * session;
 @property (nonatomic, strong) NSMutableArray * metadataObjectTypes;
 @property (nonatomic, strong) ZFMaskView * maskView;
+@property (strong, nonatomic) FIRDatabaseReference *userRef;
+@property (strong, nonatomic) FIRDatabaseReference *connectRef;
 
+@property (strong, nonatomic) CNUser *user;
 @end
 
 @implementation CNScanViewController
@@ -92,10 +95,49 @@
     [self.session startRunning];
 }
 
-- (void)showMatchScreen: (NSString*) scanedBarcode {
+- (void)showMatchScreen: (CNUser*) user {
     CNMatchViewController *vc = (CNMatchViewController *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNMatchViewController class])];
-    vc.scanedBarcode = scanedBarcode;
+    vc.user = user;
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)getFriendInfo: (NSString*) scanedBarcode{
+    NSArray *listItems = [scanedBarcode componentsSeparatedByString:@" - "];
+    NSString *userID = [listItems objectAtIndex:0];
+    NSLog(@"userID: %@", userID);
+    
+    if ([[CNUtilities shared] valideCharacter:userID]) {
+        [self showAlert:self withTitle:@"Error" withMessage:@"Sorry, this user is not registered"];
+    } else {
+        self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:userID];
+        [self.userRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            
+            if (![snapshot.value isEqual:[NSNull null]]) {
+                NSLog(@"%@", snapshot.value);
+                NSDictionary *dict = snapshot.value;
+                self.user = [[CNUser alloc] initWithDictionary:dict];
+                [self connectToFriend];
+            } else {
+                [self showAlert:self withTitle:@"Error" withMessage:@"Sorry, this user is not registered"];
+
+            }
+        }];
+    }
+
+}
+
+- (void) connectToFriend{
+    self.connectRef = [[[[AppDelegate sharedInstance].dbRef child:@"connections"] child:[CNUser currentUser].userID] child:self.user.userID];
+    [self.connectRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+//        if ([snapshot.value isEqual:[NSNull null]]) {
+//            [self showMatchScreen:self.user];
+//        } else {
+//            [self showAlert:self withTitle:@"Error" withMessage:@"You are already connected."];
+//        }
+        
+        [self showMatchScreen:self.user];
+    }];
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
@@ -106,8 +148,29 @@
         AVMetadataMachineReadableCodeObject * metadataObject = metadataObjects.firstObject;
         NSLog(@"%@", metadataObject.stringValue);
         
-        [self showMatchScreen:metadataObject.stringValue];
+        [self getFriendInfo:metadataObject.stringValue];
     }
+}
+
+- (void)showAlert:(UIViewController*) vc withTitle:(NSString *)title withMessage:(NSString *)message {
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:title
+                                 message:message
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle your yes please button action here
+                                   [self.session startRunning];
+                               }];
+    [alert addAction:okButton];
+    [vc presentViewController:alert animated:YES completion:nil];
+    
 }
 
 /*

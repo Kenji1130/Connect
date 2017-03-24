@@ -43,7 +43,12 @@
         self.profileImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     
-    self.lbName.text = notification.fromName;
+    if (notification.fromID == [CNUser currentUser].userID) {
+        self.lbName.text = notification.toName;
+    } else {
+        self.lbName.text = notification.fromName;
+    }
+    
     if (notification.notiType == CNNotificationTypeRequest) {
         self.lbNoti.text = @"requested to connect with you.";
     } else if (notification.notiType == CNNotificationTypeConfirm){
@@ -51,7 +56,7 @@
     } else if (notification.notiType == CNNotificationTypeReject){
         self.lbNoti.text = @"rejected your request.";
     }
-        NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
     NSNumber *timeStampObj = [NSNumber numberWithInteger: timeStamp];
 
     NSTimeInterval difference = [[NSDate dateWithTimeIntervalSince1970:[timeStampObj intValue]] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:[notification.timeStamp intValue]]];
@@ -68,7 +73,6 @@
 }
 
 - (IBAction)onConnectClicked:(id)sender{
-    NSLog(@"Connect Clicked");
     
     NSString *title = @"Connection Accepted";
     NSString *body = [NSString stringWithFormat:@"%@ accepeted your connection request", self.notification.toName];
@@ -78,7 +82,6 @@
 }
 
 - (IBAction)onRejectClicked:(id)sender{
-    NSLog(@"Reject Clicked");
     
     NSString *title = @"Connection Rejected";
     NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.toName];

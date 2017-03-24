@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
-@property (strong, nonatomic) NSString *profileTypeString;
+@property (assign, nonatomic) CNProfileType profileType;
 
 @end
 
@@ -67,9 +67,9 @@
     [self.viewSwitchContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_profileSwitch]|" options:0 metrics:nil views:views]];
     [self.viewSwitchContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_profileSwitch]|" options:0 metrics:nil views:views]];
     
-    self.profileTypeString = @"personal";
+    self.profileType = CNProfileTypePersonal;
     self.lblName.text = [CNUser currentUser].name;
-    self.ivCode.image = [SGQRCodeTool SG_generateWithDefaultQRCodeData:[NSString stringWithFormat:@"%@-%@", [CNUser currentUser].userID, self.profileTypeString]
+    self.ivCode.image = [SGQRCodeTool SG_generateWithDefaultQRCodeData:[NSString stringWithFormat:@"%@ - %lu", [CNUser currentUser].userID, (unsigned long)self.profileType]
                                                          imageViewWidth:(SCREEN_WIDTH - 70)];
     
 }
@@ -77,8 +77,8 @@
 - (void)switchValueChanged:(id)sender {
     // Update QRCode according to profile type
     CNSwitchView *cnSwitch = (CNSwitchView *)sender;
-    self.profileTypeString = cnSwitch.on ? @"personal" : @"business";
-    self.ivCode.image = [SGQRCodeTool SG_generateWithDefaultQRCodeData:[NSString stringWithFormat:@"%@ - %@", [CNUser currentUser].userID, self.profileTypeString]
+    self.profileType = cnSwitch.on ? CNProfileTypePersonal : CNProfileTypeBusiness;
+    self.ivCode.image = [SGQRCodeTool SG_generateWithDefaultQRCodeData:[NSString stringWithFormat:@"%@ - %lu", [CNUser currentUser].userID, (unsigned long)self.profileType]
                                                         imageViewWidth:(SCREEN_WIDTH - 70)];
 }
 
