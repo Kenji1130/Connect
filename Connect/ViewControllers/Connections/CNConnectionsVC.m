@@ -10,18 +10,17 @@
 #import "CNConnectionsCell.h"
 #import "CNSwitchView.h"
 #import "CNProfileViewController.h"
-#import "SearchController.h"
 #import "CNUserVC.h"
 #import "CNNotificationVC.h"
 
-@interface CNConnectionsVC () <UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate>
+@interface CNConnectionsVC () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *switchView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constOfSwitchViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constOfTableViewBottom;
 
-@property (strong, nonatomic) SearchController *searchController;
+@property (strong, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) CNSwitchView *searchSwitch;
 
 @property (strong, nonatomic) FIRDatabaseReference *userRef;
@@ -50,7 +49,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [self initNavBar];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillHideNotification object:nil];
 }
@@ -67,7 +65,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [self.view endEditing:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.searchController dismissViewControllerAnimated:YES completion:nil];
     [super viewWillDisappear:animated];
 }
 
@@ -118,18 +115,14 @@
 
 - (void)setupSearchBar {
     
-    // Configure search controller
-    self.searchController = [[SearchController alloc] initWithSearchResultsController:nil];
-    self.searchController.delegate = self;
-    self.searchController.searchResultsUpdater = self;
-    self.searchController.dimsBackgroundDuringPresentation = NO;
-    [self.searchController setHidesNavigationBarDuringPresentation:NO];
-    self.searchController.searchBar.placeholder = @"Search";
-    self.searchController.searchBar.delegate = self;
-    self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeWords;
-    self.searchController.searchBar.barTintColor = kAppTextColor;
-    [self.searchController.searchBar becomeFirstResponder];
-    self.navigationItem.titleView = self.searchController.searchBar;
+    // Configure searchBar
+    
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 70, SCREEN_WIDTH, 44)];
+    self.searchBar.delegate = self;
+    self.searchBar.barTintColor = kAppTextColor;
+    [self.searchBar becomeFirstResponder];
+    
+    self.navigationItem.titleView = self.searchBar;
 }
 
 - (void) setupNavTitle{
@@ -224,7 +217,7 @@
 //                         @{@"name" : @"Kathy Patterson", @"image" : @"UIImageViewPerson1", @"profile_type" : @0}];
     
     if (_connections != nil) {
-        [self startSearchWithString:self.searchController.searchBar.text];
+        [self startSearchWithString:self.searchBar.text];
         return;
     }
     
@@ -257,7 +250,7 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [MBProgressHUD hideHUDForView:self.view animated:YES];
                         
-                        [self startSearchWithString:self.searchController.searchBar.text];
+                        [self startSearchWithString:self.searchBar.text];
                     });
                     
                 }];
@@ -269,7 +262,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
                 
-                [self startSearchWithString:self.searchController.searchBar.text];
+                [self startSearchWithString:self.searchBar.text];
             });
         }
 
@@ -278,7 +271,7 @@
 
 - (void) feachAllUser{
     if (_allUsers != nil) {
-        [self startSearchWithString:self.searchController.searchBar.text];
+        [self startSearchWithString:self.searchBar.text];
         return;
     }
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -305,12 +298,41 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            [self startSearchWithString:self.searchController.searchBar.text];
+            [self startSearchWithString:self.searchBar.text];
         });
     }];
 }
 
-#pragma mark - Search Delegate
+#pragma mark - SearchBar Delegate
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    [self startSearchWithString:searchText];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    self.searchBar.text = @"";
+    [self initNavBar];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar*)searchBar {
+    [searchBar resignFirstResponder];
+    [self startSearchWithString:searchBar.text];
+}
+
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]) return YES;
+    if (text.length == 0) return YES;
+    if (searchBar.text.length > 0 && [text isEqualToString:@" "]) return YES;
+    
+    if ([text rangeOfCharacterFromSet:[NSCharacterSet alphanumericCharacterSet]].location == NSNotFound) {
+        return NO;
+    } return YES;
+}
 
 - (void)startSearchWithString:(NSString*)searchString {
     // Search implementation
@@ -356,45 +378,6 @@
     
     [self.tableView reloadData];
     
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar*)searchBar {
-    [searchBar resignFirstResponder];
-    [self startSearchWithString:searchBar.text];
-}
-
-- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if ([text isEqualToString:@"\n"]) return YES;
-    if (text.length == 0) return YES;
-    if (searchBar.text.length > 0 && [text isEqualToString:@" "]) return YES;
-    
-    if ([text rangeOfCharacterFromSet:[NSCharacterSet alphanumericCharacterSet]].location == NSNotFound) {
-        return NO;
-    } return YES;
-}
-
-- (void)updateSearchResultsForSearchController:(UISearchController*)searchController {
-    [self startSearchWithString:searchController.searchBar.text];
-}
-
-- (void)willDismissSearchController:(UISearchController *)searchController {
-    [self dismissSearch];
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [self initNavBar];
-    [self dismissSearch];
-}
-
-- (void)dismissSearch {
-    if (self.navigationItem.titleView != nil) {
-        // Remove search bar from navigation bar and hide search results
-        [self.searchController.searchBar resignFirstResponder];
-        
-        if (![self.searchController.searchBar.text isEqualToString:@""]) {
-//            [self startSearchWithString:self.searchController.searchBar.text];
-        }
-    }
 }
 
 #pragma mark - Table view data source

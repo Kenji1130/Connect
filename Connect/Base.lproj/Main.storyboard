@@ -2528,6 +2528,7 @@ News Feed</string>
                     <navigationItem key="navigationItem" id="GqX-mO-12X"/>
                     <connections>
                         <outlet property="btnConnectHeightAnchor" destination="6NV-Sz-JEi" id="AOV-c9-v0h"/>
+                        <outlet property="btnRequest" destination="Dj7-l2-rcs" id="48j-Bc-fKE"/>
                         <outlet property="ivProfileImage" destination="rVX-Gk-D2o" id="bIT-wy-9Df"/>
                         <outlet property="lbName" destination="oLZ-ZQ-aQm" id="mex-z8-8ya"/>
                         <outlet property="lbOccupation" destination="oA6-A3-DQ8" id="aNU-oN-73r"/>

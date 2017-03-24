@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbOccupation;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnConnectHeightAnchor;
+@property (weak, nonatomic) IBOutlet UIButton *btnRequest;
 
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
 @property (strong, nonatomic) FIRDatabaseReference *notiRef;
@@ -126,6 +127,10 @@
     [[CNUtilities shared] httpJsonRequest:kFCMUrl withJSON:params];
     [CNUtilities shared].delegate = self;
     [self saveNotification];
+    
+    [self.btnRequest setBackgroundColor:[UIColor grayColor]];
+    [self.btnRequest setEnabled:NO];
+    
 }
 
 - (void) saveNotification{

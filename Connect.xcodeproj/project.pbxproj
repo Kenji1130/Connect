@@ -10,7 +10,6 @@
 		0402E26D1E79C62E0042B672 /* CNOnboardingAgeInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402E26C1E79C62E0042B672 /* CNOnboardingAgeInputVC.m */; };
 		0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402E26F1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m */; };
 		040C2CCA1E80310D00A83AA4 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 040C2CC91E80310D00A83AA4 /* libz.1.2.5.tbd */; };
-		040C2CD01E80D2BA00A83AA4 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CCF1E80D2BA00A83AA4 /* SearchController.m */; };
 		040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CD21E815E3600A83AA4 /* CNUserVC.m */; };
 		040C2CE31E81CB6000A83AA4 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CD81E81CB6000A83AA4 /* NSObject+SBJSON.m */; };
 		040C2CE41E81CB6000A83AA4 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CDA1E81CB6000A83AA4 /* NSString+SBJSON.m */; };
@@ -111,8 +110,6 @@
 		0402E26E1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingProfileImagePickerVC.h; path = ViewControllers/Onboarding/CNOnboardingProfileImagePickerVC.h; sourceTree = "<group>"; };
 		0402E26F1E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingProfileImagePickerVC.m; path = ViewControllers/Onboarding/CNOnboardingProfileImagePickerVC.m; sourceTree = "<group>"; };
 		040C2CC91E80310D00A83AA4 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		040C2CCE1E80D2BA00A83AA4 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchController.h; path = ViewControllers/Connections/SearchController.h; sourceTree = "<group>"; };
-		040C2CCF1E80D2BA00A83AA4 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchController.m; path = ViewControllers/Connections/SearchController.m; sourceTree = "<group>"; };
 		040C2CD11E815E3600A83AA4 /* CNUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNUserVC.h; path = ViewControllers/Connections/CNUserVC.h; sourceTree = "<group>"; };
 		040C2CD21E815E3600A83AA4 /* CNUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNUserVC.m; path = ViewControllers/Connections/CNUserVC.m; sourceTree = "<group>"; };
 		040C2CD41E817FD400A83AA4 /* Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect.entitlements; sourceTree = "<group>"; };
@@ -583,8 +580,6 @@
 		FA4450C51E3FED9700375428 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				040C2CCE1E80D2BA00A83AA4 /* SearchController.h */,
-				040C2CCF1E80D2BA00A83AA4 /* SearchController.m */,
 				040C2CD11E815E3600A83AA4 /* CNUserVC.h */,
 				040C2CD21E815E3600A83AA4 /* CNUserVC.m */,
 				0427C3F41E82BE59008E3359 /* CNNotificationVC.h */,
@@ -1025,7 +1020,6 @@
 				04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */,
 				FA4451041E40BDC400375428 /* ZFConst.m in Sources */,
 				FA8C159C1E65A95B00075AB7 /* CNOnboardingNameVC.m in Sources */,
-				040C2CD01E80D2BA00A83AA4 /* SearchController.m in Sources */,
 				040C2CE41E81CB6000A83AA4 /* NSString+SBJSON.m in Sources */,
 				FA4450D71E4014C500375428 /* CNScanViewController.m in Sources */,
 				040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */,
