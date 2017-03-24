@@ -435,7 +435,7 @@ News Feed</string>
             <objects>
                 <navigationController id="gLi-ZL-rNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconConnections" id="cnp-bh-TrE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IY3-o7-U7A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IY3-o7-U7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -669,13 +669,13 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-xg-3dk">
-                                <rect key="frame" x="166.5" y="82.5" width="42.5" height="21"/>
+                                <rect key="frame" x="167" y="82.5" width="42.5" height="21"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-Fy-5Sh">
-                                <rect key="frame" x="150" y="597" width="75.5" height="30"/>
+                                <rect key="frame" x="150.5" y="597" width="75.5" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageRescan" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-nk-0wm">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
@@ -689,7 +689,7 @@ News Feed</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apU-k2-byO">
-                                <rect key="frame" x="150" y="597" width="75.5" height="30"/>
+                                <rect key="frame" x="150.5" y="597" width="75.5" height="30"/>
                                 <connections>
                                     <action selector="onRescan:" destination="1Xr-8C-dvE" eventType="touchUpInside" id="BD4-Bx-3Cl"/>
                                 </connections>
@@ -715,6 +715,19 @@ News Feed</string>
                                     <action selector="onViewProfile:" destination="1Xr-8C-dvE" eventType="touchUpInside" id="ov9-Mm-WF6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-r3-0oF">
+                                <rect key="frame" x="0.0" y="20" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="3pj-tN-mN7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="KXt-RZ-mLU"/>
+                                    <constraint firstAttribute="width" constant="42" id="g22-PM-VYF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="seu-30-EOO"/>
+                                </constraints>
+                                <state key="normal" image="UIButtonOnboardingBack"/>
+                                <connections>
+                                    <action selector="onRescan:" destination="1Xr-8C-dvE" eventType="touchUpInside" id="JG8-fa-qsO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -723,6 +736,8 @@ News Feed</string>
                             <constraint firstItem="9kQ-Qa-HhD" firstAttribute="leading" secondItem="aiI-lM-lS0" secondAttribute="trailing" constant="-4" id="5SH-wG-StH"/>
                             <constraint firstItem="hp4-xg-3dk" firstAttribute="top" secondItem="Tor-V8-wpC" secondAttribute="bottom" constant="4" id="5YU-HN-JRw"/>
                             <constraint firstItem="Tor-V8-wpC" firstAttribute="centerX" secondItem="rE0-yC-wZ1" secondAttribute="centerX" id="6Nv-rY-O6d"/>
+                            <constraint firstItem="yeb-r3-0oF" firstAttribute="top" secondItem="ZgA-MB-oMF" secondAttribute="bottom" id="7H8-Xa-lWJ"/>
+                            <constraint firstItem="yeb-r3-0oF" firstAttribute="leading" secondItem="rE0-yC-wZ1" secondAttribute="leading" id="Ba6-GP-op9"/>
                             <constraint firstItem="tag-ke-C0f" firstAttribute="centerX" secondItem="rE0-yC-wZ1" secondAttribute="centerX" id="C1Q-4e-W8m"/>
                             <constraint firstItem="apU-k2-byO" firstAttribute="centerX" secondItem="nXg-Fy-5Sh" secondAttribute="centerX" id="CYn-Hw-uyi"/>
                             <constraint firstItem="aiI-lM-lS0" firstAttribute="centerY" secondItem="rE0-yC-wZ1" secondAttribute="centerY" id="EPW-iR-oWP"/>
@@ -1221,7 +1236,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECT YOUR SOCIAL MEDIA ACCOPUNTS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqD-pK-uTs">
-                                <rect key="frame" x="16" y="110" width="343" height="61"/>
+                                <rect key="frame" x="16" y="110" width="343" height="58.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1241,25 +1256,25 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-Z9-IFZ">
-                                <rect key="frame" x="46" y="239" width="88" height="25"/>
+                                <rect key="frame" x="46" y="237.5" width="89" height="23.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-Ib-i4O">
-                                <rect key="frame" x="46" y="295" width="60" height="25"/>
+                                <rect key="frame" x="46" y="293.5" width="59" height="23.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOh-Lm-cGy">
-                                <rect key="frame" x="46" y="350" width="87" height="25"/>
+                                <rect key="frame" x="46" y="348.5" width="89.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOl-Eg-EJl">
-                                <rect key="frame" x="209" y="231" width="120" height="40"/>
+                                <rect key="frame" x="209" y="228.5" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="bjY-xh-Qlv"/>
                                     <constraint firstAttribute="height" constant="40" id="fmP-Sh-22F"/>
@@ -1281,7 +1296,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-la-zw6">
-                                <rect key="frame" x="209" y="287" width="120" height="40"/>
+                                <rect key="frame" x="209" y="284.5" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="QKz-lM-d67"/>
                                     <constraint firstAttribute="height" constant="40" id="bQs-hA-9RO"/>
@@ -1303,7 +1318,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu8-28-5g3">
-                                <rect key="frame" x="209" y="343" width="120" height="40"/>
+                                <rect key="frame" x="209" y="340.5" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="MBp-50-y9b"/>
                                     <constraint firstAttribute="height" constant="40" id="XgY-IA-IMe"/>
@@ -1325,7 +1340,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ue-6v7">
-                                <rect key="frame" x="209" y="399" width="120" height="40"/>
+                                <rect key="frame" x="209" y="396.5" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OBq-7a-Vvs"/>
                                     <constraint firstAttribute="width" constant="120" id="Zsn-D0-iKs"/>
@@ -1344,7 +1359,7 @@ News Feed</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LinkedIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-2V-BCg">
-                                <rect key="frame" x="46" y="406" width="75" height="25"/>
+                                <rect key="frame" x="46" y="404.5" width="76" height="23.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1402,7 +1417,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-Ie-SE0">
-                                <rect key="frame" x="51" y="110" width="273" height="31"/>
+                                <rect key="frame" x="48.5" y="110" width="278.5" height="29.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1429,7 +1444,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll confirm your number by sending a SMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-s2-J7s">
-                                <rect key="frame" x="22" y="169" width="331" height="49"/>
+                                <rect key="frame" x="22" y="167.5" width="331" height="47"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1446,22 +1461,22 @@ News Feed</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-DU-Wuu">
-                                <rect key="frame" x="40" y="284" width="295" height="37"/>
+                                <rect key="frame" x="40" y="279" width="295" height="35"/>
                                 <color key="textColor" red="0.41176470588235292" green="0.46666666666666667" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Light" family="Proxima Nova Alt" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phw-vE-7y5">
-                                <rect key="frame" x="95" y="243" width="186" height="25"/>
+                                <rect key="frame" x="92.5" y="239.5" width="191" height="23.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States (+1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-ax-peJ">
-                                        <rect key="frame" x="30" y="0.0" width="156" height="25"/>
+                                        <rect key="frame" x="30" y="0.0" width="161" height="23.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="20"/>
                                         <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewFlagUS" translatesAutoresizingMaskIntoConstraints="NO" id="wWH-NC-bYw">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="23.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Jbl-jN-lBy"/>
                                         </constraints>
@@ -1518,7 +1533,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYu-Ae-Nu1">
-                                <rect key="frame" x="89" y="110" width="197" height="30.5"/>
+                                <rect key="frame" x="89.5" y="110" width="197" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1890,19 +1905,19 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW OLD ARE YOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-ym-Lxd">
-                                <rect key="frame" x="67" y="110" width="241" height="31"/>
+                                <rect key="frame" x="64" y="110" width="247.5" height="29.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="24" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-Ht-M2M">
-                                <rect key="frame" x="16" y="201" width="343" height="25"/>
+                                <rect key="frame" x="16" y="199.5" width="343" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-pY-mfc">
-                                <rect key="frame" x="16" y="230" width="343" height="1"/>
+                                <rect key="frame" x="16" y="227.5" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7fc-LO-ThH"/>
@@ -1960,7 +1975,7 @@ News Feed</string>
         <scene sceneID="3kL-sr-VxT">
             <objects>
                 <navigationController storyboardIdentifier="loginNavController" navigationBarHidden="YES" id="sOi-YW-ner" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9g6-Do-Z6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g6-Do-Z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1977,7 +1992,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="2wJ-dG-RmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconScanner" id="IoQ-86-IW8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8aJ-fL-0Sh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aJ-fL-0Sh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1994,7 +2009,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="rVA-bE-mLT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconQRCode" id="fFJ-SL-fMF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Xn-IF-pYb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Xn-IF-pYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2011,7 +2026,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="kRq-TN-CTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconProfile" id="JNe-Jo-NDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DmP-yt-Jyg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmP-yt-Jyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2047,44 +2062,44 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S YOUR NAME?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndl-si-l08">
-                                <rect key="frame" x="59" y="110" width="257" height="31"/>
+                                <rect key="frame" x="56.5" y="110" width="262.5" height="29.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc0-xR-jzo">
-                                <rect key="frame" x="15" y="169" width="91" height="20"/>
+                                <rect key="frame" x="15" y="167.5" width="94" height="19"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLr-81-gZE">
-                                <rect key="frame" x="15" y="197" width="345" height="25"/>
+                                <rect key="frame" x="15" y="194.5" width="345" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-9z-VmR">
-                                <rect key="frame" x="15" y="226" width="345" height="1"/>
+                                <rect key="frame" x="15" y="222.5" width="345" height="1"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hI7-ks-KC0"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnW-ni-rp5">
-                                <rect key="frame" x="15" y="247" width="87" height="20"/>
+                                <rect key="frame" x="15" y="243.5" width="89" height="19"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brW-fV-5iW">
-                                <rect key="frame" x="15" y="275" width="345" height="25"/>
+                                <rect key="frame" x="15" y="270.5" width="345" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgv-oW-MgT">
-                                <rect key="frame" x="15" y="304" width="345" height="1"/>
+                                <rect key="frame" x="15" y="298.5" width="345" height="1"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="phQ-nK-pSn"/>
