@@ -30,6 +30,10 @@
 		0427C3FB1E82D81C008E3359 /* CNNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */; };
 		0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3FD1E8310EC008E3359 /* CNNotification.m */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
+		04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C61E85C404007FE43E /* CNProfileVC.m */; };
+		04EBA3CB1E860D63007FE43E /* CNMyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C91E860D63007FE43E /* CNMyProfileCell.m */; };
+		04EBA3CC1E860D63007FE43E /* CNMyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */; };
+		04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3CE1E861A6B007FE43E /* CNSettingVC.m */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		309DE55D86EFD689FE24F805 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D091ECB69DE8C4B60A6E4BB /* Pods_ConnectTests.framework */; };
 		97A6F324ECC0B8E495C5FB79 /* Pods_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C374B080BD220AF5C230BBB /* Pods_ConnectUITests.framework */; };
@@ -150,6 +154,13 @@
 		0427C3FC1E8310EC008E3359 /* CNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNNotification.h; path = DataModel/CNNotification.h; sourceTree = "<group>"; };
 		0427C3FD1E8310EC008E3359 /* CNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNNotification.m; path = DataModel/CNNotification.m; sourceTree = "<group>"; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04EBA3C51E85C404007FE43E /* CNProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNProfileVC.h; path = ViewControllers/Profile/CNProfileVC.h; sourceTree = "<group>"; };
+		04EBA3C61E85C404007FE43E /* CNProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNProfileVC.m; path = ViewControllers/Profile/CNProfileVC.m; sourceTree = "<group>"; };
+		04EBA3C81E860D63007FE43E /* CNMyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNMyProfileCell.h; path = ViewControllers/Profile/CNMyProfileCell.h; sourceTree = "<group>"; };
+		04EBA3C91E860D63007FE43E /* CNMyProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNMyProfileCell.m; path = ViewControllers/Profile/CNMyProfileCell.m; sourceTree = "<group>"; };
+		04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CNMyProfileCell.xib; path = ViewControllers/Profile/CNMyProfileCell.xib; sourceTree = "<group>"; };
+		04EBA3CD1E861A6B007FE43E /* CNSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNSettingVC.h; path = ViewControllers/Profile/CNSettingVC.h; sourceTree = "<group>"; };
+		04EBA3CE1E861A6B007FE43E /* CNSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNSettingVC.m; path = ViewControllers/Profile/CNSettingVC.m; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
 		0C374B080BD220AF5C230BBB /* Pods_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -507,6 +518,10 @@
 				FA4450DC1E403B1E00375428 /* View */,
 				FA4450D21E4014B300375428 /* CNProfileViewController.h */,
 				FA4450D31E4014B300375428 /* CNProfileViewController.m */,
+				04EBA3C51E85C404007FE43E /* CNProfileVC.h */,
+				04EBA3C61E85C404007FE43E /* CNProfileVC.m */,
+				04EBA3CD1E861A6B007FE43E /* CNSettingVC.h */,
+				04EBA3CE1E861A6B007FE43E /* CNSettingVC.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -619,6 +634,9 @@
 				FA4450ED1E409A5500375428 /* CNProfileAddMediaCell.h */,
 				FA4450EE1E409A5500375428 /* CNProfileAddMediaCell.m */,
 				FA4450EF1E409A5500375428 /* CNProfileAddMediaCell.xib */,
+				04EBA3C81E860D63007FE43E /* CNMyProfileCell.h */,
+				04EBA3C91E860D63007FE43E /* CNMyProfileCell.m */,
+				04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -797,6 +815,7 @@
 				FA4450701E3A7B6D00375428 /* LaunchScreen.storyboard in Resources */,
 				FA4451031E40BDC400375428 /* ScanQR4@2x.png in Resources */,
 				FA4451001E40BDC400375428 /* ScanQR1@2x.png in Resources */,
+				04EBA3CC1E860D63007FE43E /* CNMyProfileCell.xib in Resources */,
 				FA4450FF1E40BDC400375428 /* QRCodeScanLine@2x.png in Resources */,
 				FA4451011E40BDC400375428 /* ScanQR2@2x.png in Resources */,
 				FA4450CA1E3FEDB400375428 /* CNConnectionsCell.xib in Resources */,
@@ -1021,6 +1040,7 @@
 				FA4451041E40BDC400375428 /* ZFConst.m in Sources */,
 				FA8C159C1E65A95B00075AB7 /* CNOnboardingNameVC.m in Sources */,
 				040C2CE41E81CB6000A83AA4 /* NSString+SBJSON.m in Sources */,
+				04EBA3CB1E860D63007FE43E /* CNMyProfileCell.m in Sources */,
 				FA4450D71E4014C500375428 /* CNScanViewController.m in Sources */,
 				040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */,
 				04106D5B1E7C815200B2CAC0 /* CNOnboardingLoginVC.m in Sources */,
@@ -1028,6 +1048,8 @@
 				FA4450C91E3FEDB400375428 /* CNConnectionsCell.m in Sources */,
 				040C2CE51E81CB6000A83AA4 /* SBJSON.m in Sources */,
 				04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */,
+				04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */,
+				04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */,
 				FA4450A21E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m in Sources */,
 				0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */,
 				FA4450EB1E409A3100375428 /* CNProfileEditOptionCell.m in Sources */,

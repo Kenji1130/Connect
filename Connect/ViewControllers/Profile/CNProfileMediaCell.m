@@ -65,8 +65,7 @@
         items = @[@{@"image" : @"UIImageViewProfileFacebook", @"username" : @"Roxie Caldwell"},
                   @{@"image" : @"UIImageViewProfileSnapchat", @"username" : @"roxiecaldwell"},
                   @{@"image" : @"UIImageViewProfileTwitter", @"username" : @"roxiecaldwell"},
-                  @{@"image" : @"UIImageViewProfilePhone", @"username" : @"626-397-9511"},
-                  @{@"image" : @"UIImageViewProfileInstagram", @"username" : @"Roxie Caldwell"}];
+                  @{@"image" : @"UIImageViewProfilePhone", @"username" : @"626-397-9511"}];
         
     } else if (self.profileType == CNProfileTypeBusiness) {
         items = @[@{@"image" : @"UIImageViewProfileFacebook", @"username" : @"Roxie Caldwell"},

@@ -9,6 +9,8 @@
 #import "CNSettingVC.h"
 
 @interface CNSettingVC ()
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *lbName;
 
 @end
 
@@ -17,6 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self configLayout];
+}
+
+- (void)configLayout{
+    if ([CNUser currentUser].profileImageURL == nil) {
+        self.profileImage.backgroundColor = UIColorFromRGB(0xd1d1d1);
+        self.profileImage.image = [UIImage imageNamed:@"UIImageViewProfileIconPicture"];
+        self.profileImage.contentMode = UIViewContentModeCenter;
+    } else {
+        self.profileImage.backgroundColor = [UIColor clearColor];
+        [self.profileImage setImageWithURL:[CNUser currentUser].profileImageURL placeholderImage:nil usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        self.profileImage.contentMode = UIViewContentModeScaleAspectFill;
+    }
+    
+    self.lbName.text = [NSString stringWithFormat:@"%@ %@", [CNUser currentUser].firstName, [CNUser currentUser].lastName];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +42,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+- (IBAction)onLogOut:(id)sender {
+    [[AppDelegate sharedInstance] logOut];
+}
+
 
 @end

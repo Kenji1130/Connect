@@ -10,4 +10,6 @@
 
 @interface CNProfileVC : UIViewController
 
+@property (nonatomic, strong) CNUser *user;
+@property (nonatomic, assign) CNProfileType profileType;
 @end

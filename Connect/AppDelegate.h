@@ -22,5 +22,6 @@
 - (void)showLogin;
 - (void)showMain;
 - (void)updateToken;
+- (void)logOut;
 @end
 

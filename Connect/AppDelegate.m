@@ -138,6 +138,18 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     self.window.rootViewController = tabBarController;
 }
 
+- (void)logOut{
+    NSError *signOutError;
+    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+    if (!status) {
+        NSLog(@"Error signing out: %@", signOutError);
+        return;
+    }
+    
+    [[CNUtilities shared] saveLoggedUserID:@""];
+    [self showLogin];
+}
+
 - (void)setupAppearance {
     // Change tint, text, background colors on UI controls.
     

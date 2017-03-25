@@ -113,13 +113,14 @@
             [[[self.notiRef child:userID1] child:userID2] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
                 
                 NSLog(@"Connection ID: %@ Connection Data: %@", userID1, snapshot.value);
-                NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-                dict = snapshot.value;
-                CNNotification *noti = [[CNNotification alloc] initWithDictionary:dict];
-                [self.connections addObject:noti];
-                self.sortedNotis = [self.connections sortedArrayUsingSelector:@selector(compare:)];
+                if (![snapshot.value isEqual:[NSNull null]]) {
+                    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+                    dict = snapshot.value;
+                    CNNotification *noti = [[CNNotification alloc] initWithDictionary:dict];
+                    [self.connections addObject:noti];
+                    self.sortedNotis = [self.connections sortedArrayUsingSelector:@selector(compare:)];
 
-                
+                }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     [self.tableView reloadData];

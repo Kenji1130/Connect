@@ -29,9 +29,6 @@
                         <constraint firstAttribute="width" constant="50" id="xVh-Dg-s2g"/>
                     </constraints>
                     <state key="normal" image="UIButtonProfileSettings"/>
-                    <connections>
-                        <action selector="onSettingsBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="fHH-qc-HD4"/>
-                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jpa-r6-9Jt">
                     <rect key="frame" x="125" y="100" width="125" height="125"/>
@@ -62,7 +59,7 @@
                     <rect key="frame" x="16" y="238" width="343" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQN-ea-dXD">
-                            <rect key="frame" x="150" y="2" width="43" height="21"/>
+                            <rect key="frame" x="150.5" y="2" width="42" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="HbX-Qm-CFh"/>
                             </constraints>
@@ -71,7 +68,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="guc-cz-xuS">
-                            <rect key="frame" x="201" y="0.0" width="20" height="20"/>
+                            <rect key="frame" x="200.5" y="0.0" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="Gu6-Cb-OxI"/>
                                 <constraint firstAttribute="height" constant="20" id="feH-Q8-9qp"/>
@@ -150,6 +147,17 @@
                         <constraint firstAttribute="width" constant="46" id="Z8m-vm-GXr"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dil-ce-afL">
+                    <rect key="frame" x="0.0" y="17" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="08D-Fx-f8S"/>
+                        <constraint firstAttribute="width" constant="50" id="hX9-xx-6wi"/>
+                    </constraints>
+                    <state key="normal" image="UIButtonProfileEdit"/>
+                    <connections>
+                        <action selector="onEditBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="REZ-rJ-eR2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -160,6 +168,7 @@
                 <constraint firstAttribute="trailing" secondItem="NJq-Ns-1s8" secondAttribute="trailing" constant="16" id="9uE-W9-3k9"/>
                 <constraint firstItem="NJq-Ns-1s8" firstAttribute="top" secondItem="Dfm-Ll-kTm" secondAttribute="bottom" constant="12" id="GAh-A8-gTL"/>
                 <constraint firstItem="Jpa-r6-9Jt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="Jvz-RZ-C0V"/>
+                <constraint firstItem="Dil-ce-afL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ogb-Ac-akq"/>
                 <constraint firstAttribute="trailing" secondItem="z1O-sB-N9z" secondAttribute="trailing" constant="16" id="PJv-MR-EI9"/>
                 <constraint firstItem="z1O-sB-N9z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="PL1-eU-cEr"/>
                 <constraint firstItem="Dfm-Ll-kTm" firstAttribute="leading" secondItem="Jpa-r6-9Jt" secondAttribute="leading" id="RGm-K0-NBw"/>
@@ -169,11 +178,13 @@
                 <constraint firstItem="Dfm-Ll-kTm" firstAttribute="width" secondItem="Jpa-r6-9Jt" secondAttribute="width" id="pYv-rE-dOJ"/>
                 <constraint firstAttribute="trailing" secondItem="Kv2-zp-WOD" secondAttribute="trailing" id="tlO-dP-tai"/>
                 <constraint firstItem="Jpa-r6-9Jt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vce-To-Y9r"/>
+                <constraint firstItem="Dil-ce-afL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="weP-eq-vWx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="btnEdit" destination="Dil-ce-afL" id="Kju-aG-tcU"/>
                 <outlet property="btnImagePick" destination="Dfm-Ll-kTm" id="qik-v9-s7A"/>
-                <outlet property="btnSettings" destination="Kv2-zp-WOD" id="Ios-TJ-a0J"/>
+                <outlet property="btnSetting" destination="Kv2-zp-WOD" id="jAz-U6-9QB"/>
                 <outlet property="ivBetaTesterImage" destination="0Nx-m6-cmF" id="yjG-JF-SRT"/>
                 <outlet property="ivProfileChecked" destination="guc-cz-xuS" id="XOn-eF-gqN"/>
                 <outlet property="ivProfileImage" destination="Jpa-r6-9Jt" id="lwP-HJ-P4B"/>
@@ -189,6 +200,7 @@
     </objects>
     <resources>
         <image name="UIButtonProfileCamera" width="30" height="23"/>
+        <image name="UIButtonProfileEdit" width="24" height="24"/>
         <image name="UIButtonProfileSettings" width="24" height="24"/>
         <image name="UIImageViewProfileBetaTester" width="46" height="63"/>
         <image name="UIImageViewProfileCheckmark" width="20" height="20"/>

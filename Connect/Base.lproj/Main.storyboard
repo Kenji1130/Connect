@@ -159,14 +159,14 @@ News Feed</string>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="scX-gu-gH2">
-                                <rect key="frame" x="158" y="527" width="60" height="37"/>
+                                <rect key="frame" x="157.5" y="527" width="60" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="2rg-ge-3c9"/>
                                     <constraint firstAttribute="width" constant="60" id="Ez0-bu-oVd"/>
                                 </constraints>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPk-3R-oID">
-                                <rect key="frame" x="63" y="586" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="586" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="3Ye-aQ-tlG"/>
@@ -249,7 +249,7 @@ News Feed</string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj9-zC-dZr">
-                                <rect key="frame" x="62" y="344" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="343.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="qM6-BA-6xG"/>
@@ -270,7 +270,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cw5-Zm-yEo">
-                                <rect key="frame" x="64" y="410" width="248" height="30"/>
+                                <rect key="frame" x="63.5" y="409.5" width="248" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account yet?   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-RF-Ybk">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
@@ -363,7 +363,7 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-Hu-ebs">
-                                <rect key="frame" x="62" y="209" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="209" width="250" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="bzR-4E-5ML"/>
                                     <constraint firstAttribute="width" constant="250" id="l3f-ul-VxW"/>
@@ -386,7 +386,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3i-De-kGX">
-                                <rect key="frame" x="62" y="276" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="276" width="250" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="3rj-c7-Fkr"/>
                                     <constraint firstAttribute="height" constant="46" id="4Xq-cK-7aB"/>
@@ -435,7 +435,7 @@ News Feed</string>
             <objects>
                 <navigationController id="gLi-ZL-rNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconConnections" id="cnp-bh-TrE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IY3-o7-U7A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IY3-o7-U7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -546,8 +546,8 @@ News Feed</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ide-MM-QWT">
                                         <rect key="frame" x="0.0" y="121.5" width="345" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL5-WZ-u8I">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL5-WZ-u8I">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="29"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                 <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -663,19 +663,19 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You connected with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tor-V8-wpC">
-                                <rect key="frame" x="123.5" y="60" width="129.5" height="18.5"/>
+                                <rect key="frame" x="123" y="60" width="129.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-xg-3dk">
-                                <rect key="frame" x="167" y="82.5" width="42.5" height="21"/>
+                                <rect key="frame" x="166.5" y="82.5" width="42.5" height="21"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-Fy-5Sh">
-                                <rect key="frame" x="150.5" y="597" width="75.5" height="30"/>
+                                <rect key="frame" x="150" y="597" width="75.5" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageRescan" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-nk-0wm">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
@@ -689,13 +689,13 @@ News Feed</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apU-k2-byO">
-                                <rect key="frame" x="150.5" y="597" width="75.5" height="30"/>
+                                <rect key="frame" x="150" y="597" width="75.5" height="30"/>
                                 <connections>
                                     <action selector="onRescan:" destination="1Xr-8C-dvE" eventType="touchUpInside" id="BD4-Bx-3Cl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tag-ke-C0f">
-                                <rect key="frame" x="63" y="527" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="527" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="QE2-k7-olS"/>
@@ -786,7 +786,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozb-GW-4cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="2414"/>
+            <point key="canvasLocation" x="488.80000000000001" y="2413.9430284857572"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="4u1-ds-0g6">
@@ -801,7 +801,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ise-Fv-N1q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="fQh-RQ-uvG" id="dOk-3B-ZA7"/>
@@ -824,7 +824,655 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUD-h6-hXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2689" y="2414"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="B3R-Nl-qkS">
+            <objects>
+                <viewController id="ftX-lQ-g4n" customClass="CNProfileVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bgI-Qq-erf"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKP-zx-uuP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pT5-MY-HAW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQT-Ft-52T">
+                                <rect key="frame" x="325" y="29.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RPL-Qy-I82"/>
+                                    <constraint firstAttribute="width" constant="50" id="WeF-B0-ZLZ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.5725490196078431" green="0.61960784313725492" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="UIButtonProfileSettings"/>
+                                <connections>
+                                    <action selector="onSetting:" destination="ftX-lQ-g4n" eventType="touchUpInside" id="8hk-n9-Ory"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-6Y-Pem">
+                                <rect key="frame" x="0.0" y="29.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MFQ-gO-Ucc"/>
+                                    <constraint firstAttribute="width" constant="50" id="jm4-Eg-Pjk"/>
+                                </constraints>
+                                <color key="tintColor" red="0.5725490196078431" green="0.61960784313725492" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="UIButtonProfileEdit"/>
+                                <connections>
+                                    <action selector="onEdit:" destination="ftX-lQ-g4n" eventType="touchUpInside" id="3Hn-4u-qkh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-yF-cGt">
+                                <rect key="frame" x="54" y="20" width="267" height="69"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="X8B-10-SBe"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rc5-8q-KKu">
+                                <rect key="frame" x="125" y="93" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Fid-wj-vNU"/>
+                                    <constraint firstAttribute="height" constant="125" id="wxQ-ir-xTg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="62.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTY-qP-aMT">
+                                <rect key="frame" x="125" y="93" width="125" height="125"/>
+                                <state key="normal" image="UIButtonProfileCamera"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="62.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPicker:" destination="ftX-lQ-g4n" eventType="touchUpInside" id="eCJ-vE-XIp"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqX-fi-ddu">
+                                <rect key="frame" x="16" y="226" width="343" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbQ-9c-pKI">
+                                        <rect key="frame" x="150.5" y="2" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="LMu-Bf-1Tm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="A2Z-8n-1Rp">
+                                        <rect key="frame" x="200.5" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="3Nb-5p-1QS"/>
+                                            <constraint firstAttribute="height" constant="20" id="Bib-AW-pP7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-54-6KW">
+                                        <rect key="frame" x="153" y="23" width="36" height="21"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MbQ-9c-pKI" firstAttribute="top" secondItem="fqX-fi-ddu" secondAttribute="top" constant="2" id="8XH-C9-mjz"/>
+                                    <constraint firstItem="A2Z-8n-1Rp" firstAttribute="top" secondItem="fqX-fi-ddu" secondAttribute="top" id="KbF-s3-T5m"/>
+                                    <constraint firstAttribute="height" constant="44" id="O4u-01-cWe"/>
+                                    <constraint firstItem="MbQ-9c-pKI" firstAttribute="centerX" secondItem="fqX-fi-ddu" secondAttribute="centerX" id="R72-Mx-k98"/>
+                                    <constraint firstItem="A2Z-8n-1Rp" firstAttribute="leading" secondItem="MbQ-9c-pKI" secondAttribute="trailing" constant="8" id="co5-BJ-USv"/>
+                                    <constraint firstAttribute="bottom" secondItem="wRC-54-6KW" secondAttribute="bottom" id="dMF-Jl-2vt"/>
+                                    <constraint firstItem="wRC-54-6KW" firstAttribute="top" secondItem="MbQ-9c-pKI" secondAttribute="bottom" id="rlO-hE-Ao2"/>
+                                    <constraint firstItem="wRC-54-6KW" firstAttribute="centerX" secondItem="fqX-fi-ddu" secondAttribute="centerX" id="tFE-7U-0FD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDi-il-uXM">
+                                <rect key="frame" x="16" y="226" width="343" height="98"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMh-XK-nX1">
+                                        <rect key="frame" x="72" y="0.0" width="200" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="D1s-1A-0gc"/>
+                                            <constraint firstAttribute="height" constant="40" id="ZfG-sD-nIB"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="ftX-lQ-g4n" id="F0l-dy-Edv"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Occupation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JtB-he-meR">
+                                        <rect key="frame" x="71" y="48" width="200" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="PKD-KN-UYY"/>
+                                            <constraint firstAttribute="height" constant="40" id="uOG-wJ-ZM5"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="ftX-lQ-g4n" id="VDp-DA-wlJ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="eMh-XK-nX1" firstAttribute="centerX" secondItem="bDi-il-uXM" secondAttribute="centerX" id="65v-zs-3aF"/>
+                                    <constraint firstAttribute="height" constant="98" id="7SC-yU-z6v"/>
+                                    <constraint firstItem="JtB-he-meR" firstAttribute="top" secondItem="eMh-XK-nX1" secondAttribute="bottom" constant="8" id="Q7P-Gx-1lo"/>
+                                    <constraint firstItem="JtB-he-meR" firstAttribute="centerX" secondItem="bDi-il-uXM" secondAttribute="centerX" id="XIe-5C-sv8"/>
+                                    <constraint firstItem="eMh-XK-nX1" firstAttribute="top" secondItem="bDi-il-uXM" secondAttribute="top" id="eNc-CL-MLH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnE-G1-Dzt">
+                                <rect key="frame" x="0.0" y="324" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="msY-h6-3QL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide profile from search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY0-yZ-9vr">
+                                <rect key="frame" x="32" y="337" width="158.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a96-ae-YND">
+                                <rect key="frame" x="294" y="330.5" width="51" height="31"/>
+                            </switch>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u24-d1-GGs">
+                                <rect key="frame" x="0.0" y="278" width="375" height="278"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ftX-lQ-g4n" id="pHE-yk-55L"/>
+                                    <outlet property="delegate" destination="ftX-lQ-g4n" id="dZK-St-mUO"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hln-uR-ycx">
+                                <rect key="frame" x="62.5" y="564" width="250" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1pN-r7-QRl"/>
+                                    <constraint firstAttribute="height" constant="46" id="2x3-rh-myz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="ADD SOCIAL MEDIA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a96-ae-YND" firstAttribute="centerY" secondItem="RnE-G1-Dzt" secondAttribute="centerY" id="2q5-FD-god"/>
+                            <constraint firstItem="u24-d1-GGs" firstAttribute="leading" secondItem="pT5-MY-HAW" secondAttribute="leading" id="42e-SD-GgW"/>
+                            <constraint firstItem="RnE-G1-Dzt" firstAttribute="leading" secondItem="pT5-MY-HAW" secondAttribute="leading" id="4wy-MD-byN"/>
+                            <constraint firstItem="hln-uR-ycx" firstAttribute="centerX" secondItem="pT5-MY-HAW" secondAttribute="centerX" id="5iU-MQ-Joe"/>
+                            <constraint firstItem="wAh-yF-cGt" firstAttribute="top" secondItem="bgI-Qq-erf" secondAttribute="bottom" id="88g-3M-UqB"/>
+                            <constraint firstItem="bDi-il-uXM" firstAttribute="leading" secondItem="pT5-MY-HAW" secondAttribute="leadingMargin" id="9Tj-Fb-9Z2"/>
+                            <constraint firstItem="Rc5-8q-KKu" firstAttribute="centerX" secondItem="pT5-MY-HAW" secondAttribute="centerX" id="A6X-C7-fMv"/>
+                            <constraint firstItem="RnE-G1-Dzt" firstAttribute="top" secondItem="bDi-il-uXM" secondAttribute="bottom" id="Alf-f0-5Sr"/>
+                            <constraint firstItem="Cz5-6Y-Pem" firstAttribute="leading" secondItem="pT5-MY-HAW" secondAttribute="leading" id="BKu-2s-O3n"/>
+                            <constraint firstItem="fqX-fi-ddu" firstAttribute="leading" secondItem="pT5-MY-HAW" secondAttribute="leadingMargin" id="BX9-z8-rqs"/>
+                            <constraint firstItem="cY0-yZ-9vr" firstAttribute="centerY" secondItem="RnE-G1-Dzt" secondAttribute="centerY" id="D0e-Jr-Ssw"/>
+                            <constraint firstItem="hln-uR-ycx" firstAttribute="top" secondItem="u24-d1-GGs" secondAttribute="bottom" constant="8" id="FNN-F1-YW6"/>
+                            <constraint firstItem="Cz5-6Y-Pem" firstAttribute="centerY" secondItem="wAh-yF-cGt" secondAttribute="centerY" id="HNr-uL-nh4"/>
+                            <constraint firstItem="pQT-Ft-52T" firstAttribute="leading" secondItem="wAh-yF-cGt" secondAttribute="trailing" constant="4" id="Hgu-Bs-cbd"/>
+                            <constraint firstItem="wAh-yF-cGt" firstAttribute="leading" secondItem="Cz5-6Y-Pem" secondAttribute="trailing" constant="4" id="JrY-rl-3VZ"/>
+                            <constraint firstAttribute="trailing" secondItem="u24-d1-GGs" secondAttribute="trailing" id="N3V-dY-K5O"/>
+                            <constraint firstAttribute="trailing" secondItem="pQT-Ft-52T" secondAttribute="trailing" id="QZP-bZ-fjx"/>
+                            <constraint firstItem="u24-d1-GGs" firstAttribute="top" secondItem="fqX-fi-ddu" secondAttribute="bottom" constant="8" id="UTi-tq-umf"/>
+                            <constraint firstItem="tTY-qP-aMT" firstAttribute="top" secondItem="Rc5-8q-KKu" secondAttribute="top" id="W6n-7u-qXr"/>
+                            <constraint firstItem="bDi-il-uXM" firstAttribute="top" secondItem="tTY-qP-aMT" secondAttribute="bottom" constant="8" id="XyV-yx-WjI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a96-ae-YND" secondAttribute="trailing" constant="16" id="ea5-4n-ggc"/>
+                            <constraint firstItem="FKP-zx-uuP" firstAttribute="top" secondItem="hln-uR-ycx" secondAttribute="bottom" constant="8" id="egt-f6-eX2"/>
+                            <constraint firstItem="tTY-qP-aMT" firstAttribute="width" secondItem="Rc5-8q-KKu" secondAttribute="width" id="flM-HO-BBM"/>
+                            <constraint firstItem="tTY-qP-aMT" firstAttribute="height" secondItem="Rc5-8q-KKu" secondAttribute="height" id="ger-4e-LMm"/>
+                            <constraint firstItem="pQT-Ft-52T" firstAttribute="centerY" secondItem="wAh-yF-cGt" secondAttribute="centerY" id="hvE-dC-XCa"/>
+                            <constraint firstItem="fqX-fi-ddu" firstAttribute="trailing" secondItem="pT5-MY-HAW" secondAttribute="trailingMargin" id="i7h-mO-F3P"/>
+                            <constraint firstItem="wAh-yF-cGt" firstAttribute="leading" secondItem="Cz5-6Y-Pem" secondAttribute="trailing" constant="4" id="iCq-JD-Nj1"/>
+                            <constraint firstItem="cY0-yZ-9vr" firstAttribute="leading" secondItem="pT5-MY-HAW" secondAttribute="leadingMargin" constant="16" id="j1M-2f-nOW"/>
+                            <constraint firstItem="fqX-fi-ddu" firstAttribute="top" secondItem="tTY-qP-aMT" secondAttribute="bottom" constant="8" id="jT5-Mu-gEi"/>
+                            <constraint firstItem="Rc5-8q-KKu" firstAttribute="top" secondItem="wAh-yF-cGt" secondAttribute="bottom" constant="4" id="jiK-5a-aEL"/>
+                            <constraint firstItem="pQT-Ft-52T" firstAttribute="leading" secondItem="wAh-yF-cGt" secondAttribute="trailing" constant="4" id="pn8-rF-sHJ"/>
+                            <constraint firstItem="tTY-qP-aMT" firstAttribute="leading" secondItem="Rc5-8q-KKu" secondAttribute="leading" id="vge-v8-hGb"/>
+                            <constraint firstItem="wAh-yF-cGt" firstAttribute="centerX" secondItem="pT5-MY-HAW" secondAttribute="centerX" id="wSt-1g-RGP"/>
+                            <constraint firstItem="bDi-il-uXM" firstAttribute="trailing" secondItem="pT5-MY-HAW" secondAttribute="trailingMargin" id="yCb-F5-cLO"/>
+                            <constraint firstAttribute="trailing" secondItem="RnE-G1-Dzt" secondAttribute="trailing" id="yux-Ab-tXz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oTb-Vt-kRC"/>
+                    <connections>
+                        <outlet property="btnEdit" destination="Cz5-6Y-Pem" id="aDU-Dl-sG7"/>
+                        <outlet property="btnImagePick" destination="tTY-qP-aMT" id="NhG-9j-zgv"/>
+                        <outlet property="btnSetting" destination="pQT-Ft-52T" id="Pxq-PN-f3L"/>
+                        <outlet property="ivProfileImage" destination="Rc5-8q-KKu" id="wTc-pW-l8X"/>
+                        <outlet property="lbName" destination="MbQ-9c-pKI" id="3NB-QA-suh"/>
+                        <outlet property="lbOccupation" destination="wRC-54-6KW" id="fHa-C6-sEC"/>
+                        <outlet property="profileEditView" destination="bDi-il-uXM" id="ne8-4s-lS1"/>
+                        <outlet property="profileHideView" destination="RnE-G1-Dzt" id="yKm-oj-H2L"/>
+                        <outlet property="profileInfoView" destination="fqX-fi-ddu" id="QhL-5Y-A26"/>
+                        <outlet property="switchView" destination="wAh-yF-cGt" id="TQB-uN-AU4"/>
+                        <outlet property="tableView" destination="u24-d1-GGs" id="WiV-r5-pWH"/>
+                        <outlet property="tableViewTopAnchor" destination="UTi-tq-umf" id="3nz-e7-YVc"/>
+                        <outlet property="tfName" destination="eMh-XK-nX1" id="Vol-fu-MJm"/>
+                        <outlet property="tfOccupation" destination="JtB-he-meR" id="HEs-x1-1cy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inf-da-2r0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="2032.8" y="2413.9430284857572"/>
+        </scene>
+        <!--SettingVC-->
+        <scene sceneID="HvY-ue-xzv">
+            <objects>
+                <viewController storyboardIdentifier="CNSettingVC" id="1Ph-md-se4" customClass="CNSettingVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ody-Wr-VsF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bv4-wV-9Jb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wb4-oc-bUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3r-OP-Khw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHO-NY-pKd">
+                                        <rect key="frame" x="0.0" y="19" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="4ml-ik-pd6"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="RNO-5W-pcN"/>
+                                            <constraint firstAttribute="width" constant="42" id="ZgJ-rr-WEW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="jCu-Ta-vA9"/>
+                                        </constraints>
+                                        <state key="normal" image="UIButtonOnboardingBack"/>
+                                        <connections>
+                                            <action selector="onBack:" destination="1Ph-md-se4" eventType="touchUpInside" id="1Sp-sT-zpk"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC9-Wt-g5a">
+                                        <rect key="frame" x="151" y="28" width="74" height="24"/>
+                                        <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRT-3i-Ige">
+                                        <rect key="frame" x="307" y="19" width="60" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="GG1-5n-S7X"/>
+                                            <constraint firstAttribute="height" constant="42" id="Jj0-yl-aWX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLogOut:" destination="1Ph-md-se4" eventType="touchUpInside" id="geN-ct-Tnj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sRT-3i-Ige" secondAttribute="trailing" constant="8" id="5ah-T5-cY5"/>
+                                    <constraint firstItem="uC9-Wt-g5a" firstAttribute="centerX" secondItem="h3r-OP-Khw" secondAttribute="centerX" id="BgM-4y-0cA"/>
+                                    <constraint firstItem="sRT-3i-Ige" firstAttribute="centerY" secondItem="WHO-NY-pKd" secondAttribute="centerY" id="Hc5-36-vCi"/>
+                                    <constraint firstItem="WHO-NY-pKd" firstAttribute="leading" secondItem="h3r-OP-Khw" secondAttribute="leading" id="Izv-XF-MzH"/>
+                                    <constraint firstItem="WHO-NY-pKd" firstAttribute="centerY" secondItem="h3r-OP-Khw" secondAttribute="centerY" constant="8" id="JFG-OT-OqO"/>
+                                    <constraint firstItem="uC9-Wt-g5a" firstAttribute="centerY" secondItem="WHO-NY-pKd" secondAttribute="centerY" id="U8V-zE-IVV"/>
+                                    <constraint firstAttribute="height" constant="64" id="iqz-ab-hTC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="o80-MH-7ae"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIw-Qb-pI8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="604"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awl-rM-KQt">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="604"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDM-d6-hhb">
+                                                <rect key="frame" x="124" y="20" width="125" height="125"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="1XN-2M-yNe"/>
+                                                    <constraint firstAttribute="height" constant="125" id="j5S-9W-XKQ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="62.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-uk-siP">
+                                                <rect key="frame" x="166" y="161" width="42" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="7bS-4U-pw0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
+                                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-5M-A9C">
+                                                <rect key="frame" x="145" y="202" width="83.5" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Ym9-Fd-ABa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ProximaNovaA-Light" family="Proxima Nova Alt" pointSize="17"/>
+                                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCN-TW-I1P">
+                                                <rect key="frame" x="0.0" y="231" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Push Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb9-yO-qe9">
+                                                        <rect key="frame" x="8" y="11.5" width="169" height="21"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ymZ-lI-Ude">
+                                                        <rect key="frame" x="317" y="7" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Wb9-yO-qe9" firstAttribute="leading" secondItem="iCN-TW-I1P" secondAttribute="leading" constant="8" id="L47-bN-LE4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ymZ-lI-Ude" secondAttribute="trailing" constant="8" id="OvP-Qx-hF5"/>
+                                                    <constraint firstItem="ymZ-lI-Ude" firstAttribute="centerY" secondItem="iCN-TW-I1P" secondAttribute="centerY" id="a26-Ge-wsO"/>
+                                                    <constraint firstItem="Wb9-yO-qe9" firstAttribute="centerY" secondItem="iCN-TW-I1P" secondAttribute="centerY" id="aKi-CG-VjU"/>
+                                                    <constraint firstAttribute="height" constant="44" id="odd-LP-Z0H"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-Jd-POP">
+                                                <rect key="frame" x="0.0" y="275" width="374" height="1"/>
+                                                <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="BBP-S5-l0G"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pu3-Gk-TnU">
+                                                <rect key="frame" x="0.0" y="276" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvo-nb-JhJ">
+                                                        <rect key="frame" x="8" y="11.5" width="91.5" height="21"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nin-8D-iuC">
+                                                        <rect key="frame" x="317" y="7" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="0C7-Wj-ajm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nin-8D-iuC" secondAttribute="trailing" constant="8" id="32J-CE-8zT"/>
+                                                    <constraint firstItem="yvo-nb-JhJ" firstAttribute="leading" secondItem="pu3-Gk-TnU" secondAttribute="leading" constant="8" id="CfS-c8-0zc"/>
+                                                    <constraint firstItem="yvo-nb-JhJ" firstAttribute="centerY" secondItem="pu3-Gk-TnU" secondAttribute="centerY" id="XFB-Uk-G7h"/>
+                                                    <constraint firstItem="nin-8D-iuC" firstAttribute="centerY" secondItem="pu3-Gk-TnU" secondAttribute="centerY" id="gKC-53-5uC"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHM-iC-6gj">
+                                                <rect key="frame" x="157" y="328" width="60" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="E1Y-9l-1wc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ProximaNovaA-Light" family="Proxima Nova Alt" pointSize="17"/>
+                                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86B-fd-1iH">
+                                                <rect key="frame" x="0.0" y="357" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4V-OG-hGK">
+                                                        <rect key="frame" x="8" y="11.5" width="117.5" height="21"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIButtonRightNarrow" translatesAutoresizingMaskIntoConstraints="NO" id="zxn-Nj-y5C">
+                                                        <rect key="frame" x="346" y="12" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="2gX-BE-z4S"/>
+                                                            <constraint firstAttribute="height" constant="20" id="ulf-rH-12T"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-YZ-sqA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="kZA-YZ-sqA" firstAttribute="centerY" secondItem="86B-fd-1iH" secondAttribute="centerY" id="1K6-nc-cFX"/>
+                                                    <constraint firstItem="kZA-YZ-sqA" firstAttribute="width" secondItem="86B-fd-1iH" secondAttribute="width" id="6na-Qk-TbC"/>
+                                                    <constraint firstItem="P4V-OG-hGK" firstAttribute="centerY" secondItem="86B-fd-1iH" secondAttribute="centerY" id="9Kk-GA-V1d"/>
+                                                    <constraint firstItem="zxn-Nj-y5C" firstAttribute="centerY" secondItem="86B-fd-1iH" secondAttribute="centerY" id="F3w-fT-DbS"/>
+                                                    <constraint firstItem="kZA-YZ-sqA" firstAttribute="height" secondItem="86B-fd-1iH" secondAttribute="height" id="JYx-Ae-qiP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zxn-Nj-y5C" secondAttribute="trailing" constant="8" id="NI8-Aq-aGf"/>
+                                                    <constraint firstAttribute="height" constant="44" id="aTg-41-48N"/>
+                                                    <constraint firstItem="P4V-OG-hGK" firstAttribute="leading" secondItem="86B-fd-1iH" secondAttribute="leading" constant="8" id="bXh-R7-5R1"/>
+                                                    <constraint firstItem="kZA-YZ-sqA" firstAttribute="centerX" secondItem="86B-fd-1iH" secondAttribute="centerX" id="pa5-xK-lWe"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Euu-70-zli">
+                                                <rect key="frame" x="0.0" y="446" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-gv-pII">
+                                                        <rect key="frame" x="8" y="11.5" width="102" height="21"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIButtonRightNarrow" translatesAutoresizingMaskIntoConstraints="NO" id="jzO-XH-UJO">
+                                                        <rect key="frame" x="346" y="12" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="0Pn-ZA-gtn"/>
+                                                            <constraint firstAttribute="height" constant="20" id="4SD-mP-sjs"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z41-K5-8Ps">
+                                                        <rect key="frame" x="0.5" y="0.0" width="374" height="44"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="jzO-XH-UJO" firstAttribute="centerY" secondItem="Euu-70-zli" secondAttribute="centerY" id="4kQ-kO-lVf"/>
+                                                    <constraint firstAttribute="height" constant="44" id="EjL-T6-Rzh"/>
+                                                    <constraint firstItem="Z41-K5-8Ps" firstAttribute="centerY" secondItem="Euu-70-zli" secondAttribute="centerY" id="GJn-tE-WLc"/>
+                                                    <constraint firstItem="PlM-gv-pII" firstAttribute="leading" secondItem="Euu-70-zli" secondAttribute="leading" constant="8" id="Kca-Ci-1Su"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jzO-XH-UJO" secondAttribute="trailing" constant="8" id="WYR-uY-6Lt"/>
+                                                    <constraint firstItem="Z41-K5-8Ps" firstAttribute="width" secondItem="Euu-70-zli" secondAttribute="width" id="d50-sf-gps"/>
+                                                    <constraint firstItem="PlM-gv-pII" firstAttribute="centerY" secondItem="Euu-70-zli" secondAttribute="centerY" id="kE7-FJ-hVt"/>
+                                                    <constraint firstItem="Z41-K5-8Ps" firstAttribute="centerX" secondItem="Euu-70-zli" secondAttribute="centerX" id="sGy-RC-hUD"/>
+                                                    <constraint firstItem="Z41-K5-8Ps" firstAttribute="height" secondItem="Euu-70-zli" secondAttribute="height" id="xpm-gw-mkR"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivp-DJ-MjB">
+                                                <rect key="frame" x="0.0" y="491" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About this App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTm-wI-nda">
+                                                        <rect key="frame" x="8" y="11.5" width="111" height="21"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIButtonRightNarrow" translatesAutoresizingMaskIntoConstraints="NO" id="Hyx-c4-mmv">
+                                                        <rect key="frame" x="346" y="12" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="HhZ-vH-3dv"/>
+                                                            <constraint firstAttribute="width" constant="20" id="mT1-sB-Kxn"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSj-1k-gqa">
+                                                        <rect key="frame" x="-0.5" y="0.0" width="374" height="44"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="PTm-wI-nda" firstAttribute="centerY" secondItem="ivp-DJ-MjB" secondAttribute="centerY" id="15S-as-lu4"/>
+                                                    <constraint firstItem="PTm-wI-nda" firstAttribute="leading" secondItem="ivp-DJ-MjB" secondAttribute="leading" constant="8" id="A1f-hC-Jo8"/>
+                                                    <constraint firstItem="tSj-1k-gqa" firstAttribute="width" secondItem="ivp-DJ-MjB" secondAttribute="width" id="Fvq-zy-qLv"/>
+                                                    <constraint firstItem="tSj-1k-gqa" firstAttribute="centerX" secondItem="ivp-DJ-MjB" secondAttribute="centerX" id="V4Y-fA-W8u"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Hyx-c4-mmv" secondAttribute="trailing" constant="8" id="fWk-hW-1kL"/>
+                                                    <constraint firstAttribute="height" constant="44" id="ojf-6J-rEG"/>
+                                                    <constraint firstItem="tSj-1k-gqa" firstAttribute="height" secondItem="ivp-DJ-MjB" secondAttribute="height" id="vDq-A0-b0a"/>
+                                                    <constraint firstItem="tSj-1k-gqa" firstAttribute="centerY" secondItem="ivp-DJ-MjB" secondAttribute="centerY" id="wtc-0N-TM9"/>
+                                                    <constraint firstItem="Hyx-c4-mmv" firstAttribute="centerY" secondItem="ivp-DJ-MjB" secondAttribute="centerY" id="xBL-B1-a0e"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvE-70-pe9">
+                                                <rect key="frame" x="0.0" y="445" width="374" height="1"/>
+                                                <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="hFi-dQ-A6Y"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-pX-wfl">
+                                                <rect key="frame" x="0.0" y="490" width="374" height="1"/>
+                                                <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="f2H-YP-fMO"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DO8-PS-Pub">
+                                                <rect key="frame" x="0.0" y="401" width="374" height="1"/>
+                                                <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="9bc-14-j8T"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-cg-ORV">
+                                                <rect key="frame" x="0.0" y="401" width="374" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share with your Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bO9-4Q-gqY">
+                                                        <rect key="frame" x="8" y="11.5" width="176" height="21"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIButtonRightNarrow" translatesAutoresizingMaskIntoConstraints="NO" id="cEV-QH-o9S">
+                                                        <rect key="frame" x="346" y="12" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="HJC-aC-Ill"/>
+                                                            <constraint firstAttribute="height" constant="20" id="gHT-BN-Q4a"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-Bc-70V">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="1ce-Bc-70V" firstAttribute="centerY" secondItem="iWY-cg-ORV" secondAttribute="centerY" id="8mp-OR-zlc"/>
+                                                    <constraint firstItem="1ce-Bc-70V" firstAttribute="centerX" secondItem="iWY-cg-ORV" secondAttribute="centerX" id="YmU-Js-TdL"/>
+                                                    <constraint firstItem="bO9-4Q-gqY" firstAttribute="leading" secondItem="iWY-cg-ORV" secondAttribute="leading" constant="8" id="Zkj-dx-sYN"/>
+                                                    <constraint firstAttribute="height" constant="44" id="b8D-BN-rNd"/>
+                                                    <constraint firstItem="1ce-Bc-70V" firstAttribute="height" secondItem="iWY-cg-ORV" secondAttribute="height" id="iHn-R5-AxM"/>
+                                                    <constraint firstItem="1ce-Bc-70V" firstAttribute="width" secondItem="iWY-cg-ORV" secondAttribute="width" id="kyh-dF-leh"/>
+                                                    <constraint firstItem="cEV-QH-o9S" firstAttribute="centerY" secondItem="iWY-cg-ORV" secondAttribute="centerY" id="lX4-ef-07x"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cEV-QH-o9S" secondAttribute="trailing" constant="8" id="q5C-1a-KfW"/>
+                                                    <constraint firstItem="bO9-4Q-gqY" firstAttribute="centerY" secondItem="iWY-cg-ORV" secondAttribute="centerY" id="zS5-jL-g2V"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="pu3-Gk-TnU" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="0gN-Op-piz"/>
+                                            <constraint firstItem="86B-fd-1iH" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="1S1-yn-4eZ"/>
+                                            <constraint firstItem="86B-fd-1iH" firstAttribute="top" secondItem="vHM-iC-6gj" secondAttribute="bottom" constant="8" id="3gk-6e-xXt"/>
+                                            <constraint firstItem="teO-5M-A9C" firstAttribute="top" secondItem="xhf-uk-siP" secondAttribute="bottom" constant="20" id="4WG-Vh-OPS"/>
+                                            <constraint firstItem="iCN-TW-I1P" firstAttribute="top" secondItem="teO-5M-A9C" secondAttribute="bottom" constant="8" id="4tF-7x-VUg"/>
+                                            <constraint firstItem="eQe-Jd-POP" firstAttribute="top" secondItem="iCN-TW-I1P" secondAttribute="bottom" id="5JV-Wb-3C7"/>
+                                            <constraint firstItem="DO8-PS-Pub" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="7U8-BK-MjS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Euu-70-zli" secondAttribute="trailing" id="8qc-g3-GRY"/>
+                                            <constraint firstAttribute="trailing" secondItem="DO8-PS-Pub" secondAttribute="trailing" id="9hq-mQ-SJ8"/>
+                                            <constraint firstItem="xhf-uk-siP" firstAttribute="centerX" secondItem="Awl-rM-KQt" secondAttribute="centerX" id="CX7-Yj-p0O"/>
+                                            <constraint firstAttribute="trailing" secondItem="iWY-cg-ORV" secondAttribute="trailing" id="I2y-w4-YVO"/>
+                                            <constraint firstItem="NvE-70-pe9" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="KXv-uz-Hjh"/>
+                                            <constraint firstItem="qDM-d6-hhb" firstAttribute="centerX" secondItem="Awl-rM-KQt" secondAttribute="centerX" id="Knk-h3-cJ9"/>
+                                            <constraint firstItem="iWY-cg-ORV" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="Kv0-cf-R2W"/>
+                                            <constraint firstItem="iCN-TW-I1P" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="M8M-yh-aAa"/>
+                                            <constraint firstItem="xhf-uk-siP" firstAttribute="top" secondItem="qDM-d6-hhb" secondAttribute="bottom" constant="16" id="QDK-ud-KXb"/>
+                                            <constraint firstItem="NvE-70-pe9" firstAttribute="top" secondItem="iWY-cg-ORV" secondAttribute="bottom" id="Sg1-ky-6xE"/>
+                                            <constraint firstAttribute="trailing" secondItem="NvE-70-pe9" secondAttribute="trailing" id="V9g-ed-vkz"/>
+                                            <constraint firstItem="DO8-PS-Pub" firstAttribute="top" secondItem="86B-fd-1iH" secondAttribute="bottom" id="VcB-hH-82C"/>
+                                            <constraint firstItem="vHM-iC-6gj" firstAttribute="top" secondItem="pu3-Gk-TnU" secondAttribute="bottom" constant="8" id="YTf-GO-Lrt"/>
+                                            <constraint firstAttribute="trailing" secondItem="ef6-pX-wfl" secondAttribute="trailing" id="bId-hS-P7J"/>
+                                            <constraint firstItem="vHM-iC-6gj" firstAttribute="centerX" secondItem="Awl-rM-KQt" secondAttribute="centerX" id="bjN-ud-Bt2"/>
+                                            <constraint firstItem="ivp-DJ-MjB" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="dwU-V6-VmN"/>
+                                            <constraint firstAttribute="trailing" secondItem="iCN-TW-I1P" secondAttribute="trailing" id="g3i-Qt-X0Y"/>
+                                            <constraint firstItem="eQe-Jd-POP" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="iTx-ya-X7j"/>
+                                            <constraint firstItem="Euu-70-zli" firstAttribute="top" secondItem="NvE-70-pe9" secondAttribute="bottom" id="kF8-Du-bEe"/>
+                                            <constraint firstItem="Euu-70-zli" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="kcI-iN-CYi"/>
+                                            <constraint firstItem="teO-5M-A9C" firstAttribute="centerX" secondItem="Awl-rM-KQt" secondAttribute="centerX" id="laW-25-B3O"/>
+                                            <constraint firstItem="pu3-Gk-TnU" firstAttribute="top" secondItem="eQe-Jd-POP" secondAttribute="bottom" id="mFj-B5-uKf"/>
+                                            <constraint firstAttribute="trailing" secondItem="eQe-Jd-POP" secondAttribute="trailing" id="mrm-5o-FEa"/>
+                                            <constraint firstAttribute="trailing" secondItem="ivp-DJ-MjB" secondAttribute="trailing" id="nLZ-Fd-COb"/>
+                                            <constraint firstItem="ivp-DJ-MjB" firstAttribute="top" secondItem="ef6-pX-wfl" secondAttribute="bottom" id="off-du-bc2"/>
+                                            <constraint firstAttribute="trailing" secondItem="86B-fd-1iH" secondAttribute="trailing" id="pC3-eo-MZj"/>
+                                            <constraint firstAttribute="trailing" secondItem="pu3-Gk-TnU" secondAttribute="trailing" id="pTX-4W-UDC"/>
+                                            <constraint firstItem="qDM-d6-hhb" firstAttribute="top" secondItem="Awl-rM-KQt" secondAttribute="top" constant="20" id="qDN-Fb-2OS"/>
+                                            <constraint firstItem="iWY-cg-ORV" firstAttribute="top" secondItem="86B-fd-1iH" secondAttribute="bottom" id="sXv-2n-kfd"/>
+                                            <constraint firstItem="ef6-pX-wfl" firstAttribute="leading" secondItem="Awl-rM-KQt" secondAttribute="leading" id="tzp-jq-BG1"/>
+                                            <constraint firstItem="ef6-pX-wfl" firstAttribute="top" secondItem="Euu-70-zli" secondAttribute="bottom" id="vPv-xX-vGr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Awl-rM-KQt" firstAttribute="centerY" secondItem="uIw-Qb-pI8" secondAttribute="centerY" id="1Xt-WP-iiz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Awl-rM-KQt" secondAttribute="trailing" id="72l-5v-Cn6"/>
+                                    <constraint firstItem="Awl-rM-KQt" firstAttribute="centerX" secondItem="uIw-Qb-pI8" secondAttribute="centerX" id="78B-cq-2pO"/>
+                                    <constraint firstItem="Awl-rM-KQt" firstAttribute="leading" secondItem="uIw-Qb-pI8" secondAttribute="leading" id="AAG-50-qB3"/>
+                                    <constraint firstItem="Awl-rM-KQt" firstAttribute="top" secondItem="uIw-Qb-pI8" secondAttribute="top" id="YkJ-N8-68n"/>
+                                    <constraint firstAttribute="height" constant="604" id="yGi-1c-nim"/>
+                                    <constraint firstAttribute="bottom" secondItem="Awl-rM-KQt" secondAttribute="bottom" id="zd3-Mj-h6P"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uIw-Qb-pI8" secondAttribute="trailing" id="Hze-YR-1KA"/>
+                            <constraint firstItem="h3r-OP-Khw" firstAttribute="top" secondItem="Wb4-oc-bUf" secondAttribute="top" id="PjU-jw-obo"/>
+                            <constraint firstItem="h3r-OP-Khw" firstAttribute="leading" secondItem="Wb4-oc-bUf" secondAttribute="leading" id="Sfs-yV-BF9"/>
+                            <constraint firstItem="uIw-Qb-pI8" firstAttribute="leading" secondItem="Wb4-oc-bUf" secondAttribute="leading" id="WQe-7L-2Pq"/>
+                            <constraint firstAttribute="trailing" secondItem="h3r-OP-Khw" secondAttribute="trailing" id="XKz-UB-l5n"/>
+                            <constraint firstItem="uIw-Qb-pI8" firstAttribute="top" secondItem="h3r-OP-Khw" secondAttribute="bottom" id="mbj-lK-Ihi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbName" destination="xhf-uk-siP" id="IG9-E2-7yV"/>
+                        <outlet property="profileImage" destination="qDM-d6-hhb" id="E41-zE-oKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qlo-vZ-RI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029.5999999999999" y="3064.3178410794603"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z39-9r-2o7">
@@ -895,7 +1543,7 @@ News Feed</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr7-Tg-b7Y">
-                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="B2K-QA-vja"/>
@@ -972,7 +1620,7 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZR-Lc-sMW">
-                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="lqc-OC-BoS"/>
@@ -993,7 +1641,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfilePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="80k-zA-zi6">
-                                <rect key="frame" x="117" y="178" width="140" height="140"/>
+                                <rect key="frame" x="117.5" y="178" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="Vlo-mI-yaQ"/>
                                     <constraint firstAttribute="height" constant="140" id="hdq-ND-EZ6"/>
@@ -1044,13 +1692,13 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT PROFILE TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ans-lr-0Fx">
-                                <rect key="frame" x="57" y="110" width="262" height="31"/>
+                                <rect key="frame" x="56.5" y="110" width="262" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-p8-zLc">
-                                <rect key="frame" x="63" y="201" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="201" width="250" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Fb0-fN-NFf"/>
                                     <constraint firstAttribute="height" constant="46" id="pbe-QB-iH3"/>
@@ -1073,7 +1721,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0M-u0-FwF">
-                                <rect key="frame" x="62" y="263" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="263" width="250" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="T23-1o-h4d"/>
                                     <constraint firstAttribute="height" constant="46" id="TjD-PL-zDo"/>
@@ -1096,7 +1744,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir9-ET-cJC">
-                                <rect key="frame" x="62" y="325" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="325" width="250" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="262-bB-Fet"/>
                                     <constraint firstAttribute="width" constant="250" id="O8k-rl-mTR"/>
@@ -1119,7 +1767,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-wo-rvK">
-                                <rect key="frame" x="62" y="421" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="421" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="JOd-sf-ZBK"/>
@@ -1236,13 +1884,13 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECT YOUR SOCIAL MEDIA ACCOPUNTS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqD-pK-uTs">
-                                <rect key="frame" x="16" y="110" width="343" height="58.5"/>
+                                <rect key="frame" x="16" y="110" width="343" height="61"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ej9-Ic-liU">
-                                <rect key="frame" x="147" y="607" width="80" height="40"/>
+                                <rect key="frame" x="147.5" y="607" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9di-oa-h7L"/>
                                     <constraint firstAttribute="width" constant="80" id="fCO-Xn-0Py"/>
@@ -1256,25 +1904,25 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-Z9-IFZ">
-                                <rect key="frame" x="46" y="237.5" width="89" height="23.5"/>
+                                <rect key="frame" x="46" y="239" width="88" height="25"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-Ib-i4O">
-                                <rect key="frame" x="46" y="293.5" width="59" height="23.5"/>
+                                <rect key="frame" x="46" y="295" width="60" height="25"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOh-Lm-cGy">
-                                <rect key="frame" x="46" y="348.5" width="89.5" height="23.5"/>
+                                <rect key="frame" x="46" y="350" width="87" height="25"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOl-Eg-EJl">
-                                <rect key="frame" x="209" y="228.5" width="120" height="40"/>
+                                <rect key="frame" x="209" y="231" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="bjY-xh-Qlv"/>
                                     <constraint firstAttribute="height" constant="40" id="fmP-Sh-22F"/>
@@ -1296,7 +1944,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-la-zw6">
-                                <rect key="frame" x="209" y="284.5" width="120" height="40"/>
+                                <rect key="frame" x="209" y="287" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="QKz-lM-d67"/>
                                     <constraint firstAttribute="height" constant="40" id="bQs-hA-9RO"/>
@@ -1318,7 +1966,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu8-28-5g3">
-                                <rect key="frame" x="209" y="340.5" width="120" height="40"/>
+                                <rect key="frame" x="209" y="343" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="MBp-50-y9b"/>
                                     <constraint firstAttribute="height" constant="40" id="XgY-IA-IMe"/>
@@ -1340,7 +1988,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ue-6v7">
-                                <rect key="frame" x="209" y="396.5" width="120" height="40"/>
+                                <rect key="frame" x="209" y="399" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OBq-7a-Vvs"/>
                                     <constraint firstAttribute="width" constant="120" id="Zsn-D0-iKs"/>
@@ -1359,7 +2007,7 @@ News Feed</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LinkedIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-2V-BCg">
-                                <rect key="frame" x="46" y="404.5" width="76" height="23.5"/>
+                                <rect key="frame" x="46" y="406" width="75" height="25"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1417,13 +2065,13 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-Ie-SE0">
-                                <rect key="frame" x="48.5" y="110" width="278.5" height="29.5"/>
+                                <rect key="frame" x="51" y="110" width="273" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-ZF-Cm8">
-                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="UWg-FY-a9o"/>
@@ -1444,7 +2092,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll confirm your number by sending a SMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-s2-J7s">
-                                <rect key="frame" x="22" y="167.5" width="331" height="47"/>
+                                <rect key="frame" x="22" y="169" width="331" height="49"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1461,22 +2109,22 @@ News Feed</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-DU-Wuu">
-                                <rect key="frame" x="40" y="279" width="295" height="35"/>
+                                <rect key="frame" x="40" y="284" width="295" height="37"/>
                                 <color key="textColor" red="0.41176470588235292" green="0.46666666666666667" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Light" family="Proxima Nova Alt" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phw-vE-7y5">
-                                <rect key="frame" x="92.5" y="239.5" width="191" height="23.5"/>
+                                <rect key="frame" x="94.5" y="243" width="186" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States (+1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-ax-peJ">
-                                        <rect key="frame" x="30" y="0.0" width="161" height="23.5"/>
+                                        <rect key="frame" x="30" y="0.0" width="156" height="25"/>
                                         <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="20"/>
                                         <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewFlagUS" translatesAutoresizingMaskIntoConstraints="NO" id="wWH-NC-bYw">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Jbl-jN-lBy"/>
                                         </constraints>
@@ -1533,13 +2181,13 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYu-Ae-Nu1">
-                                <rect key="frame" x="89.5" y="110" width="197" height="30.5"/>
+                                <rect key="frame" x="89" y="110" width="197" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yli-Da-4CP">
-                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4s4-aQ-Fxc"/>
@@ -1566,7 +2214,7 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Tay-c0-ZBV">
-                                <rect key="frame" x="81" y="243" width="214" height="48"/>
+                                <rect key="frame" x="80.5" y="243" width="214" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2O-WE-yOF">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="48"/>
@@ -1671,7 +2319,7 @@ News Feed</string>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-XF-aat">
-                                <rect key="frame" x="151" y="323" width="74" height="19.5"/>
+                                <rect key="frame" x="150.5" y="323" width="74" height="19.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewVerifiedMark" translatesAutoresizingMaskIntoConstraints="NO" id="jdq-De-MHc">
                                         <rect key="frame" x="0.0" y="0.0" width="18" height="19.5"/>
@@ -1762,13 +2410,13 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR GENDER?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-vF-DB6">
-                                <rect key="frame" x="95" y="110" width="186" height="31"/>
+                                <rect key="frame" x="94.5" y="110" width="186" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H97-y6-ku2">
-                                <rect key="frame" x="148" y="207" width="80" height="40"/>
+                                <rect key="frame" x="147.5" y="207" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="nVi-js-YmS"/>
                                     <constraint firstAttribute="height" constant="40" id="r9s-lC-bjK"/>
@@ -1790,7 +2438,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gla-h7-BkC">
-                                <rect key="frame" x="238" y="207" width="80" height="40"/>
+                                <rect key="frame" x="237.5" y="207" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="QCS-hV-861"/>
                                     <constraint firstAttribute="height" constant="40" id="Xoy-nM-qIc"/>
@@ -1812,7 +2460,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dl-09-Pot">
-                                <rect key="frame" x="58" y="205" width="80" height="40"/>
+                                <rect key="frame" x="57.5" y="205" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DL7-oZ-wlj"/>
                                     <constraint firstAttribute="width" constant="80" id="n0J-rQ-cpK"/>
@@ -1834,7 +2482,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ds-sD-Zyi">
-                                <rect key="frame" x="62" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="3aL-6c-nOT"/>
@@ -1905,26 +2553,26 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW OLD ARE YOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-ym-Lxd">
-                                <rect key="frame" x="64" y="110" width="247.5" height="29.5"/>
+                                <rect key="frame" x="67" y="110" width="241" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="24" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-Ht-M2M">
-                                <rect key="frame" x="16" y="199.5" width="343" height="24"/>
+                                <rect key="frame" x="16" y="201" width="343" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-pY-mfc">
-                                <rect key="frame" x="16" y="227.5" width="343" height="1"/>
+                                <rect key="frame" x="16" y="230" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7fc-LO-ThH"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-zq-tu1">
-                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="fiF-eA-qFl"/>
@@ -1975,7 +2623,7 @@ News Feed</string>
         <scene sceneID="3kL-sr-VxT">
             <objects>
                 <navigationController storyboardIdentifier="loginNavController" navigationBarHidden="YES" id="sOi-YW-ner" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g6-Do-Z6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9g6-Do-Z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1992,7 +2640,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="2wJ-dG-RmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconScanner" id="IoQ-86-IW8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aJ-fL-0Sh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8aJ-fL-0Sh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2009,7 +2657,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="rVA-bE-mLT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconQRCode" id="fFJ-SL-fMF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Xn-IF-pYb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Xn-IF-pYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2026,12 +2674,12 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="kRq-TN-CTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconProfile" id="JNe-Jo-NDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmP-yt-Jyg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DmP-yt-Jyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fQh-RQ-uvG" kind="relationship" relationship="rootViewController" id="NS1-Q2-86A"/>
+                        <segue destination="ftX-lQ-g4n" kind="relationship" relationship="rootViewController" id="oU0-3A-E3x"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Td1-3M-mkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2062,51 +2710,51 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S YOUR NAME?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndl-si-l08">
-                                <rect key="frame" x="56.5" y="110" width="262.5" height="29.5"/>
+                                <rect key="frame" x="59" y="110" width="257" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc0-xR-jzo">
-                                <rect key="frame" x="15" y="167.5" width="94" height="19"/>
+                                <rect key="frame" x="15" y="169" width="91" height="20"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLr-81-gZE">
-                                <rect key="frame" x="15" y="194.5" width="345" height="24"/>
+                                <rect key="frame" x="15" y="197" width="345" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-9z-VmR">
-                                <rect key="frame" x="15" y="222.5" width="345" height="1"/>
+                                <rect key="frame" x="15" y="226" width="345" height="1"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hI7-ks-KC0"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnW-ni-rp5">
-                                <rect key="frame" x="15" y="243.5" width="89" height="19"/>
+                                <rect key="frame" x="15" y="247" width="87" height="20"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="16"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brW-fV-5iW">
-                                <rect key="frame" x="15" y="270.5" width="345" height="24"/>
+                                <rect key="frame" x="15" y="275" width="345" height="25"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgv-oW-MgT">
-                                <rect key="frame" x="15" y="298.5" width="345" height="1"/>
+                                <rect key="frame" x="15" y="304" width="345" height="1"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="phQ-nK-pSn"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzb-hs-9De">
-                                <rect key="frame" x="63" y="404" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="403.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="XEP-cq-ZCE"/>
@@ -2176,7 +2824,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-Tv-6Dr">
-                                <rect key="frame" x="94" y="110" width="188" height="31"/>
+                                <rect key="frame" x="93.5" y="110" width="188" height="31"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2220,7 +2868,7 @@ News Feed</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-vb-5BX">
-                                <rect key="frame" x="63" y="404" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="403.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Yom-By-2v0"/>
@@ -2336,7 +2984,7 @@ News Feed</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-VG-196">
-                                <rect key="frame" x="63" y="384" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="383.5" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="CHu-zs-dn3"/>
@@ -2357,7 +3005,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewOnboardingSnapchat" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-lj-oY8">
-                                <rect key="frame" x="138" y="554" width="100" height="93"/>
+                                <rect key="frame" x="137.5" y="554" width="100" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93.5" id="Ggg-yY-X3E"/>
                                     <constraint firstAttribute="width" constant="100" id="qjG-5d-sL1"/>
@@ -2449,8 +3097,15 @@ News Feed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileBetaTester" translatesAutoresizingMaskIntoConstraints="NO" id="Tkh-Ap-7kE">
+                                <rect key="frame" x="227" y="161" width="46" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="WTq-ly-JSf"/>
+                                    <constraint firstAttribute="width" constant="46" id="imv-mi-MTo"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roxie Caldwell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLZ-ZQ-aQm">
-                                <rect key="frame" x="130" y="282" width="114" height="21"/>
+                                <rect key="frame" x="130.5" y="282" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ApM-Ht-hhg"/>
                                 </constraints>
@@ -2465,7 +3120,7 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dj7-l2-rcs">
-                                <rect key="frame" x="63" y="338" width="250" height="46"/>
+                                <rect key="frame" x="62.5" y="338" width="250" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="6NV-Sz-JEi"/>
@@ -2506,12 +3161,14 @@ News Feed</string>
                         <constraints>
                             <constraint firstItem="oLZ-ZQ-aQm" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="0HW-vU-inh"/>
                             <constraint firstItem="8CT-Qc-ACj" firstAttribute="top" secondItem="Dj7-l2-rcs" secondAttribute="bottom" constant="8" id="8Oh-Sx-CgN"/>
+                            <constraint firstItem="Tkh-Ap-7kE" firstAttribute="top" secondItem="rVX-Gk-D2o" secondAttribute="top" constant="12" id="97D-Zy-v5h"/>
                             <constraint firstItem="oA6-A3-DQ8" firstAttribute="top" secondItem="oLZ-ZQ-aQm" secondAttribute="bottom" constant="8" id="AHN-Q8-fQJ"/>
                             <constraint firstItem="oLZ-ZQ-aQm" firstAttribute="top" secondItem="rVX-Gk-D2o" secondAttribute="bottom" constant="8" id="FGp-bl-5Qd"/>
                             <constraint firstItem="Dj7-l2-rcs" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="HP9-Pd-sMN"/>
                             <constraint firstItem="rVX-Gk-D2o" firstAttribute="top" secondItem="rSN-zR-uRr" secondAttribute="bottom" constant="16" id="IkJ-Mt-d4h"/>
                             <constraint firstItem="oA6-A3-DQ8" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="PxF-mO-a8x"/>
                             <constraint firstItem="8CT-Qc-ACj" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="QkG-s6-Rg8"/>
+                            <constraint firstItem="Tkh-Ap-7kE" firstAttribute="leading" secondItem="rVX-Gk-D2o" secondAttribute="trailing" constant="-23" id="RZp-AP-FB3"/>
                             <constraint firstItem="rVX-Gk-D2o" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="Wme-nx-BMK"/>
                             <constraint firstAttribute="trailing" secondItem="8CT-Qc-ACj" secondAttribute="trailing" id="bHv-iE-Jen"/>
                             <constraint firstItem="rSN-zR-uRr" firstAttribute="leading" secondItem="jtr-ZC-f2Y" secondAttribute="leading" id="bX3-zd-fMM"/>
@@ -2617,11 +3274,17 @@ News Feed</string>
     </scenes>
     <resources>
         <image name="UIButtonOnboardingBack" width="11" height="20"/>
+        <image name="UIButtonProfileCamera" width="30" height="23"/>
+        <image name="UIButtonProfileEdit" width="24" height="24"/>
+        <image name="UIButtonProfileSettings" width="24" height="24"/>
+        <image name="UIButtonRightNarrow" width="8" height="14"/>
         <image name="UIImageConnection" width="24" height="24"/>
         <image name="UIImageRescan" width="20" height="22"/>
         <image name="UIImageViewFlagUS" width="18" height="11"/>
         <image name="UIImageViewOnboardingSnapchat" width="100" height="93"/>
         <image name="UIImageViewPassword" width="24" height="23"/>
+        <image name="UIImageViewProfileBetaTester" width="46" height="63"/>
+        <image name="UIImageViewProfileCheckmark" width="20" height="20"/>
         <image name="UIImageViewProfilePlaceHolder" width="125" height="125"/>
         <image name="UIImageViewSplashBackground" width="375" height="667"/>
         <image name="UIImageViewUser" width="24" height="24"/>

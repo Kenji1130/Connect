@@ -13,7 +13,9 @@
 
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
 
-@property (weak, nonatomic) IBOutlet UIButton *btnSettings;
+@property (weak, nonatomic) IBOutlet UIButton *btnEdit;
+@property (weak, nonatomic) IBOutlet UIButton *btnSetting;
+
 @property (weak, nonatomic) IBOutlet UIImageView *ivBetaTesterImage;
 @property (weak, nonatomic) IBOutlet UIButton *btnImagePick;
 
@@ -77,7 +79,6 @@
         self.ivProfileImage.contentMode = UIViewContentModeScaleAspectFill;
     }
     
-    self.btnSettings.hidden = !self.user.isMe;
     self.ivBetaTesterImage.hidden = self.user.isMe;
     self.viewProfileInfo.hidden = self.isEdit;
     self.viewEditProfile.hidden = !self.isEdit;
@@ -86,17 +87,18 @@
     if (!self.isEdit) {
         self.lblName.text = self.user.name;
         self.lblOccupation.text = self.user.occupation;
-        [self.btnSettings setImage:[UIImage imageNamed:@"UIButtonProfileSettings"] forState:UIControlStateNormal];
+        [self.btnEdit setImage:[UIImage imageNamed:@"UIButtonProfileEdit"] forState:UIControlStateNormal];
         
     } else {
         self.txtFName.text = self.user.name;
         self.txtFOccupation.text = self.user.occupation;
-        [self.btnSettings setImage:[UIImage imageNamed:@"UIButtonProfileDoneCheckmark"] forState:UIControlStateNormal];
+        [self.btnEdit setImage:[UIImage imageNamed:@"UIButtonProfileDoneCheckmark"] forState:UIControlStateNormal];        
     }
     
-    if (self.user.profileType == CNProfileTypePersonal || self.user.profileType == CNProfileTypeBoth) {
+    if (self.user.profileType == CNProfileTypePersonal) {
         self.backgroundColor = UIColorFromRGB(0xf0f0f0);
-        self.btnSettings.tintColor = UIColorFromRGB(0x929eaf);
+        self.btnEdit.tintColor = UIColorFromRGB(0x929eaf);
+        self.btnSetting.tintColor = UIColorFromRGB(0x929eaf);
         self.lblName.textColor = kAppTextColor;
         self.lblOccupation.textColor = kAppTextColor;
         self.txtFName.textColor = kAppTextColor;
@@ -104,7 +106,8 @@
         
     } else if (self.user.profileType == CNProfileTypeBusiness) {
         self.backgroundColor = UIColorFromRGB(0x9a9a9b);
-        self.btnSettings.tintColor = [UIColor whiteColor];
+        self.btnEdit.tintColor = [UIColor whiteColor];
+        self.btnSetting.tintColor = [UIColor whiteColor];
         self.lblName.textColor = [UIColor whiteColor];
         self.lblOccupation.textColor = [UIColor whiteColor];
         self.txtFName.textColor = [UIColor whiteColor];
@@ -121,7 +124,7 @@
     }
 }
 
-- (IBAction)onSettingsBtnClicked:(id)sender {
+- (IBAction)onEditBtnClicked:(id)sender {
     if (self.isEdit == NO) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(didEditProfileTapped)]) {
             [self.delegate didEditProfileTapped];
