@@ -43,6 +43,7 @@
     self.profileType = [value[@"profileType"] intValue];
     self.gender = [value[@"gender"] intValue];
     self.signType = [value[@"signType"] intValue];
+    self.profileHidden = [value[@"profileHidden"] boolValue];
 }
 
 #pragma mark -

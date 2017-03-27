@@ -270,10 +270,10 @@
 }
 
 - (void) feachAllUser{
-    if (_allUsers != nil) {
-        [self startSearchWithString:self.searchBar.text];
-        return;
-    }
+//    if (_allUsers != nil) {
+//        [self startSearchWithString:self.searchBar.text];
+//        return;
+//    }
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.userRef = [[AppDelegate sharedInstance].dbRef child:@"users"];
 
@@ -288,7 +288,9 @@
             while (child = [children nextObject]) {
                 NSLog(@"Child Value: %@", child.value);
                 NSDictionary *dict = child.value;
-                if (![[CNUser currentUser].userID isEqualToString:dict[@"userID"]]) {
+                NSNumber* profileHidden = [dict objectForKey:@"profileHidden"];
+
+                if (![[CNUser currentUser].userID isEqualToString:dict[@"userID"]]  && [profileHidden boolValue] == false) {
                     [array addObject: dict];
                 }
             }

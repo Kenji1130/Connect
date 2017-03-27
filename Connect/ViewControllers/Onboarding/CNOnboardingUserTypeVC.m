@@ -107,6 +107,8 @@
     
 - (void) saveProfileInfo: (NSURL*) profileImageUrl{
     
+    [CNUser currentUser].profileHidden = false;
+    
     NSDictionary *info = @{@"userID": [CNUser currentUser].userID,
                                @"token": [[CNUtilities shared] getToken],
                                @"username": [CNUser currentUser].username,
@@ -116,7 +118,8 @@
                                @"age": [CNUser currentUser].age,
                                @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
                                @"signType": [NSNumber numberWithInteger:[CNUser currentUser].signType],
-                               @"imageURL": [CNUser currentUser].imageURL};
+                               @"imageURL": [CNUser currentUser].imageURL,
+                               @"profileHidden": [NSNumber numberWithBool:false]};
     NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithDictionary:info];
     if ([CNUser currentUser].signType == CNSignTypeEmail) {
         [userInfo setValue:[CNUser currentUser].email forKey:@"email"];

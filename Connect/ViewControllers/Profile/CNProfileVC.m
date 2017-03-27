@@ -27,11 +27,15 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopAnchor;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *profileHideView;
+@property (weak, nonatomic) IBOutlet UISwitch *profileHiddenToggle;
 
 
 @property (nonatomic, strong) CNSwitchView *profileSwitch;
 
 @property (nonatomic, assign) BOOL isEdit;
+
+@property (strong, nonatomic) FIRDatabaseReference *userRef;
+
 @end
 
 @implementation CNProfileVC
@@ -106,8 +110,10 @@
     self.tfOccupation.layer.borderColor = UIColorFromRGB(0xdddddd).CGColor;
     
     self.profileHideView.hidden = true;
+    [self.profileHiddenToggle setOn:[CNUser currentUser].profileHidden];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CNMyProfileCell" bundle:nil] forCellReuseIdentifier:@"CellMedia"];
+    
 }
 
 - (void)configSwtichView{
@@ -247,6 +253,16 @@
         self.tfOccupation.textColor = [UIColor whiteColor];
     }
 }
+
+#pragma mark - Show/Hide Profile
+- (IBAction)profileShowHide:(UISwitch *)sender {
+    [CNUser currentUser].profileHidden = sender.on;
+    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
+    NSDictionary *updateValue = @{@"profileHidden": [NSNumber numberWithBool:sender.on]};
+    [self.userRef updateChildValues:updateValue];
+}
+
+
 
 #pragma mark - UITableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

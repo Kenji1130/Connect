@@ -11,6 +11,8 @@
 @interface CNSettingVC ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -24,6 +26,7 @@
 }
 
 - (void)configLayout{
+    
     if ([CNUser currentUser].profileImageURL == nil) {
         self.profileImage.backgroundColor = UIColorFromRGB(0xd1d1d1);
         self.profileImage.image = [UIImage imageNamed:@"UIImageViewProfileIconPicture"];

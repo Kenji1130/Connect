@@ -105,22 +105,23 @@
     NSInteger second, minute, hour, day;
     second = time % 60;
     minute = (time / 60) % 60;
-    hour = (time / 3600);
-    day = (time / 14400);
+    hour = (time / 60 / 60) % 24;
+    day = (time / 60 / 60 / 24) % 30;
     
     if (day > 0) {
-        timeString = [NSString stringWithFormat:@"%ld day ago", (long)day];
+        timeString = [NSString stringWithFormat:@"%ld day%@ ago", (long)day, day == 1 ? @"" : @"s"];
     } else {
         if (hour > 0) {
-            timeString = [NSString stringWithFormat:@"%ld hour ago", (long)hour];
+            timeString = [NSString stringWithFormat:@"%ld hour%@ ago", (long)hour, hour == 1 ? @"" : @"s"];
         } else {
             if (minute > 0) {
-                timeString = [NSString stringWithFormat:@"%ld min ago", (long)minute];
+                timeString = [NSString stringWithFormat:@"%ld min%@ ago", (long)minute, minute == 1 ? @"" : @"s"];
             } else{
-                timeString = [NSString stringWithFormat:@"%ld second ago", (long)second];
+                timeString = [NSString stringWithFormat:@"%ld second%@ ago", (long)second, second == 1 ? @"" : @"s"];
             }
         }
     }
+    
     return timeString;
 }
 

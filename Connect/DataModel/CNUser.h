@@ -25,6 +25,7 @@
 @property (nonatomic, assign) CNUserGender gender;
 @property (nonatomic, assign) CNSignType signType;
 @property (nonatomic, strong) NSMutableArray *connectionId;
+@property (nonatomic, assign) BOOL profileHidden;
 
 @property (nonatomic, readonly) BOOL isMe;
 @property (nonatomic, readonly) NSString *name;
