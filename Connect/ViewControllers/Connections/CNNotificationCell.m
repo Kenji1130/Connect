@@ -85,8 +85,8 @@
     NSString *title = @"Connection Accepted";
     NSString *body = [NSString stringWithFormat:@"%@ accepeted your connection request", self.notification.toName];
     [self sendNotification:title body:body type:CNNotificationTypeConfirm];
-    [self saveNotification:CNNotificationTypeConfirm];
-    [self saveConnection];
+//    [self saveNotification:CNNotificationTypeConfirm];
+//    [self saveConnection];
 }
 
 - (IBAction)onRejectClicked:(id)sender{
@@ -109,6 +109,7 @@
     [params setObject:notification forKey:@"notification"];
     NSDictionary *data = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:type] forKey:@"type"];
     [params setObject:data forKey:@"data"];
+    [CNUtilities shared].delegate = self;
     [[CNUtilities shared] httpJsonRequest:kFCMUrl withJSON:params];
 }
 
@@ -156,4 +157,14 @@
     [[[self.connectRef child:self.notification.toID] child:self.notification.fromID] setValue:[NSNumber numberWithInt:1]];
 }
 
+# pragma mark - CNUtiltiesDelegate
+
+- (void)onFailed{
+    
+}
+
+- (void) onSuccess{
+    [self saveNotification:CNNotificationTypeConfirm];
+    [self saveConnection];
+}
 @end

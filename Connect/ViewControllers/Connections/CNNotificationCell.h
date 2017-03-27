@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CNNotification.h"
 
-@interface CNNotificationCell : UITableViewCell
+@interface CNNotificationCell : UITableViewCell <CNUtilitiesDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbOtherName;
