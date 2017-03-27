@@ -67,9 +67,11 @@
     if (self.user.profileType == CNProfileTypePersonal) {
         self.view.backgroundColor = UIColorFromRGB(0xf0f0f0);
         self.switchView.backgroundColor = UIColorFromRGB(0xf0f0f0);
+        [self.profileSwitch setOn:false];
     } else {
         self.view.backgroundColor = UIColorFromRGB(0x9a9a9b);
         self.switchView.backgroundColor = UIColorFromRGB(0x9a9a9b);
+        [self.profileSwitch setOn:true];
     }
     
     if (self.user.profileImageURL == nil) {
@@ -131,6 +133,7 @@
     NSDictionary *views = NSDictionaryOfVariableBindings(_profileSwitch);
     [self.switchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-15-[_profileSwitch]-15-|" options:0 metrics:nil views:views]];
     [self.switchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-14-[_profileSwitch(40)]" options:0 metrics:nil views:views]];
+    
 }
 
 

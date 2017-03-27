@@ -12,8 +12,12 @@
 #import "CNProfileViewController.h"
 #import "CNUserVC.h"
 #import "CNNotificationVC.h"
+#import "MIBadgeButton.h"
+
 
 @interface CNConnectionsVC () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+
+@property (strong, nonatomic) MIBadgeButton *badgeButton;
 
 @property (weak, nonatomic) IBOutlet UIView *switchView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -88,13 +92,33 @@
     self.navigationItem.leftBarButtonItem =searchButton;
     
     UIImage* image2 = [UIImage imageNamed:@"UIButtonNotification"];
-    UIButton *butto2 = [[UIButton alloc] initWithFrame:frameimg];
-    [butto2 setBackgroundImage:image2 forState:UIControlStateNormal];
-    [butto2 addTarget:self action:@selector(toggleNotification:)
+    _badgeButton = [[MIBadgeButton alloc] initWithFrame:frameimg];
+    _badgeButton.hideWhenZero = true;
+    [_badgeButton setBackgroundImage:image2 forState:UIControlStateNormal];
+    [_badgeButton addTarget:self action:@selector(toggleNotification:)
       forControlEvents:UIControlEventTouchUpInside];
+    [_badgeButton setBadgeEdgeInsets:UIEdgeInsetsMake(8, 5, 0, 8)];
+    [_badgeButton setBadgeTextColor:kAppTintColor];
+    [_badgeButton setBadgeLabelBackgroundColor:[UIColor whiteColor]];
+    [_badgeButton setBadgeString:[NSString stringWithFormat:@"%@", [CNUser currentUser].notiCount]];
     
-    UIBarButtonItem *notiButton =[[UIBarButtonItem alloc] initWithCustomView:butto2];
+    UIBarButtonItem *notiButton =[[UIBarButtonItem alloc] initWithCustomView:_badgeButton];
     self.navigationItem.rightBarButtonItem =notiButton;
+    
+    [self notiCountChangeListener];
+}
+
+- (void)notiCountChangeListener{
+    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
+    [[self.userRef child:@"notiCount"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSLog(@"notiCount: %@", snapshot.value);
+        [CNUser currentUser].notiCount = snapshot.value;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_badgeButton setBadgeString:[NSString stringWithFormat:@"%@", snapshot.value]];
+
+        });
+    }];
+    
 }
 
 - (IBAction)toggleSearch:(id)sender{
@@ -104,9 +128,12 @@
 }
 
 - (IBAction)toggleNotification:(id)sender{
+    [[AppDelegate sharedInstance] setNotiCountWithZero];
     CNNotificationVC *vc = (CNNotificationVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNNotificationVC class])];
     [self presentViewController:vc animated:YES completion:nil];
 }
+
+
 
 - (void) hideNavigationBar{
     self.navigationItem.leftBarButtonItem = nil;

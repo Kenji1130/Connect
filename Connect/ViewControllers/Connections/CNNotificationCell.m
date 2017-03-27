@@ -91,9 +91,9 @@
 
 - (IBAction)onRejectClicked:(id)sender{
     
-    NSString *title = @"Connection Rejected";
-    NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.toName];
-    [self sendNotification:title body:body type:CNNotificationTypeReject];
+//    NSString *title = @"Connection Rejected";
+//    NSString *body = [NSString stringWithFormat:@"%@ rejected your request", self.notification.toName];
+//    [self sendNotification:title body:body type:CNNotificationTypeReject];
     [self removeNotification];
     
 }

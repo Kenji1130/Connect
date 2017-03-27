@@ -34,6 +34,8 @@
 		04EBA3CB1E860D63007FE43E /* CNMyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C91E860D63007FE43E /* CNMyProfileCell.m */; };
 		04EBA3CC1E860D63007FE43E /* CNMyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */; };
 		04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3CE1E861A6B007FE43E /* CNSettingVC.m */; };
+		04EBA3D31E88BFEC007FE43E /* MIBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3D21E88BFEC007FE43E /* MIBadgeButton.m */; };
+		04EBA3D61E88C048007FE43E /* MIBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3D51E88C048007FE43E /* MIBadgeLabel.m */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		309DE55D86EFD689FE24F805 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D091ECB69DE8C4B60A6E4BB /* Pods_ConnectTests.framework */; };
 		97A6F324ECC0B8E495C5FB79 /* Pods_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C374B080BD220AF5C230BBB /* Pods_ConnectUITests.framework */; };
@@ -161,6 +163,10 @@
 		04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CNMyProfileCell.xib; path = ViewControllers/Profile/CNMyProfileCell.xib; sourceTree = "<group>"; };
 		04EBA3CD1E861A6B007FE43E /* CNSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNSettingVC.h; path = ViewControllers/Profile/CNSettingVC.h; sourceTree = "<group>"; };
 		04EBA3CE1E861A6B007FE43E /* CNSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNSettingVC.m; path = ViewControllers/Profile/CNSettingVC.m; sourceTree = "<group>"; };
+		04EBA3D11E88BFEC007FE43E /* MIBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBadgeButton.h; sourceTree = "<group>"; };
+		04EBA3D21E88BFEC007FE43E /* MIBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBadgeButton.m; sourceTree = "<group>"; };
+		04EBA3D41E88C048007FE43E /* MIBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBadgeLabel.h; sourceTree = "<group>"; };
+		04EBA3D51E88C048007FE43E /* MIBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBadgeLabel.m; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
 		0C374B080BD220AF5C230BBB /* Pods_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,6 +325,17 @@
 			);
 			name = Instagram;
 			path = ViewControllers/Instagram;
+			sourceTree = "<group>";
+		};
+		04EBA3D01E88BFEC007FE43E /* MIBadgeButton */ = {
+			isa = PBXGroup;
+			children = (
+				04EBA3D41E88C048007FE43E /* MIBadgeLabel.h */,
+				04EBA3D51E88C048007FE43E /* MIBadgeLabel.m */,
+				04EBA3D11E88BFEC007FE43E /* MIBadgeButton.h */,
+				04EBA3D21E88BFEC007FE43E /* MIBadgeButton.m */,
+			);
+			path = MIBadgeButton;
 			sourceTree = "<group>";
 		};
 		91104BB23DB4E1AF43FD192D /* Frameworks */ = {
@@ -549,6 +566,7 @@
 		FA4450B01E3F8EBB00375428 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04EBA3D01E88BFEC007FE43E /* MIBadgeButton */,
 				FA4450B11E3F8EFF00375428 /* ACMacros.h */,
 				040C2CD51E81CB6000A83AA4 /* JSON */,
 				FA4450CE1E40013B00375428 /* CNSwitchView */,
@@ -1057,6 +1075,8 @@
 				FA4450E01E403B4900375428 /* CNProfileHeaderView.m in Sources */,
 				040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */,
 				FA8C15B51E671AB800075AB7 /* SGQRCodeTool.m in Sources */,
+				04EBA3D31E88BFEC007FE43E /* MIBadgeButton.m in Sources */,
+				04EBA3D61E88C048007FE43E /* MIBadgeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

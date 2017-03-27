@@ -108,18 +108,20 @@
 - (void) saveProfileInfo: (NSURL*) profileImageUrl{
     
     [CNUser currentUser].profileHidden = false;
+    [CNUser currentUser].notiCount = 0;
     
     NSDictionary *info = @{@"userID": [CNUser currentUser].userID,
-                               @"token": [[CNUtilities shared] getToken],
-                               @"username": [CNUser currentUser].username,
-                               @"firstName": [CNUser currentUser].firstName,
-                               @"lastName": [CNUser currentUser].lastName,
-                               @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],
-                               @"age": [CNUser currentUser].age,
-                               @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
-                               @"signType": [NSNumber numberWithInteger:[CNUser currentUser].signType],
-                               @"imageURL": [CNUser currentUser].imageURL,
-                               @"profileHidden": [NSNumber numberWithBool:false]};
+                           @"token": [[CNUtilities shared] getToken],
+                           @"username": [CNUser currentUser].username,
+                           @"firstName": [CNUser currentUser].firstName,
+                           @"lastName": [CNUser currentUser].lastName,
+                           @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],
+                           @"age": [CNUser currentUser].age,
+                           @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
+                           @"signType": [NSNumber numberWithInteger:[CNUser currentUser].signType],
+                           @"imageURL": [CNUser currentUser].imageURL,
+                           @"profileHidden": [NSNumber numberWithBool:false],
+                           @"notiCount":[NSNumber numberWithInt:0]};
     NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithDictionary:info];
     if ([CNUser currentUser].signType == CNSignTypeEmail) {
         [userInfo setValue:[CNUser currentUser].email forKey:@"email"];

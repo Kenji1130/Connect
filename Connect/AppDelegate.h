@@ -23,5 +23,6 @@
 - (void)showMain;
 - (void)updateToken;
 - (void)logOut;
+- (void)setNotiCountWithZero;
 @end
 

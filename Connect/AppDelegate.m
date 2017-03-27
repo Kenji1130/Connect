@@ -233,6 +233,8 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     
     // Print full message.
     NSLog(@"%@", userInfo);
+    
+    [self increaseNotiCount];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -250,6 +252,8 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     NSLog(@"%@", userInfo);
     
     completionHandler(UIBackgroundFetchResultNewData);
+    [self increaseNotiCount];
+
 }
 // [END receive_message]
 
@@ -271,6 +275,8 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     // Change this to your preferred presentation option
     completionHandler(UNNotificationPresentationOptionNone);
+    [self increaseNotiCount];
+
 }
 
 // Handle notification messages after display notification is tapped by the user.
@@ -286,6 +292,8 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     NSLog(@"%@", userInfo);
     
     completionHandler();
+    [self increaseNotiCount];
+
 }
 #endif
 // [END ios_10_message_handling]
@@ -362,5 +370,20 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     // With swizzling disabled you must set the APNs token here.
     // [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
 }
+
+#pragma mark - Notification Count Increase
+- (void)increaseNotiCount{
+    [CNUser currentUser].notiCount = @([[CNUser currentUser].notiCount intValue] + 1);
+    NSDictionary *notiCount = @{@"notiCount": [CNUser currentUser].notiCount};
+    [[[self.dbRef child:@"users"] child:[CNUser currentUser].userID] updateChildValues:notiCount];
+    
+}
+
+- (void)setNotiCountWithZero{
+    [CNUser currentUser].notiCount = 0;
+    NSDictionary *notiCount = @{@"notiCount": [NSNumber numberWithInt:0]};
+    [[[self.dbRef child:@"users"] child:[CNUser currentUser].userID] updateChildValues:notiCount];
+}
+
 
 @end

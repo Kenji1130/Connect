@@ -44,6 +44,7 @@
     self.gender = [value[@"gender"] intValue];
     self.signType = [value[@"signType"] intValue];
     self.profileHidden = [value[@"profileHidden"] boolValue];
+    self.notiCount = value[@"notiCount"];
 }
 
 #pragma mark -
