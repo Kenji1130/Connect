@@ -62,7 +62,7 @@
     [self setupNavigationBar];
     [self setupNavTitle];
     [self.searchSwitch setOn:YES];
-    [self loadData];
+    [self loadConnection];
 
 }
 
@@ -225,35 +225,27 @@
     CNSwitchView *cnSwitch = (CNSwitchView *)sender;
     if (cnSwitch.isOn) {
         NSLog(@"Switch On");
-        [self loadData];
+        [self loadConnection];
     } else {
          NSLog(@"Switch Off");
-        [self feachAllUser];
+        [self loadAllUser];
     }
 }
 
-- (void)loadData {
-    // Default connections
-//    self.connections = @[@{@"name" : @"Jonathan Reyes", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Gabi Maskowitz", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
-//                         @{@"name" : @"Annie Rowe", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Rachel Woods", @"image" : @"UIImageViewPerson1", @"profile_type" : @2},
-//                         @{@"name" : @"Carol Mendez", @"image" : @"UIImageViewPerson1", @"profile_type" : @1},
-//                         @{@"name" : @"Joan Green", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Johnny Castillo", @"image" : @"UIImageViewPerson1", @"profile_type" : @0},
-//                         @{@"name" : @"Kathy Patterson", @"image" : @"UIImageViewPerson1", @"profile_type" : @0}];
+- (void)loadConnection {
     
-    if (_connections != nil) {
-        [self startSearchWithString:self.searchBar.text];
-        return;
-    }
-    
+//    if (_connections != nil) {
+//        [self startSearchWithString:self.searchBar.text];
+//        return;
+//    }
     self.connectionRef = [[[AppDelegate sharedInstance].dbRef child:@"connections"] child:[CNUser currentUser].userID];
     self.userRef = [[AppDelegate sharedInstance].dbRef child:@"users"];
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [_connectionRef observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+
+        self.connections = [[NSMutableArray alloc] init];
 
         [MBProgressHUD hideHUDForView:self.view animated:YES];
 
@@ -296,11 +288,12 @@
     }];
 }
 
-- (void) feachAllUser{
+- (void) loadAllUser{
 //    if (_allUsers != nil) {
 //        [self startSearchWithString:self.searchBar.text];
 //        return;
 //    }
+    
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.userRef = [[AppDelegate sharedInstance].dbRef child:@"users"];
 
@@ -308,6 +301,8 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (![snapshot.value isEqual:[NSNull null]]) {
  
+            self.allUsers = [[NSMutableArray alloc] init];
+
             NSEnumerator *children = [snapshot children];
             FIRDataSnapshot *child;
             NSMutableArray *array = [[NSMutableArray alloc] init];

@@ -67,11 +67,9 @@
     if (self.user.profileType == CNProfileTypePersonal) {
         self.view.backgroundColor = UIColorFromRGB(0xf0f0f0);
         self.switchView.backgroundColor = UIColorFromRGB(0xf0f0f0);
-        [self.profileSwitch setOn:false];
     } else {
         self.view.backgroundColor = UIColorFromRGB(0x9a9a9b);
         self.switchView.backgroundColor = UIColorFromRGB(0x9a9a9b);
-        [self.profileSwitch setOn:true];
     }
     
     if (self.user.profileImageURL == nil) {
