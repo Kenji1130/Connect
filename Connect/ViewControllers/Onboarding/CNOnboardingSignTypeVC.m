@@ -9,6 +9,7 @@
 #import "CNOnboardingSignTypeVC.h"
 #import "CNOnboardingLoginVC.h"
 #import "CNOnboardingPhoneInputVC.h"
+#import "CNOnboardingSocialVC.h"
 
 @interface CNOnboardingSignTypeVC ()
 @property (weak, nonatomic) IBOutlet UIButton *btnSignWithEmail;
@@ -46,7 +47,8 @@
 }
 
 - (IBAction)onSignWithPhone:(id)sender {
-    CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
+//    CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
+    CNOnboardingSocialVC *vc = (CNOnboardingSocialVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
     

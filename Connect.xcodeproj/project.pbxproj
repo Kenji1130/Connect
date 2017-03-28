@@ -18,7 +18,6 @@
 		040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CE01E81CB6000A83AA4 /* SBJsonParser.m */; };
 		040C2CE81E81CB6000A83AA4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C2CE21E81CB6000A83AA4 /* SBJsonWriter.m */; };
 		04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D451E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m */; };
-		04106D521E7C764200B2CAC0 /* CNInstagramCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D511E7C764200B2CAC0 /* CNInstagramCV.m */; };
 		04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D571E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m */; };
 		04106D5B1E7C815200B2CAC0 /* CNOnboardingLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D5A1E7C815200B2CAC0 /* CNOnboardingLoginVC.m */; };
 		04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106D5D1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m */; };
@@ -36,6 +35,9 @@
 		04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3CE1E861A6B007FE43E /* CNSettingVC.m */; };
 		04EBA3D31E88BFEC007FE43E /* MIBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3D21E88BFEC007FE43E /* MIBadgeButton.m */; };
 		04EBA3D61E88C048007FE43E /* MIBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3D51E88C048007FE43E /* MIBadgeLabel.m */; };
+		04EBA3DF1E89C3EA007FE43E /* CNInstagramCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3DC1E89C3EA007FE43E /* CNInstagramCV.m */; };
+		04EBA3E51E89C66C007FE43E /* CNFacebookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3E41E89C66C007FE43E /* CNFacebookVC.m */; };
+		04EBA3E81E89D688007FE43E /* CNTwitterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3E71E89D688007FE43E /* CNTwitterVC.m */; };
 		04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */; };
 		309DE55D86EFD689FE24F805 /* Pods_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D091ECB69DE8C4B60A6E4BB /* Pods_ConnectTests.framework */; };
 		97A6F324ECC0B8E495C5FB79 /* Pods_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C374B080BD220AF5C230BBB /* Pods_ConnectUITests.framework */; };
@@ -135,8 +137,6 @@
 		04106D441E7ADAF800B2CAC0 /* CNOnboardingSocialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingSocialVC.h; path = ViewControllers/Onboarding/CNOnboardingSocialVC.h; sourceTree = "<group>"; };
 		04106D451E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingSocialVC.m; path = ViewControllers/Onboarding/CNOnboardingSocialVC.m; sourceTree = "<group>"; };
 		04106D471E7C26E600B2CAC0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		04106D501E7C764200B2CAC0 /* CNInstagramCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNInstagramCV.h; sourceTree = "<group>"; };
-		04106D511E7C764200B2CAC0 /* CNInstagramCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNInstagramCV.m; sourceTree = "<group>"; };
 		04106D561E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingSignTypeVC.h; path = ViewControllers/Onboarding/CNOnboardingSignTypeVC.h; sourceTree = "<group>"; };
 		04106D571E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingSignTypeVC.m; path = ViewControllers/Onboarding/CNOnboardingSignTypeVC.m; sourceTree = "<group>"; };
 		04106D591E7C815200B2CAC0 /* CNOnboardingLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingLoginVC.h; path = ViewControllers/Connections/CNOnboardingLoginVC.h; sourceTree = "<group>"; };
@@ -167,6 +167,12 @@
 		04EBA3D21E88BFEC007FE43E /* MIBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBadgeButton.m; sourceTree = "<group>"; };
 		04EBA3D41E88C048007FE43E /* MIBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBadgeLabel.h; sourceTree = "<group>"; };
 		04EBA3D51E88C048007FE43E /* MIBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBadgeLabel.m; sourceTree = "<group>"; };
+		04EBA3DB1E89C3EA007FE43E /* CNInstagramCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNInstagramCV.h; sourceTree = "<group>"; };
+		04EBA3DC1E89C3EA007FE43E /* CNInstagramCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNInstagramCV.m; sourceTree = "<group>"; };
+		04EBA3E31E89C66C007FE43E /* CNFacebookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNFacebookVC.h; sourceTree = "<group>"; };
+		04EBA3E41E89C66C007FE43E /* CNFacebookVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNFacebookVC.m; sourceTree = "<group>"; };
+		04EBA3E61E89D688007FE43E /* CNTwitterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTwitterVC.h; sourceTree = "<group>"; };
+		04EBA3E71E89D688007FE43E /* CNTwitterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTwitterVC.m; sourceTree = "<group>"; };
 		04FFB2B21E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingGenderSelectCV.h; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.h; sourceTree = "<group>"; };
 		04FFB2B31E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingGenderSelectCV.m; path = ViewControllers/Onboarding/CNOnboardingGenderSelectCV.m; sourceTree = "<group>"; };
 		0C374B080BD220AF5C230BBB /* Pods_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,16 +323,6 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		04106D4C1E7C5EAD00B2CAC0 /* Instagram */ = {
-			isa = PBXGroup;
-			children = (
-				04106D501E7C764200B2CAC0 /* CNInstagramCV.h */,
-				04106D511E7C764200B2CAC0 /* CNInstagramCV.m */,
-			);
-			name = Instagram;
-			path = ViewControllers/Instagram;
-			sourceTree = "<group>";
-		};
 		04EBA3D01E88BFEC007FE43E /* MIBadgeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +332,52 @@
 				04EBA3D21E88BFEC007FE43E /* MIBadgeButton.m */,
 			);
 			path = MIBadgeButton;
+			sourceTree = "<group>";
+		};
+		04EBA3D81E89C3EA007FE43E /* social */ = {
+			isa = PBXGroup;
+			children = (
+				04EBA3D91E89C3EA007FE43E /* facebook */,
+				04EBA3DA1E89C3EA007FE43E /* Instagram */,
+				04EBA3DD1E89C3EA007FE43E /* linkedin */,
+				04EBA3DE1E89C3EA007FE43E /* twitter */,
+			);
+			name = social;
+			path = ViewControllers/social;
+			sourceTree = "<group>";
+		};
+		04EBA3D91E89C3EA007FE43E /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				04EBA3E31E89C66C007FE43E /* CNFacebookVC.h */,
+				04EBA3E41E89C66C007FE43E /* CNFacebookVC.m */,
+			);
+			path = facebook;
+			sourceTree = "<group>";
+		};
+		04EBA3DA1E89C3EA007FE43E /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				04EBA3DB1E89C3EA007FE43E /* CNInstagramCV.h */,
+				04EBA3DC1E89C3EA007FE43E /* CNInstagramCV.m */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		04EBA3DD1E89C3EA007FE43E /* linkedin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = linkedin;
+			sourceTree = "<group>";
+		};
+		04EBA3DE1E89C3EA007FE43E /* twitter */ = {
+			isa = PBXGroup;
+			children = (
+				04EBA3E61E89D688007FE43E /* CNTwitterVC.h */,
+				04EBA3E71E89D688007FE43E /* CNTwitterVC.m */,
+			);
+			path = twitter;
 			sourceTree = "<group>";
 		};
 		91104BB23DB4E1AF43FD192D /* Frameworks */ = {
@@ -472,7 +514,7 @@
 		FA4450971E3F786600375428 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				04106D4C1E7C5EAD00B2CAC0 /* Instagram */,
+				04EBA3D81E89C3EA007FE43E /* social */,
 				FA4450991E3F794300375428 /* Onboarding */,
 				FA4450A61E3F864600375428 /* Connections */,
 				FA4450A81E3F865900375428 /* Scan */,
@@ -1038,7 +1080,6 @@
 				0402E26D1E79C62E0042B672 /* CNOnboardingAgeInputVC.m in Sources */,
 				040C2CE81E81CB6000A83AA4 /* SBJsonWriter.m in Sources */,
 				04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */,
-				04106D521E7C764200B2CAC0 /* CNInstagramCV.m in Sources */,
 				FA44509C1E3F795000375428 /* CNSplashViewController.m in Sources */,
 				FA4450C01E3FDE6600375428 /* CNUtilities.m in Sources */,
 				FA4451091E40C3D300375428 /* CNMatchViewController.m in Sources */,
@@ -1054,6 +1095,7 @@
 				04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */,
 				FA4450D11E40149C00375428 /* CNQRCodeViewController.m in Sources */,
 				FA4450D41E4014B300375428 /* CNProfileViewController.m in Sources */,
+				04EBA3DF1E89C3EA007FE43E /* CNInstagramCV.m in Sources */,
 				04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */,
 				FA4451041E40BDC400375428 /* ZFConst.m in Sources */,
 				FA8C159C1E65A95B00075AB7 /* CNOnboardingNameVC.m in Sources */,
@@ -1065,6 +1107,8 @@
 				0427C3F61E82BE59008E3359 /* CNNotificationVC.m in Sources */,
 				FA4450C91E3FEDB400375428 /* CNConnectionsCell.m in Sources */,
 				040C2CE51E81CB6000A83AA4 /* SBJSON.m in Sources */,
+				04EBA3E51E89C66C007FE43E /* CNFacebookVC.m in Sources */,
+				04EBA3E81E89D688007FE43E /* CNTwitterVC.m in Sources */,
 				04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */,
 				04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */,
 				04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */,

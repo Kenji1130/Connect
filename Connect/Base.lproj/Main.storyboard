@@ -405,7 +405,7 @@ News Feed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onSignWithPhone:" destination="UBh-nn-G5Q" eventType="touchUpInside" id="5ii-2s-HCm"/>
+                                    <action selector="onSignWithPhone:" destination="UBh-nn-G5Q" eventType="touchUpInside" id="RwY-aC-Zy8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1820,6 +1820,43 @@ News Feed</string>
             </objects>
             <point key="canvasLocation" x="4118" y="140"/>
         </scene>
+        <!--FacebookVC-->
+        <scene sceneID="L04-DC-uoF">
+            <objects>
+                <viewController storyboardIdentifier="CNFacebookVC" id="pGh-F0-9J4" customClass="CNFacebookVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mvg-gA-M93"/>
+                        <viewControllerLayoutGuide type="bottom" id="BUR-t0-xGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Prb-6b-z4i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yKe-Cv-eVc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvJ-9l-6Oj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5433" y="141"/>
+        </scene>
+        <!--TwitterVC-->
+        <scene sceneID="Tnz-0W-J0H">
+            <objects>
+                <viewController storyboardIdentifier="CNTwitterVC" id="uA9-eA-TNF" customClass="CNTwitterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lpk-uI-56h"/>
+                        <viewControllerLayoutGuide type="bottom" id="A9Q-F8-nQ4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5hj-9C-Owi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9n-ZU-4Ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5438" y="780"/>
+        </scene>
         <!--InstagramCV-->
         <scene sceneID="IZw-Ns-UbQ">
             <objects>
@@ -1864,11 +1901,12 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFT-w6-kK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4793" y="-510"/>
+            <point key="canvasLocation" x="5433" y="-510"/>
         </scene>
         <!--Onboarding SocialVC-->
         <scene sceneID="npA-aF-dgo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xX-xT-oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CNOnboardingSocialVC" id="iQK-Rp-E8z" customClass="CNOnboardingSocialVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dvJ-xX-aWL"/>
@@ -1946,7 +1984,7 @@ News Feed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="connectWithFB:" destination="iQK-Rp-E8z" eventType="touchUpInside" id="0pB-aL-F8C"/>
+                                    <action selector="connectWithFB:" destination="iQK-Rp-E8z" eventType="touchUpInside" id="xte-iM-BjT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-la-zw6">
@@ -2054,7 +2092,6 @@ News Feed</string>
                         <outlet property="btnTwitter" destination="IOc-la-zw6" id="nXu-cg-5g9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xX-xT-oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4792.8000000000002" y="138.98050974512745"/>
         </scene>

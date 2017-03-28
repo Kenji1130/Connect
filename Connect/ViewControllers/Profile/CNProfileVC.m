@@ -257,10 +257,10 @@
 
 #pragma mark - Show/Hide Profile
 - (IBAction)profileShowHide:(UISwitch *)sender {
-    [CNUser currentUser].profileHidden = sender.on;
-    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
-    NSDictionary *updateValue = @{@"profileHidden": [NSNumber numberWithBool:sender.on]};
-    [self.userRef updateChildValues:updateValue];
+//    [CNUser currentUser].profileHidden = sender.on;
+//    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
+//    NSDictionary *updateValue = @{@"profileHidden": [NSNumber numberWithBool:sender.on]};
+//    [self.userRef updateChildValues:updateValue];
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "CNOnboardingUserTypeVC.h"
+#import "CNOnboardingSocialVC.h"
 
 @interface CNOnboardingUserTypeVC ()
 @property (weak, nonatomic) IBOutlet UIButton *btnPersonal;
@@ -153,6 +154,11 @@
         }
 
     }];
+}
+
+- (void)goSocialVC{
+    CNOnboardingSocialVC *vc = (CNOnboardingSocialVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation
