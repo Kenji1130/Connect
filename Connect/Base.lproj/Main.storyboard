@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sOi-YW-ner">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sOi-YW-ner">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -357,7 +357,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR SIGN TYPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-ff-7VB">
-                                <rect key="frame" x="33" y="110" width="310.5" height="30.5"/>
+                                <rect key="frame" x="32.5" y="110" width="310.5" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1183,7 +1183,7 @@ News Feed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-5M-A9C">
-                                                <rect key="frame" x="146" y="202" width="83.5" height="21"/>
+                                                <rect key="frame" x="145.5" y="202" width="83.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Ym9-Fd-ABa"/>
                                                 </constraints>
@@ -1942,7 +1942,7 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-Ib-i4O">
-                                <rect key="frame" x="46" y="295" width="59.5" height="24.5"/>
+                                <rect key="frame" x="46" y="295.5" width="59" height="24.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3178,18 +3178,37 @@ News Feed</string>
                                 <rect key="frame" x="0.0" y="391.5" width="375" height="275.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This user has Private Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJL-nb-VLc">
-                                        <rect key="frame" x="91" y="128.5" width="194" height="18.5"/>
+                                        <rect key="frame" x="90" y="128.5" width="194" height="18.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tg6-h8-YhF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="275.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="439-nj-B6k" id="dU8-1L-oBY"/>
+                                            <outlet property="delegate" destination="439-nj-B6k" id="ldD-CR-xch"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tg6-h8-YhF" secondAttribute="trailing" id="Drq-u6-VER"/>
+                                    <constraint firstItem="Tg6-h8-YhF" firstAttribute="leading" secondItem="8CT-Qc-ACj" secondAttribute="leading" id="Hie-aK-XwI"/>
                                     <constraint firstItem="nJL-nb-VLc" firstAttribute="centerX" secondItem="8CT-Qc-ACj" secondAttribute="centerX" id="Ocf-jv-UYv"/>
+                                    <constraint firstItem="Tg6-h8-YhF" firstAttribute="top" secondItem="8CT-Qc-ACj" secondAttribute="top" id="VRq-BL-Zxf"/>
                                     <constraint firstItem="nJL-nb-VLc" firstAttribute="centerY" secondItem="8CT-Qc-ACj" secondAttribute="centerY" id="ogv-yq-rKi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tg6-h8-YhF" secondAttribute="bottom" id="t3N-Ec-pe8"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="TXD-fD-nSB">
+                                <rect key="frame" x="246" y="282" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="iY0-qN-oLF"/>
+                                    <constraint firstAttribute="height" constant="20" id="uau-BC-N9P"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -3203,6 +3222,7 @@ News Feed</string>
                             <constraint firstItem="oA6-A3-DQ8" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="PxF-mO-a8x"/>
                             <constraint firstItem="8CT-Qc-ACj" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="QkG-s6-Rg8"/>
                             <constraint firstItem="Tkh-Ap-7kE" firstAttribute="leading" secondItem="rVX-Gk-D2o" secondAttribute="trailing" constant="-23" id="RZp-AP-FB3"/>
+                            <constraint firstItem="TXD-fD-nSB" firstAttribute="leading" secondItem="oLZ-ZQ-aQm" secondAttribute="trailing" constant="1" id="SaU-am-HfP"/>
                             <constraint firstItem="rVX-Gk-D2o" firstAttribute="centerX" secondItem="jtr-ZC-f2Y" secondAttribute="centerX" id="Wme-nx-BMK"/>
                             <constraint firstAttribute="trailing" secondItem="8CT-Qc-ACj" secondAttribute="trailing" id="bHv-iE-Jen"/>
                             <constraint firstItem="rSN-zR-uRr" firstAttribute="leading" secondItem="jtr-ZC-f2Y" secondAttribute="leading" id="bX3-zd-fMM"/>
@@ -3214,6 +3234,7 @@ News Feed</string>
                             <constraint firstItem="rSN-zR-uRr" firstAttribute="top" secondItem="deb-bb-W0h" secondAttribute="bottom" id="tzH-b9-Vma"/>
                             <constraint firstItem="vO3-T6-kEO" firstAttribute="top" secondItem="8CT-Qc-ACj" secondAttribute="bottom" id="vdQ-iD-PbQ"/>
                             <constraint firstItem="deb-bb-W0h" firstAttribute="leading" secondItem="jtr-ZC-f2Y" secondAttribute="leading" id="x41-fF-NvG"/>
+                            <constraint firstItem="TXD-fD-nSB" firstAttribute="centerY" secondItem="oLZ-ZQ-aQm" secondAttribute="centerY" id="y4l-Fr-ERE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GqX-mO-12X"/>
@@ -3224,6 +3245,7 @@ News Feed</string>
                         <outlet property="lbName" destination="oLZ-ZQ-aQm" id="mex-z8-8ya"/>
                         <outlet property="lbOccupation" destination="oA6-A3-DQ8" id="aNU-oN-73r"/>
                         <outlet property="switchView" destination="rSN-zR-uRr" id="cwj-2d-zJd"/>
+                        <outlet property="tableView" destination="Tg6-h8-YhF" id="doZ-Ef-9ED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLK-rb-hDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

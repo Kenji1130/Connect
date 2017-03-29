@@ -218,11 +218,42 @@
         //        self.user setProfileImage:<#(UIImage *)#>
         //        image = info[UIIm]
         [self.ivProfileImage setImage:image];
+        [self uploadProfileImage:image];
     }];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) uploadProfileImage: (UIImage*) image{
+    NSString *imageName = [NSString stringWithFormat:@"%@%@", [CNUser currentUser].userID, @".jpg"];
+    FIRStorageReference *imageRef = [[[AppDelegate sharedInstance].storageRef child:@"profile_image"] child:imageName];
+    
+    // Create file metadata including the content type
+    FIRStorageMetadata *meta = [[FIRStorageMetadata alloc] init];
+    meta.contentType = @"image/jpeg";
+    
+    // Upload the file
+    NSData *data = UIImageJPEGRepresentation(image, 0.1);
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [imageRef putData:data metadata:meta completion:^(FIRStorageMetadata *metadata, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+            NSLog(@"Error: %@", error.localizedDescription);
+            [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:error.localizedDescription];
+        } else {
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            [self updateProfileImageUrl:metadata.downloadURL];
+        }
+    }];
+}
+
+- (void)updateProfileImageUrl:(NSURL*) url {
+    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID];
+    NSDictionary *dict = @{@"imageURL": url.absoluteString};
+    [self.userRef updateChildValues:dict];
 }
 
 #pragma mark - Switch Value Change

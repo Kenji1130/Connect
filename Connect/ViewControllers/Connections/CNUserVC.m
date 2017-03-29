@@ -9,14 +9,16 @@
 #import "CNUserVC.h"
 #import "CNSwitchView.h"
 #import "CNNotification.h"
+#import "CNUserCell.h"
 
-@interface CNUserVC () <CNUtilitiesDelegate>
+@interface CNUserVC () <CNUtilitiesDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *switchView;
 @property (weak, nonatomic) IBOutlet UIImageView *ivProfileImage;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbOccupation;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnConnectHeightAnchor;
 @property (weak, nonatomic) IBOutlet UIButton *btnRequest;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
 @property (strong, nonatomic) FIRDatabaseReference *notiRef;
@@ -50,6 +52,8 @@
     
     _lbName.text = [NSString stringWithFormat:@"%@ %@", _user.firstName, _user.lastName];
     _lbOccupation.text = _user.occupation;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"CNUserCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
     
 }
 
@@ -167,14 +171,37 @@
 - (void) onFailed{
     NSLog(@"Failed");
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 4;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [self cellHeight:indexPath.row];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CNUserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    [cell configureCellWithIndex:indexPath.row withUser:self.user];
+    return cell;
+}
+
+- (CGFloat)cellHeight:(NSInteger)index{
+    NSString *socialKey = kSocialKey[index];
+    NSDictionary *dict = self.user.social[socialKey];
+    if (dict != nil) {
+        return 43;
+    } else {
+        return 0;
+    }
+    
+}
+
 
 @end

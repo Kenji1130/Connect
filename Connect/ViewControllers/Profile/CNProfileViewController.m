@@ -252,7 +252,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [self dismissViewControllerAnimated:YES completion:^{
-        UIImage *image = info[UIImagePickerControllerEditedImage];
+//        UIImage *image = info[UIImagePickerControllerEditedImage];
 //        self.user setProfileImage:<#(UIImage *)#>
 //        image = info[UIIm]
         

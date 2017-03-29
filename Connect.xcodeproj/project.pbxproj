@@ -28,6 +28,8 @@
 		0427C3FA1E82D81C008E3359 /* CNNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3F81E82D81C008E3359 /* CNNotificationCell.m */; };
 		0427C3FB1E82D81C008E3359 /* CNNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */; };
 		0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3FD1E8310EC008E3359 /* CNNotification.m */; };
+		0435B9441E8C5978007A82FA /* CNUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B9421E8C5978007A82FA /* CNUserCell.m */; };
+		0435B9451E8C5978007A82FA /* CNUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0435B9431E8C5978007A82FA /* CNUserCell.xib */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
 		0481C1801E8ADBE400FB2F8E /* CNLinkedInCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */; };
 		0481C19F1E8AEB8400FB2F8E /* LIALinkedInApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1951E8AEB8400FB2F8E /* LIALinkedInApplication.m */; };
@@ -166,6 +168,9 @@
 		0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CNNotificationCell.xib; path = ViewControllers/Connections/CNNotificationCell.xib; sourceTree = "<group>"; };
 		0427C3FC1E8310EC008E3359 /* CNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNNotification.h; path = DataModel/CNNotification.h; sourceTree = "<group>"; };
 		0427C3FD1E8310EC008E3359 /* CNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNNotification.m; path = DataModel/CNNotification.m; sourceTree = "<group>"; };
+		0435B9411E8C5978007A82FA /* CNUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNUserCell.h; path = ViewControllers/Connections/CNUserCell.h; sourceTree = "<group>"; };
+		0435B9421E8C5978007A82FA /* CNUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNUserCell.m; path = ViewControllers/Connections/CNUserCell.m; sourceTree = "<group>"; };
+		0435B9431E8C5978007A82FA /* CNUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CNUserCell.xib; path = ViewControllers/Connections/CNUserCell.xib; sourceTree = "<group>"; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0481C17E1E8ADBE400FB2F8E /* CNLinkedInCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLinkedInCV.h; sourceTree = "<group>"; };
 		0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNLinkedInCV.m; sourceTree = "<group>"; };
@@ -715,6 +720,9 @@
 				FA4450C61E3FEDB400375428 /* CNConnectionsCell.h */,
 				FA4450C71E3FEDB400375428 /* CNConnectionsCell.m */,
 				FA4450C81E3FEDB400375428 /* CNConnectionsCell.xib */,
+				0435B9411E8C5978007A82FA /* CNUserCell.h */,
+				0435B9421E8C5978007A82FA /* CNUserCell.m */,
+				0435B9431E8C5978007A82FA /* CNUserCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -958,6 +966,7 @@
 				0481C1A41E8AEB8400FB2F8E /* 01-refresh@2x.png in Resources */,
 				FA4450B81E3F923700375428 /* ProximaNovaBold.otf in Resources */,
 				FA4450BC1E3F923700375428 /* ProximaNovaSemibold.otf in Resources */,
+				0435B9451E8C5978007A82FA /* CNUserCell.xib in Resources */,
 				FA4450AD1E3F87A600375428 /* UIImageView.xcassets in Resources */,
 				FA4450EC1E409A3100375428 /* CNProfileEditOptionCell.xib in Resources */,
 				FA4450AF1E3F87C100375428 /* UITabBar.xcassets in Resources */,
@@ -1190,6 +1199,7 @@
 				04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */,
 				04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */,
 				FA4450A21E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m in Sources */,
+				0435B9441E8C5978007A82FA /* CNUserCell.m in Sources */,
 				0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */,
 				FA4450EB1E409A3100375428 /* CNProfileEditOptionCell.m in Sources */,
 				0481C1A01E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.m in Sources */,
