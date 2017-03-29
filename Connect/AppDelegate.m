@@ -109,6 +109,7 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
         [self showLogin];
     }
     
+    [self updateCurrentUser];
     return YES;
 }
 
@@ -139,15 +140,34 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
 }
 
 - (void)logOut{
-    NSError *signOutError;
-    BOOL status = [[FIRAuth auth] signOut:&signOutError];
-    if (!status) {
-        NSLog(@"Error signing out: %@", signOutError);
-        return;
-    }
-    
-    [[CNUtilities shared] saveLoggedUserID:@""];
+//    NSError *signOutError;
+//    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+//    if (!status) {
+//        NSLog(@"Error signing out: %@", signOutError);
+//        return;
+//    }
+//    
+//    [[CNUtilities shared] saveLoggedUserID:@""];
     [self showLogin];
+}
+
+- (void) updateCurrentUser{
+    NSString *loggedUserID = [[CNUtilities shared] getLoggedUserID];
+    if (loggedUserID != nil && ![loggedUserID isEqualToString:@""]) {
+        // Get current user information
+        [[[_dbRef child:@"users"] child:loggedUserID] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            // Get user value
+            if (![snapshot.value isEqual:[NSNull null]]) {
+                NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:snapshot.value];
+                
+                [[CNUser currentUser] configureUserWithDictionary:userInfo];
+            }
+        } withCancelBlock:^(NSError * _Nonnull error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+    } else {
+    }
+
 }
 
 - (void)setupAppearance {

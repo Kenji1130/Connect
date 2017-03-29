@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CNFacebook.h"
+#import "CNTwitter.h"
+#import "CNInstagram.h"
+#import "CNLinkedIn.h"
 
 @interface CNUser : NSObject
 
@@ -27,6 +31,12 @@
 @property (nonatomic, strong) NSMutableArray *connectionId;
 @property (nonatomic, assign) BOOL profileHidden;
 @property (nonatomic, strong) NSNumber *notiCount;
+
+@property (nonatomic, strong) NSDictionary *social;
+@property (nonatomic, strong) CNFacebook *facebook;
+@property (nonatomic, strong) CNTwitter *twitter;
+@property (nonatomic, strong) CNInstagram *instagram;
+@property (nonatomic, strong) CNLinkedIn *linkedIn;
 
 @property (nonatomic, readonly) BOOL isMe;
 @property (nonatomic, readonly) NSString *name;

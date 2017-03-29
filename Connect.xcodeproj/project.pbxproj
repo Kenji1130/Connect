@@ -29,6 +29,17 @@
 		0427C3FB1E82D81C008E3359 /* CNNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0427C3F91E82D81C008E3359 /* CNNotificationCell.xib */; };
 		0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427C3FD1E8310EC008E3359 /* CNNotification.m */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
+		0481C1801E8ADBE400FB2F8E /* CNLinkedInCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */; };
+		0481C19F1E8AEB8400FB2F8E /* LIALinkedInApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1951E8AEB8400FB2F8E /* LIALinkedInApplication.m */; };
+		0481C1A01E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1971E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.m */; };
+		0481C1A11E8AEB8400FB2F8E /* LIALinkedInHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1991E8AEB8400FB2F8E /* LIALinkedInHttpClient.m */; };
+		0481C1A21E8AEB8400FB2F8E /* NSString+LIAEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C19B1E8AEB8400FB2F8E /* NSString+LIAEncode.m */; };
+		0481C1A31E8AEB8400FB2F8E /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 0481C19D1E8AEB8400FB2F8E /* 01-refresh.png */; };
+		0481C1A41E8AEB8400FB2F8E /* 01-refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0481C19E1E8AEB8400FB2F8E /* 01-refresh@2x.png */; };
+		0481C1A71E8B204D00FB2F8E /* CNFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1A61E8B204D00FB2F8E /* CNFacebook.m */; };
+		0481C1AA1E8B5AE000FB2F8E /* CNTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1A91E8B5AE000FB2F8E /* CNTwitter.m */; };
+		0481C1AD1E8BDF9400FB2F8E /* CNInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1AC1E8BDF9400FB2F8E /* CNInstagram.m */; };
+		0481C1B01E8BDFA900FB2F8E /* CNLinkedIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1AF1E8BDFA900FB2F8E /* CNLinkedIn.m */; };
 		04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C61E85C404007FE43E /* CNProfileVC.m */; };
 		04EBA3CB1E860D63007FE43E /* CNMyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C91E860D63007FE43E /* CNMyProfileCell.m */; };
 		04EBA3CC1E860D63007FE43E /* CNMyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */; };
@@ -156,6 +167,26 @@
 		0427C3FC1E8310EC008E3359 /* CNNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNNotification.h; path = DataModel/CNNotification.h; sourceTree = "<group>"; };
 		0427C3FD1E8310EC008E3359 /* CNNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNNotification.m; path = DataModel/CNNotification.m; sourceTree = "<group>"; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0481C17E1E8ADBE400FB2F8E /* CNLinkedInCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLinkedInCV.h; sourceTree = "<group>"; };
+		0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNLinkedInCV.m; sourceTree = "<group>"; };
+		0481C1941E8AEB8400FB2F8E /* LIALinkedInApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIALinkedInApplication.h; sourceTree = "<group>"; };
+		0481C1951E8AEB8400FB2F8E /* LIALinkedInApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIALinkedInApplication.m; sourceTree = "<group>"; };
+		0481C1961E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIALinkedInAuthorizationViewController.h; sourceTree = "<group>"; };
+		0481C1971E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIALinkedInAuthorizationViewController.m; sourceTree = "<group>"; };
+		0481C1981E8AEB8400FB2F8E /* LIALinkedInHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIALinkedInHttpClient.h; sourceTree = "<group>"; };
+		0481C1991E8AEB8400FB2F8E /* LIALinkedInHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIALinkedInHttpClient.m; sourceTree = "<group>"; };
+		0481C19A1E8AEB8400FB2F8E /* NSString+LIAEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LIAEncode.h"; sourceTree = "<group>"; };
+		0481C19B1E8AEB8400FB2F8E /* NSString+LIAEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LIAEncode.m"; sourceTree = "<group>"; };
+		0481C19D1E8AEB8400FB2F8E /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
+		0481C19E1E8AEB8400FB2F8E /* 01-refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh@2x.png"; sourceTree = "<group>"; };
+		0481C1A51E8B204D00FB2F8E /* CNFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNFacebook.h; path = DataModel/CNFacebook.h; sourceTree = "<group>"; };
+		0481C1A61E8B204D00FB2F8E /* CNFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNFacebook.m; path = DataModel/CNFacebook.m; sourceTree = "<group>"; };
+		0481C1A81E8B5AE000FB2F8E /* CNTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNTwitter.h; path = DataModel/CNTwitter.h; sourceTree = "<group>"; };
+		0481C1A91E8B5AE000FB2F8E /* CNTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNTwitter.m; path = DataModel/CNTwitter.m; sourceTree = "<group>"; };
+		0481C1AB1E8BDF9400FB2F8E /* CNInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNInstagram.h; path = DataModel/CNInstagram.h; sourceTree = "<group>"; };
+		0481C1AC1E8BDF9400FB2F8E /* CNInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNInstagram.m; path = DataModel/CNInstagram.m; sourceTree = "<group>"; };
+		0481C1AE1E8BDFA900FB2F8E /* CNLinkedIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNLinkedIn.h; path = DataModel/CNLinkedIn.h; sourceTree = "<group>"; };
+		0481C1AF1E8BDFA900FB2F8E /* CNLinkedIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNLinkedIn.m; path = DataModel/CNLinkedIn.m; sourceTree = "<group>"; };
 		04EBA3C51E85C404007FE43E /* CNProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNProfileVC.h; path = ViewControllers/Profile/CNProfileVC.h; sourceTree = "<group>"; };
 		04EBA3C61E85C404007FE43E /* CNProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNProfileVC.m; path = ViewControllers/Profile/CNProfileVC.m; sourceTree = "<group>"; };
 		04EBA3C81E860D63007FE43E /* CNMyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNMyProfileCell.h; path = ViewControllers/Profile/CNMyProfileCell.h; sourceTree = "<group>"; };
@@ -323,6 +354,31 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		0481C1931E8AEB8400FB2F8E /* IOSLinkedInAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0481C1941E8AEB8400FB2F8E /* LIALinkedInApplication.h */,
+				0481C1951E8AEB8400FB2F8E /* LIALinkedInApplication.m */,
+				0481C1961E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.h */,
+				0481C1971E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.m */,
+				0481C1981E8AEB8400FB2F8E /* LIALinkedInHttpClient.h */,
+				0481C1991E8AEB8400FB2F8E /* LIALinkedInHttpClient.m */,
+				0481C19A1E8AEB8400FB2F8E /* NSString+LIAEncode.h */,
+				0481C19B1E8AEB8400FB2F8E /* NSString+LIAEncode.m */,
+				0481C19C1E8AEB8400FB2F8E /* Resources */,
+			);
+			path = IOSLinkedInAPI;
+			sourceTree = "<group>";
+		};
+		0481C19C1E8AEB8400FB2F8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0481C19D1E8AEB8400FB2F8E /* 01-refresh.png */,
+				0481C19E1E8AEB8400FB2F8E /* 01-refresh@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		04EBA3D01E88BFEC007FE43E /* MIBadgeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +423,8 @@
 		04EBA3DD1E89C3EA007FE43E /* linkedin */ = {
 			isa = PBXGroup;
 			children = (
+				0481C17E1E8ADBE400FB2F8E /* CNLinkedInCV.h */,
+				0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */,
 			);
 			path = linkedin;
 			sourceTree = "<group>";
@@ -507,6 +565,14 @@
 				FA4450D91E401E3500375428 /* CNUser.m */,
 				0427C3FC1E8310EC008E3359 /* CNNotification.h */,
 				0427C3FD1E8310EC008E3359 /* CNNotification.m */,
+				0481C1A51E8B204D00FB2F8E /* CNFacebook.h */,
+				0481C1A61E8B204D00FB2F8E /* CNFacebook.m */,
+				0481C1A81E8B5AE000FB2F8E /* CNTwitter.h */,
+				0481C1A91E8B5AE000FB2F8E /* CNTwitter.m */,
+				0481C1AB1E8BDF9400FB2F8E /* CNInstagram.h */,
+				0481C1AC1E8BDF9400FB2F8E /* CNInstagram.m */,
+				0481C1AE1E8BDFA900FB2F8E /* CNLinkedIn.h */,
+				0481C1AF1E8BDFA900FB2F8E /* CNLinkedIn.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -608,6 +674,7 @@
 		FA4450B01E3F8EBB00375428 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0481C1931E8AEB8400FB2F8E /* IOSLinkedInAPI */,
 				04EBA3D01E88BFEC007FE43E /* MIBadgeButton */,
 				FA4450B11E3F8EFF00375428 /* ACMacros.h */,
 				040C2CD51E81CB6000A83AA4 /* JSON */,
@@ -880,6 +947,7 @@
 				FA4451011E40BDC400375428 /* ScanQR2@2x.png in Resources */,
 				FA4450CA1E3FEDB400375428 /* CNConnectionsCell.xib in Resources */,
 				FA44506D1E3A7B6D00375428 /* Assets.xcassets in Resources */,
+				0481C1A31E8AEB8400FB2F8E /* 01-refresh.png in Resources */,
 				FA44506B1E3A7B6D00375428 /* Main.storyboard in Resources */,
 				FA4450F11E409A5500375428 /* CNProfileAddMediaCell.xib in Resources */,
 				FA4450BA1E3F923700375428 /* ProximaNovaLight.otf in Resources */,
@@ -887,6 +955,7 @@
 				FA4450E21E403B5A00375428 /* CNProfileHeaderView.xib in Resources */,
 				FA4450E71E403BAF00375428 /* CNProfileMediaCell.xib in Resources */,
 				FA4450AB1E3F879B00375428 /* UIButton.xcassets in Resources */,
+				0481C1A41E8AEB8400FB2F8E /* 01-refresh@2x.png in Resources */,
 				FA4450B81E3F923700375428 /* ProximaNovaBold.otf in Resources */,
 				FA4450BC1E3F923700375428 /* ProximaNovaSemibold.otf in Resources */,
 				FA4450AD1E3F87A600375428 /* UIImageView.xcassets in Resources */,
@@ -1076,6 +1145,7 @@
 				0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */,
 				04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */,
 				FA4450E61E403BAF00375428 /* CNProfileMediaCell.m in Sources */,
+				0481C1A71E8B204D00FB2F8E /* CNFacebook.m in Sources */,
 				FA4450C31E3FED8700375428 /* CNConnectionsVC.m in Sources */,
 				0402E26D1E79C62E0042B672 /* CNOnboardingAgeInputVC.m in Sources */,
 				040C2CE81E81CB6000A83AA4 /* SBJsonWriter.m in Sources */,
@@ -1087,6 +1157,7 @@
 				FA4450651E3A7B6D00375428 /* AppDelegate.m in Sources */,
 				FA4451061E40BDC400375428 /* ZFScanViewController.m in Sources */,
 				FA4450CD1E40013300375428 /* CNSwitchView.m in Sources */,
+				0481C1AA1E8B5AE000FB2F8E /* CNTwitter.m in Sources */,
 				FA44509F1E3F7BEF00375428 /* CNOnboardingSnapchatVC.m in Sources */,
 				040C2CE61E81CB6000A83AA4 /* SBJsonBase.m in Sources */,
 				0427C3FA1E82D81C008E3359 /* CNNotificationCell.m in Sources */,
@@ -1095,26 +1166,33 @@
 				04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */,
 				FA4450D11E40149C00375428 /* CNQRCodeViewController.m in Sources */,
 				FA4450D41E4014B300375428 /* CNProfileViewController.m in Sources */,
+				0481C1AD1E8BDF9400FB2F8E /* CNInstagram.m in Sources */,
 				04EBA3DF1E89C3EA007FE43E /* CNInstagramCV.m in Sources */,
 				04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */,
 				FA4451041E40BDC400375428 /* ZFConst.m in Sources */,
 				FA8C159C1E65A95B00075AB7 /* CNOnboardingNameVC.m in Sources */,
 				040C2CE41E81CB6000A83AA4 /* NSString+SBJSON.m in Sources */,
+				0481C1A21E8AEB8400FB2F8E /* NSString+LIAEncode.m in Sources */,
 				04EBA3CB1E860D63007FE43E /* CNMyProfileCell.m in Sources */,
 				FA4450D71E4014C500375428 /* CNScanViewController.m in Sources */,
 				040C2CE71E81CB6000A83AA4 /* SBJsonParser.m in Sources */,
 				04106D5B1E7C815200B2CAC0 /* CNOnboardingLoginVC.m in Sources */,
 				0427C3F61E82BE59008E3359 /* CNNotificationVC.m in Sources */,
 				FA4450C91E3FEDB400375428 /* CNConnectionsCell.m in Sources */,
+				0481C19F1E8AEB8400FB2F8E /* LIALinkedInApplication.m in Sources */,
 				040C2CE51E81CB6000A83AA4 /* SBJSON.m in Sources */,
+				0481C1801E8ADBE400FB2F8E /* CNLinkedInCV.m in Sources */,
 				04EBA3E51E89C66C007FE43E /* CNFacebookVC.m in Sources */,
+				0481C1A11E8AEB8400FB2F8E /* LIALinkedInHttpClient.m in Sources */,
 				04EBA3E81E89D688007FE43E /* CNTwitterVC.m in Sources */,
+				0481C1B01E8BDFA900FB2F8E /* CNLinkedIn.m in Sources */,
 				04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */,
 				04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */,
 				04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */,
 				FA4450A21E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m in Sources */,
 				0402E2701E79CEA70042B672 /* CNOnboardingProfileImagePickerVC.m in Sources */,
 				FA4450EB1E409A3100375428 /* CNProfileEditOptionCell.m in Sources */,
+				0481C1A01E8AEB8400FB2F8E /* LIALinkedInAuthorizationViewController.m in Sources */,
 				FA4450DA1E401E3500375428 /* CNUser.m in Sources */,
 				FA4450E01E403B4900375428 /* CNProfileHeaderView.m in Sources */,
 				040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */,

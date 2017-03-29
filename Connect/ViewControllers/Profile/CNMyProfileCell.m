@@ -16,6 +16,8 @@
     
     self.backgroundColor = [UIColor clearColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    self.user = [CNUser currentUser];
 
 }
 
@@ -29,24 +31,30 @@
     // Configure Cell
     self.profileType = profileType;
     self.isEdit = isEdit;
-
-    NSArray *items;
-    if (self.profileType == CNProfileTypePersonal || self.profileType == CNProfileTypeBoth) {
-        items = @[@{@"image" : @"UIImageViewProfileFacebook", @"username" : @"Roxie Caldwell"},
-                  @{@"image" : @"UIImageViewProfileSnapchat", @"username" : @"roxiecaldwell"},
-                  @{@"image" : @"UIImageViewProfileTwitter", @"username" : @"roxiecaldwell"},
-                  @{@"image" : @"UIImageViewProfilePhone", @"username" : @"626-397-9511"}];
-        
-    } else if (self.profileType == CNProfileTypeBusiness) {
-        items = @[@{@"image" : @"UIImageViewProfileFacebook", @"username" : @"Roxie Caldwell"},
-                  @{@"image" : @"UIImageViewProfileLinkedIn", @"username" : @"Roxie Caldwell"},
-                  @{@"image" : @"UIImageViewProfileEmail", @"username" : @"roxie@asana.com"},
-                  @{@"image" : @"UIImageViewProfileSkype", @"username" : @"roxiecaldwell"}];
+    self.socialType = index;
+    self.socialKey = kSocialKey[self.socialType];
+    
+    NSDictionary *dict = self.user.social[self.socialKey];
+    if (dict != nil) {
+        self.socialMediaLogo.hidden = false;
+        self.socialMediaName.hidden = false;
+        self.toggle.hidden = !isEdit;
+    } else {
+        self.socialMediaLogo.hidden = true;
+        self.socialMediaName.hidden = true;
+        self.toggle.hidden = true;
     }
     
-    self.socialMediaLogo.image = [UIImage imageNamed:[items[index] objectForKey:@"image"]];
-    self.socialMediaName.text = [items[index] objectForKey:@"username"];
-    self.toggle.hidden = !self.isEdit;
-
+    [self.socialMediaLogo setImage:[UIImage imageNamed:kSocialImage[self.socialType]]];
+    self.socialMediaName.text = dict[@"name"];
+    BOOL hidden = [dict[@"hidden"] boolValue];
+    [self.toggle setOn:hidden];
 }
+
+- (IBAction)onToggle:(UISwitch*)sender {
+    self.userRef = [[[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"] child:self.socialKey];
+    NSDictionary *dict = @{@"hidden": [NSNumber numberWithBool:sender.on]};
+    [self.userRef updateChildValues:dict];
+}
+
 @end

@@ -7,16 +7,20 @@
 //
 
 #import "CNOnboardingSocialVC.h"
-#import "CNOnboardingPhoneInputVC.h"
 #import "CNInstagramCV.h"
 #import "CNFacebookVC.h"
 #import "CNTwitterVC.h"
+#import "CNLinkedInCV.h"
 
 @interface CNOnboardingSocialVC () <UIWebViewDelegate, CNFacebookDelegate, CNTwitterDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btnFB;
 @property (weak, nonatomic) IBOutlet UIButton *btnTwitter;
 @property (weak, nonatomic) IBOutlet UIButton *btnInstagram;
 @property (weak, nonatomic) IBOutlet UIButton *btnSnapchat;
+@property (weak, nonatomic) IBOutlet UIButton *btnSkip;
+
+@property (nonatomic, assign) BOOL isConnectedSoial;
+@property (nonatomic, strong) FIRDatabaseReference *userRef;
 
 @end
 
@@ -25,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _isConnectedSoial = false;
     [self configLayout];
 }
 
@@ -42,14 +47,15 @@
     
 
 #pragma mark - IBActions
-    
-- (IBAction)onBackBtnClicked:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (IBAction)onSkipeClicked:(id)sender {
-      CNOnboardingPhoneInputVC *vc = (CNOnboardingPhoneInputVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPhoneInputVC class])];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (_isConnectedSoial) {
+        [self saveSocialInfo];
+    } else {
+        [[AppDelegate sharedInstance] showMain];
+    }
+
+//    [self saveSocialInfo];
 }
 
 #pragma mark - Facebook Login
@@ -61,9 +67,13 @@
 
 #pragma mark - CNFacebookDelegate
 - (void) facebookLoginSuccess:(CNFacebookVC *)facebookController withDictionary:(NSDictionary *)userInfo{
+    
+    [CNUser currentUser].facebook = [[CNFacebook sharedInstance] initWithDictionary:userInfo];
+    [self setConnected:self.btnFB];
 }
 
 - (void) facebookLoginCancelled:(CNFacebookVC *)facebookController{
+    
 }
 
 - (void) facebookLoginFailed:(CNFacebookVC *)facebookController withError:(NSString *)error{
@@ -79,14 +89,15 @@
 }
 
 #pragma mark - CNTwitterDelegate
-- (void) twitterLoginSuccess:(CNTwitterVC *)twitterController withDictionary:(NSDictionary *)userInfoUIViewController{
-    
+- (void) twitterLoginSuccess:(CNTwitterVC *)twitterController withDictionary:(NSDictionary *)userInfo{
+    [CNUser currentUser].twitter = [[CNTwitter sharedInstance] initWithDictionary:userInfo];
+    [self setConnected:self.btnTwitter];
+
 }
 
 - (void) twiterLoginFailed:(CNTwitterVC *)twitterController withError:(NSString *)error{
-    
+    [[CNUtilities shared] showAlert:self withTitle:@"Twitter Login Failed" withMessage:error];
 }
-
 
 
 #pragma mark - Instagram Login
@@ -95,14 +106,53 @@
     [self.navigationController pushViewController:instagramVC animated:YES];
 }
     
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - LinkedIn Login
+- (IBAction)connectWithLinkedIn:(id)sender {
+    [[CNLinkedInCV shared] connectWithLinkedIn];
 }
-*/
+
+#pragma mark - Change Button Style after connect social account
+- (void)setConnected:(UIButton*)button{
+    [[button layer] setBorderColor:kAppTextColor.CGColor];
+    [button setTitle:@"CONNECTED" forState:UIControlStateNormal];
+    [button setEnabled:false];
+    [self.btnSkip setTitle:@"SAVE" forState:UIControlStateNormal];
+    
+    _isConnectedSoial = true;
+}
+
+- (void)saveSocialInfo{
+    self.userRef = [[[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID] child:@"social"];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    CNUser *user = [CNUser currentUser];
+    if (user.facebook != nil) {
+        NSMutableDictionary *facebook = [[NSMutableDictionary alloc] init];
+        [facebook setObject:user.facebook.name forKey:@"name"];
+        [facebook setObject:[NSNumber numberWithBool:user.facebook.hidden] forKey:@"hidden"];
+        [dict setObject:facebook forKey:@"facebook"];
+    }
+    if (user.twitter != nil) {
+        NSMutableDictionary *twitter = [[NSMutableDictionary alloc] init];
+        [twitter setObject:user.twitter.name forKey:@"name"];
+        [twitter setObject:[NSNumber numberWithBool:user.twitter.hidden] forKey:@"hidden"];
+        [dict setObject:twitter forKey:@"twitter"];
+    }
+    if (user.instagram != nil) {
+        NSMutableDictionary *instagram = [[NSMutableDictionary alloc] init];
+        [instagram setObject:user.instagram.name forKey:@"name"];
+        [instagram setObject:[NSNumber numberWithBool:user.instagram.hidden] forKey:@"hidden"];
+        [dict setObject:instagram forKey:@"instagram"];
+    }
+    if (user.linkedIn != nil) {
+        NSMutableDictionary *linkedIn = [[NSMutableDictionary alloc] init];
+        [linkedIn setObject:user.linkedIn.name forKey:@"name"];
+        [linkedIn setObject:[NSNumber numberWithBool:user.linkedIn.hidden] forKey:@"hidden"];
+        [dict setObject:linkedIn forKey:@"linkedIn"];
+    }
+    
+    [self.userRef setValue:dict withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        [[AppDelegate sharedInstance] showMain];
+    }];
+}
 
 @end

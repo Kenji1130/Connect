@@ -47,6 +47,22 @@ typedef NS_ENUM(NSUInteger, CNNotificationType) {
     CNNotificationTypeReject
 };
 
+typedef NS_ENUM(NSUInteger, CNSocialType) {
+    // Facebook
+    CNSocialTypeFacebook = 0,
+    // Twitter
+    CNSocialTypeTwitter,
+    // Instagram
+    CNSocialTypeInstagram,
+    // LinkedIn
+    CNSocialTypeLinkedIn
+};
+
+
+#define kSocialImage  [NSArray arrayWithObjects: @"UIImageViewProfileFacebook",@"UIImageViewProfileTwitter", @"UIImageViewProfileInstagram", @"UIImageViewProfileLinkedIn",nil]
+#define kSocialKey [NSArray arrayWithObjects: @"facebook",@"twitter", @"instagram", @"linkedIn",nil]
+
+
 // Log In
 #define kLoggedUserID   @"LoggedUserID"
 #define kToken          @"token"
@@ -72,6 +88,9 @@ alpha:1.0]
 #define kTwitterCustomerKey @"sdS7fwETVs99cS9QvWpaxKQyI"
 
 #define kInstagramClientID  @"1dd5bf86971e48a19471481e2ff5c72a"
+
+#define kLinkedInClientID   @"86h1p8kv63h3r8"
+#define kLinkedInClientSecret @"O8kHS33AjF1paVG5"
 
 /// Firebase Info
 #define kFCMUrl             @"https://fcm.googleapis.com/fcm/send"

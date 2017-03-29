@@ -148,7 +148,8 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Show main screens
-                [[AppDelegate sharedInstance] showMain];
+//                [[AppDelegate sharedInstance] showMain];
+                [self goSocialVC];
                 
             });
         }
@@ -158,7 +159,7 @@
 
 - (void)goSocialVC{
     CNOnboardingSocialVC *vc = (CNOnboardingSocialVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 /*
 #pragma mark - Navigation

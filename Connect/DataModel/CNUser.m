@@ -45,7 +45,24 @@
     self.signType = [value[@"signType"] intValue];
     self.profileHidden = [value[@"profileHidden"] boolValue];
     self.notiCount = value[@"notiCount"];
+    
+    NSDictionary *social = value[@"social"];
+    self.social = social;
+    
+    NSDictionary *facebook = social[@"facebook"];
+    self.facebook = [[CNFacebook sharedInstance] initWithDictionary:facebook];
+    
+    NSDictionary *twitter = social[@"twitter"];
+    self.twitter = [[CNTwitter sharedInstance] initWithDictionary:twitter];
+    
+    NSDictionary *instagram = social[@"instagram"];
+    self.instagram = [[CNInstagram sharedInstance] initWithDictionary:instagram];
+    
+    NSDictionary *linkedIn = social[@"linkedIn"];
+    self.linkedIn = [[CNLinkedIn sharedInstance] initWithDictionary:linkedIn];
+    
 }
+
 
 #pragma mark -
 

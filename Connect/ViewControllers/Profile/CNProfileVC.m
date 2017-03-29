@@ -274,6 +274,12 @@
     return 4;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return [self cellHeight:indexPath.row];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -287,4 +293,17 @@
     
     return cell;
 }
+
+
+- (CGFloat)cellHeight:(NSInteger)index{
+    NSString *socialKey = kSocialKey[index];
+    NSDictionary *dict = self.user.social[socialKey];
+    if (dict != nil) {
+        return 43;
+    } else {
+        return 0;
+    }
+    
+}
+
 @end

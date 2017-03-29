@@ -11,7 +11,7 @@
 @protocol CNTwitterDelegate <NSObject>
 
 @optional
-- (void)twitterLoginSuccess:(UIViewController*) twitterController withDictionary:(NSDictionary *)userInfoUIViewController;
+- (void)twitterLoginSuccess:(UIViewController*) twitterController withDictionary:(NSDictionary *)userInfo;
 - (void)twitterLoginCancelled:(UIViewController*) twitterController;
 - (void)twiterLoginFailed:(UIViewController*) twitterController withError:(NSString*) error;
 
