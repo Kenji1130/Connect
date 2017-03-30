@@ -19,6 +19,8 @@ target 'Connect' do
   pod 'SDWebImage'
   pod 'UIActivityIndicator-for-SDWebImage'
   pod 'InstagramKit', '~> 3.0'
+  pod 'PopupKit'
+
   target 'ConnectTests' do
     inherit! :search_paths
     # Pods for testing

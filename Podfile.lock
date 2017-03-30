@@ -83,6 +83,7 @@ PODS:
   - PinterestSDK (1.0.2):
     - AFNetworking (~> 3.0)
     - SAMKeychain
+  - PopupKit (3.1.1)
   - SAMKeychain (1.5.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -105,6 +106,7 @@ DEPENDENCIES:
   - InstagramKit (~> 3.0)
   - MBProgressHUD
   - PinterestSDK (from `https://github.com/pinterest/ios-pdk.git`)
+  - PopupKit
   - SDWebImage
   - TwitterKit
   - UIActivityIndicator-for-SDWebImage
@@ -137,12 +139,13 @@ SPEC CHECKSUMS:
   InstagramKit: 402d6bba375357b548039de08eea19a1b8716354
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   PinterestSDK: 798aced4e2ce7a9607b3df1ac77abf2c72f57734
+  PopupKit: e362ed92148d831a9c38a2bc7a25893e46d64c54
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   TwitterCore: fbdbeaf6d2d20cf7c7aa4136fe5173c1c85df2e2
   TwitterKit: 97e729ceea041d174126235bf6ff67dcf37772d4
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: caad716f519cd2f1c7dc9f7daaf2be2bceb5324a
+PODFILE CHECKSUM: 4449a9be0df5d9ef54d0b2cfe0a9257f4bccd467
 
 COCOAPODS: 1.2.0

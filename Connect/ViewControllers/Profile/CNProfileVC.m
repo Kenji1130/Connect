@@ -10,8 +10,13 @@
 #import "CNSwitchView.h"
 #import "CNMyProfileCell.h"
 #import "CNSettingVC.h"
+#import "CNFacebookVC.h"
+#import "CNSocialMediaAddView.h"
+#import "CNSaveSuccessView.h"
+@import PopupKit;
 
-@interface CNProfileVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@interface CNProfileVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, CNSocialMediaAddViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnEdit;
 @property (weak, nonatomic) IBOutlet UIButton *btnSetting;
@@ -29,7 +34,8 @@
 @property (weak, nonatomic) IBOutlet UIView *profileHideView;
 @property (weak, nonatomic) IBOutlet UISwitch *profileHiddenToggle;
 
-
+@property (nonatomic, strong) CNSocialMediaAddView *mediaView;
+@property (nonatomic, strong) CNSaveSuccessView *saveSuccessView;
 @property (nonatomic, strong) CNSwitchView *profileSwitch;
 
 @property (nonatomic, assign) BOOL isEdit;
@@ -114,6 +120,10 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CNMyProfileCell" bundle:nil] forCellReuseIdentifier:@"CellMedia"];
     
+    self.mediaView = (CNSocialMediaAddView*)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSocialMediaAddView class]) owner:nil options:nil] firstObject];
+    self.mediaView.delegate = self;
+    
+    self.saveSuccessView = (CNSaveSuccessView*)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSaveSuccessView class]) owner:nil options:nil] firstObject];
 }
 
 - (void)configSwtichView{
@@ -288,12 +298,27 @@
 
 #pragma mark - Show/Hide Profile
 - (IBAction)profileShowHide:(UISwitch *)sender {
-//    [CNUser currentUser].profileHidden = sender.on;
-//    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:[CNUser currentUser].userID];
-//    NSDictionary *updateValue = @{@"profileHidden": [NSNumber numberWithBool:sender.on]};
-//    [self.userRef updateChildValues:updateValue];
+
 }
 
+- (IBAction)onAddSocialMedia:(id)sender {
+    
+    [self showPopUp:self.mediaView];
+}
+
+- (void)showPopUp: (UIView *) view{
+    // Show in popup
+    PopupViewLayout layout = PopupViewLayoutMake(PopupViewHorizontalLayoutCenter,
+                                                 PopupViewVerticalLayoutCenter);
+    
+    PopupView* popup = [PopupView popupViewWithContentView:view
+                                                  showType:PopupViewShowTypeSlideInFromBottom
+                                               dismissType:PopupViewDismissTypeSlideOutToBottom
+                                                  maskType:PopupViewMaskTypeDarkBlur
+                            shouldDismissOnBackgroundTouch:NO shouldDismissOnContentTouch:NO];
+    
+    [popup showWithLayout:layout];
+}
 
 
 #pragma mark - UITableView DataSource
@@ -335,6 +360,29 @@
         return 0;
     }
     
+}
+
+#pragma  mark - CNSocialMediaAddViewDelegate
+
+-(void)toggleForFacebook:(UISwitch *)sender{
+    NSLog(@"Facebook Switch: %hhd", sender.on);
+    
+}
+
+- (void)toggleForTwitter:(UISwitch *)sender{
+    NSLog(@"Twitter Switch: %hhd", sender.on);
+}
+
+- (void)toggleForInstagram:(UISwitch *)sender{
+    NSLog(@"Instagram Switch: %hhd", sender.on);
+}
+
+- (void)toggleForLinkedIn:(UISwitch *)sender{
+    NSLog(@"LinkedIn Switch: %hhd", sender.on);
+}
+
+- (void)saveWithSocialMedia{
+    [self showPopUp:self.saveSuccessView];
 }
 
 @end

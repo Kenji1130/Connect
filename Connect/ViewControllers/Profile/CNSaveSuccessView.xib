@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaSemibold.otf">
+            <string>ProximaNovaA-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CNSaveSuccessView">
+            <rect key="frame" x="0.0" y="0.0" width="270" height="351"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewSaveSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="nko-jU-c9d">
+                    <rect key="frame" x="75" y="105.5" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="9JN-Hp-ffY"/>
+                        <constraint firstAttribute="height" constant="120" id="okc-f2-8Q5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Successfully" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-jL-i5S">
+                    <rect key="frame" x="60.5" y="30" width="149" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="uLR-fS-60C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
+                    <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhM-Dr-w9B">
+                    <rect key="frame" x="35" y="281" width="200" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Db9-uA-nlc"/>
+                        <constraint firstAttribute="height" constant="40" id="vKz-ea-eoZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                    <state key="normal" title="SAVE">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onDismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="8I4-xg-nDd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dW4-jL-i5S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="0kR-vb-87J"/>
+                <constraint firstItem="nko-jU-c9d" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-10" id="D6W-4Q-BHm"/>
+                <constraint firstItem="dW4-jL-i5S" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WX0-KR-YHe"/>
+                <constraint firstItem="nko-jU-c9d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZOP-w6-tX3"/>
+                <constraint firstItem="mhM-Dr-w9B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ozE-QS-BrM"/>
+                <constraint firstAttribute="bottom" secondItem="mhM-Dr-w9B" secondAttribute="bottom" constant="30" id="pbT-z4-1Mc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="15" y="-3.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="UIImageViewSaveSuccess" width="129" height="129"/>
+    </resources>
+</document>

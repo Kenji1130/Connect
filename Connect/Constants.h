@@ -58,6 +58,7 @@ typedef NS_ENUM(NSUInteger, CNSocialType) {
     CNSocialTypeLinkedIn
 };
 
+#define TRANSITION_DURATION 0.5
 
 #define kSocialImage  [NSArray arrayWithObjects: @"UIImageViewProfileFacebook",@"UIImageViewProfileTwitter", @"UIImageViewProfileInstagram", @"UIImageViewProfileLinkedIn",nil]
 #define kSocialKey [NSArray arrayWithObjects: @"facebook",@"twitter", @"instagram", @"linkedIn",nil]

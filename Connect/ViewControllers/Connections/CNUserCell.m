@@ -30,7 +30,8 @@
     self.socialKey = kSocialKey[self.socialType];
     
     NSDictionary *dict = user.social[self.socialKey];
-    if (dict != nil) {
+    BOOL hidden = [dict[@"hidden"] boolValue];
+    if (dict != nil && !hidden) {
         self.socialMediaLogo.hidden = false;
         self.socialMediaName.hidden = false;
     } else {

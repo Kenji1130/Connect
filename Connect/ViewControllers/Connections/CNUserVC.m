@@ -195,7 +195,8 @@
 - (CGFloat)cellHeight:(NSInteger)index{
     NSString *socialKey = kSocialKey[index];
     NSDictionary *dict = self.user.social[socialKey];
-    if (dict != nil) {
+    BOOL hidden = [dict[@"hidden"] boolValue];
+    if (dict != nil && !hidden) {
         return 43;
     } else {
         return 0;
