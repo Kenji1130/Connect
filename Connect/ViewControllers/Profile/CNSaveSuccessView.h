@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CNSaveSuccessViewDelegate <NSObject>
+
+- (void)save;
+
+@end
+
 @interface CNSaveSuccessView : UIView
+
+@property (weak, nonatomic) id<CNSaveSuccessViewDelegate> delegate;
+
 
 @end

@@ -51,7 +51,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-RG-sOi">
-                                                        <rect key="frame" x="69.5" y="465.5" width="237" height="51.5"/>
+                                                        <rect key="frame" x="69" y="465.5" width="237" height="51.5"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -78,7 +78,7 @@ News Feed</string>
                                                 <rect key="frame" x="375" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-3p-K6l">
-                                                        <rect key="frame" x="69.5" y="465.5" width="237" height="51.5"/>
+                                                        <rect key="frame" x="69" y="465.5" width="237" height="51.5"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -105,7 +105,7 @@ News Feed</string>
                                                 <rect key="frame" x="750" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-Id-HMl">
-                                                        <rect key="frame" x="69.5" y="465.5" width="237" height="51.5"/>
+                                                        <rect key="frame" x="69" y="465.5" width="237" height="51.5"/>
                                                         <string key="text">You can follow favorite people anytime
 and get their updates right on your
 News Feed</string>
@@ -357,7 +357,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR SIGN TYPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afx-ff-7VB">
-                                <rect key="frame" x="32.5" y="110" width="310.5" height="30.5"/>
+                                <rect key="frame" x="33" y="110" width="310.5" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -435,7 +435,7 @@ News Feed</string>
             <objects>
                 <navigationController id="gLi-ZL-rNw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconConnections" id="cnp-bh-TrE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IY3-o7-U7A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IY3-o7-U7A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -669,13 +669,13 @@ News Feed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-xg-3dk">
-                                <rect key="frame" x="166.5" y="82.5" width="42.5" height="21"/>
+                                <rect key="frame" x="167" y="82.5" width="42.5" height="21"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-Fy-5Sh">
-                                <rect key="frame" x="150" y="597" width="75.5" height="30"/>
+                                <rect key="frame" x="150.5" y="597" width="75.5" height="30"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageRescan" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-nk-0wm">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
@@ -689,7 +689,7 @@ News Feed</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apU-k2-byO">
-                                <rect key="frame" x="150" y="597" width="75.5" height="30"/>
+                                <rect key="frame" x="150.5" y="597" width="75.5" height="30"/>
                                 <connections>
                                     <action selector="onRescan:" destination="1Xr-8C-dvE" eventType="touchUpInside" id="BD4-Bx-3Cl"/>
                                 </connections>
@@ -1075,6 +1075,7 @@ News Feed</string>
                     </view>
                     <navigationItem key="navigationItem" id="oTb-Vt-kRC"/>
                     <connections>
+                        <outlet property="btnAddSocial" destination="hln-uR-ycx" id="4Mz-mD-0jG"/>
                         <outlet property="btnEdit" destination="Cz5-6Y-Pem" id="aDU-Dl-sG7"/>
                         <outlet property="btnImagePick" destination="tTY-qP-aMT" id="NhG-9j-zgv"/>
                         <outlet property="btnSetting" destination="pQT-Ft-52T" id="Pxq-PN-f3L"/>
@@ -1095,6 +1096,370 @@ News Feed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inf-da-2r0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2032.8" y="2413.9430284857572"/>
+        </scene>
+        <!--Social Media AddVC-->
+        <scene sceneID="Qbe-Jw-dzf">
+            <objects>
+                <viewController storyboardIdentifier="CNSocialMediaAddVC" id="5LH-KM-s3N" customClass="CNSocialMediaAddVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgH-at-f3F"/>
+                        <viewControllerLayoutGuide type="bottom" id="U0e-iD-RbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M9g-sw-Sn8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7G-v7-Bow">
+                                <rect key="frame" x="325" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TeW-iI-yPv"/>
+                                    <constraint firstAttribute="width" constant="50" id="jx5-i8-rIv"/>
+                                </constraints>
+                                <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="UIButtonClose"/>
+                                <connections>
+                                    <action selector="onClose:" destination="5LH-KM-s3N" eventType="touchUpInside" id="Rtj-iZ-OS5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Social Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYo-UG-ETC">
+                                <rect key="frame" x="112" y="49" width="151.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qnr-T9-ZDk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="17"/>
+                                <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-qE-KBo">
+                                <rect key="frame" x="16" y="102" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileFacebook" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-c6-t6O">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="eeX-CB-0qs"/>
+                                            <constraint firstAttribute="height" constant="30" id="jRN-8a-pzl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbE-Uh-ffA">
+                                        <rect key="frame" x="62" y="11" width="66" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llo-BL-SeW">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleForFacebook:" destination="5LH-KM-s3N" eventType="valueChanged" id="VGh-Zc-sz7"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fbE-Uh-ffA" firstAttribute="centerY" secondItem="nEE-c6-t6O" secondAttribute="centerY" id="8ke-D6-get"/>
+                                    <constraint firstAttribute="height" constant="42" id="DIU-3f-hIy"/>
+                                    <constraint firstItem="fbE-Uh-ffA" firstAttribute="leading" secondItem="nEE-c6-t6O" secondAttribute="trailing" constant="16" id="JMl-2i-J0u"/>
+                                    <constraint firstItem="llo-BL-SeW" firstAttribute="centerY" secondItem="oRg-qE-KBo" secondAttribute="centerY" id="ej0-5e-3z7"/>
+                                    <constraint firstAttribute="trailing" secondItem="llo-BL-SeW" secondAttribute="trailing" constant="16" id="kCC-KO-sL3"/>
+                                    <constraint firstItem="nEE-c6-t6O" firstAttribute="leading" secondItem="oRg-qE-KBo" secondAttribute="leading" constant="16" id="o4v-Ic-YPN"/>
+                                    <constraint firstItem="nEE-c6-t6O" firstAttribute="centerY" secondItem="oRg-qE-KBo" secondAttribute="centerY" id="vN7-Bu-e5f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwX-a7-lZz">
+                                <rect key="frame" x="16" y="144" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileTwitter" translatesAutoresizingMaskIntoConstraints="NO" id="D8d-8B-5bf">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="YFd-5a-JVt"/>
+                                            <constraint firstAttribute="width" constant="30" id="gwe-2h-1xV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spx-nh-edM">
+                                        <rect key="frame" x="62" y="11" width="44.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LhL-8n-fIY">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleForTwitter:" destination="5LH-KM-s3N" eventType="valueChanged" id="074-2U-3nk"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="spx-nh-edM" firstAttribute="leading" secondItem="D8d-8B-5bf" secondAttribute="trailing" constant="16" id="81v-sM-zdS"/>
+                                    <constraint firstAttribute="trailing" secondItem="LhL-8n-fIY" secondAttribute="trailing" constant="16" id="GEz-cZ-Cfa"/>
+                                    <constraint firstAttribute="height" constant="42" id="IMc-SM-eTZ"/>
+                                    <constraint firstItem="spx-nh-edM" firstAttribute="centerY" secondItem="D8d-8B-5bf" secondAttribute="centerY" id="YJc-4r-7cK"/>
+                                    <constraint firstItem="D8d-8B-5bf" firstAttribute="centerY" secondItem="NwX-a7-lZz" secondAttribute="centerY" id="oFg-vt-hXu"/>
+                                    <constraint firstItem="D8d-8B-5bf" firstAttribute="leading" secondItem="NwX-a7-lZz" secondAttribute="leading" constant="16" id="rFE-wk-sIT"/>
+                                    <constraint firstItem="LhL-8n-fIY" firstAttribute="centerY" secondItem="NwX-a7-lZz" secondAttribute="centerY" id="ydF-3g-3Ud"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERc-2v-4US">
+                                <rect key="frame" x="16" y="270" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileSnapchat" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-gS-Inf">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="7vx-c2-BKv"/>
+                                            <constraint firstAttribute="height" constant="30" id="jyo-RM-Wyd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snapchat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-Jf-YOi">
+                                        <rect key="frame" x="62" y="11" width="62" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Td6-pm-fgi">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Td6-pm-fgi" secondAttribute="trailing" constant="16" id="DlO-O3-9cC"/>
+                                    <constraint firstItem="hnh-gS-Inf" firstAttribute="centerY" secondItem="ERc-2v-4US" secondAttribute="centerY" id="G6O-L2-8v3"/>
+                                    <constraint firstItem="WuE-Jf-YOi" firstAttribute="leading" secondItem="hnh-gS-Inf" secondAttribute="trailing" constant="16" id="HfH-eQ-0Af"/>
+                                    <constraint firstAttribute="height" constant="42" id="Jpm-iU-omM"/>
+                                    <constraint firstItem="WuE-Jf-YOi" firstAttribute="centerY" secondItem="hnh-gS-Inf" secondAttribute="centerY" id="L55-fj-NqF"/>
+                                    <constraint firstItem="hnh-gS-Inf" firstAttribute="leading" secondItem="ERc-2v-4US" secondAttribute="leading" constant="16" id="heo-GF-f4L"/>
+                                    <constraint firstItem="Td6-pm-fgi" firstAttribute="centerY" secondItem="ERc-2v-4US" secondAttribute="centerY" id="ict-3f-2NR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmS-8c-wJc">
+                                <rect key="frame" x="16" y="186" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileInstagram" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-t9-k2Y">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7Aq-aK-cJW"/>
+                                            <constraint firstAttribute="width" constant="30" id="waX-6r-tQG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-BD-rtA">
+                                        <rect key="frame" x="62" y="11" width="65" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jdf-2E-byG">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleForInstagram:" destination="5LH-KM-s3N" eventType="valueChanged" id="6Qe-uV-1ri"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jdf-2E-byG" secondAttribute="trailing" constant="16" id="0vD-ZD-X2O"/>
+                                    <constraint firstItem="IEH-BD-rtA" firstAttribute="leading" secondItem="GFx-t9-k2Y" secondAttribute="trailing" constant="16" id="WMZ-vp-6S7"/>
+                                    <constraint firstItem="IEH-BD-rtA" firstAttribute="centerY" secondItem="GFx-t9-k2Y" secondAttribute="centerY" id="a0P-vV-MHj"/>
+                                    <constraint firstItem="Jdf-2E-byG" firstAttribute="centerY" secondItem="pmS-8c-wJc" secondAttribute="centerY" id="ePB-H3-CGY"/>
+                                    <constraint firstItem="GFx-t9-k2Y" firstAttribute="leading" secondItem="pmS-8c-wJc" secondAttribute="leading" constant="16" id="ebn-dk-fqT"/>
+                                    <constraint firstAttribute="height" constant="42" id="iRk-hy-PWV"/>
+                                    <constraint firstItem="GFx-t9-k2Y" firstAttribute="centerY" secondItem="pmS-8c-wJc" secondAttribute="centerY" id="rht-ub-6zF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6U-EC-9xY">
+                                <rect key="frame" x="16" y="354" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfilePhone" translatesAutoresizingMaskIntoConstraints="NO" id="11f-4K-Pu5">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="SFn-HQ-Mpl"/>
+                                            <constraint firstAttribute="height" constant="30" id="ys9-IA-G38"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL4-QV-NBK">
+                                        <rect key="frame" x="62" y="11" width="99.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-6S-3rQ">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="WL4-QV-NBK" firstAttribute="leading" secondItem="11f-4K-Pu5" secondAttribute="trailing" constant="16" id="1Vt-xD-X0f"/>
+                                    <constraint firstAttribute="trailing" secondItem="c2m-6S-3rQ" secondAttribute="trailing" constant="16" id="HvD-iu-wuB"/>
+                                    <constraint firstItem="11f-4K-Pu5" firstAttribute="leading" secondItem="o6U-EC-9xY" secondAttribute="leading" constant="16" id="OAA-lI-JoI"/>
+                                    <constraint firstAttribute="height" constant="42" id="PBu-Fk-A9p"/>
+                                    <constraint firstItem="c2m-6S-3rQ" firstAttribute="centerY" secondItem="o6U-EC-9xY" secondAttribute="centerY" id="QKn-Rr-mIN"/>
+                                    <constraint firstItem="11f-4K-Pu5" firstAttribute="centerY" secondItem="o6U-EC-9xY" secondAttribute="centerY" id="obg-74-V26"/>
+                                    <constraint firstItem="WL4-QV-NBK" firstAttribute="centerY" secondItem="11f-4K-Pu5" secondAttribute="centerY" id="u1g-fm-BEu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igb-Of-tEG">
+                                <rect key="frame" x="16" y="228" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileLinkedIn" translatesAutoresizingMaskIntoConstraints="NO" id="7ES-M5-Clb">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MbP-F7-OO8"/>
+                                            <constraint firstAttribute="width" constant="30" id="bxZ-nL-89s"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LinkedIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzM-VO-2gN">
+                                        <rect key="frame" x="62" y="11" width="56" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-f4-YGg">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleForLinkeIn:" destination="5LH-KM-s3N" eventType="valueChanged" id="KJe-N6-ncj"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XqV-f4-YGg" firstAttribute="centerY" secondItem="igb-Of-tEG" secondAttribute="centerY" id="1Pf-Us-Lvj"/>
+                                    <constraint firstItem="WzM-VO-2gN" firstAttribute="centerY" secondItem="7ES-M5-Clb" secondAttribute="centerY" id="2Im-KN-Wv5"/>
+                                    <constraint firstItem="7ES-M5-Clb" firstAttribute="leading" secondItem="igb-Of-tEG" secondAttribute="leading" constant="16" id="Coz-Ea-LbM"/>
+                                    <constraint firstAttribute="trailing" secondItem="XqV-f4-YGg" secondAttribute="trailing" constant="16" id="Dp2-fW-Yhi"/>
+                                    <constraint firstAttribute="height" constant="42" id="OKy-ge-Q9n"/>
+                                    <constraint firstItem="7ES-M5-Clb" firstAttribute="centerY" secondItem="igb-Of-tEG" secondAttribute="centerY" id="jZT-qO-BzT"/>
+                                    <constraint firstItem="WzM-VO-2gN" firstAttribute="leading" secondItem="7ES-M5-Clb" secondAttribute="trailing" constant="16" id="mga-mg-az0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IyC-hT-dIa">
+                                <rect key="frame" x="16" y="396" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileSkype" translatesAutoresizingMaskIntoConstraints="NO" id="eNk-ph-bN9">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IAn-Py-VyR"/>
+                                            <constraint firstAttribute="width" constant="30" id="kOh-C0-sWb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skype" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-ay-nsP">
+                                        <rect key="frame" x="62" y="11" width="41" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0s-Fl-Vzh">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Nxt-ay-nsP" firstAttribute="leading" secondItem="eNk-ph-bN9" secondAttribute="trailing" constant="16" id="1NB-pa-qVs"/>
+                                    <constraint firstItem="eNk-ph-bN9" firstAttribute="centerY" secondItem="IyC-hT-dIa" secondAttribute="centerY" id="6Z5-cY-yDq"/>
+                                    <constraint firstItem="T0s-Fl-Vzh" firstAttribute="centerY" secondItem="IyC-hT-dIa" secondAttribute="centerY" id="BTX-07-Kri"/>
+                                    <constraint firstAttribute="height" constant="42" id="DR0-Xd-HLg"/>
+                                    <constraint firstItem="Nxt-ay-nsP" firstAttribute="centerY" secondItem="eNk-ph-bN9" secondAttribute="centerY" id="FWd-gd-ypO"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0s-Fl-Vzh" secondAttribute="trailing" constant="16" id="gJS-9G-Pid"/>
+                                    <constraint firstItem="eNk-ph-bN9" firstAttribute="leading" secondItem="IyC-hT-dIa" secondAttribute="leading" constant="16" id="hHH-Sf-JZp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7U0-90-AvN">
+                                <rect key="frame" x="16" y="312" width="343" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UIImageViewProfileVine" translatesAutoresizingMaskIntoConstraints="NO" id="wVy-41-Zm6">
+                                        <rect key="frame" x="16" y="6" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="3qP-dg-5tE"/>
+                                            <constraint firstAttribute="height" constant="30" id="Pck-If-zIV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-MO-Ofl">
+                                        <rect key="frame" x="62" y="11" width="30" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-v6-M0B">
+                                        <rect key="frame" x="278" y="6" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wVy-41-Zm6" firstAttribute="leading" secondItem="7U0-90-AvN" secondAttribute="leading" constant="16" id="HLp-w3-HGh"/>
+                                    <constraint firstItem="I1i-v6-M0B" firstAttribute="centerY" secondItem="7U0-90-AvN" secondAttribute="centerY" id="LHB-oP-ggn"/>
+                                    <constraint firstItem="wVy-41-Zm6" firstAttribute="centerY" secondItem="7U0-90-AvN" secondAttribute="centerY" id="QQO-Xb-bUW"/>
+                                    <constraint firstAttribute="trailing" secondItem="I1i-v6-M0B" secondAttribute="trailing" constant="16" id="VIP-O5-mtu"/>
+                                    <constraint firstItem="jJG-MO-Ofl" firstAttribute="centerY" secondItem="wVy-41-Zm6" secondAttribute="centerY" id="YTD-CH-Wrg"/>
+                                    <constraint firstItem="jJG-MO-Ofl" firstAttribute="leading" secondItem="wVy-41-Zm6" secondAttribute="trailing" constant="16" id="fwM-VL-jL2"/>
+                                    <constraint firstAttribute="height" constant="42" id="qmO-zd-Vqf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-Iy-uH7">
+                                <rect key="frame" x="87" y="508" width="200" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2ke-f3-20M"/>
+                                    <constraint firstAttribute="height" constant="40" id="g0j-QJ-7hN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Semibold" family="Proxima Nova Alt" pointSize="15"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSave:" destination="5LH-KM-s3N" eventType="touchUpInside" id="Ean-nZ-kEe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yYo-UG-ETC" firstAttribute="top" secondItem="lgH-at-f3F" secondAttribute="bottom" constant="29" id="0tu-G1-LeS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o6U-EC-9xY" secondAttribute="trailing" id="1Ss-78-RIy"/>
+                            <constraint firstItem="IyC-hT-dIa" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="4PL-qB-beb"/>
+                            <constraint firstItem="ERc-2v-4US" firstAttribute="top" secondItem="igb-Of-tEG" secondAttribute="bottom" id="6BA-oX-TuG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ERc-2v-4US" secondAttribute="trailing" id="7fJ-Uu-ISj"/>
+                            <constraint firstItem="igb-Of-tEG" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="8cx-oJ-auq"/>
+                            <constraint firstItem="UaI-Iy-uH7" firstAttribute="centerX" secondItem="M9g-sw-Sn8" secondAttribute="centerX" id="Bbl-ti-6qf"/>
+                            <constraint firstItem="pmS-8c-wJc" firstAttribute="top" secondItem="NwX-a7-lZz" secondAttribute="bottom" id="CaH-LW-9wW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IyC-hT-dIa" secondAttribute="trailing" id="FAG-1f-TeT"/>
+                            <constraint firstItem="igb-Of-tEG" firstAttribute="top" secondItem="pmS-8c-wJc" secondAttribute="bottom" id="HOq-Ab-RiI"/>
+                            <constraint firstItem="7U0-90-AvN" firstAttribute="top" secondItem="ERc-2v-4US" secondAttribute="bottom" id="IIR-ol-sEi"/>
+                            <constraint firstItem="oRg-qE-KBo" firstAttribute="top" secondItem="yYo-UG-ETC" secondAttribute="bottom" constant="32" id="JBZ-aB-CWc"/>
+                            <constraint firstItem="o6U-EC-9xY" firstAttribute="top" secondItem="7U0-90-AvN" secondAttribute="bottom" id="KS4-5r-Lam"/>
+                            <constraint firstAttribute="trailing" secondItem="n7G-v7-Bow" secondAttribute="trailing" id="KSo-Ad-oDB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oRg-qE-KBo" secondAttribute="trailing" id="MlJ-r0-xXd"/>
+                            <constraint firstItem="UaI-Iy-uH7" firstAttribute="top" secondItem="IyC-hT-dIa" secondAttribute="bottom" constant="70" id="O5J-2N-c9s"/>
+                            <constraint firstItem="pmS-8c-wJc" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="R52-TC-TIM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NwX-a7-lZz" secondAttribute="trailing" id="SoH-Ii-dv4"/>
+                            <constraint firstItem="n7G-v7-Bow" firstAttribute="top" secondItem="lgH-at-f3F" secondAttribute="bottom" id="Z3b-fS-z2R"/>
+                            <constraint firstItem="NwX-a7-lZz" firstAttribute="top" secondItem="oRg-qE-KBo" secondAttribute="bottom" id="b1m-gT-lxz"/>
+                            <constraint firstItem="ERc-2v-4US" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="evz-Ib-GCI"/>
+                            <constraint firstItem="7U0-90-AvN" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="fFz-uc-eim"/>
+                            <constraint firstItem="NwX-a7-lZz" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="iRf-uC-aWS"/>
+                            <constraint firstItem="yYo-UG-ETC" firstAttribute="centerX" secondItem="M9g-sw-Sn8" secondAttribute="centerX" id="j1f-Kl-Oh4"/>
+                            <constraint firstItem="o6U-EC-9xY" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="jpt-u2-cuj"/>
+                            <constraint firstItem="IyC-hT-dIa" firstAttribute="top" secondItem="o6U-EC-9xY" secondAttribute="bottom" id="mtz-og-4gn"/>
+                            <constraint firstItem="oRg-qE-KBo" firstAttribute="leading" secondItem="M9g-sw-Sn8" secondAttribute="leadingMargin" id="nnI-aF-mct"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="igb-Of-tEG" secondAttribute="trailing" id="tHq-rX-pWW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pmS-8c-wJc" secondAttribute="trailing" id="ut0-GR-3CI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7U0-90-AvN" secondAttribute="trailing" id="wQy-tF-ptg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="toggleFacebook" destination="llo-BL-SeW" id="axg-Uz-Ih9"/>
+                        <outlet property="toggleInstagram" destination="Jdf-2E-byG" id="dA4-mZ-HQX"/>
+                        <outlet property="toggleLinkedIn" destination="XqV-f4-YGg" id="N7X-Bo-KQ1"/>
+                        <outlet property="togglePhone" destination="c2m-6S-3rQ" id="BbV-PO-cJa"/>
+                        <outlet property="toggleSkype" destination="T0s-Fl-Vzh" id="hk3-mZ-JfE"/>
+                        <outlet property="toggleSnapchat" destination="Td6-pm-fgi" id="k6N-xv-ire"/>
+                        <outlet property="toggleTwitter" destination="LhL-8n-fIY" id="Fur-J6-eAg"/>
+                        <outlet property="toggleVine" destination="I1i-v6-M0B" id="K5C-OA-Cu1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwh-Tt-yqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="3068"/>
         </scene>
         <!--SettingVC-->
         <scene sceneID="HvY-ue-xzv">
@@ -1186,7 +1551,7 @@ News Feed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-5M-A9C">
-                                                <rect key="frame" x="145.5" y="202" width="83.5" height="21"/>
+                                                <rect key="frame" x="146" y="202" width="83.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Ym9-Fd-ABa"/>
                                                 </constraints>
@@ -1527,7 +1892,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S YOUR EMAIL?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-vY-z7B">
-                                <rect key="frame" x="60" y="110" width="255" height="30.5"/>
+                                <rect key="frame" x="60.5" y="110" width="255" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882352941" green="0.22352941176470587" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1701,7 +2066,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT PROFILE TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ans-lr-0Fx">
-                                <rect key="frame" x="56.5" y="110" width="262" height="30.5"/>
+                                <rect key="frame" x="57" y="110" width="262" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1872,9 +2237,12 @@ News Feed</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8k-K6-jrB">
+                            <webView clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Len-2N-hJc">
                                 <rect key="frame" x="0.0" y="54" width="375" height="613"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Tvc-X6-l91" id="bOS-x0-AIW"/>
+                                </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pur-Gg-YDv">
                                 <rect key="frame" x="0.0" y="20" width="85" height="34"/>
@@ -1890,21 +2258,21 @@ News Feed</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l8k-K6-jrB" firstAttribute="leading" secondItem="Amk-WO-Pff" secondAttribute="leading" id="5Jn-wb-LDg"/>
                             <constraint firstItem="pur-Gg-YDv" firstAttribute="leading" secondItem="Amk-WO-Pff" secondAttribute="leading" id="7aA-VD-T55"/>
+                            <constraint firstItem="Len-2N-hJc" firstAttribute="top" secondItem="Amk-WO-Pff" secondAttribute="top" constant="54" id="7dO-dT-YOg"/>
                             <constraint firstItem="pur-Gg-YDv" firstAttribute="top" secondItem="fSN-NH-ws3" secondAttribute="bottom" id="9qR-tu-GJg"/>
-                            <constraint firstItem="l8k-K6-jrB" firstAttribute="top" secondItem="pur-Gg-YDv" secondAttribute="bottom" id="goU-iW-mVK"/>
-                            <constraint firstAttribute="trailing" secondItem="l8k-K6-jrB" secondAttribute="trailing" id="mI9-kt-Y6Z"/>
-                            <constraint firstItem="m3i-Ye-VQD" firstAttribute="top" secondItem="l8k-K6-jrB" secondAttribute="bottom" id="y1c-ZR-LQt"/>
+                            <constraint firstItem="Len-2N-hJc" firstAttribute="leading" secondItem="Amk-WO-Pff" secondAttribute="leading" id="Xii-xh-NnA"/>
+                            <constraint firstAttribute="trailing" secondItem="Len-2N-hJc" secondAttribute="trailing" id="YjS-Mb-nx4"/>
+                            <constraint firstItem="m3i-Ye-VQD" firstAttribute="top" secondItem="Len-2N-hJc" secondAttribute="bottom" id="qdN-cp-Khl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="l8k-K6-jrB" id="kfn-cQ-qqm"/>
+                        <outlet property="webView" destination="Len-2N-hJc" id="Q39-8d-iRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFT-w6-kK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5433" y="-510"/>
+            <point key="canvasLocation" x="5432.8000000000002" y="-510.49475262368821"/>
         </scene>
         <!--Onboarding SocialVC-->
         <scene sceneID="npA-aF-dgo">
@@ -2102,7 +2470,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-Ie-SE0">
-                                <rect key="frame" x="51" y="110" width="273" height="30.5"/>
+                                <rect key="frame" x="51.5" y="110" width="273" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2152,7 +2520,7 @@ News Feed</string>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phw-vE-7y5">
-                                <rect key="frame" x="95" y="242.5" width="185.5" height="24.5"/>
+                                <rect key="frame" x="95.5" y="242.5" width="185.5" height="24.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States (+1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-ax-peJ">
                                         <rect key="frame" x="30" y="0.0" width="155.5" height="24.5"/>
@@ -2218,7 +2586,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYu-Ae-Nu1">
-                                <rect key="frame" x="89" y="110" width="197" height="30.5"/>
+                                <rect key="frame" x="89.5" y="110" width="197" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2590,7 +2958,7 @@ News Feed</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW OLD ARE YOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-ym-Lxd">
-                                <rect key="frame" x="67" y="110" width="241" height="30.5"/>
+                                <rect key="frame" x="67.5" y="110" width="241" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2660,7 +3028,7 @@ News Feed</string>
         <scene sceneID="3kL-sr-VxT">
             <objects>
                 <navigationController storyboardIdentifier="loginNavController" navigationBarHidden="YES" id="sOi-YW-ner" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9g6-Do-Z6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9g6-Do-Z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2677,7 +3045,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="2wJ-dG-RmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconScanner" id="IoQ-86-IW8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8aJ-fL-0Sh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8aJ-fL-0Sh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2694,7 +3062,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="rVA-bE-mLT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconQRCode" id="fFJ-SL-fMF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Xn-IF-pYb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Xn-IF-pYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2711,7 +3079,7 @@ News Feed</string>
             <objects>
                 <navigationController navigationBarHidden="YES" id="kRq-TN-CTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="UITabBarIconProfile" id="JNe-Jo-NDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DmP-yt-Jyg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmP-yt-Jyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2861,7 +3229,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-Tv-6Dr">
-                                <rect key="frame" x="94" y="110" width="187.5" height="30.5"/>
+                                <rect key="frame" x="94.5" y="110" width="187.5" height="30.5"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="25"/>
                                 <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3181,7 +3549,7 @@ News Feed</string>
                                 <rect key="frame" x="0.0" y="391.5" width="375" height="275.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This user has Private Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJL-nb-VLc">
-                                        <rect key="frame" x="90" y="128.5" width="194" height="18.5"/>
+                                        <rect key="frame" x="90.5" y="128.5" width="194" height="18.5"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3350,6 +3718,7 @@ News Feed</string>
         </scene>
     </scenes>
     <resources>
+        <image name="UIButtonClose" width="24" height="24"/>
         <image name="UIButtonOnboardingBack" width="11" height="20"/>
         <image name="UIButtonProfileCamera" width="30" height="23"/>
         <image name="UIButtonProfileEdit" width="24" height="24"/>
@@ -3362,7 +3731,15 @@ News Feed</string>
         <image name="UIImageViewPassword" width="24" height="23"/>
         <image name="UIImageViewProfileBetaTester" width="46" height="63"/>
         <image name="UIImageViewProfileCheckmark" width="20" height="20"/>
+        <image name="UIImageViewProfileFacebook" width="10" height="20"/>
+        <image name="UIImageViewProfileInstagram" width="24" height="24"/>
+        <image name="UIImageViewProfileLinkedIn" width="20" height="20"/>
+        <image name="UIImageViewProfilePhone" width="12" height="20"/>
         <image name="UIImageViewProfilePlaceHolder" width="125" height="125"/>
+        <image name="UIImageViewProfileSkype" width="20" height="20"/>
+        <image name="UIImageViewProfileSnapchat" width="21" height="20"/>
+        <image name="UIImageViewProfileTwitter" width="25" height="20"/>
+        <image name="UIImageViewProfileVine" width="17" height="20"/>
         <image name="UIImageViewSplashBackground" width="375" height="667"/>
         <image name="UIImageViewUser" width="24" height="24"/>
         <image name="UIImageViewVerifiedMark" width="13" height="13"/>

@@ -46,6 +46,7 @@
     self.profileHidden = [value[@"profileHidden"] boolValue];
     self.notiCount = value[@"notiCount"];
     
+  
     NSDictionary *social = value[@"social"];
     self.social = social;
     
@@ -61,6 +62,17 @@
     NSDictionary *linkedIn = social[@"linkedIn"];
     self.linkedIn = [[CNLinkedIn sharedInstance] initWithDictionary:linkedIn];
     
+    NSDictionary *snapchat = social[@"snapchat"];
+    self.snapchat = [[CNSnapchat sharedInstance] initWithDictionary:snapchat];
+    
+    NSDictionary *vine = social[@"vine"];
+    self.vine = [[CNVine sharedInstance] initWithDictionary:vine];
+    
+    NSDictionary *phone = social[@"phone"];
+    self.phone = [[CNPhone sharedInstance] initWithDictionary:phone];
+    
+    NSDictionary *skype = social[@"skype"];
+    self.skype = [[CNSkype sharedInstance] initWithDictionary:skype];
 }
 
 

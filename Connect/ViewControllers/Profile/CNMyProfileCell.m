@@ -35,7 +35,8 @@
     self.socialKey = kSocialKey[self.socialType];
     
     NSDictionary *dict = self.user.social[self.socialKey];
-    if (dict != nil) {
+    BOOL active = [dict[@"active"] boolValue];
+    if (dict != nil && active) {
         self.socialMediaLogo.hidden = false;
         self.socialMediaName.hidden = false;
         self.toggle.hidden = !isEdit;

@@ -39,6 +39,22 @@
     [self.delegate toggleForLinkedIn:sender];
 }
 
+- (IBAction)snapchatSwitchChanged:(id)sender {
+    [self.delegate toggleForSnapchat:sender];
+}
+
+- (IBAction)vineSwitchChanged:(id)sender {
+    [self.delegate toggleForVine:sender];
+}
+
+- (IBAction)phoneSwitchChanged:(id)sender {
+    [self.delegate toggleForPhone:sender];
+}
+
+- (IBAction)skypeSwitchChanged:(id)sender {
+    [self.delegate toggleForSkype:sender];
+}
+
 - (IBAction)onSave:(id)sender {
     [self.delegate saveWithSocialMedia];
     [self onDismiss:sender];

@@ -34,6 +34,11 @@
 		0435B94D1E8C9C2F007A82FA /* CNSocialMediaAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0435B94C1E8C9C2F007A82FA /* CNSocialMediaAddView.xib */; };
 		0435B94F1E8CAD17007A82FA /* CNSaveSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0435B94E1E8CAD17007A82FA /* CNSaveSuccessView.xib */; };
 		0435B9521E8CAD3A007A82FA /* CNSaveSuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B9511E8CAD3A007A82FA /* CNSaveSuccessView.m */; };
+		0435B9551E8D4627007A82FA /* CNSocialMediaAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B9541E8D4627007A82FA /* CNSocialMediaAddVC.m */; };
+		0435B9581E8D545F007A82FA /* CNSnapchat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B9571E8D545F007A82FA /* CNSnapchat.m */; };
+		0435B95B1E8D547D007A82FA /* CNVine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B95A1E8D547D007A82FA /* CNVine.m */; };
+		0435B95E1E8D548D007A82FA /* CNPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B95D1E8D548D007A82FA /* CNPhone.m */; };
+		0435B9611E8D549A007A82FA /* CNSkype.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435B9601E8D549A007A82FA /* CNSkype.m */; };
 		047E3A131E7A3767003C83C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */; };
 		0481C1801E8ADBE400FB2F8E /* CNLinkedInCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */; };
 		0481C19F1E8AEB8400FB2F8E /* LIALinkedInApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1951E8AEB8400FB2F8E /* LIALinkedInApplication.m */; };
@@ -181,6 +186,16 @@
 		0435B94E1E8CAD17007A82FA /* CNSaveSuccessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CNSaveSuccessView.xib; path = ViewControllers/Profile/CNSaveSuccessView.xib; sourceTree = "<group>"; };
 		0435B9501E8CAD3A007A82FA /* CNSaveSuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNSaveSuccessView.h; path = ViewControllers/Profile/CNSaveSuccessView.h; sourceTree = "<group>"; };
 		0435B9511E8CAD3A007A82FA /* CNSaveSuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNSaveSuccessView.m; path = ViewControllers/Profile/CNSaveSuccessView.m; sourceTree = "<group>"; };
+		0435B9531E8D4627007A82FA /* CNSocialMediaAddVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNSocialMediaAddVC.h; path = ViewControllers/Profile/CNSocialMediaAddVC.h; sourceTree = "<group>"; };
+		0435B9541E8D4627007A82FA /* CNSocialMediaAddVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNSocialMediaAddVC.m; path = ViewControllers/Profile/CNSocialMediaAddVC.m; sourceTree = "<group>"; };
+		0435B9561E8D545F007A82FA /* CNSnapchat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNSnapchat.h; path = DataModel/CNSnapchat.h; sourceTree = "<group>"; };
+		0435B9571E8D545F007A82FA /* CNSnapchat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNSnapchat.m; path = DataModel/CNSnapchat.m; sourceTree = "<group>"; };
+		0435B9591E8D547D007A82FA /* CNVine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNVine.h; path = DataModel/CNVine.h; sourceTree = "<group>"; };
+		0435B95A1E8D547D007A82FA /* CNVine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNVine.m; path = DataModel/CNVine.m; sourceTree = "<group>"; };
+		0435B95C1E8D548D007A82FA /* CNPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNPhone.h; path = DataModel/CNPhone.h; sourceTree = "<group>"; };
+		0435B95D1E8D548D007A82FA /* CNPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNPhone.m; path = DataModel/CNPhone.m; sourceTree = "<group>"; };
+		0435B95F1E8D549A007A82FA /* CNSkype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNSkype.h; path = DataModel/CNSkype.h; sourceTree = "<group>"; };
+		0435B9601E8D549A007A82FA /* CNSkype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNSkype.m; path = DataModel/CNSkype.m; sourceTree = "<group>"; };
 		047E3A121E7A3767003C83C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0481C17E1E8ADBE400FB2F8E /* CNLinkedInCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLinkedInCV.h; sourceTree = "<group>"; };
 		0481C17F1E8ADBE400FB2F8E /* CNLinkedInCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNLinkedInCV.m; sourceTree = "<group>"; };
@@ -588,6 +603,14 @@
 				0481C1AC1E8BDF9400FB2F8E /* CNInstagram.m */,
 				0481C1AE1E8BDFA900FB2F8E /* CNLinkedIn.h */,
 				0481C1AF1E8BDFA900FB2F8E /* CNLinkedIn.m */,
+				0435B9561E8D545F007A82FA /* CNSnapchat.h */,
+				0435B9571E8D545F007A82FA /* CNSnapchat.m */,
+				0435B9591E8D547D007A82FA /* CNVine.h */,
+				0435B95A1E8D547D007A82FA /* CNVine.m */,
+				0435B95C1E8D548D007A82FA /* CNPhone.h */,
+				0435B95D1E8D548D007A82FA /* CNPhone.m */,
+				0435B95F1E8D549A007A82FA /* CNSkype.h */,
+				0435B9601E8D549A007A82FA /* CNSkype.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -769,6 +792,8 @@
 				0435B94E1E8CAD17007A82FA /* CNSaveSuccessView.xib */,
 				0435B9501E8CAD3A007A82FA /* CNSaveSuccessView.h */,
 				0435B9511E8CAD3A007A82FA /* CNSaveSuccessView.m */,
+				0435B9531E8D4627007A82FA /* CNSocialMediaAddVC.h */,
+				0435B9541E8D4627007A82FA /* CNSocialMediaAddVC.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1171,6 +1196,7 @@
 				FA4450A51E3F7CA200375428 /* CNOnboardingVerifyCodeVC.m in Sources */,
 				0435B9521E8CAD3A007A82FA /* CNSaveSuccessView.m in Sources */,
 				0427C3FE1E8310EC008E3359 /* CNNotification.m in Sources */,
+				0435B9611E8D549A007A82FA /* CNSkype.m in Sources */,
 				04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */,
 				FA4450E61E403BAF00375428 /* CNProfileMediaCell.m in Sources */,
 				0481C1A71E8B204D00FB2F8E /* CNFacebook.m in Sources */,
@@ -1180,6 +1206,7 @@
 				04FFB2B41E798C5F00D8BFBE /* CNOnboardingGenderSelectCV.m in Sources */,
 				FA44509C1E3F795000375428 /* CNSplashViewController.m in Sources */,
 				FA4450C01E3FDE6600375428 /* CNUtilities.m in Sources */,
+				0435B95B1E8D547D007A82FA /* CNVine.m in Sources */,
 				FA4451091E40C3D300375428 /* CNMatchViewController.m in Sources */,
 				FA4450F01E409A5500375428 /* CNProfileAddMediaCell.m in Sources */,
 				FA4450651E3A7B6D00375428 /* AppDelegate.m in Sources */,
@@ -1195,6 +1222,7 @@
 				FA4450D11E40149C00375428 /* CNQRCodeViewController.m in Sources */,
 				FA4450D41E4014B300375428 /* CNProfileViewController.m in Sources */,
 				0435B94B1E8C9BBD007A82FA /* CNSocialMediaAddView.m in Sources */,
+				0435B9551E8D4627007A82FA /* CNSocialMediaAddVC.m in Sources */,
 				0481C1AD1E8BDF9400FB2F8E /* CNInstagram.m in Sources */,
 				04EBA3DF1E89C3EA007FE43E /* CNInstagramCV.m in Sources */,
 				04106D5E1E7CC0ED00B2CAC0 /* CNOnboardingPasswordVC.m in Sources */,
@@ -1217,6 +1245,7 @@
 				0481C1B01E8BDFA900FB2F8E /* CNLinkedIn.m in Sources */,
 				04106D461E7ADAF800B2CAC0 /* CNOnboardingSocialVC.m in Sources */,
 				04EBA3CF1E861A6B007FE43E /* CNSettingVC.m in Sources */,
+				0435B95E1E8D548D007A82FA /* CNPhone.m in Sources */,
 				04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */,
 				FA4450A21E3F7C5B00375428 /* CNOnboardingPhoneInputVC.m in Sources */,
 				0435B9441E8C5978007A82FA /* CNUserCell.m in Sources */,
@@ -1226,6 +1255,7 @@
 				FA4450DA1E401E3500375428 /* CNUser.m in Sources */,
 				FA4450E01E403B4900375428 /* CNProfileHeaderView.m in Sources */,
 				040C2CD31E815E3600A83AA4 /* CNUserVC.m in Sources */,
+				0435B9581E8D545F007A82FA /* CNSnapchat.m in Sources */,
 				FA8C15B51E671AB800075AB7 /* SGQRCodeTool.m in Sources */,
 				04EBA3D31E88BFEC007FE43E /* MIBadgeButton.m in Sources */,
 				04EBA3D61E88C048007FE43E /* MIBadgeLabel.m in Sources */,

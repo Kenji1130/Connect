@@ -10,13 +10,14 @@
 #import "CNSwitchView.h"
 #import "CNMyProfileCell.h"
 #import "CNSettingVC.h"
-#import "CNFacebookVC.h"
 #import "CNSocialMediaAddView.h"
 #import "CNSaveSuccessView.h"
+#import "CNSocialMediaAddVC.h"
+
 @import PopupKit;
 
 
-@interface CNProfileVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, CNSocialMediaAddViewDelegate>
+@interface CNProfileVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnEdit;
 @property (weak, nonatomic) IBOutlet UIButton *btnSetting;
@@ -33,9 +34,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *profileHideView;
 @property (weak, nonatomic) IBOutlet UISwitch *profileHiddenToggle;
+@property (weak, nonatomic) IBOutlet UIButton *btnAddSocial;
 
-@property (nonatomic, strong) CNSocialMediaAddView *mediaView;
-@property (nonatomic, strong) CNSaveSuccessView *saveSuccessView;
 @property (nonatomic, strong) CNSwitchView *profileSwitch;
 
 @property (nonatomic, assign) BOOL isEdit;
@@ -51,6 +51,11 @@
     // Do any additional setup after loading the view.
     [self initData];
     [self configLayout];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
@@ -120,10 +125,6 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CNMyProfileCell" bundle:nil] forCellReuseIdentifier:@"CellMedia"];
     
-    self.mediaView = (CNSocialMediaAddView*)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSocialMediaAddView class]) owner:nil options:nil] firstObject];
-    self.mediaView.delegate = self;
-    
-    self.saveSuccessView = (CNSaveSuccessView*)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSaveSuccessView class]) owner:nil options:nil] firstObject];
 }
 
 - (void)configSwtichView{
@@ -170,6 +171,8 @@
     self.tableViewTopAnchor.constant = 106;
     
     self.btnSetting.hidden = true;
+    self.btnAddSocial.hidden = true;
+    
 }
 
 - (void)profileSave{
@@ -181,6 +184,7 @@
     self.tableViewTopAnchor.constant = 8;
     
     self.btnSetting.hidden = false;
+    self.btnAddSocial.hidden = false;
 
 }
 
@@ -303,22 +307,12 @@
 
 - (IBAction)onAddSocialMedia:(id)sender {
     
-    [self showPopUp:self.mediaView];
+    CNSocialMediaAddVC *vc = (CNSocialMediaAddVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNSocialMediaAddVC class])];
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
-- (void)showPopUp: (UIView *) view{
-    // Show in popup
-    PopupViewLayout layout = PopupViewLayoutMake(PopupViewHorizontalLayoutCenter,
-                                                 PopupViewVerticalLayoutCenter);
-    
-    PopupView* popup = [PopupView popupViewWithContentView:view
-                                                  showType:PopupViewShowTypeSlideInFromBottom
-                                               dismissType:PopupViewDismissTypeSlideOutToBottom
-                                                  maskType:PopupViewMaskTypeDarkBlur
-                            shouldDismissOnBackgroundTouch:NO shouldDismissOnContentTouch:NO];
-    
-    [popup showWithLayout:layout];
-}
+
 
 
 #pragma mark - UITableView DataSource
@@ -354,7 +348,8 @@
 - (CGFloat)cellHeight:(NSInteger)index{
     NSString *socialKey = kSocialKey[index];
     NSDictionary *dict = self.user.social[socialKey];
-    if (dict != nil) {
+    BOOL active = [dict[@"active"] boolValue];
+    if (dict != nil && active) {
         return 43;
     } else {
         return 0;
@@ -362,27 +357,5 @@
     
 }
 
-#pragma  mark - CNSocialMediaAddViewDelegate
-
--(void)toggleForFacebook:(UISwitch *)sender{
-    NSLog(@"Facebook Switch: %hhd", sender.on);
-    
-}
-
-- (void)toggleForTwitter:(UISwitch *)sender{
-    NSLog(@"Twitter Switch: %hhd", sender.on);
-}
-
-- (void)toggleForInstagram:(UISwitch *)sender{
-    NSLog(@"Instagram Switch: %hhd", sender.on);
-}
-
-- (void)toggleForLinkedIn:(UISwitch *)sender{
-    NSLog(@"LinkedIn Switch: %hhd", sender.on);
-}
-
-- (void)saveWithSocialMedia{
-    [self showPopUp:self.saveSuccessView];
-}
 
 @end

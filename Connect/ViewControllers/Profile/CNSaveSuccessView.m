@@ -18,6 +18,8 @@
 - (IBAction)onDismiss:(id)sender {
     if ([sender isKindOfClass:[UIView class]]) {
         [(UIView*)sender dismissPresentingPopup];
+        
+        [self.delegate save];
     }
 }
 

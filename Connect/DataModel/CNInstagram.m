@@ -31,7 +31,8 @@
 - (void)configureInstagramWithDictionary:(NSDictionary *)value {
     // Configure user with dictionary
     self.name = value[@"name"];
-    self.hidden = value[@"hidden"];
+    self.hidden = [value[@"hidden"] boolValue];
+    self.active = [value[@"active"] boolValue];
 }
 
 

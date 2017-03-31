@@ -11,9 +11,13 @@
 @interface CNTwitter : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) BOOL hidden;
+@property (nonatomic, assign) BOOL active;
+
 
 + (instancetype)sharedInstance;
 
 - (instancetype)initWithDictionary:(NSDictionary *)value;
+- (instancetype)initWithDictionary:(NSDictionary *)value fromTwitter:(BOOL) twitter;
 - (void)configureTwitterWithDictionary:(NSDictionary *)value;
+- (void)configureTwitterWithDictionary:(NSDictionary *)value fromTwitter:(BOOL) twitter;
 @end

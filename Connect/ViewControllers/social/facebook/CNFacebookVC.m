@@ -19,10 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self initView];
+    [self login];
 }
 
-- (void)initView{
+- (void)login{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     FBSDKLoginManager *logIn = [[FBSDKLoginManager alloc] init];
     [logIn logInWithReadPermissions:@[@"public_profile", @"email", @"user_friends"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {

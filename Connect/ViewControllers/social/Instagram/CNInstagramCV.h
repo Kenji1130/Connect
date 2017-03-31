@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CNInstagramDelegate <NSObject>
+
+@optional
+- (void)instagramLoginSuccess:(UIViewController*) instagramController withDictionary:(NSDictionary *)userInfo;
+- (void)instagramLoginCancelled:(UIViewController*) instagramController;
+- (void)instagramLoginFailed:(UIViewController*) instagramController withError:(NSString*) error;
+
+@end
+
 @interface CNInstagramCV : UIViewController
 
+@property (nonatomic, weak) id<CNInstagramDelegate> delegate;
 @end

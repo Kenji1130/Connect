@@ -27,10 +27,25 @@
     return self;
 }
 
-- (void)configureTwitterWithDictionary:(NSDictionary *)value {
-    // Configure user with dictionary
-    self.name = value[@"screen_name"];
-    self.hidden = value[@"hidden"];
+- (instancetype)initWithDictionary:(NSDictionary *)value fromTwitter:(BOOL) twitter{
+    self = [super init];
+    if (self) {
+        [self configureTwitterWithDictionary:value fromTwitter:twitter];
+    }
+    
+    return self;
 }
 
+- (void)configureTwitterWithDictionary:(NSDictionary *)value {
+    // Configure user with dictionary
+    self.name = value[@"name"];
+    self.hidden = [value[@"hidden"] boolValue];
+    self.active = [value[@"active"] boolValue];
+}
+
+- (void)configureTwitterWithDictionary:(NSDictionary *)value fromTwitter:(BOOL) twitter{
+    self.name = value[@"screen_name"];
+    self.hidden = [value[@"hidden"] boolValue];
+    self.active = [value[@"active"] boolValue];
+}
 @end

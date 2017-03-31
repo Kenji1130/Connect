@@ -32,7 +32,7 @@
         }
         else{
             NSLog(@"Twitter Login Failed! %@", [error localizedDescription]);
-            [self.delegate twiterLoginFailed:self withError:error.localizedDescription];
+            [self.delegate twitterLoginFailed:self withError:error.localizedDescription];
             [self.navigationController popViewControllerAnimated:YES];
 
         }
@@ -68,7 +68,7 @@
             }
             else{
                 NSLog(@"Error : %@", connectionError);
-                [self.delegate twiterLoginFailed:self withError:connectionError.localizedDescription];
+                [self.delegate twitterLoginFailed:self withError:connectionError.localizedDescription];
                 
                 [self.navigationController popViewControllerAnimated:YES];
 
@@ -96,7 +96,7 @@
             }
             else{
                 NSLog(@"Error : %@", connectionError);
-                [self.delegate twiterLoginFailed:self withError:connectionError.localizedDescription];
+                [self.delegate twitterLoginFailed:self withError:connectionError.localizedDescription];
                 [self.navigationController popViewControllerAnimated:YES];
 
             }

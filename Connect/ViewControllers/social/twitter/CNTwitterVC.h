@@ -13,7 +13,7 @@
 @optional
 - (void)twitterLoginSuccess:(UIViewController*) twitterController withDictionary:(NSDictionary *)userInfo;
 - (void)twitterLoginCancelled:(UIViewController*) twitterController;
-- (void)twiterLoginFailed:(UIViewController*) twitterController withError:(NSString*) error;
+- (void)twitterLoginFailed:(UIViewController*) twitterController withError:(NSString*) error;
 
 @end
 

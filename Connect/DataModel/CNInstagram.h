@@ -11,6 +11,7 @@
 @interface CNInstagram : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) BOOL hidden;
+@property (nonatomic, assign) BOOL active;
 
 + (instancetype)sharedInstance;
 

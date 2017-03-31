@@ -11,6 +11,10 @@
 #import "CNTwitter.h"
 #import "CNInstagram.h"
 #import "CNLinkedIn.h"
+#import "CNSnapchat.h"
+#import "CNVine.h"
+#import "CNPhone.h"
+#import "CNSkype.h"
 
 @interface CNUser : NSObject
 
@@ -37,6 +41,10 @@
 @property (nonatomic, strong) CNTwitter *twitter;
 @property (nonatomic, strong) CNInstagram *instagram;
 @property (nonatomic, strong) CNLinkedIn *linkedIn;
+@property (nonatomic, strong) CNSnapchat *snapchat;
+@property (nonatomic, strong) CNVine *vine;
+@property (nonatomic, strong) CNPhone *phone;
+@property (nonatomic, strong) CNSkype *skype;
 
 @property (nonatomic, readonly) BOOL isMe;
 @property (nonatomic, readonly) NSString *name;
