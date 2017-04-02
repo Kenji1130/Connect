@@ -24,6 +24,16 @@
 				<string>fb1817165355167633</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>LI5123696</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>li5123696-Connect</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

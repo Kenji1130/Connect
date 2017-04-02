@@ -12,7 +12,7 @@
 #import "CNTwitterVC.h"
 #import "CNLinkedInCV.h"
 
-@interface CNOnboardingSocialVC () <UIWebViewDelegate, CNFacebookDelegate, CNTwitterDelegate, CNInstagramDelegate>
+@interface CNOnboardingSocialVC () <UIWebViewDelegate, CNFacebookDelegate, CNTwitterDelegate, CNInstagramDelegate, CNLinkedInDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btnFB;
 @property (weak, nonatomic) IBOutlet UIButton *btnTwitter;
 @property (weak, nonatomic) IBOutlet UIButton *btnInstagram;
@@ -120,8 +120,20 @@
 
 #pragma mark - LinkedIn Login
 - (IBAction)connectWithLinkedIn:(id)sender {
-    [[CNLinkedInCV shared] connectWithLinkedIn];
+    CNLinkedInCV *linkedInVC = (CNLinkedInCV*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNLinkedInCV class])];
+    linkedInVC.delegate = self;
+    [self.navigationController pushViewController:linkedInVC animated:YES];
 }
+
+#pragma mark - CNLinkedInDelegate
+- (void)linkedInLoginSuccess:(UIViewController *)linkedInController withDictionary:(NSDictionary *)userInfo{
+    
+}
+
+- (void)linkedInLoginFailed:(UIViewController *)linkedInController withError:(NSString *)error{
+    [[CNUtilities shared] showAlert:self withTitle:@"LinkedIn Login Failed" withMessage:error];
+}
+
 
 #pragma mark - Change Button Style after connect social account
 - (void)setConnected:(UIButton*)button{

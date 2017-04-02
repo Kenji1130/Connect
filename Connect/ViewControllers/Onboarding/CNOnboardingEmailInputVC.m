@@ -12,6 +12,7 @@
 @interface CNOnboardingEmailInputVC ()
 @property (weak, nonatomic) IBOutlet UITextField *tfEmail;
 
+@property (strong, nonatomic) NSMutableArray *emails;
 @end
 
 @implementation CNOnboardingEmailInputVC
@@ -19,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self loadEmails];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -29,6 +33,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadEmails{
+    self.emails = [[NSMutableArray alloc] init];
+    FIRDatabaseReference *emailRef = [[AppDelegate sharedInstance].dbRef child:@"emails"];
+    [emailRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        NSEnumerator *children = [snapshot children];
+        FIRDataSnapshot *child;
+        while (child = [children nextObject]) {
+            [self.emails addObject:child.value];
+        }
+    }];
 }
 
 #pragma mark - Helpers
@@ -51,21 +68,22 @@
         return;
     }
     
-    [CNUser currentUser].email = self.tfEmail.text;
+//    [self goNext];
     
+    if ([self.emails containsObject:self.tfEmail.text]) {
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Sorry, This email is already exist."];
+    } else {
+        [self goNext];
+    }
+}
+
+
+- (void)goNext{
+    
+    [CNUser currentUser].email = self.tfEmail.text;
     // Show onboarding name vc
     CNOnboardingPasswordVC *vc = (CNOnboardingPasswordVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPasswordVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
-    
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

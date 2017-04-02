@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CNLinkedInDelegate <NSObject>
+
+@optional
+- (void)linkedInLoginSuccess:(UIViewController*) linkedInController withDictionary:(NSDictionary *)userInfo;
+- (void)linkedInLoginCancelled:(UIViewController*) linkedInController;
+- (void)linkedInLoginFailed:(UIViewController*) linkedInController withError:(NSString*) error;
+
+@end
+
 @interface CNLinkedInCV : UIViewController
-+ (instancetype)shared;
-- (void)connectWithLinkedIn;
+
+@property (weak, nonatomic) id<CNLinkedInDelegate> delegate;
 @end

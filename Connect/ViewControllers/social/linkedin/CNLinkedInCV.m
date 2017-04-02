@@ -7,34 +7,40 @@
 //
 
 #import "CNLinkedInCV.h"
-#import "LIALinkedInHttpClient.h"
-#import "LIALinkedInApplication.h"
+#import "LinkedInHelper.h"
+
 
 @interface CNLinkedInCV ()
+
+@property (strong, nonatomic) LinkedInHelper *linkedIn;
 
 @end
 
 @implementation CNLinkedInCV{
-    LIALinkedInHttpClient *_client;
 
-}
-
-+ (instancetype)shared {
-    static id instance = nil;
-    static dispatch_once_t onceToken;
-    
-    dispatch_once(&onceToken, ^{
-        instance = [[self alloc] init];
-    });
-    
-    return instance;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _client = [self client];
+    [self login];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    LinkedInHelper *linkedIn = [LinkedInHelper sharedInstance];
+    [linkedIn logout];
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    for(NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+        
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,39 +48,74 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)connectWithLinkedIn{
-    [self.client getAuthorizationCode:^(NSString *code) {
-        [self.client getAccessToken:code success:^(NSDictionary *accessTokenData) {
-            NSString *accessToken = [accessTokenData objectForKey:@"access_token"];
-            NSLog(@"Access Token: %@",accessToken);
-
-            [self requestMeWithToken:accessToken];
-        }                   failure:^(NSError *error) {
-            NSLog(@"Quering accessToken failed %@", error);
+- (void)login{
+    LinkedInHelper *linkedIn = [LinkedInHelper sharedInstance];
+    
+    // If user has already connected via linkedin in and access token is still valid then
+    // No need to fetch authorizationCode and then accessToken again!
+    
+    if (linkedIn.isValidToken) {
+        
+        linkedIn.customSubPermissions = [NSString stringWithFormat:@"%@,%@", first_name, last_name];
+        
+        // So Fetch member info by elderyly access token
+        [linkedIn autoFetchUserInfoWithSuccess:^(NSDictionary *userInfo) {
+            // Whole User Info
+            
+            NSString * desc = [NSString stringWithFormat:@"first name : %@\n last name : %@", userInfo[@"firstName"], userInfo[@"lastName"] ];
+            [self showAlert:desc];
+            
+            NSLog(@"user Info : %@", userInfo);
+        } failUserInfo:^(NSError *error) {
+            NSLog(@"error : %@", error.userInfo.description);
         }];
-    }                      cancel:^{
-        NSLog(@"Authorization was cancelled by user");
-    }                     failure:^(NSError *error) {
-        NSLog(@"Authorization failed %@", error);
-    }];
+    } else {
+        
+        linkedIn.cancelButtonText = @"Close"; // Or any other language But Default is Close
+        
+        NSArray *permissions = @[@(BasicProfile),
+                                 @(EmailAddress),
+                                 @(Share),
+                                 @(CompanyAdmin)];
+        
+        linkedIn.showActivityIndicator = YES;
+        
+//warning - Your LinkedIn App ClientId - ClientSecret - RedirectUrl - And state
+        
+        [linkedIn requestMeWithSenderViewController:self
+                                           clientId:kLinkedInClientID
+                                       clientSecret:kLinkedInClientSecret
+                                        redirectUrl:kLinkedInRedirectURL
+                                        permissions:permissions
+                                              state:@"adsfregasagagerrqer32"
+                                    successUserInfo:^(NSDictionary *userInfo) {
+                                        
+                                        
+                                        NSString * desc = [NSString stringWithFormat:@"first name : %@\n last name : %@",
+                                                           userInfo[@"firstName"], userInfo[@"lastName"] ];
+                                        [self showAlert:desc];
+                                        
+                                        // Whole User Info
+                                        NSLog(@"user Info : %@", userInfo);
+                                        // You can also fetch user's those informations like below
+                                        NSLog(@"job title : %@",     [LinkedInHelper sharedInstance].title);
+                                        NSLog(@"company Name : %@",  [LinkedInHelper sharedInstance].companyName);
+                                        NSLog(@"email address : %@", [LinkedInHelper sharedInstance].emailAddress);
+                                        NSLog(@"Photo Url : %@",     [LinkedInHelper sharedInstance].photo);
+                                        NSLog(@"Industry : %@",      [LinkedInHelper sharedInstance].industry);
+                                    }
+                                  failUserInfoBlock:^(NSError *error) {
+                                      NSLog(@"error : %@", error.userInfo.description);
+                                  }
+         ];
+    }
+
 }
 
-- (void)requestMeWithToken:(NSString *)accessToken {
 
-    [self.client GET:[[NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~?oauth2_access_token=%@&format=json"] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]] parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"responseObject: %@", responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Error: %@", error.localizedDescription);
-    }];
-}
-
-- (LIALinkedInHttpClient *)client {
-    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"https://www.linkedin.com/feed/"
-                                                                                    clientId:kLinkedInClientID
-                                                                                clientSecret:kLinkedInClientSecret
-                                                                                       state:[NSString stringWithFormat:@"linkedin%f", [NSDate date].timeIntervalSince1970]
-                                                                               grantedAccess:@[@"r_basicprofile", @"r_emailaddress",@"w_share"]];
-    return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
+- (void)showAlert:(NSString *)desc {
+    
+    [[[UIAlertView alloc] initWithTitle:@"Simple User info" message:desc delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
 }
 
 @end

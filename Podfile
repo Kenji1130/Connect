@@ -19,6 +19,7 @@ target 'Connect' do
   pod 'SDWebImage'
   pod 'UIActivityIndicator-for-SDWebImage'
   pod 'InstagramKit', '~> 3.0'
+  pod 'LinkedinIOSHelper', '~> 1.0.7'
   pod 'PopupKit'
 
   target 'ConnectTests' do

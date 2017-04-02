@@ -75,6 +75,8 @@
              
          } else {
              [CNUser currentUser].userID = user.uid;
+             FIRDatabaseReference *emailRef = [[AppDelegate sharedInstance].dbRef child:@"emails"];
+             [[emailRef childByAutoId] setValue:email];
              [self uploadProfileImage];
          }
      }];
@@ -155,6 +157,7 @@
         }
 
     }];
+    
 }
 
 - (void)goSocialVC{

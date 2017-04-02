@@ -77,17 +77,17 @@
     }];
 }
 
-//- (void)viewWillDisappear:(BOOL)animated{
-//    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:[NSURLRequest requestWithURL:_authURL]];
-//    [[NSURLCache sharedURLCache] removeAllCachedResponses];
-//    for(NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
-//        
-//        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
-//    }
-//    
-//    [super viewWillDisappear:animated];
-//
-//}
+- (void)viewWillDisappear:(BOOL)animated{
+    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:[NSURLRequest requestWithURL:_authURL]];
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    for(NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+        
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+    }
+    
+    [super viewWillDisappear:animated];
+
+}
 /*
 #pragma mark - Navigation
 

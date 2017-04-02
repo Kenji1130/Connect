@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LinkedinIOSHelper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B079110F62E21455A16D4A12C8584E9</key>
+		<key>43FDB85C36A066F0805341FEBD148442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>450D1157D1397418D471D843AC446EF0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>471FB8A59B42658651D418820C096CD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,17 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>658DD2A8DFE047FAF998C2A60E71CED6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6D5CEDECD3D8DC52EA507E0431BDA8A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7681D8E97F77F03DB2781EB059FECA2C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>90708F6FF0CBC92F0A2A3B742D7122C2</key>
+		<key>7B00B19E161A16D214CF6119A9FD3E1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -118,11 +133,6 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA6437435D90AC60CE2F8A6A96E45F94</key>
 		<dict>
 			<key>primary</key>
 			<true/>

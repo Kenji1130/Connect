@@ -216,6 +216,7 @@
 }
 
 - (void)instagramLoginCancelled:(UIViewController *)instagramController{
+    [_navController dismissViewControllerAnimated:YES completion:nil];
     [self.toggleInstagram setOn:false];
 }
 

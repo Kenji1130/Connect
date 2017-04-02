@@ -79,6 +79,7 @@ PODS:
     - InstagramKit/Exclude-UICKeyChainStore (= 3.8)
   - InstagramKit/Exclude-UICKeyChainStore (3.8):
     - AFNetworking (~> 3.0)
+  - LinkedinIOSHelper (1.0.7)
   - MBProgressHUD (1.0.0)
   - PinterestSDK (1.0.2):
     - AFNetworking (~> 3.0)
@@ -104,6 +105,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - InstagramKit (~> 3.0)
+  - LinkedinIOSHelper (~> 1.0.7)
   - MBProgressHUD
   - PinterestSDK (from `https://github.com/pinterest/ios-pdk.git`)
   - PopupKit
@@ -137,6 +139,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   InstagramKit: 402d6bba375357b548039de08eea19a1b8716354
+  LinkedinIOSHelper: 3316a1d934b821d0f8d3a4a0fcf5e51bd8d77cd3
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   PinterestSDK: 798aced4e2ce7a9607b3df1ac77abf2c72f57734
   PopupKit: e362ed92148d831a9c38a2bc7a25893e46d64c54
@@ -146,6 +149,6 @@ SPEC CHECKSUMS:
   TwitterKit: 97e729ceea041d174126235bf6ff67dcf37772d4
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 4449a9be0df5d9ef54d0b2cfe0a9257f4bccd467
+PODFILE CHECKSUM: f1e80fa2847798bef47995667bd1ed0e62c813fc
 
 COCOAPODS: 1.2.0

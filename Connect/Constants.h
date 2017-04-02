@@ -92,6 +92,7 @@ alpha:1.0]
 
 #define kLinkedInClientID   @"86h1p8kv63h3r8"
 #define kLinkedInClientSecret @"O8kHS33AjF1paVG5"
+#define kLinkedInRedirectURL  @"https://www.linkedin.com/"
 
 /// Firebase Info
 #define kFCMUrl             @"https://fcm.googleapis.com/fcm/send"
