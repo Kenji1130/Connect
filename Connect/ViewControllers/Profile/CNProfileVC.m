@@ -37,7 +37,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnAddSocial;
 
 @property (nonatomic, strong) CNSwitchView *profileSwitch;
-
 @property (nonatomic, assign) BOOL isEdit;
 
 @property (strong, nonatomic) FIRDatabaseReference *userRef;
@@ -70,6 +69,7 @@
 - (void)initData{
     self.isEdit = false;
     self.user = [CNUser currentUser];
+    self.profileType = CNProfileTypePersonal;
 }
 
 - (void)configLayout{
@@ -285,6 +285,9 @@
         self.tfName.textColor = kAppTextColor;
         self.tfOccupation.textColor = kAppTextColor;
         
+        self.profileType = CNProfileTypePersonal;
+        [self.tableView reloadData];
+        
 
     } else {
         NSLog(@"Switch Off");
@@ -297,6 +300,9 @@
         self.lbOccupation.textColor = [UIColor whiteColor];
         self.tfName.textColor = [UIColor whiteColor];
         self.tfOccupation.textColor = [UIColor whiteColor];
+        
+        self.profileType = CNProfileTypeBusiness;
+        [self.tableView reloadData];
     }
 }
 
@@ -308,12 +314,10 @@
 - (IBAction)onAddSocialMedia:(id)sender {
     
     CNSocialMediaAddVC *vc = (CNSocialMediaAddVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNSocialMediaAddVC class])];
+    vc.profileType = self.profileType;
     [self presentViewController:vc animated:YES completion:nil];
     
 }
-
-
-
 
 #pragma mark - UITableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -325,7 +329,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     return [self cellHeight:indexPath.row];
     
 }
@@ -339,7 +343,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CNMyProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellMedia" forIndexPath:indexPath];
    
-    [cell configureCellWithIndex:indexPath.row withType:self.user.profileType isEdit:self.isEdit];
+    [cell configureCellWithIndex:indexPath.row withType:self.profileType isEdit:self.isEdit];
     
     return cell;
 }
@@ -347,7 +351,12 @@
 
 - (CGFloat)cellHeight:(NSInteger)index{
     NSString *socialKey = kSocialKey[index];
-    NSDictionary *dict = self.user.social[socialKey];
+    NSDictionary *dict;
+    if (self.profileType == CNProfileTypePersonal) {
+        dict = self.user.socialPersonal[socialKey];
+    } else {
+        dict = self.user.socialBusiness[socialKey];
+    }
     BOOL active = [dict[@"active"] boolValue];
     if (dict != nil && active) {
         return 43;

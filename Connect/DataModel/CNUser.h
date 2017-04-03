@@ -37,14 +37,26 @@
 @property (nonatomic, strong) NSNumber *notiCount;
 
 @property (nonatomic, strong) NSDictionary *social;
-@property (nonatomic, strong) CNFacebook *facebook;
-@property (nonatomic, strong) CNTwitter *twitter;
-@property (nonatomic, strong) CNInstagram *instagram;
-@property (nonatomic, strong) CNLinkedIn *linkedIn;
-@property (nonatomic, strong) CNSnapchat *snapchat;
-@property (nonatomic, strong) CNVine *vine;
-@property (nonatomic, strong) CNPhone *phone;
-@property (nonatomic, strong) CNSkype *skype;
+
+@property (nonatomic, strong) NSDictionary *socialPersonal;
+@property (nonatomic, strong) CNFacebook *pFacebook;
+@property (nonatomic, strong) CNTwitter *pTwitter;
+@property (nonatomic, strong) CNInstagram *pInstagram;
+@property (nonatomic, strong) CNLinkedIn *pLinkedIn;
+@property (nonatomic, strong) CNSnapchat *pSnapchat;
+@property (nonatomic, strong) CNVine    *pVine;
+@property (nonatomic, strong) CNPhone  *pPhone;
+@property (nonatomic, strong) CNSkype  *pSkype;
+
+@property (nonatomic, strong) NSDictionary *socialBusiness;
+@property (nonatomic, strong) CNFacebook *bFacebook;
+@property (nonatomic, strong) CNTwitter *bTwitter;
+@property (nonatomic, strong) CNInstagram *bInstagram;
+@property (nonatomic, strong) CNLinkedIn *bLinkedIn;
+@property (nonatomic, strong) CNSnapchat *bSnapchat;
+@property (nonatomic, strong) CNVine    *bVine;
+@property (nonatomic, strong) CNPhone  *bPhone;
+@property (nonatomic, strong) CNSkype  *bSkype;
 
 @property (nonatomic, readonly) BOOL isMe;
 @property (nonatomic, readonly) NSString *name;

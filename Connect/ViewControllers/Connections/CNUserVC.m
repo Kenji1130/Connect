@@ -33,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.profileType = CNProfileTypePersonal;
     [self configLayout];
     [self isConnected];
 }
@@ -80,11 +81,17 @@
         self.view.backgroundColor = UIColorFromRGB(0xf0f0f0);
         self.lbName.textColor = kAppTextColor;
         self.lbOccupation.textColor = kAppTextColor;
+        
+        self.profileType = CNProfileTypePersonal;
+        [self.tableView reloadData];
     } else {
         NSLog(@"Switch Off");
         self.view.backgroundColor = UIColorFromRGB(0x9a9a9b);
         self.lbName.textColor = [UIColor whiteColor];
         self.lbOccupation.textColor = [UIColor whiteColor];
+        
+        self.profileType = CNProfileTypeBusiness;
+        [self.tableView reloadData];
     }
 }
 
@@ -188,13 +195,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CNUserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [cell configureCellWithIndex:indexPath.row withUser:self.user];
+    [cell configureCellWithIndex:indexPath.row withUser:self.user profileType: self.profileType];
     return cell;
 }
 
 - (CGFloat)cellHeight:(NSInteger)index{
     NSString *socialKey = kSocialKey[index];
-    NSDictionary *dict = self.user.social[socialKey];
+    NSDictionary *dict;
+    if (self.profileType == CNProfileTypePersonal) {
+        dict = self.user.socialPersonal[socialKey];
+    } else{
+        dict = self.user.socialBusiness[socialKey];
+    }
     BOOL hidden = [dict[@"hidden"] boolValue];
     if (dict != nil && !hidden) {
         return 43;

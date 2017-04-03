@@ -34,7 +34,13 @@
     self.socialType = index;
     self.socialKey = kSocialKey[self.socialType];
     
-    NSDictionary *dict = self.user.social[self.socialKey];
+    NSDictionary *dict ;
+    if (self.profileType == CNProfileTypePersonal) {
+        dict = self.user.socialPersonal[self.socialKey];
+    } else {
+        dict = self.user.socialBusiness[self.socialKey];
+
+    }
     BOOL active = [dict[@"active"] boolValue];
     if (dict != nil && active) {
         self.socialMediaLogo.hidden = false;
@@ -53,7 +59,13 @@
 }
 
 - (IBAction)onToggle:(UISwitch*)sender {
-    self.userRef = [[[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"] child:self.socialKey];
+    
+    if (self.profileType == CNProfileTypePersonal) {
+        self.userRef = [[[[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"] child:@"personal"]child:self.socialKey];
+    } else {
+        self.userRef = [[[[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"] child:@"business"]child:self.socialKey];
+    }
+
     NSDictionary *dict = @{@"hidden": [NSNumber numberWithBool:sender.on]};
     [self.userRef updateChildValues:dict];
 }

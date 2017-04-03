@@ -46,33 +46,65 @@
     self.profileHidden = [value[@"profileHidden"] boolValue];
     self.notiCount = value[@"notiCount"];
     
-  
+    // Social
     NSDictionary *social = value[@"social"];
     self.social = social;
+        
+    // Personal Social
+    NSDictionary *socialPersonal = social[@"personal"];
+    self.socialPersonal = socialPersonal;
     
-    NSDictionary *facebook = social[@"facebook"];
-    self.facebook = [[CNFacebook sharedInstance] initWithDictionary:facebook];
+    NSDictionary *pFacebook = socialPersonal[@"facebook"];
+    self.pFacebook = [[CNFacebook alloc] initWithDictionary:pFacebook fromSocial:NO];
     
-    NSDictionary *twitter = social[@"twitter"];
-    self.twitter = [[CNTwitter sharedInstance] initWithDictionary:twitter];
+    NSDictionary *pTwitter = socialPersonal[@"twitter"];
+    self.pTwitter = [[CNTwitter alloc] initWithDictionary:pTwitter fromSocial:NO];
     
-    NSDictionary *instagram = social[@"instagram"];
-    self.instagram = [[CNInstagram sharedInstance] initWithDictionary:instagram];
+    NSDictionary *pInstagram = socialPersonal[@"instagram"];
+    self.pInstagram = [[CNInstagram alloc] initWithDictionary:pInstagram fromSocial:NO];
     
-    NSDictionary *linkedIn = social[@"linkedIn"];
-    self.linkedIn = [[CNLinkedIn sharedInstance] initWithDictionary:linkedIn];
+    NSDictionary *pLinkedIn = socialPersonal[@"linkedIn"];
+    self.pLinkedIn = [[CNLinkedIn alloc] initWithDictionary:pLinkedIn fromSocial:NO];
     
-    NSDictionary *snapchat = social[@"snapchat"];
-    self.snapchat = [[CNSnapchat sharedInstance] initWithDictionary:snapchat];
+    NSDictionary *pSnapchat = socialPersonal[@"snapchat"];
+    self.pSnapchat = [[CNSnapchat alloc] initWithDictionary:pSnapchat];
     
-    NSDictionary *vine = social[@"vine"];
-    self.vine = [[CNVine sharedInstance] initWithDictionary:vine];
+    NSDictionary *pVine = socialPersonal[@"vine"];
+    self.pVine = [[CNVine alloc] initWithDictionary:pVine];
     
-    NSDictionary *phone = social[@"phone"];
-    self.phone = [[CNPhone sharedInstance] initWithDictionary:phone];
+    NSDictionary *pPhone = socialPersonal[@"phone"];
+    self.pPhone = [[CNPhone alloc] initWithDictionary:pPhone];
     
-    NSDictionary *skype = social[@"skype"];
-    self.skype = [[CNSkype sharedInstance] initWithDictionary:skype];
+    NSDictionary *pSkype = socialPersonal[@"skype"];
+    self.pSkype = [[CNSkype alloc] initWithDictionary:pSkype];
+    
+    // Business Social
+    NSDictionary *socialBusiness = social[@"business"];
+    self.socialBusiness = socialBusiness;
+    
+    NSDictionary *bFacebook = socialBusiness[@"facebook"];
+    self.bFacebook = [[CNFacebook alloc] initWithDictionary:bFacebook fromSocial:NO];
+    
+    NSDictionary *bTwitter = socialBusiness[@"twitter"];
+    self.bTwitter = [[CNTwitter alloc] initWithDictionary:bTwitter fromSocial:NO];
+    
+    NSDictionary *bInstagram = socialBusiness[@"instagram"];
+    self.bInstagram = [[CNInstagram alloc] initWithDictionary:bInstagram fromSocial:NO];
+    
+    NSDictionary *bLinkedIn = socialBusiness[@"linkedIn"];
+    self.bLinkedIn = [[CNLinkedIn alloc] initWithDictionary:bLinkedIn fromSocial:NO];
+    
+    NSDictionary *bSnapchat = socialBusiness[@"snapchat"];
+    self.bSnapchat = [[CNSnapchat alloc] initWithDictionary:bSnapchat];
+    
+    NSDictionary *bVine = socialBusiness[@"vine"];
+    self.bVine = [[CNVine alloc] initWithDictionary:bVine];
+    
+    NSDictionary *bPhone = socialBusiness[@"phone"];
+    self.bPhone = [[CNPhone alloc] initWithDictionary:bPhone];
+    
+    NSDictionary *bSkype = socialBusiness[@"skype"];
+    self.bSkype = [[CNSkype alloc] initWithDictionary:bSkype];
 }
 
 

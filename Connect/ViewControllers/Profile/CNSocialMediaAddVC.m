@@ -45,18 +45,35 @@
 
 - (void)initData{
     self.user = [CNUser currentUser];
-    self.socialRef = [[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"];
+    if (self.profileType == CNProfileTypePersonal) {
+        self.socialRef = [[[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"] child:@"personal"];
+    } else{
+        self.socialRef = [[[[[AppDelegate sharedInstance].dbRef child:@"users"] child:self.user.userID] child:@"social"] child:@"business"];
+    }
+
 }
 
 - (void)configLayout{
-    [self.toggleFacebook setOn:self.user.facebook.active];
-    [self.toggleTwitter setOn:self.user.twitter.active];
-    [self.toggleInstagram setOn:self.user.instagram.active];
-    [self.toggleLinkedIn setOn:self.user.linkedIn.active];
-    [self.toggleSnapchat setOn:self.user.snapchat.active];
-    [self.toggleVine setOn:self.user.vine.active];
-    [self.togglePhone setOn:self.user.phone.active];
-    [self.toggleSkype setOn:self.user.skype.active];
+    if (self.profileType == CNProfileTypePersonal) {
+        [self.toggleFacebook setOn:self.user.pFacebook.active];
+        [self.toggleTwitter setOn:self.user.pTwitter.active];
+        [self.toggleInstagram setOn:self.user.pInstagram.active];
+        [self.toggleLinkedIn setOn:self.user.pLinkedIn.active];
+        [self.toggleSnapchat setOn:self.user.pSnapchat.active];
+        [self.toggleVine setOn:self.user.pVine.active];
+        [self.togglePhone setOn:self.user.pPhone.active];
+        [self.toggleSkype setOn:self.user.pSkype.active];
+    } else {
+        [self.toggleFacebook setOn:self.user.bFacebook.active];
+        [self.toggleTwitter setOn:self.user.bTwitter.active];
+        [self.toggleInstagram setOn:self.user.bInstagram.active];
+        [self.toggleLinkedIn setOn:self.user.bLinkedIn.active];
+        [self.toggleSnapchat setOn:self.user.bSnapchat.active];
+        [self.toggleVine setOn:self.user.bVine.active];
+        [self.togglePhone setOn:self.user.bPhone.active];
+        [self.toggleSkype setOn:self.user.bSkype.active];
+    }
+
     
     self.saveSuccessView = (CNSaveSuccessView *)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSaveSuccessView class]) owner:nil options:nil] firstObject];
     self.saveSuccessView.delegate = self;
@@ -87,7 +104,13 @@
 
 #pragma mark - Facebook
 - (IBAction)toggleForFacebook:(UISwitch*)sender {
-    if (self.user.facebook.name != nil) {
+    CNFacebook *facebook;
+    if (self.profileType == CNProfileTypePersonal) {
+        facebook = self.user.pFacebook;
+    } else {
+        facebook = self.user.bFacebook;
+    }
+    if (facebook.name != nil) {
         [[[self.socialRef child:@"facebook"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
     } else{
         if (sender.isOn) {
@@ -107,12 +130,22 @@
 #pragma mark - CNFacebookDelegate
 - (void)facebookLoginSuccess:(UIViewController *)facebookController withDictionary:(NSDictionary *)userInfo{
     [_navController dismissViewControllerAnimated:YES completion:nil];
-    [CNUser currentUser].facebook = [[CNFacebook sharedInstance] initWithDictionary:userInfo];
     
-    CNUser *user = [CNUser currentUser];
+    CNFacebook *fb;
+
+    if (self.profileType == CNProfileTypePersonal) {
+         [CNUser currentUser].pFacebook = [[CNFacebook alloc] initWithDictionary:userInfo fromSocial:YES];
+        fb = self.user.pFacebook;
+
+    } else {
+        [CNUser currentUser].bFacebook = [[CNFacebook alloc] initWithDictionary:userInfo fromSocial:YES];
+        fb = self.user.bFacebook;
+
+    }
+ 
     NSMutableDictionary *facebook = [[NSMutableDictionary alloc] init];
-    [facebook setObject:user.facebook.name forKey:@"name"];
-    [facebook setObject:[NSNumber numberWithBool:user.facebook.hidden] forKey:@"hidden"];
+    [facebook setObject:fb.name forKey:@"name"];
+    [facebook setObject:[NSNumber numberWithBool:fb.hidden] forKey:@"hidden"];
     [facebook setObject:[NSNumber numberWithBool:true] forKey:@"active"];
     
     [[self.socialRef child:@"facebook"]setValue:facebook];
@@ -134,10 +167,19 @@
 
 #pragma mark - Twitter
 - (IBAction)toggleForTwitter:(UISwitch*)sender {
-    if (self.user.twitter.name != nil) {
+    CNTwitter *twitter;
+    if (self.profileType == CNProfileTypePersonal) {
+        twitter = self.user.pTwitter;
+    } else{
+        twitter = self.user.bTwitter;
+    }
+    
+    if (twitter.name != nil) {
         [[[self.socialRef child:@"twitter"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
     } else{
-        [self showTwitterLogin];
+        if (sender.on) {
+            [self showTwitterLogin];
+        }
     }
 }
 
@@ -154,12 +196,20 @@
 - (void)twitterLoginSuccess:(UIViewController *)twitterController withDictionary:(NSDictionary *)userInfo{
     [_navController dismissViewControllerAnimated:YES completion:nil];
 
-    [CNUser currentUser].twitter = [[CNTwitter sharedInstance] initWithDictionary:userInfo fromTwitter:true];
+    CNTwitter *tw;
+
+    if (self.profileType == CNProfileTypePersonal) {
+        [CNUser currentUser].pTwitter = [[CNTwitter alloc] initWithDictionary:userInfo fromSocial:true];
+        tw = self.user.pTwitter;
+    } else {
+        [CNUser currentUser].bTwitter = [[CNTwitter alloc] initWithDictionary:userInfo fromSocial:true];
+        tw = self.user.bTwitter;
+    }
     
-    CNUser *user = [CNUser currentUser];
+
     NSMutableDictionary *twitter = [[NSMutableDictionary alloc] init];
-    [twitter setObject:user.twitter.name forKey:@"name"];
-    [twitter setObject:[NSNumber numberWithBool:user.twitter.hidden] forKey:@"hidden"];
+    [twitter setObject:tw.name forKey:@"name"];
+    [twitter setObject:[NSNumber numberWithBool:tw.hidden] forKey:@"hidden"];
     [twitter setObject:[NSNumber numberWithBool:true] forKey:@"active"];
     
     [[self.socialRef child:@"twitter"] setValue:twitter];
@@ -179,10 +229,19 @@
 
 #pragma mark - Instagram
 - (IBAction)toggleForInstagram:(UISwitch*)sender {
-    if (self.user.instagram.name != nil) {
+    CNInstagram *instagram;
+    if (self.profileType == CNProfileTypePersonal) {
+        instagram = self.user.pInstagram;
+    } else{
+        instagram = self.user.bInstagram;
+    }
+    
+    if (instagram.name != nil) {
         [[[self.socialRef child:@"instagram"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
     } else{
-        [self showInstagramLogin];
+        if (sender.on) {
+            [self showInstagramLogin];
+        }
     }
 }
 
@@ -198,12 +257,19 @@
 - (void)instagramLoginSuccess:(UIViewController *)instagramController withDictionary:(NSDictionary *)userInfo{
     [_navController dismissViewControllerAnimated:YES completion:nil];
 
-    [CNUser currentUser].instagram = [[CNInstagram sharedInstance] initWithDictionary:userInfo];
+    CNInstagram *insta;
+    if (self.profileType == CNProfileTypePersonal) {
+        [CNUser currentUser].pInstagram = [[CNInstagram alloc] initWithDictionary:userInfo fromSocial:YES];
+        insta = self.user.pInstagram;
+    } else {
+        [CNUser currentUser].bInstagram = [[CNInstagram alloc] initWithDictionary:userInfo fromSocial:YES];
+        insta = self.user.bInstagram;
+    }
+
     
-    CNUser *user = [CNUser currentUser];
     NSMutableDictionary *instagram = [[NSMutableDictionary alloc] init];
-    [instagram setObject:user.instagram.name forKey:@"name"];
-    [instagram setObject:[NSNumber numberWithBool:user.instagram.hidden] forKey:@"hidden"];
+    [instagram setObject:insta.name forKey:@"name"];
+    [instagram setObject:[NSNumber numberWithBool:insta.hidden] forKey:@"hidden"];
     [instagram setObject:[NSNumber numberWithBool:true] forKey:@"active"];
     
     [[self.socialRef child:@"instagram"] setValue:instagram];
@@ -222,10 +288,18 @@
 
 #pragma mark - LinkedIn
 - (IBAction)toggleForLinkeIn:(UISwitch*)sender {
-    if (self.user.linkedIn.name != nil) {
+    CNLinkedIn *linkedIn;
+    if (self.profileType == CNProfileTypePersonal) {
+        linkedIn = self.user.pLinkedIn;
+    } else {
+        linkedIn = self.user.bLinkedIn;
+    }
+    if (linkedIn.name != nil) {
         [[[self.socialRef child:@"linkedIn"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
     } else{
-        [self showLinkedInLogin];
+        if (sender.on) {
+            [self showLinkedInLogin];
+        }
     }
 }
 

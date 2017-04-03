@@ -15,6 +15,5 @@
 @property (assign, nonatomic) CNSocialType socialType;
 @property (strong, nonatomic) NSString *socialKey;
 
-- (void)configureCellWithIndex:(NSInteger)index withUser:(CNUser*)user;
-    
+- (void)configureCellWithIndex:(NSInteger)index withUser:(CNUser*)user profileType:(CNProfileType) profileType;
 @end

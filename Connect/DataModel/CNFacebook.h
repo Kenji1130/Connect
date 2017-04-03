@@ -13,8 +13,11 @@
 @property (nonatomic, assign) BOOL hidden;
 @property (nonatomic, assign) BOOL active;
 
+@property (nonatomic, assign) BOOL fromSocial;
+
 + (instancetype)sharedInstance;
 
-- (instancetype)initWithDictionary:(NSDictionary *)value;
+- (instancetype)initWithDictionary:(NSDictionary *)value fromSocial: (BOOL)social;
 - (void)configureFacebookWithDictionary:(NSDictionary *)value;
+
 @end

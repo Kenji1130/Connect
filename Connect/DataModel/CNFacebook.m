@@ -18,9 +18,10 @@
     return instance;
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)value {
+- (instancetype)initWithDictionary:(NSDictionary *)value fromSocial:(BOOL)social {
     self = [super init];
     if (self) {
+        self.fromSocial = social;
         [self configureFacebookWithDictionary:value];
     }
     
@@ -29,10 +30,16 @@
 
 - (void)configureFacebookWithDictionary:(NSDictionary *)value {
     // Configure user with dictionary
-    self.name = value[@"name"];
-    self.hidden = [value[@"hidden"] boolValue];
-    self.active = [value[@"active"] boolValue];
-}
+    if (self.fromSocial) {
+        self.name = value[@"name"];
+        self.hidden = [value[@"hidden"] boolValue];
+        self.active = [value[@"active"] boolValue];
+    } else {
+        self.name = value[@"name"];
+        self.hidden = [value[@"hidden"] boolValue];
+        self.active = [value[@"active"] boolValue];
+    }
 
+}
 
 @end

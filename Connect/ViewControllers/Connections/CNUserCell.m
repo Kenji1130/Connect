@@ -24,12 +24,18 @@
     // Configure the view for the selected state
 }
 
-- (void)configureCellWithIndex:(NSInteger)index withUser:(CNUser*)user{
+- (void)configureCellWithIndex:(NSInteger)index withUser:(CNUser*)user profileType:(CNProfileType) profileType{
     // Configure Cell
     self.socialType = index;
     self.socialKey = kSocialKey[self.socialType];
+    self.profileType = profileType;
     
-    NSDictionary *dict = user.social[self.socialKey];
+    NSDictionary *dict;
+    if (self.profileType == CNProfileTypePersonal) {
+        dict = user.socialPersonal[self.socialKey];
+    } else {
+        dict = user.socialBusiness[self.socialKey];
+    }
     BOOL hidden = [dict[@"hidden"] boolValue];
     if (dict != nil && !hidden) {
         self.socialMediaLogo.hidden = false;

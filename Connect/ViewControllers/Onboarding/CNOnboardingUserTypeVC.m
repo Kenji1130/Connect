@@ -8,6 +8,8 @@
 
 #import "CNOnboardingUserTypeVC.h"
 #import "CNOnboardingSocialVC.h"
+#import "CNOnboardingPersonalSocialVC.h"
+#import "CNOnboardingBusinessSocialVC.h"
 
 @interface CNOnboardingUserTypeVC ()
 @property (weak, nonatomic) IBOutlet UIButton *btnPersonal;
@@ -58,6 +60,8 @@
 - (IBAction)onNextBtnClicked:(id)sender {
   
     [self signUpWithEmail:[CNUser currentUser].email password:[CNUser currentUser].password];
+    
+//    [self goSocialVC];
 }
 
 - (void) signUpWithEmail:(NSString*) email password:(NSString*) password{
@@ -161,8 +165,17 @@
 }
 
 - (void)goSocialVC{
-    CNOnboardingSocialVC *vc = (CNOnboardingSocialVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
-    [self.navigationController pushViewController:vc animated:YES];
+//    CNOnboardingSocialVC *vc = (CNOnboardingSocialVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingSocialVC class])];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    if ([CNUser currentUser].profileType == CNProfileTypeBusiness) {
+        CNOnboardingBusinessSocialVC *vc = (CNOnboardingBusinessSocialVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingBusinessSocialVC class])];
+         [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        CNOnboardingPersonalSocialVC *vc = (CNOnboardingPersonalSocialVC*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingPersonalSocialVC class])];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
 }
 /*
 #pragma mark - Navigation
