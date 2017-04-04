@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *socialMediaLogo;
 @property (weak, nonatomic) IBOutlet UILabel *socialMediaName;
 @property (weak, nonatomic) IBOutlet UISwitch *toggle;
+@property (weak, nonatomic) IBOutlet UILabel *lbShowHide;
 
 @property (strong, nonatomic) FIRDatabaseReference *userRef;
 

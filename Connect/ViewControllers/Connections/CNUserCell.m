@@ -37,7 +37,8 @@
         dict = user.socialBusiness[self.socialKey];
     }
     BOOL hidden = [dict[@"hidden"] boolValue];
-    if (dict != nil && !hidden) {
+    BOOL active = [dict[@"active"] boolValue];
+    if (dict != nil && !hidden && active) {
         self.socialMediaLogo.hidden = false;
         self.socialMediaName.hidden = false;
     } else {

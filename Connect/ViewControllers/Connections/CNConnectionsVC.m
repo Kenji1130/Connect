@@ -467,9 +467,21 @@
     NSArray *sectionConnections = [self.connectionsData objectForKey:sectionTitle];
     NSDictionary *connection = [sectionConnections objectAtIndex:indexPath.row];
     
-    CNUser *user = [[CNUser alloc] initWithDictionary:connection];
-    vc.user = user;
-    [self presentViewController:vc animated:YES completion:nil];
+    NSString *userID = connection[@"userID"];
+    
+    self.userRef = [[[AppDelegate sharedInstance].dbRef child:@"users"] child:userID];
+    [self.userRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        if (![snapshot.value isEqual:[NSNull null]]) {
+            NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:snapshot.value];
+            CNUser *user = [[CNUser alloc] initWithDictionary:userInfo];
+            vc.user = user;
+            
+            [self presentViewController:vc animated:YES completion:nil];
+
+        }
+        
+    }];
+    
 }
 
 // Override to support conditional editing of the table view.

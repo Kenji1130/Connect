@@ -23,6 +23,7 @@
 @property (strong, nonatomic) CNSwitchView *profileSwitch;
 @property (strong, nonatomic) FIRDatabaseReference *notiRef;
 @property (strong, nonatomic) FIRDatabaseReference *connectRef;
+@property (strong, nonatomic) FIRDatabaseReference *userRef;
 
 
 @end
@@ -32,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+       
     self.profileType = CNProfileTypePersonal;
     [self configLayout];
     [self isConnected];
@@ -185,7 +186,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return 8;
 }
 
 #pragma mark - UITableViewDelegate
@@ -208,7 +209,9 @@
         dict = self.user.socialBusiness[socialKey];
     }
     BOOL hidden = [dict[@"hidden"] boolValue];
-    if (dict != nil && !hidden) {
+    BOOL active = [dict[@"active"] boolValue];
+
+    if (dict != nil && !hidden && active) {
         return 43;
     } else {
         return 0;

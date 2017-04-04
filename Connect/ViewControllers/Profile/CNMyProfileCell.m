@@ -45,10 +45,12 @@
     if (dict != nil && active) {
         self.socialMediaLogo.hidden = false;
         self.socialMediaName.hidden = false;
+        self.lbShowHide.hidden = !isEdit;
         self.toggle.hidden = !isEdit;
     } else {
         self.socialMediaLogo.hidden = true;
         self.socialMediaName.hidden = true;
+        self.lbShowHide.hidden = true;
         self.toggle.hidden = true;
     }
     

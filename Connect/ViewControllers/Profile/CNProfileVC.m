@@ -10,7 +10,6 @@
 #import "CNSwitchView.h"
 #import "CNMyProfileCell.h"
 #import "CNSettingVC.h"
-#import "CNSocialMediaAddView.h"
 #import "CNSaveSuccessView.h"
 #import "CNSocialMediaAddVC.h"
 
@@ -143,6 +142,17 @@
     [self.switchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-15-[_profileSwitch]-15-|" options:0 metrics:nil views:views]];
     [self.switchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-14-[_profileSwitch(40)]" options:0 metrics:nil views:views]];
     
+//    if (self.user.profileType == CNProfileTypePersonal) {
+//        [self.profileSwitch setOn:YES];
+//        self.profileSwitch.enabled = false;
+//    } else if (self.user.profileType == CNProfileTypeBusiness){
+//        [self.profileSwitch setOn:NO];
+//        self.profileSwitch.enabled = false;
+//    } else {
+//        [self.profileSwitch setOn:YES];
+//        self.profileSwitch.enabled = true;
+//    }
+    
 }
 
 
@@ -177,6 +187,11 @@
 
 - (void)profileSave{
     [self.view endEditing:YES];
+//    if (self.user.profileType != CNProfileTypeBoth) {
+//        [self.profileSwitch setEnabled:false];
+//    } else{
+//        [self.profileSwitch setEnabled:true];
+//    }
     [self.profileSwitch setEnabled:true];
     self.profileInfoView.hidden = false;
     self.profileEditView.hidden = true;
@@ -325,7 +340,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return 8;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

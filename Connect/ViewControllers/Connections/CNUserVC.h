@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) CNUser *user;
 @property (assign, nonatomic) CNProfileType profileType;
+@property (strong, nonatomic) NSString *userID;
 
 @end

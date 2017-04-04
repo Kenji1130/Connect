@@ -17,48 +17,38 @@
     [super awakeFromNib];
 }
 
-- (IBAction)onDismiss:(id)sender {
+- (IBAction)onCancel:(id)sender {
     if ([sender isKindOfClass:[UIView class]]) {
         [(UIView*)sender dismissPresentingPopup];
+        
+        [self.delegate cancel:self.socialType];
     }
 }
 
-- (IBAction)facebookSwitchChanged:(UISwitch*)sender {
-    [self.delegate toggleForFacebook:sender];
-}
-
-- (IBAction)twitterSwitchChanged:(UISwitch*)sender {
-    [self.delegate toggleForTwitter:sender];
-}
-
-- (IBAction)instagramSwitchChanged:(UISwitch*)sender {
-    [self.delegate toggleForInstagram:sender];
-}
-
-- (IBAction)linkedInSwitchChanged:(UISwitch*)sender {
-    [self.delegate toggleForLinkedIn:sender];
-}
-
-- (IBAction)snapchatSwitchChanged:(id)sender {
-    [self.delegate toggleForSnapchat:sender];
-}
-
-- (IBAction)vineSwitchChanged:(id)sender {
-    [self.delegate toggleForVine:sender];
-}
-
-- (IBAction)phoneSwitchChanged:(id)sender {
-    [self.delegate toggleForPhone:sender];
-}
-
-- (IBAction)skypeSwitchChanged:(id)sender {
-    [self.delegate toggleForSkype:sender];
-}
-
 - (IBAction)onSave:(id)sender {
-    [self.delegate saveWithSocialMedia];
-    [self onDismiss:sender];
+    if ([sender isKindOfClass:[UIView class]]) {
+        [(UIView*)sender dismissPresentingPopup];
+        
+        [self.delegate saveWith:self.tfName.text socialType:self.socialType];
+    }
 }
 
+- (void)initViewWithSocialType:(NSString *)socialType{
+    self.tfName.text = @"";
+    self.socialType = socialType;
+    if ([self.socialType isEqualToString:@"snapchat"]) {
+        self.lbTitle.text = @"Please enter your snapchat name.";
+    } else if ([self.socialType isEqualToString:@"vine"]){
+        self.lbTitle.text = @"Please enter your vine name.";
+
+    } else if ([self.socialType isEqualToString:@"phone"]){
+        self.lbTitle.text = @"Please enter your phone number.";
+
+    } else if ([self.socialType isEqualToString:@"skype"]){
+        self.lbTitle.text = @"Please enter your skype id.";
+
+    }
+    
+}
 
 @end

@@ -10,20 +10,18 @@
 
 @protocol CNSocialMediaAddViewDelegate <NSObject>
 
-- (void)toggleForFacebook: (UISwitch*)sender;
-- (void)toggleForTwitter: (UISwitch*)sender;
-- (void)toggleForInstagram: (UISwitch*)sender;
-- (void)toggleForLinkedIn: (UISwitch*)sender;
-- (void)toggleForSnapchat: (UISwitch*)sender;
-- (void)toggleForVine: (UISwitch*)sender;
-- (void)toggleForPhone: (UISwitch*)sender;
-- (void)toggleForSkype: (UISwitch*)sender;
-- (void)saveWithSocialMedia;
+- (void)saveWith:(NSString*)name socialType:(NSString*)socialType;
+- (void)cancel:(NSString*)socialType;
 
 @end
 
 
 @interface CNSocialMediaAddView : UIView
 @property (weak, nonatomic) id<CNSocialMediaAddViewDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UITextField *tfName;
+@property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
+@property (strong, nonatomic) NSString *socialType;
+
+- (void)initViewWithSocialType:(NSString*)socialType;
 @end

@@ -32,8 +32,8 @@
     // Configure user with dictionary
     if(self.fromSocial){
         self.name = value[@"name"];
-        self.hidden = [value[@"hidden"] boolValue];
-        self.active = [value[@"active"] boolValue];
+        self.hidden = false;
+        self.active = true;
     } else{
         self.name = value[@"name"];
         self.hidden = [value[@"hidden"] boolValue];

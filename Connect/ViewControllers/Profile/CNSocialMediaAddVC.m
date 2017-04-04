@@ -10,10 +10,13 @@
 #import "CNFacebookVC.h"
 #import "CNTwitterVC.h"
 #import "CNInstagramCV.h"
+#import "CNLinkedInCV.h"
 #import "CNSaveSuccessView.h"
+#import "CNSocialMediaAddView.h"
+
 @import PopupKit;
 
-@interface CNSocialMediaAddVC () <CNFacebookDelegate, CNTwitterDelegate,CNInstagramDelegate,CNSaveSuccessViewDelegate>
+@interface CNSocialMediaAddVC () <CNFacebookDelegate, CNTwitterDelegate,CNInstagramDelegate, CNLinkedInDelegate, CNSaveSuccessViewDelegate, CNSocialMediaAddViewDelegate>
 
 @property (strong, nonatomic) UINavigationController *navController;
 
@@ -30,6 +33,7 @@
 @property (strong, nonatomic) FIRDatabaseReference *userRef;
 
 @property (strong, nonatomic) CNSaveSuccessView *saveSuccessView;
+@property (strong, nonatomic) CNSocialMediaAddView *mediaView;
 
 @end
 
@@ -77,6 +81,9 @@
     
     self.saveSuccessView = (CNSaveSuccessView *)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSaveSuccessView class]) owner:nil options:nil] firstObject];
     self.saveSuccessView.delegate = self;
+    
+    self.mediaView = (CNSocialMediaAddView*)[[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CNSocialMediaAddView class]) owner:nil options:nil] firstObject];
+    self.mediaView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,10 +91,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)showPopUp: (UIView *) view{
+//- (void)showPopUp: (UIView *) view{
+//    // Show in popup
+//    PopupViewLayout layout = PopupViewLayoutMake(PopupViewHorizontalLayoutCenter,
+//                                                 PopupViewVerticalLayoutCenter);
+//    
+//    PopupView* popup = [PopupView popupViewWithContentView:view
+//                                                  showType:PopupViewShowTypeSlideInFromBottom
+//                                               dismissType:PopupViewDismissTypeSlideOutToBottom
+//                                                  maskType:PopupViewMaskTypeDarkBlur
+//                            shouldDismissOnBackgroundTouch:NO shouldDismissOnContentTouch:NO];
+//    
+//    [popup showWithLayout:layout];
+//}
+
+- (void)showPopUp:(UIView*)view withVerticalLayout:(PopupViewVerticalLayout)verticalLayout{
     // Show in popup
     PopupViewLayout layout = PopupViewLayoutMake(PopupViewHorizontalLayoutCenter,
-                                                 PopupViewVerticalLayoutCenter);
+                                                 verticalLayout);
     
     PopupView* popup = [PopupView popupViewWithContentView:view
                                                   showType:PopupViewShowTypeSlideInFromBottom
@@ -298,21 +319,172 @@
         [[[self.socialRef child:@"linkedIn"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
     } else{
         if (sender.on) {
-            [self showLinkedInLogin];
+//            [self showLinkedInLogin];
         }
     }
 }
 
 - (void)showLinkedInLogin{
+    CNLinkedInCV *vc = (CNLinkedInCV*)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNLinkedInCV class])];
+    vc.delegate = self;
+    _navController = [[UINavigationController alloc] initWithRootViewController:vc];
+    _navController.navigationBar.hidden = true;
+    [self presentViewController:_navController animated:YES completion:nil];
+}
+
+#pragma mark: - CNLinkedInDelegate
+- (void)linkedInLoginSuccess:(UIViewController *)linkedInController withDictionary:(NSDictionary *)userInfo{
     
 }
 
+- (void)linkedInLoginFailed:(UIViewController *)linkedInController withError:(NSString *)error{
+    [_navController dismissViewControllerAnimated:YES completion:nil];
+    [[CNUtilities shared] showAlert:self withTitle:@"LinkedIn Login Failed" withMessage:error];
+    [self.toggleLinkedIn setOn:false];
+}
+
+- (void)linkedInLoginCancelled:(UIViewController *)linkedInController{
+    [_navController dismissViewControllerAnimated:YES completion:nil];
+    [self.toggleLinkedIn setOn:false];
+}
+
+#pragma mark: - Snapchat
+- (IBAction)toggleForSnapchat:(UISwitch *)sender {
+    CNSnapchat *snapchat;
+    if (self.profileType == CNProfileTypePersonal) {
+        snapchat = self.user.pSnapchat;
+    } else {
+        snapchat = self.user.bSnapchat;
+    }
+    
+    if (sender.on) {
+        [self.mediaView initViewWithSocialType:@"snapchat"];
+        [self showPopUp:self.mediaView withVerticalLayout:PopupViewVerticalLayoutAboveCenter];
+    } else {
+        if (snapchat.name != nil) {
+            [[[self.socialRef child:@"snapchat"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
+        }
+    }
+
+}
+
+#pragma mark: - Vine
+- (IBAction)toggleForVine:(UISwitch*)sender {
+    CNVine *vine;
+    if (self.profileType == CNProfileTypePersonal) {
+        vine = self.user.pVine;
+    } else {
+        vine = self.user.bVine;
+    }
+
+    if (sender.on) {
+        [self.mediaView initViewWithSocialType:@"vine"];
+        [self showPopUp:self.mediaView withVerticalLayout:PopupViewVerticalLayoutAboveCenter];
+    } else {
+        if (vine.name != nil) {
+            [[[self.socialRef child:@"vine"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
+        }
+    }
+
+    
+}
+
+- (IBAction)toggleForPhone:(UISwitch *)sender {
+    CNPhone *phone;
+    if (self.profileType == CNProfileTypePersonal) {
+        phone = self.user.pPhone;
+    } else {
+        phone = self.user.bPhone;
+    }
+    
+    if (sender.on) {
+        [self.mediaView initViewWithSocialType:@"phone"];
+        [self showPopUp:self.mediaView withVerticalLayout:PopupViewVerticalLayoutAboveCenter];
+    } else {
+        if (phone.name != nil) {
+            [[[self.socialRef child:@"phone"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
+        }
+    }
+}
+
+- (IBAction)toggleForSkype:(UISwitch *)sender {
+    CNSkype *skype;
+    if (self.profileType == CNProfileTypePersonal) {
+        skype = self.user.pSkype;
+    } else {
+        skype = self.user.bSkype;
+    }
+    if (sender.on) {
+        [self.mediaView initViewWithSocialType:@"skype"];
+        [self showPopUp:self.mediaView withVerticalLayout:PopupViewVerticalLayoutAboveCenter];
+    } else {
+        if (skype.name != nil) {
+            [[[self.socialRef child:@"skype"] child:@"active"] setValue:[NSNumber numberWithBool:sender.on]];
+        }
+    }
+}
+
 - (IBAction)onSave:(id)sender {
-    [self showPopUp:self.saveSuccessView];
+    [self showPopUp:self.saveSuccessView withVerticalLayout:PopupViewVerticalLayoutCenter];
 }
 
 #pragma mark - CNSaveSuccessViewDelegate
 - (void)save{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark- CNSocialMediaViewDelegate
+- (void)saveWith:(NSString *)name socialType:(NSString *)socialType{
+    
+    NSDictionary *dict = @{@"name": name,
+                           @"hidden": @false,
+                           @"active": @true};
+    
+    if ([socialType isEqualToString:@"snapchat"]) {
+
+        if (self.profileType == CNProfileTypePersonal) {
+            self.user.pSnapchat = [[CNSnapchat alloc] initWithDictionary:dict];
+        } else {
+            self.user.bSnapchat = [[CNSnapchat alloc] initWithDictionary:dict];
+        }
+        [[self.socialRef child:@"snapchat"] setValue:dict];
+        
+    } else if([socialType isEqualToString:@"vine"]){
+        if (self.profileType == CNProfileTypePersonal) {
+            self.user.pVine = [[CNVine alloc] initWithDictionary:dict];
+        } else {
+            self.user.bVine = [[CNVine alloc] initWithDictionary:dict];
+        }
+        [[self.socialRef child:@"vine"] setValue:dict];
+        
+    } else if([socialType isEqualToString:@"phone"]){
+        if (self.profileType == CNProfileTypePersonal) {
+            self.user.pPhone = [[CNPhone alloc] initWithDictionary:dict];
+        } else {
+            self.user.bPhone = [[CNPhone alloc] initWithDictionary:dict];
+        }
+        [[self.socialRef child:@"phone"] setValue:dict];
+        
+    } else if([socialType isEqualToString:@"skype"]){
+        if (self.profileType == CNProfileTypePersonal) {
+            self.user.pSkype = [[CNSkype alloc] initWithDictionary:dict];
+        } else {
+            self.user.bSkype = [[CNSkype alloc] initWithDictionary:dict];
+        }
+        [[self.socialRef child:@"skype"] setValue:dict];
+        
+    }
+}
+
+- (void)cancel:(NSString*)socialType{
+    if ([socialType isEqualToString:@"snapchat"]) {
+        [self.toggleSnapchat setOn:false];
+    } else if([socialType isEqualToString:@"vine"]){
+        [self.toggleVine setOn:false];
+    } else if([socialType isEqualToString:@"phone"]){
+        [self.togglePhone setOn:false];
+    } else if([socialType isEqualToString:@"skype"]){
+        [self.toggleSkype setOn:false];
+    }
 }
 @end

@@ -41,17 +41,26 @@
                             <action selector="onToggle:" destination="KGk-i7-Jjw" eventType="valueChanged" id="7RX-ks-ouP"/>
                         </connections>
                     </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show/Hide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdh-jB-keI">
+                        <rect key="frame" x="174.5" y="12" width="72.5" height="18.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <color key="textColor" red="0.1764705882" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1WR-7Y-X5T" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CFP-yC-AmF"/>
                     <constraint firstItem="JWF-Hk-rJ1" firstAttribute="centerY" secondItem="g12-Pd-Ih2" secondAttribute="centerY" id="F4m-Ex-1La"/>
                     <constraint firstItem="g12-Pd-Ih2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="V6i-IM-62v"/>
                     <constraint firstAttribute="trailing" secondItem="1WR-7Y-X5T" secondAttribute="trailing" constant="16" id="VaA-qX-1sw"/>
+                    <constraint firstItem="1WR-7Y-X5T" firstAttribute="leading" secondItem="Vdh-jB-keI" secondAttribute="trailing" constant="8" id="aX0-tF-Amg"/>
                     <constraint firstItem="JWF-Hk-rJ1" firstAttribute="leading" secondItem="g12-Pd-Ih2" secondAttribute="trailing" constant="16" id="c9g-h0-QVk"/>
                     <constraint firstItem="g12-Pd-Ih2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jX3-cb-hh2"/>
+                    <constraint firstItem="Vdh-jB-keI" firstAttribute="centerY" secondItem="1WR-7Y-X5T" secondAttribute="centerY" id="pFO-NE-S1q"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="lbShowHide" destination="Vdh-jB-keI" id="8Ve-Hw-xx3"/>
                 <outlet property="socialMediaLogo" destination="g12-Pd-Ih2" id="gFw-Eu-6Nw"/>
                 <outlet property="socialMediaName" destination="JWF-Hk-rJ1" id="Vf6-ZJ-vg6"/>
                 <outlet property="toggle" destination="1WR-7Y-X5T" id="UFe-G2-9qs"/>
