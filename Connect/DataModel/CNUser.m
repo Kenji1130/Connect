@@ -36,7 +36,7 @@
     self.username = value[@"username"];
     self.firstName = value[@"firstName"];
     self.lastName = value[@"lastName"];
-    self.age = value[@"age"];
+    self.birth = value[@"age"];
     self.occupation = value[@"occupation"];
     self.phoneNumber = value[@"phoneNumber"];
     self.imageURL = value[@"imageURL"];

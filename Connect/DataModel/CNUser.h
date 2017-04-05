@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
-@property (nonatomic, strong) NSNumber *age;
+@property (nonatomic, strong) NSString *birth;
 @property (nonatomic, strong) NSString *occupation;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *imageURL;

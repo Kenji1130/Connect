@@ -123,7 +123,7 @@
                            @"firstName": [CNUser currentUser].firstName,
                            @"lastName": [CNUser currentUser].lastName,
                            @"gender": [NSNumber numberWithInteger:[CNUser currentUser].gender],
-                           @"age": [CNUser currentUser].age,
+                           @"birth": [CNUser currentUser].birth,
                            @"profileType": [NSNumber numberWithInteger:[CNUser currentUser].profileType],
                            @"signType": [NSNumber numberWithInteger:[CNUser currentUser].signType],
                            @"imageURL": [CNUser currentUser].imageURL,

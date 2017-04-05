@@ -10,7 +10,7 @@
 #import "CNOnboardingProfileImagePickerVC.h"
 
 @interface CNOnboardingAgeInputVC ()
-@property (weak, nonatomic) IBOutlet UITextField *tfAge;
+@property (weak, nonatomic) IBOutlet UITextField *tfBirth;
 
 @end
 
@@ -19,6 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    datePicker=[[UIDatePicker alloc]init];
+    datePicker.datePickerMode=UIDatePickerModeDate;
+    [self.tfBirth setInputView:datePicker];
+    UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [toolBar setTintColor:[UIColor grayColor]];
+    UIBarButtonItem *doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(ShowSelectedDate)];
+    UIBarButtonItem *space=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolBar setItems:[NSArray arrayWithObjects:space,doneBtn, nil]];
+    [self.tfBirth setInputAccessoryView:toolBar];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -46,29 +56,25 @@
 
 - (IBAction)onNextBtnClicked:(id)sender {
     
-    if ([self.tfAge.text isEqualToString:@""]) {
+    if ([self.tfBirth.text isEqualToString:@""]) {
 
-        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your age."];
+        [[CNUtilities shared] showAlert:self withTitle:@"Error" withMessage:@"Please enter your birthday."];
         return;
     }
     
-    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-    f.numberStyle = NSNumberFormatterDecimalStyle;
-    [CNUser currentUser].age = [f numberFromString:self.tfAge.text];
+    [CNUser currentUser].birth = self.tfBirth.text;
     
     // Show onboarding snapchat vc
     CNOnboardingProfileImagePickerVC *vc = (CNOnboardingProfileImagePickerVC *)[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNOnboardingProfileImagePickerVC class])];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)ShowSelectedDate
+{
+    NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"dd/MM/YYYY"];
+    self.tfBirth.text=[NSString stringWithFormat:@"%@",[formatter stringFromDate:datePicker.date]];
+    [self.tfBirth resignFirstResponder];
 }
-*/
 
 @end

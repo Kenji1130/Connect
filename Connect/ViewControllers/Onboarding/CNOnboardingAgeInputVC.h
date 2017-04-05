@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CNOnboardingAgeInputVC : UIViewController
+@interface CNOnboardingAgeInputVC : UIViewController{
+    UIDatePicker *datePicker;
+}
 
 @end
