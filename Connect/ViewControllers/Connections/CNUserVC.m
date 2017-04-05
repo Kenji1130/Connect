@@ -131,7 +131,7 @@
     [params setObject:_user.token forKey:@"to"];
     NSDictionary *notification = [NSDictionary dictionaryWithObjectsAndKeys:
                                   @"Connection Request", @"title",
-                                  [NSString stringWithFormat:@"%@ %@ requested to connet with you", _user.firstName, _user.lastName], @"body",
+                                  [NSString stringWithFormat:@"%@ %@ requested to connet with you", [CNUser currentUser].firstName, [CNUser currentUser].lastName], @"body",
                                   nil];
     [params setObject:notification forKey:@"notification"];
     NSDictionary *data = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:CNNotificationTypeRequest] forKey:@"type"];
