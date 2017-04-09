@@ -47,6 +47,8 @@
 		0481C1B01E8BDFA900FB2F8E /* CNLinkedIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481C1AF1E8BDFA900FB2F8E /* CNLinkedIn.m */; };
 		0483843A1E91DF1500502025 /* CNOnboardingBusinessSocialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 048384391E91DF1500502025 /* CNOnboardingBusinessSocialVC.m */; };
 		049144991E91C44900597336 /* CNOnboardingPersonalSocialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 049144981E91C44900597336 /* CNOnboardingPersonalSocialVC.m */; };
+		04BAB0121E99C68C0082AAD5 /* CNSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BAB0111E99C68C0082AAD5 /* CNSearchVC.m */; };
+		04BAB0151E99C6A10082AAD5 /* CNNotiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BAB0141E99C6A10082AAD5 /* CNNotiVC.m */; };
 		04EBA3C71E85C404007FE43E /* CNProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C61E85C404007FE43E /* CNProfileVC.m */; };
 		04EBA3CB1E860D63007FE43E /* CNMyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBA3C91E860D63007FE43E /* CNMyProfileCell.m */; };
 		04EBA3CC1E860D63007FE43E /* CNMyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EBA3CA1E860D63007FE43E /* CNMyProfileCell.xib */; };
@@ -207,6 +209,10 @@
 		048384391E91DF1500502025 /* CNOnboardingBusinessSocialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingBusinessSocialVC.m; path = ViewControllers/Onboarding/CNOnboardingBusinessSocialVC.m; sourceTree = "<group>"; };
 		049144971E91C44900597336 /* CNOnboardingPersonalSocialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNOnboardingPersonalSocialVC.h; path = ViewControllers/Onboarding/CNOnboardingPersonalSocialVC.h; sourceTree = "<group>"; };
 		049144981E91C44900597336 /* CNOnboardingPersonalSocialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNOnboardingPersonalSocialVC.m; path = ViewControllers/Onboarding/CNOnboardingPersonalSocialVC.m; sourceTree = "<group>"; };
+		04BAB0101E99C68C0082AAD5 /* CNSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSearchVC.h; sourceTree = "<group>"; };
+		04BAB0111E99C68C0082AAD5 /* CNSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSearchVC.m; sourceTree = "<group>"; };
+		04BAB0131E99C6A10082AAD5 /* CNNotiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNotiVC.h; sourceTree = "<group>"; };
+		04BAB0141E99C6A10082AAD5 /* CNNotiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNotiVC.m; sourceTree = "<group>"; };
 		04EBA3C51E85C404007FE43E /* CNProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNProfileVC.h; path = ViewControllers/Profile/CNProfileVC.h; sourceTree = "<group>"; };
 		04EBA3C61E85C404007FE43E /* CNProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNProfileVC.m; path = ViewControllers/Profile/CNProfileVC.m; sourceTree = "<group>"; };
 		04EBA3C81E860D63007FE43E /* CNMyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CNMyProfileCell.h; path = ViewControllers/Profile/CNMyProfileCell.h; sourceTree = "<group>"; };
@@ -372,6 +378,26 @@
 				040C2CE21E81CB6000A83AA4 /* SBJsonWriter.m */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		04BAB00E1E99C5DD0082AAD5 /* noti */ = {
+			isa = PBXGroup;
+			children = (
+				04BAB0131E99C6A10082AAD5 /* CNNotiVC.h */,
+				04BAB0141E99C6A10082AAD5 /* CNNotiVC.m */,
+			);
+			name = noti;
+			path = ViewControllers/noti;
+			sourceTree = "<group>";
+		};
+		04BAB00F1E99C5DD0082AAD5 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				04BAB0101E99C68C0082AAD5 /* CNSearchVC.h */,
+				04BAB0111E99C68C0082AAD5 /* CNSearchVC.m */,
+			);
+			name = search;
+			path = ViewControllers/search;
 			sourceTree = "<group>";
 		};
 		04EBA3D01E88BFEC007FE43E /* MIBadgeButton */ = {
@@ -589,6 +615,8 @@
 				FA4450A81E3F865900375428 /* Scan */,
 				FA4450A91E3F869200375428 /* QRCode */,
 				FA4450A71E3F864C00375428 /* Profile */,
+				04BAB00E1E99C5DD0082AAD5 /* noti */,
+				04BAB00F1E99C5DD0082AAD5 /* search */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1166,6 +1194,7 @@
 				04106D581E7C7BB600B2CAC0 /* CNOnboardingSignTypeVC.m in Sources */,
 				FA4450E61E403BAF00375428 /* CNProfileMediaCell.m in Sources */,
 				0481C1A71E8B204D00FB2F8E /* CNFacebook.m in Sources */,
+				04BAB0151E99C6A10082AAD5 /* CNNotiVC.m in Sources */,
 				FA4450C31E3FED8700375428 /* CNConnectionsVC.m in Sources */,
 				0402E26D1E79C62E0042B672 /* CNOnboardingAgeInputVC.m in Sources */,
 				040C2CE81E81CB6000A83AA4 /* SBJsonWriter.m in Sources */,
@@ -1186,6 +1215,7 @@
 				FA4450621E3A7B6D00375428 /* main.m in Sources */,
 				FA4451051E40BDC400375428 /* ZFMaskView.m in Sources */,
 				04106D611E7CC51500B2CAC0 /* CNOnboardingUserTypeVC.m in Sources */,
+				04BAB0121E99C68C0082AAD5 /* CNSearchVC.m in Sources */,
 				FA4450D11E40149C00375428 /* CNQRCodeViewController.m in Sources */,
 				FA4450D41E4014B300375428 /* CNProfileViewController.m in Sources */,
 				0435B94B1E8C9BBD007A82FA /* CNSocialMediaAddView.m in Sources */,
