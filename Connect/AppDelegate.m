@@ -178,15 +178,6 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     tabBarAppearance.tintColor = kAppTintColor;
     [tabBarAppearance setSelectionIndicatorImage:[[UIImage alloc] init]];
     
-    // if ([UIBarButtonItem instancesRespondToSelector:@selector(appearanceWhenContainedInInstancesOfClasses:)]) {
-        // [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setTintColor:[UIColor blackColor]];
-    // }
-    
-    // Remove the icon, which is located in the left view
-    //    [[UISearchBar appearance] setImage:[UIImage new] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
-    // Give some left padding between the edge of the search bar and the text the user enters
-    //    [UISearchBar appearance].searchTextPositionAdjustment = UIOffsetMake(-22, 0);
-    
 }
 
 #pragma mark -

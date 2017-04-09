@@ -116,9 +116,10 @@
     
     [CNUser currentUser].profileHidden = false;
     [CNUser currentUser].notiCount = 0;
+    [CNUser currentUser].token = [[CNUtilities shared] getToken];
     
     NSDictionary *info = @{@"userID": [CNUser currentUser].userID,
-                           @"token": [[CNUtilities shared] getToken],
+                           @"token": [CNUser currentUser].token,
                            @"username": [CNUser currentUser].username,
                            @"firstName": [CNUser currentUser].firstName,
                            @"lastName": [CNUser currentUser].lastName,
