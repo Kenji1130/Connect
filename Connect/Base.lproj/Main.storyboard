@@ -430,25 +430,6 @@ News Feed</string>
             </objects>
             <point key="canvasLocation" x="-1286" y="141"/>
         </scene>
-        <!--NotiVC-->
-        <scene sceneID="gUE-Yh-HRj">
-            <objects>
-                <viewController id="wRv-pr-0ct" customClass="CNNotiVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="o3y-xm-Mtl"/>
-                        <viewControllerLayoutGuide type="bottom" id="ulp-ES-2dW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2qc-gr-CO9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="umo-Cf-jdv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KH6-UQ-4Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1735" y="2414"/>
-        </scene>
         <!--SearchVC-->
         <scene sceneID="gGp-Qy-MJ6">
             <objects>
@@ -510,7 +491,7 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="wRv-pr-0ct" kind="relationship" relationship="rootViewController" id="AZE-Ps-YDQ"/>
+                        <segue destination="a7c-PT-0AU" kind="relationship" relationship="rootViewController" id="Kpb-dv-pwh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSB-3Q-nlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,37 +545,25 @@ News Feed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvR-LT-vox">
-                                <rect key="frame" x="0.0" y="69" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="amJ-vJ-k1X" id="FvS-ZY-8wC"/>
                                     <outlet property="delegate" destination="amJ-vJ-k1X" id="SF4-GI-0qm"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLi-su-nrr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="nAM-SM-UNb"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dOH-ZL-umw" firstAttribute="top" secondItem="TvR-LT-vox" secondAttribute="bottom" id="4tq-w4-v8O"/>
-                            <constraint firstItem="TvR-LT-vox" firstAttribute="top" secondItem="sLi-su-nrr" secondAttribute="bottom" id="QTa-hE-irh"/>
-                            <constraint firstItem="sLi-su-nrr" firstAttribute="top" secondItem="Xkj-nL-wnr" secondAttribute="bottom" id="WSA-K6-mKX"/>
-                            <constraint firstAttribute="trailing" secondItem="sLi-su-nrr" secondAttribute="trailing" id="XuY-Vw-x0z"/>
+                            <constraint firstItem="TvR-LT-vox" firstAttribute="top" secondItem="Xkj-nL-wnr" secondAttribute="bottom" id="Hu3-nP-28U"/>
                             <constraint firstItem="TvR-LT-vox" firstAttribute="leading" secondItem="NXF-vb-Vjl" secondAttribute="leading" id="i1m-iA-6jb"/>
                             <constraint firstAttribute="trailing" secondItem="TvR-LT-vox" secondAttribute="trailing" id="uPb-VB-guN"/>
-                            <constraint firstItem="sLi-su-nrr" firstAttribute="leading" secondItem="NXF-vb-Vjl" secondAttribute="leading" id="yzF-6p-Zgi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GPd-dO-XZ5"/>
                     <connections>
-                        <outlet property="constOfSwitchViewHeight" destination="nAM-SM-UNb" id="wgE-0n-o2z"/>
                         <outlet property="constOfTableViewBottom" destination="4tq-w4-v8O" id="HNs-WT-LCY"/>
-                        <outlet property="switchView" destination="sLi-su-nrr" id="Vai-yu-cZl"/>
                         <outlet property="tableView" destination="TvR-LT-vox" id="uUt-Ue-kTb"/>
                     </connections>
                 </viewController>
@@ -3754,30 +3723,6 @@ News Feed</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRV-Zq-OEx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGB-XB-pHD">
-                                        <rect key="frame" x="0.0" y="19" width="42" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="86V-U7-QkP"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="OCf-0n-HtM"/>
-                                            <constraint firstAttribute="width" constant="42" id="bUU-tn-Nea"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="yAe-mI-Gf9"/>
-                                        </constraints>
-                                        <state key="normal" image="UIButtonOnboardingBack"/>
-                                        <connections>
-                                            <action selector="onBack:" destination="a7c-PT-0AU" eventType="touchUpInside" id="cni-zp-xNH"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="IGB-XB-pHD" firstAttribute="centerY" secondItem="KRV-Zq-OEx" secondAttribute="centerY" constant="8" id="K9v-ol-FpJ"/>
-                                    <constraint firstAttribute="height" constant="64" id="OoL-eU-MBO"/>
-                                    <constraint firstItem="IGB-XB-pHD" firstAttribute="leading" secondItem="KRV-Zq-OEx" secondAttribute="leading" id="ZcC-U3-0FE"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqS-gS-kHQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="69"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3786,7 +3731,7 @@ News Feed</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVc-Rd-xfV">
-                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="477"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="a7c-PT-0AU" id="oc3-gx-U1N"/>
@@ -3796,18 +3741,16 @@ News Feed</string>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KRV-Zq-OEx" firstAttribute="top" secondItem="yVA-bK-c81" secondAttribute="top" id="7xf-Ox-THR"/>
-                            <constraint firstItem="LqS-gS-kHQ" firstAttribute="top" secondItem="KRV-Zq-OEx" secondAttribute="bottom" id="B5p-eM-Hfr"/>
                             <constraint firstItem="LqS-gS-kHQ" firstAttribute="leading" secondItem="yVA-bK-c81" secondAttribute="leading" id="CNK-TG-05Y"/>
                             <constraint firstItem="vVc-Rd-xfV" firstAttribute="top" secondItem="LqS-gS-kHQ" secondAttribute="bottom" constant="8" id="XEM-Td-4sL"/>
                             <constraint firstAttribute="trailing" secondItem="LqS-gS-kHQ" secondAttribute="trailing" id="YBp-mb-aha"/>
                             <constraint firstItem="2Ya-Z2-lVk" firstAttribute="top" secondItem="vVc-Rd-xfV" secondAttribute="bottom" id="aDg-7r-RVg"/>
                             <constraint firstAttribute="trailing" secondItem="vVc-Rd-xfV" secondAttribute="trailing" id="ezK-pE-SYd"/>
-                            <constraint firstItem="KRV-Zq-OEx" firstAttribute="leading" secondItem="yVA-bK-c81" secondAttribute="leading" id="seQ-K5-JWJ"/>
-                            <constraint firstAttribute="trailing" secondItem="KRV-Zq-OEx" secondAttribute="trailing" id="x0y-97-DpE"/>
+                            <constraint firstItem="LqS-gS-kHQ" firstAttribute="top" secondItem="Tes-m4-iZ3" secondAttribute="bottom" id="pnN-9F-vw0"/>
                             <constraint firstItem="vVc-Rd-xfV" firstAttribute="leading" secondItem="yVA-bK-c81" secondAttribute="leading" id="xLV-NP-sbb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lqy-L6-idp"/>
                     <connections>
                         <outlet property="switchView" destination="LqS-gS-kHQ" id="PJH-U0-7gb"/>
                         <outlet property="tableView" destination="vVc-Rd-xfV" id="cqb-eE-tfi"/>
@@ -3815,7 +3758,7 @@ News Feed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AqB-Ff-6Rs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263.19999999999999" y="3751.5742128935535"/>
+            <point key="canvasLocation" x="-1735" y="2414"/>
         </scene>
         <!--Linked InCV-->
         <scene sceneID="55x-le-aYx">
